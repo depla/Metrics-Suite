@@ -4,6 +4,8 @@
 
 package com.metricssuite;
 
+import com.metricssuite.menu.FunctionPointGui;
+
 public class main {
 
     public static void main(String[] args){
@@ -13,6 +15,6 @@ public class main {
 
     static void init(){
         //initialize the startScreen
-        startScreen startscreen = new startScreen();
+        new FunctionPointGui();
     }
 }
