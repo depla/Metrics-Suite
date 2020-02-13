@@ -1,16 +1,16 @@
 package com.metricssuite.menu;
 
+import com.metricssuite.components.languageSelection;
+
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FunctionPointGui extends JFrame implements ActionListener {
+public class Menu extends JFrame implements ActionListener {
     private JTabbedPane tabbedPane;
 
-    public FunctionPointGui() {
+    public Menu() {
         getContentPane().setLayout(new BorderLayout());
         tabbedPane = new JTabbedPane();
         this.createTab();
@@ -77,6 +77,9 @@ public class FunctionPointGui extends JFrame implements ActionListener {
             case "Open":
                 System.out.println("open");
                 break;
+            case "languages":
+                languageSelection l = new languageSelection();
+                break;
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
@@ -85,6 +88,6 @@ public class FunctionPointGui extends JFrame implements ActionListener {
         tabbedPane.addTab( "Function Points", new JFrame().getContentPane());
     }
     public static void main(String []args) {
-        new FunctionPointGui();
+        new Menu();
     }
 }

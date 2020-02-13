@@ -4,7 +4,7 @@
 
 package com.metricssuite;
 
-import com.metricssuite.menu.FunctionPointGui;
+import com.metricssuite.menu.Menu;
 
 public class main {
 
@@ -15,6 +15,6 @@ public class main {
 
     static void init(){
         //initialize the startScreen
-        new FunctionPointGui();
+        new Menu();
     }
 }

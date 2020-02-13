@@ -1,4 +1,4 @@
-package com.metricssuite;
+package com.metricssuite.components;
 
 import javax.swing.*;
 
