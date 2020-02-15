@@ -1,5 +1,6 @@
 package com.metricssuite.menu;
 
+import com.metricssuite.components.FunctionPoint;
 import com.metricssuite.components.languageSelection;
 
 import javax.swing.*;
@@ -13,7 +14,7 @@ public class Menu extends JFrame implements ActionListener {
     public Menu() {
         getContentPane().setLayout(new BorderLayout());
         tabbedPane = new JTabbedPane();
-        this.createTab();
+        //this.createTab();
         getContentPane().add(BorderLayout.CENTER, tabbedPane);
         this.setJMenuBar(createMenuBar());
 
@@ -80,12 +81,20 @@ public class Menu extends JFrame implements ActionListener {
             case "languages":
                 languageSelection l = new languageSelection();
                 break;
+            case "Function Points":
+                this.createTab("fp");
+                break;
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
     }
-    protected void createTab() {
-        tabbedPane.addTab( "Function Points", new JFrame().getContentPane());
+    protected void createTab(String metric) {
+
+        if(metric.equals("fp")){
+            FunctionPoint functionPoint = new FunctionPoint();
+            tabbedPane.addTab( "Function Points", functionPoint);
+        }
+
     }
     public static void main(String []args) {
         new Menu();
