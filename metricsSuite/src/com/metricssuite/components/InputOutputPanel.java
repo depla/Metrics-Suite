@@ -13,7 +13,7 @@ public class InputOutputPanel extends JPanel {
     private JTextField total;
     private String name;
 
-    public InputOutputPanel(String name){
+    public InputOutputPanel(String name, String[] factors){
 
         this.name = name;
 
@@ -22,11 +22,11 @@ public class InputOutputPanel extends JPanel {
         label.setMaximumSize(new Dimension(150, label.getMinimumSize().height));
         textfield = new JTextField();
         textfield.setMaximumSize(new Dimension(50, label.getMinimumSize().height));
-        simpleRadioButton = new JRadioButton();
+        simpleRadioButton = new JRadioButton(factors[0]);
         simpleRadioButton.setMaximumSize(new Dimension(70, simpleRadioButton.getMinimumSize().height));
-        avgRadioButton = new JRadioButton();
+        avgRadioButton = new JRadioButton(factors[1]);
         avgRadioButton.setMaximumSize(new Dimension(70, avgRadioButton.getMinimumSize().height));
-        complexRadioButton = new JRadioButton();
+        complexRadioButton = new JRadioButton(factors[2]);
         complexRadioButton.setMaximumSize(new Dimension(70, complexRadioButton.getMinimumSize().height));
 
         total = new JTextField();

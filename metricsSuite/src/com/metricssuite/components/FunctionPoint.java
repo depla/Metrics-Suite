@@ -33,11 +33,11 @@ public class FunctionPoint extends JPanel implements ActionListener {
 
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        eiPanel = new InputOutputPanel("External Inputs");
-        eoPanel = new InputOutputPanel("External Outputs");
-        externalInquiriesPanel = new InputOutputPanel("External Inquiries");
-        ilfPanel = new InputOutputPanel("Internal Logical Files");
-        eifPanel = new InputOutputPanel("External Interface Files");
+        eiPanel = new InputOutputPanel("External Inputs", new String[] {"3", "4", "6"});
+        eoPanel = new InputOutputPanel("External Outputs", new String[] {"4", "5", "7"});
+        externalInquiriesPanel = new InputOutputPanel("External Inquiries", new String[] {"3", "4", "6"});
+        ilfPanel = new InputOutputPanel("Internal Logical Files", new String[] {"7", "10", "15"});
+        eifPanel = new InputOutputPanel("External Interface Files", new String[] {"5", "7", "10"});
         add(wf);
         add(labeling);
         add(eiPanel);
