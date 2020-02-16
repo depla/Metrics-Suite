@@ -4,6 +4,7 @@
 
 package com.metricssuite;
 
+import com.metricssuite.components.NewProjectWindow;
 import com.metricssuite.menu.Menu;
 
 public class main {

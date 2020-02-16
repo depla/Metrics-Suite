@@ -1,5 +1,6 @@
 package com.metricssuite.menu;
 
+import com.metricssuite.components.NewProjectWindow;
 import com.metricssuite.components.languageSelection;
 
 import javax.swing.*;
@@ -73,6 +74,7 @@ public class Menu extends JFrame implements ActionListener {
         switch (i){
             case "New":
                 System.out.println("New Project");
+                new NewProjectWindow();
                 break;
             case "Open":
                 System.out.println("open");
