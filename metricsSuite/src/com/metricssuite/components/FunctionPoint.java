@@ -46,17 +46,87 @@ public class FunctionPoint extends JPanel implements ActionListener {
         add(ilfPanel);
         add(eifPanel);
 
-        JButton button = new JButton("Compute Fp");
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                dummy = eiPanel.getTextfield().getText();
-                System.out.print(dummy);
+        JPanel calcPanel = new JPanel(new GridBagLayout());
+        GridBagConstraints constraints = new GridBagConstraints();
 
-            }
-        });
+        //constraints.fill = GridBagConstraints.HORIZONTAL;
 
-        add(button);
+        JLabel totalLbl = new JLabel("Total Count");
+        constraints.fill = GridBagConstraints.WEST;
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.weightx = .5;
+        calcPanel.add(totalLbl, constraints);
+
+        JTextField totalTextfield = new JTextField();
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.gridx = 1;
+        constraints.gridy = 0;
+        constraints.weightx = .5;
+        calcPanel.add(totalTextfield, constraints);
+
+        JButton functionPointBtn = new JButton("Compute FP");
+        constraints.fill = GridBagConstraints.WEST;
+        constraints.weightx = 0.5;
+        constraints.gridx = 0;
+        constraints.gridy = 1;
+        calcPanel.add(functionPointBtn, constraints);
+
+        JTextField fpTextfield = new JTextField();
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.gridx = 1;
+        constraints.gridy = 1;
+        constraints.weightx = 0.5;
+        calcPanel.add(fpTextfield, constraints);
+
+        JButton vfBtn = new JButton("Value Adjustments");
+        constraints.fill = GridBagConstraints.WEST;
+        constraints.gridx = 0;
+        constraints.gridy = 2;
+        constraints.weightx = 0.5;
+        calcPanel.add(vfBtn, constraints);
+
+        JTextField vfTextfield = new JTextField();
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.gridx = 1;
+        constraints.gridy = 2;
+        constraints.weightx = 0.5;
+        calcPanel.add(vfTextfield, constraints);
+
+        JButton computeSizeBtn = new JButton("Compute Size");
+        constraints.fill = GridBagConstraints.WEST;
+        constraints.gridx = 0;
+        constraints.gridy = 3;
+        calcPanel.add(computeSizeBtn, constraints);
+
+        JLabel langLbl = new JLabel("Current Language");
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.gridx = 1;
+        constraints.gridy = 3;
+        calcPanel.add(langLbl, constraints);
+
+        JTextField languageTextfield = new JTextField();
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.gridx = 2;
+        constraints.gridy = 3;
+        calcPanel.add(languageTextfield, constraints);
+
+        JTextField computeSizeTextfield = new JTextField();
+        constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.gridx = 3;
+        constraints.gridy = 3;
+        calcPanel.add(computeSizeTextfield, constraints);
+
+        JButton changeLangBtn = new JButton("Change Language");
+        constraints.fill = GridBagConstraints.WEST;
+        constraints.gridx = 0;
+        constraints.gridy = 4;
+        calcPanel.add(changeLangBtn, constraints);
+
+        add(calcPanel);
+
+
+
 
 
     }
