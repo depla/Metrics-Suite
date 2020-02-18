@@ -74,7 +74,7 @@ public class Menu extends JFrame implements ActionListener {
         switch (i){
             case "New":
                 System.out.println("New Project");
-                new NewProjectWindow();
+                new NewProjectWindow(this);
                 break;
             case "Open":
                 System.out.println("open");

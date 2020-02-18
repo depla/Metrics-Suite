@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class NewProjectWindow extends JFrame
 {
-    private static final int WINDOW_WIDTH = 400;
+    private static final int WINDOW_WIDTH = 350;
     private static final int WINDOW_HEIGHT = 300;
     private static final String TITLE = "New Project";
     private static final String HEADER_TITLE = "CECS 543 Metrics Suite New Project";
@@ -43,7 +43,7 @@ public class NewProjectWindow extends JFrame
     private JButton cancelButton;
     private JPanel buttonPanel;
 
-    public NewProjectWindow()
+    public NewProjectWindow(JFrame mainFrame)
     {
         super(TITLE);
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
@@ -64,6 +64,9 @@ public class NewProjectWindow extends JFrame
         projectNameLabel = new JLabel(PROJECT_NAME_LABEL);
         productNameLabel = new JLabel(PRODUCT_NAME_LABEL);
         creatorNameLabel = new JLabel(CREATOR_NAME_LABEL);
+        projectNameLabel.setHorizontalAlignment(JLabel.CENTER);
+        productNameLabel.setHorizontalAlignment(JLabel.CENTER);
+        creatorNameLabel.setHorizontalAlignment(JLabel.CENTER);
         projectNameTextField = new JTextField();
         productNameTextField = new JTextField();
         creatorNameTextField = new JTextField();
@@ -92,10 +95,11 @@ public class NewProjectWindow extends JFrame
         okButton = new JButton(OK_BUTTON_TEXT);
         cancelButton = new JButton(CANCEL_BUTTON_TEXT);
         buttonPanel = new JPanel();
-        buttonPanel.setLayout(new GridLayout(1, 2));
         buttonPanel.add(okButton);
         buttonPanel.add(cancelButton);
         mainPanel.add(buttonPanel);
+
+        setLocationRelativeTo(mainFrame);
 
         setVisible(true);
     }
