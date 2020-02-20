@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FunctionPoint extends JPanel implements ActionListener {
+public class FunctionPointGui extends JPanel implements ActionListener {
 
     private InputOutputPanel eiPanel;
     private InputOutputPanel eoPanel;
@@ -14,7 +14,7 @@ public class FunctionPoint extends JPanel implements ActionListener {
     private InputOutputPanel eifPanel;
     private String dummy = "";
 
-    public FunctionPoint(){
+    public FunctionPointGui(){
 
         JPanel wf = new JPanel();
         wf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 50));
@@ -49,48 +49,43 @@ public class FunctionPoint extends JPanel implements ActionListener {
         JPanel calcPanel = new JPanel(new GridBagLayout());
         GridBagConstraints constraints = new GridBagConstraints();
 
-        //constraints.fill = GridBagConstraints.HORIZONTAL;
+        constraints.weightx = 0.5;
 
         JLabel totalLbl = new JLabel("Total Count");
         constraints.fill = GridBagConstraints.WEST;
         constraints.gridx = 0;
         constraints.gridy = 0;
-        constraints.weightx = .5;
         calcPanel.add(totalLbl, constraints);
 
         JTextField totalTextfield = new JTextField();
+        constraints.insets = new Insets(0,0,0,10);
         constraints.fill = GridBagConstraints.HORIZONTAL;
-        constraints.gridx = 1;
+        constraints.gridx = 3;
         constraints.gridy = 0;
-        constraints.weightx = .5;
         calcPanel.add(totalTextfield, constraints);
-
+       // constraints.insets = new Insets(0,0,0,0);
         JButton functionPointBtn = new JButton("Compute FP");
         constraints.fill = GridBagConstraints.WEST;
-        constraints.weightx = 0.5;
         constraints.gridx = 0;
         constraints.gridy = 1;
         calcPanel.add(functionPointBtn, constraints);
 
         JTextField fpTextfield = new JTextField();
         constraints.fill = GridBagConstraints.HORIZONTAL;
-        constraints.gridx = 1;
+        constraints.gridx = 3;
         constraints.gridy = 1;
-        constraints.weightx = 0.5;
         calcPanel.add(fpTextfield, constraints);
 
         JButton vfBtn = new JButton("Value Adjustments");
         constraints.fill = GridBagConstraints.WEST;
         constraints.gridx = 0;
         constraints.gridy = 2;
-        constraints.weightx = 0.5;
         calcPanel.add(vfBtn, constraints);
 
         JTextField vfTextfield = new JTextField();
         constraints.fill = GridBagConstraints.HORIZONTAL;
-        constraints.gridx = 1;
+        constraints.gridx = 3;
         constraints.gridy = 2;
-        constraints.weightx = 0.5;
         calcPanel.add(vfTextfield, constraints);
 
         JButton computeSizeBtn = new JButton("Compute Size");
@@ -100,6 +95,7 @@ public class FunctionPoint extends JPanel implements ActionListener {
         calcPanel.add(computeSizeBtn, constraints);
 
         JLabel langLbl = new JLabel("Current Language");
+        langLbl.setHorizontalAlignment(JLabel.RIGHT);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 1;
         constraints.gridy = 3;
@@ -125,14 +121,20 @@ public class FunctionPoint extends JPanel implements ActionListener {
 
         add(calcPanel);
 
-
-
-
-
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
+    }
+
+    public static void main(String[] args){
+
+        JFrame frame = new JFrame();
+        frame.setLayout(new BorderLayout());
+        frame.setSize(new Dimension(500, 500));
+        FunctionPointGui p = new FunctionPointGui();
+        frame.add(p);
+        frame.setVisible(true);
     }
 }

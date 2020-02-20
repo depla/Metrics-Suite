@@ -1,6 +1,6 @@
 package com.metricssuite.menu;
 
-import com.metricssuite.components.FunctionPoint;
+import com.metricssuite.components.FunctionPointGui;
 import com.metricssuite.components.languageSelection;
 
 import javax.swing.*;
@@ -91,7 +91,7 @@ public class Menu extends JFrame implements ActionListener {
     protected void createTab(String metric) {
 
         if(metric.equals("fp")){
-            FunctionPoint functionPoint = new FunctionPoint();
+            FunctionPointGui functionPoint = new FunctionPointGui();
             tabbedPane.addTab( "Function Points", functionPoint);
         }
 

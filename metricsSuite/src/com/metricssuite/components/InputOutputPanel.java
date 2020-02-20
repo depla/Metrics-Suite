@@ -30,6 +30,7 @@ public class InputOutputPanel extends JPanel {
         complexRadioButton.setMaximumSize(new Dimension(70, complexRadioButton.getMinimumSize().height));
 
         total = new JTextField();
+        //total.setAlignmentX(Component.RIGHT_ALIGNMENT);
         total.setMaximumSize(new Dimension(50, label.getMinimumSize().height));
 
         add(label);
