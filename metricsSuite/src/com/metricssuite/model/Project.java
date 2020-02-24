@@ -12,7 +12,23 @@ public class Project implements Serializable
 
     private FunctionPoint functionPoint;
 
+    /**
+     * Default constructor
+     */
+    public Project()
+    {
 
+    }
+
+    /**
+     * Constructor with parameters
+     *
+     * @param projectName
+     * @param productName
+     * @param creatorName
+     * @param comments
+     * @param language
+     */
     public Project(String projectName, String productName, String creatorName, String comments, String language)
     {
         this.projectName = projectName;
@@ -21,43 +37,6 @@ public class Project implements Serializable
         this.comments = comments;
         this.language = language;
         this.functionPoint = null;
-    }
-
-    /**
-     * Constructor to read in a project
-     * @param fileName the file name that contains the project
-     */
-    public Project(String fileName)
-    {
-        Project object = null;
-
-        try
-        {
-            FileInputStream fileInputStream = new FileInputStream(fileName);
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-
-            object = (Project) objectInputStream.readObject();
-
-            this.projectName = object.getProjectName();
-            this.productName = object.getProductName();
-            this.creatorName = object.getCreatorName();
-            this.comments = object.getComments();
-            this.language = object.getLanguage();
-            this.functionPoint = object.getFunctionPoint();
-
-        }
-        catch (FileNotFoundException e)
-        {
-            e.printStackTrace();
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        catch (ClassNotFoundException e)
-        {
-            e.printStackTrace();
-        }
     }
 
     public String getProjectName()
@@ -123,7 +102,7 @@ public class Project implements Serializable
      * Method to write to a file
      * @param fileName the file name to write to
      */
-    public void writeToFile(String fileName)
+    public void writeProject(String fileName)
     {
         try
         {
@@ -143,5 +122,38 @@ public class Project implements Serializable
         {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Method to read a project from given file name
+     *
+     * @param fileName the file name to read from
+     * @return the project from the file
+     */
+    public static Project readProject(String fileName)
+    {
+        Project object = null;
+
+        try
+        {
+            FileInputStream fileInputStream = new FileInputStream(fileName);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+
+            object = (Project) objectInputStream.readObject();
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        
+        return object;
     }
 }
