@@ -83,10 +83,7 @@ public class languageSelection implements ActionListener {
         JCheckBox cb = (JCheckBox) e.getSource();
         System.out.println(cb.getText());
         if(languages.containsKey(cb.getText())){
-            List<Integer> list = languages.get(cb.getText());
-            for(int i: list){
-                linesOfCode.add(i);
-            }
+            linesOfCode = languages.get(cb.getText());
         }
     }
     public List<Integer> getLinesOfCode(){
