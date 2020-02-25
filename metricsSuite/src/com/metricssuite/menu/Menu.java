@@ -90,6 +90,7 @@ public class Menu extends JFrame implements ActionListener {
         tabbedPane.addTab( "Function Points", new JFrame().getContentPane());
     }
     public static void main(String []args) {
-        new Menu();
+       new Menu();
+
     }
 }
