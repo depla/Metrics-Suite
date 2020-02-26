@@ -39,7 +39,7 @@ public class languageSelection implements ActionListener {
         panel12 = getCheckbox("Visual Basic",50,52,14,276);
 
         button = new JButton("Done");
-
+        button.addActionListener(this);
         frame.add(panel);
         frame.add(panel1);
         frame.add(panel2);
@@ -80,14 +80,26 @@ public class languageSelection implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e){
-        JCheckBox cb = (JCheckBox) e.getSource();
-        System.out.println(cb.getText());
-        if(languages.containsKey(cb.getText())){
-            linesOfCode = languages.get(cb.getText());
+        String i = e.getActionCommand();
+        if(i == "Done"){
+            setVisibility(false);
+        }else {
+            JCheckBox cb = (JCheckBox) e.getSource();
+            System.out.println(cb.getText());
+            if(languages.containsKey(cb.getText())){
+                linesOfCode = languages.get(cb.getText());
+            }
         }
+        System.out.println(i);
+
     }
     public List<Integer> getLinesOfCode(){
         return this.linesOfCode;
     }
+
+    public void setVisibility(boolean b){
+        frame.setVisible(b);
+    }
+
 
 }

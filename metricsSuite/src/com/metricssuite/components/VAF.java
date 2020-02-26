@@ -104,14 +104,25 @@ public class VAF implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e){
-        JComboBox cb = (JComboBox) e.getSource();
-        int value = (int) cb.getSelectedItem();
-        list.add(value);
-        System.out.println(value);
+        String i = e.getActionCommand();
+        if(i == "Done"){
+            setVisibility(false);
+        }else{
+            JComboBox cb = (JComboBox) e.getSource();
+            int value = (int) cb.getSelectedItem();
+            list.add(value);
+            System.out.println(value);
+        }
+
     }
     public List<Integer> getVAFValue(){
         return this.list;
     }
+
+    public void setVisibility(boolean b){
+        frame.setVisible(b);
+    }
+
 
 
 
