@@ -1,9 +1,13 @@
 package com.metricssuite.components;
 
+import com.metricssuite.model.Project;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class NewProjectWindow extends JFrame
+public class NewProjectWindow extends JFrame implements ActionListener
 {
     private static final int WINDOW_WIDTH = 350;
     private static final int WINDOW_HEIGHT = 300;
@@ -15,6 +19,9 @@ public class NewProjectWindow extends JFrame
     private static final String COMMENTS_LABEL = "Comments:";
     private static final String OK_BUTTON_TEXT = "Ok";
     private static final String CANCEL_BUTTON_TEXT = "Cancel";
+
+    private boolean newProjectStatus = false;
+    private Project project = null;
 
     //main panel that holds everything
     private JPanel mainPanel;
@@ -93,7 +100,9 @@ public class NewProjectWindow extends JFrame
 
         //set up the buttons
         okButton = new JButton(OK_BUTTON_TEXT);
+        okButton.addActionListener(this);
         cancelButton = new JButton(CANCEL_BUTTON_TEXT);
+        cancelButton.addActionListener(this);
         buttonPanel = new JPanel();
         buttonPanel.add(okButton);
         buttonPanel.add(cancelButton);
@@ -102,5 +111,77 @@ public class NewProjectWindow extends JFrame
         setLocationRelativeTo(mainFrame);
 
         setVisible(true);
+    }
+
+    public boolean getNewProjectStatus()
+    {
+        return newProjectStatus;
+    }
+
+    public Project getProject()
+    {
+        return project;
+    }
+
+    public void actionPerformed(ActionEvent e)
+    {
+        String eventText = e.getActionCommand();
+
+        switch(eventText)
+        {
+            case OK_BUTTON_TEXT:
+                System.out.println(OK_BUTTON_TEXT);
+                if(checkTextFieldsContents())
+                {
+                    createNewProject();
+                    newProjectStatus = true;
+                    System.out.println(project.toString());
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this,
+                            "Please enter all the name fields.",
+                            "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                break;
+
+            case CANCEL_BUTTON_TEXT:
+                System.out.println(CANCEL_BUTTON_TEXT);
+                cancelNewProject();
+                newProjectStatus = false;
+                break;
+
+            default:
+                throw new IllegalStateException("Unexpected value: " + eventText);
+        }
+    }
+
+    private boolean checkTextFieldsContents()
+    {
+        if(projectNameTextField.getText().isEmpty() ||
+            productNameTextField.getText().isEmpty() ||
+            creatorNameTextField.getText().isEmpty())
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    private void createNewProject()
+    {
+        project = new Project();
+
+        project.setProjectName(projectNameTextField.getText());
+        project.setProductName(productNameTextField.getText());
+        project.setCreatorName(creatorNameTextField.getText());
+        project.setComments(commentsTextArea.getText());
+
+        dispose();
+    }
+
+    private void cancelNewProject()
+    {
+        dispose();
     }
 }

@@ -1,6 +1,7 @@
 package com.metricssuite.model;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class Project implements Serializable
 {
@@ -10,7 +11,7 @@ public class Project implements Serializable
     private String comments;
     private String language;
 
-    private FunctionPoint functionPoint;
+    private ArrayList<FunctionPoint> functionPointArrayList;
 
     /**
      * Default constructor
@@ -36,7 +37,7 @@ public class Project implements Serializable
         this.creatorName = creatorName;
         this.comments = comments;
         this.language = language;
-        this.functionPoint = null;
+        this.functionPointArrayList = new ArrayList<FunctionPoint>();
     }
 
     public String getProjectName()
@@ -88,14 +89,19 @@ public class Project implements Serializable
         this.language = language;
     }
 
-    public FunctionPoint getFunctionPoint()
+    public ArrayList<FunctionPoint> getFunctionPointArrayList()
     {
-        return functionPoint;
+        return functionPointArrayList;
     }
 
-    public void setFunctionPoint(FunctionPoint functionPoint)
+    public void setFunctionPointArrayList(ArrayList<FunctionPoint> functionPointArrayList)
     {
-        this.functionPoint = functionPoint;
+        this.functionPointArrayList = functionPointArrayList;
+    }
+
+    public void addFunctionPoint(FunctionPoint functionPointToAdd)
+    {
+        this.functionPointArrayList.add(functionPointToAdd);
     }
 
     /**
@@ -155,5 +161,16 @@ public class Project implements Serializable
         }
 
         return object;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Project{" +
+                "projectName='" + projectName + '\'' +
+                ", productName='" + productName + '\'' +
+                ", creatorName='" + creatorName + '\'' +
+                ", comments='" + comments + '\'' +
+                '}';
     }
 }
