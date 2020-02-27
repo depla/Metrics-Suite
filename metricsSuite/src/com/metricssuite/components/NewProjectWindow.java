@@ -177,6 +177,11 @@ public class NewProjectWindow extends JFrame implements ActionListener
         project.setCreatorName(creatorNameTextField.getText());
         project.setComments(commentsTextArea.getText());
 
+        //create a ms file
+        String fileName = projectNameTextField.getText() + ".ms";
+
+        project.writeProject(fileName);
+
         dispose();
     }
 
