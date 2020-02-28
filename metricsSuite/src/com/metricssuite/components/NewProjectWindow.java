@@ -50,7 +50,7 @@ public class NewProjectWindow extends JFrame implements ActionListener
     private JButton cancelButton;
     private JPanel buttonPanel;
 
-    public NewProjectWindow(JFrame mainFrame, Project menuProject)
+    public NewProjectWindow(JFrame mainFrame)
     {
         super(TITLE);
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
@@ -109,8 +109,6 @@ public class NewProjectWindow extends JFrame implements ActionListener
         mainPanel.add(buttonPanel);
 
         setLocationRelativeTo(mainFrame);
-        menuProject = new Project();
-        this.project = menuProject;
 
         setVisible(true);
     }
