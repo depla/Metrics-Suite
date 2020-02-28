@@ -1,6 +1,9 @@
 package com.metricssuite.model;
 
-public class Project
+import java.io.*;
+import java.util.ArrayList;
+
+public class Project implements Serializable
 {
     private String projectName;
     private String productName;
@@ -8,9 +11,25 @@ public class Project
     private String comments;
     private String language;
 
-    //private FunctionPoint functionPoint;
+    private ArrayList<FunctionPoint> functionPointArrayList;
 
+    /**
+     * Default constructor
+     */
+    public Project()
+    {
 
+    }
+
+    /**
+     * Constructor with parameters
+     *
+     * @param projectName
+     * @param productName
+     * @param creatorName
+     * @param comments
+     * @param language
+     */
     public Project(String projectName, String productName, String creatorName, String comments, String language)
     {
         this.projectName = projectName;
@@ -18,6 +37,7 @@ public class Project
         this.creatorName = creatorName;
         this.comments = comments;
         this.language = language;
+        this.functionPointArrayList = new ArrayList<FunctionPoint>();
     }
 
     public String getProjectName()
@@ -67,5 +87,90 @@ public class Project
     public void setLanguage(String language)
     {
         this.language = language;
+    }
+
+    public ArrayList<FunctionPoint> getFunctionPointArrayList()
+    {
+        return functionPointArrayList;
+    }
+
+    public void setFunctionPointArrayList(ArrayList<FunctionPoint> functionPointArrayList)
+    {
+        this.functionPointArrayList = functionPointArrayList;
+    }
+
+    public void addFunctionPoint(FunctionPoint functionPointToAdd)
+    {
+        this.functionPointArrayList.add(functionPointToAdd);
+    }
+
+    /**
+     * Method to write to a file
+     * @param fileName the file name to write to
+     */
+    public void writeProject(String fileName)
+    {
+        try
+        {
+            FileOutputStream fileOutputStream = new FileOutputStream(fileName);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
+
+            objectOutputStream.writeObject(this);
+
+            objectOutputStream.close();
+            fileOutputStream.close();
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Method to read a project from given file name
+     *
+     * @param fileName the file name to read from
+     * @return the project from the file
+     */
+    public static Project readProject(String fileName)
+    {
+        Project object = null;
+
+        try
+        {
+            FileInputStream fileInputStream = new FileInputStream(fileName);
+            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
+
+            object = (Project) objectInputStream.readObject();
+        }
+        catch (FileNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+        catch (IOException e)
+        {
+            e.printStackTrace();
+        }
+        catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        }
+
+        return object;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Project{" +
+                "projectName='" + projectName + '\'' +
+                ", productName='" + productName + '\'' +
+                ", creatorName='" + creatorName + '\'' +
+                ", comments='" + comments + '\'' +
+                '}';
     }
 }
