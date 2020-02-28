@@ -1,23 +1,113 @@
 package com.metricssuite.model;
 
+import com.metricssuite.components.languageSelection;
 import javafx.util.Pair;
 
-public class FunctionPoint {
 
-    private Pair<Integer, String> ei;
-    private Pair<Integer, String> eo;
-    private Pair<Integer, String> externalI;
-    private Pair<Integer, String> ilf;
-    private Pair<Integer, String> eif;
-    private int[] vaf = null;
+import java.io.Serializable;
+import java.util.List;
+
+public class FunctionPoint implements Serializable {
+
+    private int eivalue = 0;
+    private int eovalue = 0;
+    private int externalInquiries = 0;
+    private int ilfvalue = 0;
+    private int eifvalue = 0;
+    private String eiWeight;
+    private String eoWeight;
+    private String externalInqWeight;
+    private String ilfWeight;
+    private String eifWeidht;
+
+    private List<Integer> vaf = null;
     private int totalCount;
+    private languageSelection language;
 
-
-    private String language;
-    public FunctionPoint(String language){
+    public FunctionPoint(languageSelection language){
 
         totalCount = 0;
         this.language = language;
+    }
+
+    public int getEivalue() {
+        return eivalue;
+    }
+
+    public void setEivalue(int eivalue) {
+        this.eivalue = eivalue;
+    }
+
+    public int getEovalue() {
+        return eovalue;
+    }
+
+    public void setEovalue(int eovalue) {
+        this.eovalue = eovalue;
+    }
+
+    public int getExternalInquiries() {
+        return externalInquiries;
+    }
+
+    public void setExternalInquiries(int externalInquiries) {
+        this.externalInquiries = externalInquiries;
+    }
+
+    public int getIlfvalue() {
+        return ilfvalue;
+    }
+
+    public void setIlfvalue(int ilfvalue) {
+        this.ilfvalue = ilfvalue;
+    }
+
+    public int getEifvalue() {
+        return eifvalue;
+    }
+
+    public void setEifvalue(int eifvalue) {
+        this.eifvalue = eifvalue;
+    }
+
+    public String getEiWeight() {
+        return eiWeight;
+    }
+
+    public void setEiWeight(String eiWeight) {
+        this.eiWeight = eiWeight;
+    }
+
+    public String getEoWeight() {
+        return eoWeight;
+    }
+
+    public void setEoWeight(String eoWeight) {
+        this.eoWeight = eoWeight;
+    }
+
+    public String getExternalInqWeight() {
+        return externalInqWeight;
+    }
+
+    public void setExternalInqWeight(String externalInqWeight) {
+        this.externalInqWeight = externalInqWeight;
+    }
+
+    public String getIlfWeight() {
+        return ilfWeight;
+    }
+
+    public void setIlfWeight(String ilfWeight) {
+        this.ilfWeight = ilfWeight;
+    }
+
+    public String getEifWeidht() {
+        return eifWeidht;
+    }
+
+    public void setEifWeight(String eifWeidht) {
+        this.eifWeidht = eifWeidht;
     }
 
     public int getTotalCount() {
@@ -28,60 +118,20 @@ public class FunctionPoint {
         this.totalCount = totalCount;
     }
 
-    public String getLanguage() {
+    public languageSelection getLanguage() {
         return language;
     }
 
-    public void setLanguage(String language) {
+    public void setLanguage(languageSelection language) {
         this.language = language;
     }
 
-    public int[] getVaf() {
+    public List<Integer> getVaf() {
         return vaf;
     }
 
-    public void setVaf(int[] vaf) {
+    public void setVaf(List<Integer> vaf) {
         this.vaf = vaf;
-    }
-
-    public Pair<Integer, String> getEi() {
-        return ei;
-    }
-
-    public void setEi(Pair<Integer, String> ei) {
-        this.ei = ei;
-    }
-
-    public Pair<Integer, String> getEo() {
-        return eo;
-    }
-
-    public void setEo(Pair<Integer, String> eo) {
-        this.eo = eo;
-    }
-
-    public Pair<Integer, String> getExternalI() {
-        return externalI;
-    }
-
-    public void setExternalI(Pair<Integer, String> externalI) {
-        this.externalI = externalI;
-    }
-
-    public Pair<Integer, String> getIlf() {
-        return ilf;
-    }
-
-    public void setIlf(Pair<Integer, String> ilf) {
-        this.ilf = ilf;
-    }
-
-    public Pair<Integer, String> getEif() {
-        return eif;
-    }
-
-    public void setEif(Pair<Integer, String> eif) {
-        this.eif = eif;
     }
 
     public double computeFP(){
@@ -97,6 +147,11 @@ public class FunctionPoint {
             sum += value;
         }
         return sum;
+    }
+
+    public int computeTotal(){
+
+        return eivalue + eovalue + externalInquiries + eifvalue + ilfvalue;
     }
 
 

@@ -12,23 +12,27 @@ public class InputOutputPanel extends JPanel {
     private JRadioButton complexRadioButton;
     private JTextField total;
     private String name;
+    private ButtonGroup buttonGroup;
 
     public InputOutputPanel(String name, String[] factors){
 
         this.name = name;
-
+        buttonGroup = new ButtonGroup();
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         label = new JLabel(this.name);
         label.setMaximumSize(new Dimension(150, label.getMinimumSize().height));
         textfield = new JTextField();
         textfield.setMaximumSize(new Dimension(50, label.getMinimumSize().height));
         simpleRadioButton = new JRadioButton(factors[0]);
+        simpleRadioButton.setSelected(true);
         simpleRadioButton.setMaximumSize(new Dimension(70, simpleRadioButton.getMinimumSize().height));
         avgRadioButton = new JRadioButton(factors[1]);
         avgRadioButton.setMaximumSize(new Dimension(70, avgRadioButton.getMinimumSize().height));
         complexRadioButton = new JRadioButton(factors[2]);
         complexRadioButton.setMaximumSize(new Dimension(70, complexRadioButton.getMinimumSize().height));
-
+        buttonGroup.add(simpleRadioButton);
+        buttonGroup.add(avgRadioButton);
+        buttonGroup.add(complexRadioButton);
         total = new JTextField();
         //total.setAlignmentX(Component.RIGHT_ALIGNMENT);
         total.setMaximumSize(new Dimension(50, label.getMinimumSize().height));
@@ -88,6 +92,14 @@ public class InputOutputPanel extends JPanel {
 
     public void setTotal(JTextField total) {
         this.total = total;
+    }
+
+    public ButtonGroup getButtonGroup() {
+        return buttonGroup;
+    }
+
+    public void setButtonGroup(ButtonGroup buttonGroup) {
+        this.buttonGroup = buttonGroup;
     }
 
     @Override
