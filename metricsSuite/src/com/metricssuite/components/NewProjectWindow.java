@@ -102,5 +102,6 @@ public class NewProjectWindow extends JFrame
         setLocationRelativeTo(mainFrame);
 
         setVisible(true);
+
     }
 }
