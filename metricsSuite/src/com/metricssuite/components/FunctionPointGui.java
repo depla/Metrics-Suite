@@ -1,9 +1,13 @@
 package com.metricssuite.components;
 
+import com.metricssuite.model.FunctionPoint;
+import javafx.scene.control.RadioButton;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
 public class FunctionPointGui extends JPanel implements ActionListener {
 
@@ -12,10 +16,17 @@ public class FunctionPointGui extends JPanel implements ActionListener {
     private InputOutputPanel externalInquiriesPanel;
     private InputOutputPanel ilfPanel;
     private InputOutputPanel eifPanel;
-    private String dummy = "";
+    private String dummy = "Java";
+    private FunctionPoint functionPoint;
+    private static int eivalue = 0;
+    private static int eovalue = 0;
+    private static int externalInquiries = 0;
+    private static int ilfvalue = 0;
+    private static int eifvalue = 0;
+
 
     public FunctionPointGui(){
-
+        functionPoint = new FunctionPoint(new languageSelection());
         JPanel wf = new JPanel();
         wf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 50));
         wf.setLayout(new FlowLayout());
@@ -121,6 +132,150 @@ public class FunctionPointGui extends JPanel implements ActionListener {
 
         add(calcPanel);
 
+        /*eiPanel.getTextfield().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.print(eiPanel.getTextfield().getText());
+                eivalue = Integer.parseInt(eiPanel.getTextfield().getText());
+                functionPoint.setEivalue(eivalue);
+
+            }
+        });
+
+        eoPanel.getTextfield().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                eovalue = Integer.parseInt(eoPanel.getTextfield().getText());
+                functionPoint.setEovalue(eovalue);
+            }
+        });
+        externalInquiriesPanel.getTextfield().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                externalInquiries = Integer.parseInt(externalInquiriesPanel.getTextfield().getText());
+                functionPoint.setExternalInquiries(externalInquiries);
+            }
+        });
+
+        ilfPanel.getTextfield().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ilfvalue = Integer.parseInt(ilfPanel.getTextfield().getText());
+                functionPoint.setIlfvalue(ilfvalue);
+            }
+        });
+        eifPanel.getTextfield().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                eifvalue = Integer.parseInt(eifPanel.getTextfield().getText());
+                functionPoint.setEifvalue(eifvalue);
+            }
+        });*/
+
+        eiPanel.getTotal().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                for (Enumeration<AbstractButton> buttons = eiPanel.getButtonGroup().getElements(); buttons.hasMoreElements();) {
+                    AbstractButton button = buttons.nextElement();
+
+                    if (button.isSelected()) {
+                        functionPoint.setEivalue(Integer.parseInt(eiPanel.getTextfield().getText()));
+                        functionPoint.setEiWeight(button.getText());
+                        eivalue = functionPoint.getEivalue() * Integer.parseInt(button.getText());
+                        eiPanel.getTotal().setText(String.valueOf(eivalue));
+                    }
+                }
+
+            }
+        });
+
+        eoPanel.getTotal().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                for (Enumeration<AbstractButton> buttons = eoPanel.getButtonGroup().getElements(); buttons.hasMoreElements();) {
+                    AbstractButton button = buttons.nextElement();
+
+                    if (button.isSelected()) {
+                        functionPoint.setEovalue(Integer.parseInt(eoPanel.getTextfield().getText()));
+                        functionPoint.setEoWeight(button.getText());
+                        eovalue = functionPoint.getEovalue() * Integer.parseInt(button.getText());
+                        eoPanel.getTotal().setText(String.valueOf(eovalue));
+                    }
+                }
+
+            }
+        });
+
+        externalInquiriesPanel.getTotal().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                for (Enumeration<AbstractButton> buttons = externalInquiriesPanel.getButtonGroup().getElements(); buttons.hasMoreElements();) {
+                    AbstractButton button = buttons.nextElement();
+
+                    if (button.isSelected()) {
+                        functionPoint.setExternalInquiries(Integer.parseInt(externalInquiriesPanel.getTextfield().getText()));
+                        functionPoint.setExternalInqWeight(button.getText());
+                        externalInquiries = functionPoint.getExternalInquiries() * Integer.parseInt(button.getText());
+                        externalInquiriesPanel.getTotal().setText(String.valueOf(externalInquiries));
+                    }
+                }
+
+            }
+        });
+
+        ilfPanel.getTotal().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                for (Enumeration<AbstractButton> buttons = ilfPanel.getButtonGroup().getElements(); buttons.hasMoreElements();) {
+                    AbstractButton button = buttons.nextElement();
+
+                    if (button.isSelected()) {
+                        functionPoint.setIlfvalue(Integer.parseInt(ilfPanel.getTextfield().getText()));
+                        functionPoint.setIlfWeight(button.getText());
+                        ilfvalue = functionPoint.getIlfvalue() * Integer.parseInt(button.getText());
+                        ilfPanel.getTotal().setText(String.valueOf(ilfvalue));
+                    }
+                }
+
+            }
+        });
+
+        eifPanel.getTotal().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                for (Enumeration<AbstractButton> buttons = eifPanel.getButtonGroup().getElements(); buttons.hasMoreElements();) {
+                    AbstractButton button = buttons.nextElement();
+
+                    if (button.isSelected()) {
+                        functionPoint.setEifvalue(Integer.parseInt(eifPanel.getTextfield().getText()));
+                        functionPoint.setEifWeight(button.getText());
+                        eifvalue = functionPoint.getEifvalue() * Integer.parseInt(button.getText());
+                        eifPanel.getTotal().setText(String.valueOf(eifvalue));
+                    }
+                }
+
+            }
+        });
+
+        totalTextfield.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                totalTextfield.setText(String.valueOf(computeTotal()));
+            }
+        });
+
+
+
+    }
+
+    public static int computeTotal(){
+
+        return eivalue + eovalue + externalInquiries + eifvalue + ilfvalue;
     }
 
     @Override
