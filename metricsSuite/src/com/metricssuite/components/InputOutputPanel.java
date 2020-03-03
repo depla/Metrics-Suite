@@ -20,6 +20,7 @@ public class InputOutputPanel extends JPanel {
     private JTextField total;
     private String name;
     private ButtonGroup buttonGroup;
+    private String weight = "Average";
 
     public InputOutputPanel(String name, String[] factors){
 
@@ -41,6 +42,7 @@ public class InputOutputPanel extends JPanel {
                     AbstractButton button = buttons.nextElement();
 
                     if (button.isSelected()) {
+                        setWeight(button.getText());
                         Integer buttonValue = Integer.parseInt(button.getText());
                         total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
                     }
@@ -59,6 +61,7 @@ public class InputOutputPanel extends JPanel {
                     AbstractButton button = buttons.nextElement();
 
                     if (button.isSelected()) {
+                        setWeight(button.getText());
                         Integer buttonValue = Integer.parseInt(button.getText());
                         total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
                     }
@@ -75,6 +78,7 @@ public class InputOutputPanel extends JPanel {
                     AbstractButton button = buttons.nextElement();
 
                     if (button.isSelected()) {
+                        setWeight(button.getText());
                         Integer buttonValue = Integer.parseInt(button.getText());
                         total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
                     }
@@ -97,6 +101,14 @@ public class InputOutputPanel extends JPanel {
         add(complexRadioButton);
         add(total);
 
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
     }
 
     public JLabel getLabel() {
