@@ -1,6 +1,7 @@
 package com.metricssuite.components;
 
 import com.metricssuite.model.FunctionPoint;
+import com.metricssuite.model.Project;
 import javafx.scene.control.RadioButton;
 
 import javax.swing.*;
@@ -9,7 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Enumeration;
 
-public class FunctionPointGui extends JPanel implements ActionListener {
+public class FunctionPointGui extends JPanel {
 
     private InputOutputPanel eiPanel;
     private InputOutputPanel eoPanel;
@@ -23,9 +24,11 @@ public class FunctionPointGui extends JPanel implements ActionListener {
     private static int externalInquiries = 0;
     private static int ilfvalue = 0;
     private static int eifvalue = 0;
+    private Project project;
 
 
-    public FunctionPointGui(){
+    public FunctionPointGui(Project p){
+        this.project = p;
         functionPoint = new FunctionPoint(new languageSelection());
         JPanel wf = new JPanel();
         wf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 50));
@@ -132,47 +135,8 @@ public class FunctionPointGui extends JPanel implements ActionListener {
 
         add(calcPanel);
 
-        /*eiPanel.getTextfield().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.print(eiPanel.getTextfield().getText());
-                eivalue = Integer.parseInt(eiPanel.getTextfield().getText());
-                functionPoint.setEivalue(eivalue);
 
-            }
-        });
-
-        eoPanel.getTextfield().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                eovalue = Integer.parseInt(eoPanel.getTextfield().getText());
-                functionPoint.setEovalue(eovalue);
-            }
-        });
-        externalInquiriesPanel.getTextfield().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                externalInquiries = Integer.parseInt(externalInquiriesPanel.getTextfield().getText());
-                functionPoint.setExternalInquiries(externalInquiries);
-            }
-        });
-
-        ilfPanel.getTextfield().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                ilfvalue = Integer.parseInt(ilfPanel.getTextfield().getText());
-                functionPoint.setIlfvalue(ilfvalue);
-            }
-        });
-        eifPanel.getTextfield().addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                eifvalue = Integer.parseInt(eifPanel.getTextfield().getText());
-                functionPoint.setEifvalue(eifvalue);
-            }
-        });*/
-
-        eiPanel.getTotal().addActionListener(new ActionListener() {
+        /*eiPanel.getTotal().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
@@ -260,12 +224,22 @@ public class FunctionPointGui extends JPanel implements ActionListener {
                 }
 
             }
-        });
+        });*/
 
         totalTextfield.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                totalTextfield.setText(String.valueOf(computeTotal()));
+
+                int total = computeTotal();
+                totalTextfield.setText(String.valueOf(total));
+                functionPoint.setTotalCount(total);
+            }
+        });
+
+        functionPointBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                fpTextfield.setText(String.valueOf(functionPoint.computeFP()));
             }
         });
 
@@ -273,23 +247,10 @@ public class FunctionPointGui extends JPanel implements ActionListener {
 
     }
 
-    public static int computeTotal(){
+    public int computeTotal(){
 
-        return eivalue + eovalue + externalInquiries + eifvalue + ilfvalue;
+        return eifPanel.computedTotal()+ eoPanel.computedTotal() + externalInquiriesPanel.computedTotal() + eifPanel.computedTotal()
+                + ilfPanel.computedTotal();
     }
 
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
-    }
-
-    public static void main(String[] args){
-
-        JFrame frame = new JFrame();
-        frame.setLayout(new BorderLayout());
-        frame.setSize(new Dimension(500, 500));
-        FunctionPointGui p = new FunctionPointGui();
-        frame.add(p);
-        frame.setVisible(true);
-    }
 }

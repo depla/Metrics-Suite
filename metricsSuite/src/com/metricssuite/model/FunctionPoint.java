@@ -149,10 +149,5 @@ public class FunctionPoint implements Serializable {
         return sum;
     }
 
-    public int computeTotal(){
-
-        return eivalue + eovalue + externalInquiries + eifvalue + ilfvalue;
-    }
-
 
 }
