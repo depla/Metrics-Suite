@@ -1,5 +1,7 @@
 package com.metricssuite.components;
 
+import com.metricssuite.model.Project;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -103,6 +105,7 @@ public class NewProjectWindow extends JFrame implements ActionListener
         okButton = new JButton(OK_BUTTON_TEXT);
         okButton.addActionListener(this);
         cancelButton = new JButton(CANCEL_BUTTON_TEXT);
+        cancelButton.addActionListener(this);
         buttonPanel = new JPanel();
         buttonPanel.add(okButton);
         buttonPanel.add(cancelButton);
@@ -153,5 +156,73 @@ public class NewProjectWindow extends JFrame implements ActionListener
     }
     public boolean isNewProject(){
         return newProject;
+    }
+
+/*
+    public void actionPerformed(ActionEvent e)
+    {
+        String eventText = e.getActionCommand();
+
+        switch(eventText)
+        {
+            case OK_BUTTON_TEXT:
+                System.out.println(OK_BUTTON_TEXT);
+                if(checkTextFieldsContents())
+                {
+                    createNewProject();
+                    newProjectStatus = true;
+                    System.out.println(project.toString());
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(this,
+                            "Please enter all the name fields.",
+                            "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                break;
+
+            case CANCEL_BUTTON_TEXT:
+                System.out.println(CANCEL_BUTTON_TEXT);
+                cancelNewProject();
+                newProjectStatus = false;
+                break;
+
+            default:
+                throw new IllegalStateException("Unexpected value: " + eventText);
+        }
+    }
+
+    private boolean checkTextFieldsContents()
+    {
+        if(projectNameTextField.getText().isEmpty() ||
+            productNameTextField.getText().isEmpty() ||
+            creatorNameTextField.getText().isEmpty())
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    private void createNewProject()
+    {
+        project = new Project();
+
+        project.setProjectName(projectNameTextField.getText());
+        project.setProductName(productNameTextField.getText());
+        project.setCreatorName(creatorNameTextField.getText());
+        project.setComments(commentsTextArea.getText());
+
+        //create a ms file
+        String fileName = projectNameTextField.getText() + ".ms";
+
+        project.writeProject(fileName);
+
+        this.setVisible(false);
+    }*/
+
+    private void cancelNewProject()
+    {
+        dispose();
     }
 }

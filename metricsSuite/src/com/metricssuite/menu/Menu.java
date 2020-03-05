@@ -9,6 +9,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class Menu extends JFrame implements ActionListener {
     private JTabbedPane tabbedPane;
@@ -16,11 +17,13 @@ public class Menu extends JFrame implements ActionListener {
     private Project project;
     private languageSelection language;
     private FunctionPointGui functionPoint;
+  
+    Project p;
+    //Language l;
 
     public Menu() {
         getContentPane().setLayout(new BorderLayout());
         tabbedPane = new JTabbedPane();
-        this.createTab();
         getContentPane().add(BorderLayout.CENTER, tabbedPane);
         this.setJMenuBar(createMenuBar());
 
@@ -80,6 +83,7 @@ public class Menu extends JFrame implements ActionListener {
         switch (i){
             case "New":
                 System.out.println("New Project");
+
                 projectWindow = new NewProjectWindow(this);
                 if(projectWindow.isNewProject()){//new project created
                    project = new Project();
@@ -91,24 +95,78 @@ public class Menu extends JFrame implements ActionListener {
                 break;
             case "Open":
                 System.out.println("open");
+                createFileChooser();
                 break;
+            case "Save":
+                System.out.println("Save");
+                saveProject();
             case "languages":
+
                 language = new languageSelection();
                 project.setLanguage(language.getLangauge());
                 break;
-
-            case "FunctionPointGui":
-                functionPoint = new FunctionPointGui();
-                //need to pass all data need to calculate function points
+            
+            case "Function Points":
+                createTab();
+                break;
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
     }
     protected void createTab() {
-        tabbedPane.addTab( "Function Points", new JFrame().getContentPane());
+        tabbedPane.addTab( "Function Points", new FunctionPointGui(p));
     }
-    public static void main(String []args) {
-       new Menu();
 
+    private void createFileChooser()
+    {
+        JFileChooser fileChooser = new JFileChooser();
+        File currentDirectory = new File(System.getProperty("user.dir"));
+
+        fileChooser.setCurrentDirectory(currentDirectory);
+        fileChooser.setDialogTitle("Choose a file to open");
+
+        if(fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
+        {
+            String absolutePath = fileChooser.getSelectedFile().getAbsolutePath();
+            //get the last 3 chars of the absolute path
+            String fileExtension = absolutePath.substring(absolutePath.length() - 3);
+
+            //check if the last 3 chars are .ms
+            if(fileExtension.equalsIgnoreCase(".ms"))
+            {
+                System.out.println("chosen ms file: " + fileChooser.getSelectedFile().getAbsolutePath());
+
+                //read the project from the opened file
+                p = Project.readProject(absolutePath);
+
+                System.out.println(p.toString());
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this,
+                        "Please choose an .ms file.",
+                        "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
+
+    private void saveProject()
+    {
+        //check if project is null or not
+        if(p == null)
+        {
+            JOptionPane.showMessageDialog(this,
+                    "There is no open project. Unable to save.",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        //else there is a project open
+        else
+        {
+            p.writeProject(p.getProjectName() + ".ms");
+        }
+    }
+
+    public static void main(String []args) {
+        new Menu();
     }
 }
