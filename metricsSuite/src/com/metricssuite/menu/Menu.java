@@ -13,6 +13,11 @@ import java.io.File;
 
 public class Menu extends JFrame implements ActionListener {
     private JTabbedPane tabbedPane;
+    private NewProjectWindow projectWindow;
+    private Project project;
+    private languageSelection language;
+    private FunctionPointGui functionPoint;
+  
     Project p;
     //Language l;
 
@@ -78,7 +83,15 @@ public class Menu extends JFrame implements ActionListener {
         switch (i){
             case "New":
                 System.out.println("New Project");
-                new NewProjectWindow(this);
+
+                projectWindow = new NewProjectWindow(this);
+                if(projectWindow.isNewProject()){//new project created
+                   project = new Project();
+                   project.setProjectName(projectWindow.getProjectName());
+                   project.setProductName(projectWindow.getProductName());
+                   project.setCreatorName(projectWindow.getCreatorName());
+                }
+
                 break;
             case "Open":
                 System.out.println("open");
@@ -88,8 +101,11 @@ public class Menu extends JFrame implements ActionListener {
                 System.out.println("Save");
                 saveProject();
             case "languages":
-                // l = new languageSelection();
+
+                language = new languageSelection();
+                project.setLanguage(language.getLangauge());
                 break;
+            
             case "Function Points":
                 createTab();
                 break;

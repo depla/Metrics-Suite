@@ -13,6 +13,7 @@ public class languageSelection implements ActionListener {
     private JPanel panel,panel1,panel2,panel3,panel4,panel5,panel6,panel7,panel8,panel9,
             panel10,panel11, panel12;
     private JButton button;
+    private String language;
     private HashMap<String,List<Integer>> languages = new HashMap<>();
     private List<Integer>linesOfCode;
 
@@ -87,7 +88,8 @@ public class languageSelection implements ActionListener {
             JCheckBox cb = (JCheckBox) e.getSource();
             System.out.println(cb.getText());
             if(languages.containsKey(cb.getText())){
-                linesOfCode = languages.get(cb.getText());
+                this.linesOfCode = languages.get(cb.getText());
+                this.language = cb.getText();
             }
         }
         System.out.println(i);
@@ -100,6 +102,8 @@ public class languageSelection implements ActionListener {
     public void setVisibility(boolean b){
         frame.setVisible(b);
     }
-
+    public String getLangauge(){
+        return language;
+    }
 
 }
