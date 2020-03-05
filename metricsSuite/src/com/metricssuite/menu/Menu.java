@@ -103,7 +103,6 @@ public class Menu extends JFrame implements ActionListener {
             case "languages":
 
                 language = new languageSelection();
-                project.setLanguage(language.getLangauge());
                 break;
             
             case "Function Points":
