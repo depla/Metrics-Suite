@@ -171,6 +171,8 @@ public class NewProjectWindow extends JFrame implements ActionListener
 
     private void createNewProject()
     {
+        project = new Project();
+
         project.setProjectName(projectNameTextField.getText());
         project.setProductName(productNameTextField.getText());
         project.setCreatorName(creatorNameTextField.getText());

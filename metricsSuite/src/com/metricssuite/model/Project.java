@@ -9,7 +9,6 @@ public class Project implements Serializable
     private String productName;
     private String creatorName;
     private String comments;
-    private String language;
 
     private ArrayList<FunctionPoint> functionPointArrayList;
 
@@ -36,7 +35,6 @@ public class Project implements Serializable
         this.productName = productName;
         this.creatorName = creatorName;
         this.comments = comments;
-        this.language = language;
         this.functionPointArrayList = new ArrayList<FunctionPoint>();
     }
 
@@ -77,16 +75,6 @@ public class Project implements Serializable
     public void setComments(String comments)
     {
         this.comments = comments;
-    }
-
-    public String getLanguage()
-    {
-        return language;
-    }
-
-    public void setLanguage(String language)
-    {
-        this.language = language;
     }
 
     public ArrayList<FunctionPoint> getFunctionPointArrayList()
