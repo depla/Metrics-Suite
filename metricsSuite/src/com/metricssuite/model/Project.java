@@ -10,15 +10,24 @@ public class Project
 
     //private FunctionPoint functionPoint;
 
+    public Project(){}
 
-    public Project(String projectName, String productName, String creatorName, String comments, String language)
+    public Project(String projectName, String productName, String creatorName, String comments)
     {
         this.projectName = projectName;
         this.productName = productName;
         this.creatorName = creatorName;
         this.comments = comments;
-        this.language = language;
     }
+
+//    public Project(String projectName, String productName, String creatorName, String comments, String language)
+//    {
+//        this.projectName = projectName;
+//        this.productName = productName;
+//        this.creatorName = creatorName;
+//        this.comments = comments;
+//        this.language = language;
+//    }
 
     public String getProjectName()
     {

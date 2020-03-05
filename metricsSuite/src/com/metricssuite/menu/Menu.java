@@ -3,6 +3,7 @@ package com.metricssuite.menu;
 import com.metricssuite.components.FunctionPointGui;
 import com.metricssuite.components.NewProjectWindow;
 import com.metricssuite.components.languageSelection;
+import com.metricssuite.model.Project;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,7 +12,10 @@ import java.awt.event.ActionListener;
 
 public class Menu extends JFrame implements ActionListener {
     private JTabbedPane tabbedPane;
-    //langu l
+    private NewProjectWindow projectWindow;
+    private Project project;
+    private languageSelection language;
+    private FunctionPointGui functionPoint;
 
     public Menu() {
         getContentPane().setLayout(new BorderLayout());
@@ -76,18 +80,26 @@ public class Menu extends JFrame implements ActionListener {
         switch (i){
             case "New":
                 System.out.println("New Project");
-                new NewProjectWindow(this);
+                projectWindow = new NewProjectWindow(this);
+                if(projectWindow.isNewProject()){//new project created
+                   project = new Project();
+                   project.setProjectName(projectWindow.getProjectName());
+                   project.setProductName(projectWindow.getProductName());
+                   project.setCreatorName(projectWindow.getCreatorName());
+                }
 
                 break;
             case "Open":
                 System.out.println("open");
                 break;
             case "languages":
-                languageSelection l = new languageSelection();
+                language = new languageSelection();
+                project.setLanguage(language.getLangauge());
                 break;
 
             case "FunctionPointGui":
-                new FunctionPointGui();
+                functionPoint = new FunctionPointGui();
+                //need to pass all data need to calculate function points
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
