@@ -27,9 +27,8 @@ public class Project implements Serializable
      * @param productName
      * @param creatorName
      * @param comments
-     * @param language
      */
-    public Project(String projectName, String productName, String creatorName, String comments, String language)
+    public Project(String projectName, String productName, String creatorName, String comments)
     {
         this.projectName = projectName;
         this.productName = productName;
