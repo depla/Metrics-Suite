@@ -35,12 +35,59 @@ public class FunctionPointGui extends JPanel {
     private VAF vaf;
     private languageSelection languageSelection;
 
-
-    public FunctionPointGui(Project p, FunctionPoint fp, languageSelection language){
+    public FunctionPointGui(Project p, languageSelection language) {
         this.project = p;
         this.languageSelection = language;
-        this.functionPoint = fp;
         vaf = new VAF();
+        functionPoint = new FunctionPoint();
+         initGui();
+         initListeners();
+    }
+
+
+    public FunctionPointGui(Project p, FunctionPoint fp, languageSelection language) {
+
+        this.functionPoint = fp;
+        this.project = p;
+        this.languageSelection = language;
+        vaf = new VAF();
+
+        initGui();
+        initListeners();
+
+        eiPanel.getTextfield().setText(String.valueOf(this.functionPoint.getEivalue()));
+        eoPanel.getTextfield().setText(String.valueOf(this.functionPoint.getEovalue()));
+        externalInquiriesPanel.getTextfield().setText(String.valueOf(this.functionPoint.getExternalInquiries()));
+        ilfPanel.getTextfield().setText(String.valueOf(this.functionPoint.getIlfvalue()));
+        eifPanel.getTextfield().setText(String.valueOf(this.functionPoint.getEifvalue()));
+
+        String weight = this.functionPoint.getEiWeight();
+
+        setWeights(eiPanel, weight);
+
+        weight = this.functionPoint.getEoWeight();
+
+        setWeights(eoPanel, weight);
+
+        weight = this.functionPoint.getExternalInqWeight();
+
+        setWeights(externalInquiriesPanel, weight);
+
+        weight = this.functionPoint.getIlfWeight();
+
+        setWeights(ilfPanel, weight);
+
+        weight = this.functionPoint.getEifWeight();
+
+        setWeights(eifPanel, weight);
+
+        totalTextfield.setText(String.valueOf(functionPoint.getTotalCount()));
+        languageTextfield.setText(functionPoint.getLanguage());
+        fpTextfield.setText(String.valueOf(functionPoint.getFunctionPoint()));
+
+    }
+
+    private void initGui() {
 
         JPanel wf = new JPanel();
         wf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 50));
@@ -59,11 +106,11 @@ public class FunctionPointGui extends JPanel {
 
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        eiPanel = new InputOutputPanel("External Inputs", new String[] {"3", "4", "6"});
-        eoPanel = new InputOutputPanel("External Outputs", new String[] {"4", "5", "7"});
-        externalInquiriesPanel = new InputOutputPanel("External Inquiries", new String[] {"3", "4", "6"});
-        ilfPanel = new InputOutputPanel("Internal Logical Files", new String[] {"7", "10", "15"});
-        eifPanel = new InputOutputPanel("External Interface Files", new String[] {"5", "7", "10"});
+        eiPanel = new InputOutputPanel("External Inputs", new String[]{"3", "4", "6"});
+        eoPanel = new InputOutputPanel("External Outputs", new String[]{"4", "5", "7"});
+        externalInquiriesPanel = new InputOutputPanel("External Inquiries", new String[]{"3", "4", "6"});
+        ilfPanel = new InputOutputPanel("Internal Logical Files", new String[]{"7", "10", "15"});
+        eifPanel = new InputOutputPanel("External Interface Files", new String[]{"5", "7", "10"});
         add(wf);
         add(labeling);
         add(eiPanel);
@@ -84,12 +131,12 @@ public class FunctionPointGui extends JPanel {
         calcPanel.add(totalLbl, constraints);
 
         totalTextfield = new JTextField();
-        constraints.insets = new Insets(0,0,0,10);
+        constraints.insets = new Insets(0, 0, 0, 10);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 3;
         constraints.gridy = 0;
         calcPanel.add(totalTextfield, constraints);
-       // constraints.insets = new Insets(0,0,0,0);
+        // constraints.insets = new Insets(0,0,0,0);
         functionPointBtn = new JButton("Compute FP");
         constraints.fill = GridBagConstraints.WEST;
         constraints.gridx = 0;
@@ -147,74 +194,20 @@ public class FunctionPointGui extends JPanel {
         calcPanel.add(changeLangBtn, constraints);
 
         add(calcPanel);
+    }
 
-        if (this.functionPoint != null){
-            eiPanel.getTextfield().setText(String.valueOf(this.functionPoint.getEivalue()));
-            eoPanel.getTextfield().setText(String.valueOf(this.functionPoint.getEovalue()));
-            externalInquiriesPanel.getTextfield().setText(String.valueOf(this.functionPoint.getExternalInquiries()));
-            ilfPanel.getTextfield().setText(String.valueOf(this.functionPoint.getIlfvalue()));
-            eifPanel.getTextfield().setText(String.valueOf(this.functionPoint.getEifvalue()));
+    private void setWeights(InputOutputPanel panel, String weight){
 
-            String weight = this.functionPoint.getEiWeight();
+        for (Enumeration<AbstractButton> buttons = panel.getButtonGroup().getElements(); buttons.hasMoreElements(); ) {
+            AbstractButton button = buttons.nextElement();
 
-            for (Enumeration<AbstractButton> buttons = eiPanel.getButtonGroup().getElements(); buttons.hasMoreElements();) {
-                AbstractButton button = buttons.nextElement();
-
-                if (button.getText().equals(weight)) {
-                    button.setSelected(true);
-                }
+            if (button.getText().equals(weight)) {
+                button.setSelected(true);
             }
-
-            weight = this.functionPoint.getEoWeight();
-
-            for (Enumeration<AbstractButton> buttons = eoPanel.getButtonGroup().getElements(); buttons.hasMoreElements();) {
-                AbstractButton button = buttons.nextElement();
-
-                if (button.getText().equals(weight)) {
-                    button.setSelected(true);
-                }
-            }
-
-            weight = this.functionPoint.getExternalInqWeight();
-
-            for (Enumeration<AbstractButton> buttons = externalInquiriesPanel.getButtonGroup().getElements(); buttons.hasMoreElements();) {
-                AbstractButton button = buttons.nextElement();
-
-                if (button.getText().equals(weight)) {
-                    button.setSelected(true);
-                }
-            }
-
-            weight = this.functionPoint.getIlfWeight();
-
-            for (Enumeration<AbstractButton> buttons = ilfPanel.getButtonGroup().getElements(); buttons.hasMoreElements();) {
-                AbstractButton button = buttons.nextElement();
-
-                if (button.getText().equals(weight)) {
-                    button.setSelected(true);
-                }
-            }
-
-            weight = this.functionPoint.getEifWeight();
-
-            for (Enumeration<AbstractButton> buttons = eifPanel.getButtonGroup().getElements(); buttons.hasMoreElements();) {
-                AbstractButton button = buttons.nextElement();
-
-                if (button.getText().equals(weight)) {
-                    button.setSelected(true);
-                }
-            }
-
-            totalTextfield.setText(String.valueOf(functionPoint.getTotalCount()));
-            languageTextfield.setText(functionPoint.getLanguage());
-            fpTextfield.setText(String.valueOf(functionPoint.getFunctionPoint()));
-
-
-        }else {
-            this.functionPoint = new FunctionPoint();
-
         }
+    }
 
+    private void initListeners(){
 
         functionPointBtn.addActionListener(new ActionListener() {
             @Override
@@ -301,13 +294,11 @@ public class FunctionPointGui extends JPanel {
                 functionPoint.setTotalCount(total);
             }
         });
-
-
     }
 
-    public int computeTotal(){
+    public int computeTotal() {
 
-        return eiPanel.computedTotal()+ eoPanel.computedTotal() + externalInquiriesPanel.computedTotal() + eifPanel.computedTotal()
+        return eiPanel.computedTotal() + eoPanel.computedTotal() + externalInquiriesPanel.computedTotal() + eifPanel.computedTotal()
                 + ilfPanel.computedTotal();
     }
 

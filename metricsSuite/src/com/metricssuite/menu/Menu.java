@@ -84,7 +84,6 @@ public class Menu extends JFrame implements ActionListener {
         switch (i){
             case "New":
                 System.out.println("New Project");
-
                 project = new Project();
                 projectWindow = new NewProjectWindow(this, project);
 
@@ -92,8 +91,6 @@ public class Menu extends JFrame implements ActionListener {
             case "Open":
                 System.out.println("open");
                 createFileChooser();
-                for(FunctionPoint point: project.getFunctionPointArrayList())
-                    createTab(point);
                 break;
             case "Save":
                 System.out.println("Save");
@@ -104,17 +101,25 @@ public class Menu extends JFrame implements ActionListener {
                 break;
             
             case "Function Points":
-                createTab(null);
-                System.out.println(project.toString());
-                //createTab(new FunctionPoint());
+                createTab();
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
     }
-    private void createTab(FunctionPoint fp) {
+    private void createTab() {
 
-        tabbedPane.addTab( "Function Points", new FunctionPointGui(project, fp, language));
+        tabbedPane.addTab( "Function Points", new FunctionPointGui(project, language));
+    }
+
+    private void createTab(FunctionPoint fp){
+        tabbedPane.addTab( "Function Points", new FunctionPointGui(project, fp,language));
+    }
+
+    private void setTabsFromSaved(){
+
+        for(FunctionPoint point: project.getFunctionPointArrayList())
+            createTab(point);
     }
 
     private void createFileChooser()
@@ -138,6 +143,7 @@ public class Menu extends JFrame implements ActionListener {
 
                 //read the project from the opened file
                 project = Project.readProject(absolutePath);
+                setTabsFromSaved();
 
                 System.out.println(project.toString());
             }
