@@ -92,6 +92,8 @@ public class Menu extends JFrame implements ActionListener {
             case "Open":
                 System.out.println("open");
                 createFileChooser();
+                for(FunctionPoint point: project.getFunctionPointArrayList())
+                    createTab(point);
                 break;
             case "Save":
                 System.out.println("Save");

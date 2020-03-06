@@ -40,6 +40,7 @@ public class FunctionPointGui extends JPanel {
         this.project = p;
         this.languageSelection = language;
         this.functionPoint = fp;
+        vaf = new VAF();
 
         JPanel wf = new JPanel();
         wf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 50));
@@ -252,22 +253,20 @@ public class FunctionPointGui extends JPanel {
         });
 
 
-        vfTextfield.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                int sum = 0;
-                for (Integer integer : FunctionPointGui.this.functionPoint.getVaf()) {
-                    sum += integer;
-                }
-                vfTextfield.setText(String.valueOf(sum));
-            }
-        });
-
-
         vfBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                vaf = new VAF(FunctionPointGui.this.functionPoint.getVaf());
+                vaf.setVisibility(true);
+
+            }
+        });
+
+        vaf.getDone().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                functionPoint.setVaf(vaf.getVAFValue());
+                vfTextfield.setText(String.valueOf(functionPoint.getVafTotal()));
+
             }
         });
 
@@ -289,7 +288,7 @@ public class FunctionPointGui extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 List<Integer> list = languageSelection.getLinesOfCode();
-                computeSizeTextfield.setText(String.valueOf(list.get(0) * FunctionPointGui.this.functionPoint.computeFP()));
+                computeSizeTextfield.setText(String.valueOf(list.get(0) * functionPoint.computeFP()));
             }
         });
 
@@ -299,7 +298,7 @@ public class FunctionPointGui extends JPanel {
 
                 int total = computeTotal();
                 totalTextfield.setText(String.valueOf(total));
-                FunctionPointGui.this.functionPoint.setTotalCount(total);
+                functionPoint.setTotalCount(total);
             }
         });
 
