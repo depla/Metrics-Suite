@@ -13,7 +13,9 @@ public class languageSelection implements ActionListener {
     private JPanel panel,panel1,panel2,panel3,panel4,panel5,panel6,panel7,panel8,panel9,
             panel10,panel11, panel12;
     private JButton button;
+    private ButtonGroup btnGroup = new ButtonGroup();
     private String language;
+
     private HashMap<String,List<Integer>> languages = new HashMap<>();
     private List<Integer>linesOfCode;
 
@@ -26,18 +28,18 @@ public class languageSelection implements ActionListener {
 
         JLabel label= new JLabel("Select a language");
         panel.add(label);
-        panel1 = getCheckbox("Assembler",209,203,91,320);
-        panel2 = getCheckbox("Ada",154,0,104,205);
-        panel3 = getCheckbox("C",148,107,22,704);
-        panel4 = getCheckbox( "C++",59,53,20,178 );
-        panel5 = getCheckbox("C#",58,59,51,66);
-        panel6 = getCheckbox("COBOL",80,78,8,400);
-        panel7 = getCheckbox("FORTRAN",90,118,35,0);
-        panel8 = getCheckbox("HTML",43,42,35,53);
-        panel9 = getCheckbox("Java",55,53,9,214);
-        panel10 = getCheckbox("JavaScript",54,55,45,63);
-        panel11 = getCheckbox("VBScript",38,37,29,50);
-        panel12 = getCheckbox("Visual Basic",50,52,14,276);
+        panel1 = getRadioButton("Assembler",209,203,91,320);
+        panel2 = getRadioButton("Ada",154,0,104,205);
+        panel3 = getRadioButton("C",148,107,22,704);
+        panel4 = getRadioButton( "C++",59,53,20,178 );
+        panel5 = getRadioButton("C#",58,59,51,66);
+        panel6 = getRadioButton("COBOL",80,78,8,400);
+        panel7 = getRadioButton("FORTRAN",90,118,35,0);
+        panel8 = getRadioButton("HTML",43,42,35,53);
+        panel9 = getRadioButton("Java",55,53,9,214);
+        panel10 = getRadioButton("JavaScript",54,55,45,63);
+        panel11 = getRadioButton("VBScript",38,37,29,50);
+        panel12 = getRadioButton("Visual Basic",50,52,14,276);
 
         button = new JButton("Done");
         button.addActionListener(this);
@@ -60,17 +62,27 @@ public class languageSelection implements ActionListener {
         frame.setVisible(true);
     }
 
-    private JPanel getCheckbox(String text, int avg, int median, int low, int high ){
+//    private JPanel getCheckbox(String text, int avg, int median, int low, int high ){
+//        JPanel panel = new JPanel();
+//        panel.setLayout(new BoxLayout(panel,BoxLayout.X_AXIS));
+//        JCheckBox box = new JCheckBox(text);
+//        box.addActionListener(this);
+//        panel.add(box);
+//        languages.put(text,putLinesOfCode(avg,median,low,high));
+//
+//        return panel;
+//    }
+
+    private JPanel getRadioButton(String text, int avg, int median, int low, int high){
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel,BoxLayout.X_AXIS));
-        JCheckBox box = new JCheckBox(text);
-        box.addActionListener(this);
-        panel.add(box);
+        JRadioButton button = new JRadioButton(text);
+        button.addActionListener(this);
+        btnGroup.add(button);
+        panel.add(button);
         languages.put(text,putLinesOfCode(avg,median,low,high));
-
         return panel;
     }
-
     private List<Integer> putLinesOfCode(int avg, int median, int low, int high){
         List<Integer> result = new ArrayList<>();
         result.add(avg);
@@ -85,11 +97,10 @@ public class languageSelection implements ActionListener {
         if(i == "Done"){
             setVisibility(false);
         }else {
-            JCheckBox cb = (JCheckBox) e.getSource();
-            System.out.println(cb.getText());
-            if(languages.containsKey(cb.getText())){
-                this.linesOfCode = languages.get(cb.getText());
-                this.language = cb.getText();
+            JRadioButton btn = (JRadioButton) e.getSource();
+            if(languages.containsKey(btn.getText())){
+                this.linesOfCode = languages.get(btn.getText());
+                this.language = btn.getText();
             }
         }
         System.out.println(i);
