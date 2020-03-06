@@ -9,11 +9,6 @@ import java.awt.event.ActionListener;
 
 public class NewProjectWindow extends JFrame implements ActionListener
 {
-    private String projectName;
-    private String productName;
-    private String creatorName;
-    private String comments;
-    private boolean newProject = false;
     private static final int WINDOW_WIDTH = 350;
     private static final int WINDOW_HEIGHT = 300;
     private static final String TITLE = "New Project";
@@ -24,7 +19,6 @@ public class NewProjectWindow extends JFrame implements ActionListener
     private static final String COMMENTS_LABEL = "Comments:";
     private static final String OK_BUTTON_TEXT = "Ok";
     private static final String CANCEL_BUTTON_TEXT = "Cancel";
-
 
     //main panel that holds everything
     private JPanel mainPanel;
@@ -53,9 +47,12 @@ public class NewProjectWindow extends JFrame implements ActionListener
     private JButton cancelButton;
     private JPanel buttonPanel;
 
-    public NewProjectWindow(JFrame mainFrame)
+    private Project project;
+
+    public NewProjectWindow(JFrame mainFrame, Project project)
     {
         super(TITLE);
+        this.project = project;
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setLayout(new BorderLayout());
 
@@ -121,74 +118,27 @@ public class NewProjectWindow extends JFrame implements ActionListener
         //if the button is ok --> store name
         String i = e.getActionCommand();
         System.out.println(i);
-        if(i == "Ok"){
-            this.setProjectName();
-            this.setProductName();
-            this.setCreatorName();
-            newProject = true;
-        }
-    }
-    private void setProjectName(){
-        this.projectName = projectNameTextField.getText();
-        System.out.println(getProjectName());
-    }
-    private void setProductName(){
-        this.productName= productNameTextField.getText();
-        System.out.println(getProductName());
-    }
-    private void setCreatorName(){
-        this.creatorName = creatorNameTextField.getText();
-        System.out.println(getCreatorName());
-    }
-    private void setComments(){
-        this.comments = commentsTextArea.getText();
-    }
-
-    public String getProjectName(){
-        return projectName;
-    }
-    public String getProductName(){
-        return productName;
-    }
-
-    public String getCreatorName(){
-        return creatorName;
-    }
-    public boolean isNewProject(){
-        return newProject;
-    }
-
-/*
-    public void actionPerformed(ActionEvent e)
-    {
-        String eventText = e.getActionCommand();
-
-        switch(eventText)
+        if(i.equalsIgnoreCase("Ok"))
         {
-            case OK_BUTTON_TEXT:
-                System.out.println(OK_BUTTON_TEXT);
-                if(checkTextFieldsContents())
-                {
-                    createNewProject();
-                    newProjectStatus = true;
-                    System.out.println(project.toString());
-                }
-                else
-                {
-                    JOptionPane.showMessageDialog(this,
-                            "Please enter all the name fields.",
-                            "Error", JOptionPane.ERROR_MESSAGE);
-                }
-                break;
+            if(checkTextFieldsContents())
+            {
+                project.setProjectName(projectNameTextField.getText());
+                project.setProductName(productNameTextField.getText());
+                project.setCreatorName(creatorNameTextField.getText());
+                project.setComments(commentsTextArea.getText());
 
-            case CANCEL_BUTTON_TEXT:
-                System.out.println(CANCEL_BUTTON_TEXT);
-                cancelNewProject();
-                newProjectStatus = false;
-                break;
-
-            default:
-                throw new IllegalStateException("Unexpected value: " + eventText);
+                setVisible(false);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(this,
+                        "Please enter all the name fields.",
+                        "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        else //user hit cancel
+        {
+            dispose();
         }
     }
 
@@ -204,25 +154,4 @@ public class NewProjectWindow extends JFrame implements ActionListener
         return true;
     }
 
-    private void createNewProject()
-    {
-        project = new Project();
-
-        project.setProjectName(projectNameTextField.getText());
-        project.setProductName(productNameTextField.getText());
-        project.setCreatorName(creatorNameTextField.getText());
-        project.setComments(commentsTextArea.getText());
-
-        //create a ms file
-        String fileName = projectNameTextField.getText() + ".ms";
-
-        project.writeProject(fileName);
-
-        this.setVisible(false);
-    }*/
-
-    private void cancelNewProject()
-    {
-        dispose();
-    }
 }

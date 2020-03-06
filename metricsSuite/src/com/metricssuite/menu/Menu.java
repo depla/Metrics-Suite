@@ -17,8 +17,7 @@ public class Menu extends JFrame implements ActionListener {
     private Project project;
     private languageSelection language;
     private FunctionPointGui functionPoint;
-  
-    Project p;
+
     //Language l;
 
     public Menu() {
@@ -84,13 +83,8 @@ public class Menu extends JFrame implements ActionListener {
             case "New":
                 System.out.println("New Project");
 
-                projectWindow = new NewProjectWindow(this);
-                if(projectWindow.isNewProject()){//new project created
-                   project = new Project();
-                   project.setProjectName(projectWindow.getProjectName());
-                   project.setProductName(projectWindow.getProductName());
-                   project.setCreatorName(projectWindow.getCreatorName());
-                }
+                project = new Project();
+                projectWindow = new NewProjectWindow(this, project);
 
                 break;
             case "Open":
@@ -113,7 +107,7 @@ public class Menu extends JFrame implements ActionListener {
         }
     }
     protected void createTab() {
-        tabbedPane.addTab( "Function Points", new FunctionPointGui(p));
+        tabbedPane.addTab( "Function Points", new FunctionPointGui(project));
     }
 
     private void createFileChooser()
@@ -136,9 +130,9 @@ public class Menu extends JFrame implements ActionListener {
                 System.out.println("chosen ms file: " + fileChooser.getSelectedFile().getAbsolutePath());
 
                 //read the project from the opened file
-                p = Project.readProject(absolutePath);
+                project = Project.readProject(absolutePath);
 
-                System.out.println(p.toString());
+                System.out.println(project.toString());
             }
             else
             {
@@ -152,7 +146,7 @@ public class Menu extends JFrame implements ActionListener {
     private void saveProject()
     {
         //check if project is null or not
-        if(p == null)
+        if(project == null)
         {
             JOptionPane.showMessageDialog(this,
                     "There is no open project. Unable to save.",
@@ -161,7 +155,7 @@ public class Menu extends JFrame implements ActionListener {
         //else there is a project open
         else
         {
-            p.writeProject(p.getProjectName() + ".ms");
+            project.writeProject(project.getProjectName() + ".ms");
         }
     }
 
