@@ -17,7 +17,11 @@ public class Project implements Serializable
      */
     public Project()
     {
-
+        projectName = "";
+        productName = "";
+        creatorName = "";
+        comments = "";
+        functionPointArrayList = new ArrayList<>();
     }
 
     /**
@@ -80,6 +84,11 @@ public Project(String projectName, String productName, String creatorName, Strin
     public ArrayList<FunctionPoint> getFunctionPointArrayList()
     {
         return functionPointArrayList;
+    }
+
+    public FunctionPoint getFunctionPoint(int index)
+    {
+        return functionPointArrayList.get(index);
     }
 
     public void setFunctionPointArrayList(ArrayList<FunctionPoint> functionPointArrayList)
