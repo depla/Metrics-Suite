@@ -89,9 +89,7 @@ public class InputOutputPanel extends JPanel {
         buttonGroup.add(avgRadioButton);
         buttonGroup.add(complexRadioButton);
         total = new JTextField();
-        //total.getDocument().addDocumentListener(new IOPanelDocumentListener());
-        //total.setInputVerifier(new TextInputVerifier());
-        //total.setAlignmentX(Component.RIGHT_ALIGNMENT);
+        total.setEditable(false);
         total.setMaximumSize(new Dimension(50, label.getMinimumSize().height));
 
         add(label);

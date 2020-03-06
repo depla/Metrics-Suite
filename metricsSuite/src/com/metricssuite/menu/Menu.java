@@ -3,6 +3,7 @@ package com.metricssuite.menu;
 import com.metricssuite.components.FunctionPointGui;
 import com.metricssuite.components.NewProjectWindow;
 import com.metricssuite.components.languageSelection;
+import com.metricssuite.model.FunctionPoint;
 import com.metricssuite.model.Project;
 
 import javax.swing.*;
@@ -31,6 +32,7 @@ public class Menu extends JFrame implements ActionListener {
         setSize(new Dimension(500, 500));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
+        language = new languageSelection();
     }
     protected JMenuBar createMenuBar() {
         JMenuBar menuBar = new JMenuBar(); //create menubar
@@ -96,18 +98,21 @@ public class Menu extends JFrame implements ActionListener {
                 saveProject();
             case "languages":
 
-                language = new languageSelection();
+                language.setVisibility(true);
                 break;
             
             case "Function Points":
-                createTab();
+                createTab(null);
+                System.out.println(project.toString());
+                //createTab(new FunctionPoint());
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
     }
-    protected void createTab() {
-        tabbedPane.addTab( "Function Points", new FunctionPointGui(project));
+    private void createTab(FunctionPoint fp) {
+
+        tabbedPane.addTab( "Function Points", new FunctionPointGui(project, fp, language));
     }
 
     private void createFileChooser()

@@ -13,9 +13,10 @@ public class VAF implements ActionListener {
             panel10,panel11, panel12,panel13,panel14;
     private JPanel bottom;
     private JComboBox row1, row2, row3, row4, row5, row6, row7, row8, row9, row10, row11, row12, row13, row14;
-    private List<Integer> list = new ArrayList<Integer>();
+    private List<Integer> list;
 
-    public VAF(){
+    public VAF(List<Integer> functionList){
+        this.list = functionList;
         frame = new JFrame();
         frame.setTitle("Value Adjustment Factors");
 
@@ -44,6 +45,8 @@ public class VAF implements ActionListener {
 
         JButton done = new JButton("Done");
         JButton cancel = new JButton("Cancel");
+        done.addActionListener(this);
+        cancel.addActionListener(this);
         bottom.add(done);
         bottom.add(cancel);
         frame.add(panel);
@@ -105,9 +108,11 @@ public class VAF implements ActionListener {
 
     public void actionPerformed(ActionEvent e){
         String i = e.getActionCommand();
-        if(i == "Done"){
+        if (i.equalsIgnoreCase("Done")) {
             setVisibility(false);
-        }else{
+        } else if(i.equalsIgnoreCase("cancel")) {
+            this.setVisibility(false);
+        } else {
             JComboBox cb = (JComboBox) e.getSource();
             int value = (int) cb.getSelectedItem();
             list.add(value);

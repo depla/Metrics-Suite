@@ -118,7 +118,7 @@ public class NewProjectWindow extends JFrame implements ActionListener
         //if the button is ok --> store name
         String i = e.getActionCommand();
         System.out.println(i);
-        if(i.equalsIgnoreCase("Ok"))
+        if(i.equals("Ok"))
         {
             if(checkTextFieldsContents())
             {
@@ -126,7 +126,7 @@ public class NewProjectWindow extends JFrame implements ActionListener
                 project.setProductName(productNameTextField.getText());
                 project.setCreatorName(creatorNameTextField.getText());
                 project.setComments(commentsTextArea.getText());
-
+                System.out.print(project.toString());
                 setVisible(false);
             }
             else

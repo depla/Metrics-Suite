@@ -10,7 +10,7 @@ public class Project implements Serializable
     private String creatorName;
     private String comments;
 
-    private ArrayList<FunctionPoint> functionPointArrayList;
+    private ArrayList<FunctionPoint> functionPointArrayList  = new ArrayList<FunctionPoint>();
 
     /**
      * Default constructor
@@ -35,7 +35,6 @@ public Project(String projectName, String productName, String creatorName, Strin
         this.productName = productName;
         this.creatorName = creatorName;
         this.comments = comments;
-        this.functionPointArrayList = new ArrayList<FunctionPoint>();
     }
 
     public String getProjectName()

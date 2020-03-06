@@ -57,7 +57,7 @@ public class languageSelection implements ActionListener {
         frame.add(button);
         frame.setSize(200,400);
 
-        frame.setVisible(true);
+        frame.setVisible(false);
     }
 
     private JPanel getCheckbox(String text, int avg, int median, int low, int high ){
@@ -82,7 +82,7 @@ public class languageSelection implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e){
         String i = e.getActionCommand();
-        if(i == "Done"){
+        if(i.equalsIgnoreCase("Done")){
             setVisibility(false);
         }else {
             JCheckBox cb = (JCheckBox) e.getSource();
