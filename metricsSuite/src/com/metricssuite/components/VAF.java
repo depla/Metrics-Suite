@@ -93,7 +93,6 @@ public class VAF implements ActionListener {
         JLabel label = new JLabel(st);
         label.setAlignmentX(Component.LEFT_ALIGNMENT);
         leftPanel.add(label);
-
         list = dropdown();
         list.addActionListener(this);
         list.setMaximumSize(new Dimension(80, 50));
@@ -132,6 +131,10 @@ public class VAF implements ActionListener {
     }
     public List<Integer> getVAFValue(){
         return this.list;
+    }
+
+    public void setList(List<Integer> list) {
+        this.list = list;
     }
 
     public void setVisibility(boolean b){

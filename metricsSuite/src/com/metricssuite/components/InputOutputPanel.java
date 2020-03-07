@@ -216,7 +216,19 @@ public class InputOutputPanel extends JPanel {
             Document doc = (Document)e.getDocument();
             Integer value = 0;
             if(doc.getLength() != 0) {
-                value = Integer.parseInt(doc.getText(0, doc.getLength()));
+                try {
+                    value = Integer.parseInt(doc.getText(0, doc.getLength()));
+                    if(value < 0){
+                        value = 0;
+                        JOptionPane.showMessageDialog(InputOutputPanel.this,
+                                "Please enter all the name fields.",
+                                "Error", JOptionPane.ERROR_MESSAGE);}
+                } catch (NumberFormatException n){
+                    value = 0;
+                    JOptionPane.showMessageDialog(InputOutputPanel.this,
+                            "Please enter a digit.",
+                            "Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
 
 

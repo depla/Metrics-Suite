@@ -38,10 +38,12 @@ public class FunctionPointGui extends JPanel {
     public FunctionPointGui(Project p, languageSelection language) {
         this.project = p;
         this.languageSelection = language;
-        vaf = new VAF();
         functionPoint = new FunctionPoint();
-         initGui();
-         initListeners();
+        vaf = new VAF();
+        functionPoint.setVaf(vaf.getVAFValue());
+        project.addFunctionPoint(functionPoint);
+        initGui();
+        initListeners();
     }
 
 
@@ -51,7 +53,6 @@ public class FunctionPointGui extends JPanel {
         this.project = p;
         this.languageSelection = language;
         vaf = new VAF();
-
         initGui();
         initListeners();
 
@@ -131,6 +132,7 @@ public class FunctionPointGui extends JPanel {
         calcPanel.add(totalLbl, constraints);
 
         totalTextfield = new JTextField();
+        totalTextfield.setEditable(false);
         constraints.insets = new Insets(0, 0, 0, 10);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 3;
@@ -144,6 +146,7 @@ public class FunctionPointGui extends JPanel {
         calcPanel.add(functionPointBtn, constraints);
 
         fpTextfield = new JTextField();
+        fpTextfield.setEditable(false);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 3;
         constraints.gridy = 1;
@@ -157,6 +160,7 @@ public class FunctionPointGui extends JPanel {
         calcPanel.add(vfBtn, constraints);
 
         vfTextfield = new JTextField();
+        vfTextfield.setEditable(false);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 3;
         constraints.gridy = 2;
@@ -176,12 +180,14 @@ public class FunctionPointGui extends JPanel {
         calcPanel.add(langLbl, constraints);
 
         languageTextfield = new JTextField();
+        languageTextfield.setEditable(false);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 2;
         constraints.gridy = 3;
         calcPanel.add(languageTextfield, constraints);
 
         computeSizeTextfield = new JTextField();
+        computeSizeTextfield.setEditable(false);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 3;
         constraints.gridy = 3;
@@ -240,7 +246,7 @@ public class FunctionPointGui extends JPanel {
                 //set function point field
                 functionPoint.setFunctionPoint(functionPoint.computeFP());
                 fpTextfield.setText(String.valueOf(functionPoint.computeFP()));
-                project.addFunctionPoint(functionPoint);
+
 
             }
         });

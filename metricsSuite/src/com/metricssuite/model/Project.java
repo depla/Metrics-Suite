@@ -10,13 +10,15 @@ public class Project implements Serializable
     private String creatorName;
     private String comments;
 
-    private ArrayList<FunctionPoint> functionPointArrayList  = new ArrayList<FunctionPoint>();
+    private ArrayList<FunctionPoint> functionPointArrayList;
 
     /**
      * Default constructor
      */
     public Project()
     {
+        functionPointArrayList  = new ArrayList<FunctionPoint>();
+
 
     }
 

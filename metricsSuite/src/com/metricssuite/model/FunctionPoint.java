@@ -6,6 +6,7 @@ import javafx.util.Pair;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class FunctionPoint implements Serializable {
@@ -21,7 +22,7 @@ public class FunctionPoint implements Serializable {
     private String ilfWeight;
     private String eifWeight;
 
-    private List<Integer> vaf = new ArrayList<>();
+    private List<Integer> vaf = new ArrayList<>(Collections.nCopies(14, 0));
     private int totalCount;
     private double functionPoint;
     private String language = "java";

@@ -95,6 +95,7 @@ public class Menu extends JFrame implements ActionListener {
             case "Save":
                 System.out.println("Save");
                 saveProject();
+                break;
             case "languages":
 
                 language.setVisibility(true);
