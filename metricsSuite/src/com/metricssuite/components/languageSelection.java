@@ -62,16 +62,6 @@ public class languageSelection implements ActionListener {
         frame.setVisible(true);
     }
 
-//    private JPanel getCheckbox(String text, int avg, int median, int low, int high ){
-//        JPanel panel = new JPanel();
-//        panel.setLayout(new BoxLayout(panel,BoxLayout.X_AXIS));
-//        JCheckBox box = new JCheckBox(text);
-//        box.addActionListener(this);
-//        panel.add(box);
-//        languages.put(text,putLinesOfCode(avg,median,low,high));
-//
-//        return panel;
-//    }
 
     private JPanel getRadioButton(String text, int avg, int median, int low, int high){
         JPanel panel = new JPanel();
