@@ -2,6 +2,7 @@ package com.metricssuite.menu;
 
 import com.metricssuite.components.FunctionPointGui;
 import com.metricssuite.components.NewProjectWindow;
+import com.metricssuite.components.VAF;
 import com.metricssuite.components.languageSelection;
 import com.metricssuite.model.Project;
 
@@ -10,6 +11,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Menu extends JFrame implements ActionListener {
     private JTabbedPane tabbedPane;
@@ -17,8 +20,7 @@ public class Menu extends JFrame implements ActionListener {
     private Project project;
     private languageSelection language;
     private FunctionPointGui functionPoint;
-
-    //Language l;
+    //private static VAF  v;
 
     public Menu() {
         getContentPane().setLayout(new BorderLayout());
@@ -161,5 +163,6 @@ public class Menu extends JFrame implements ActionListener {
 
     public static void main(String []args) {
         new Menu();
+
     }
 }
