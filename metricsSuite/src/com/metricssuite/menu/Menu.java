@@ -106,12 +106,26 @@ public class Menu extends JFrame implements ActionListener {
             case "Function Points":
                 createTab();
                 break;
+
+            case "Exit":
+                System.out.println("Exit");
+                exitProgramAutoSave();
+                //close program
+                System.exit(0);
+                break;
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
     }
     private void createTab() {
 
+        if(project == null)
+        {
+            JOptionPane.showMessageDialog(this,
+                    "Please open a project first.",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
         tabbedPane.addTab( "Function Points", new FunctionPointGui(project, language));
     }
 
@@ -171,6 +185,16 @@ public class Menu extends JFrame implements ActionListener {
         //else there is a project open
         else
         {
+            project.writeProject(project.getProjectName() + ".ms");
+        }
+    }
+
+    private void exitProgramAutoSave()
+    {
+        //check if project is open
+        if(project != null)
+        {
+            //save it
             project.writeProject(project.getProjectName() + ".ms");
         }
     }
