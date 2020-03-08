@@ -5,6 +5,8 @@ import javafx.util.Pair;
 
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class FunctionPoint implements Serializable {
@@ -18,16 +20,29 @@ public class FunctionPoint implements Serializable {
     private String eoWeight;
     private String externalInqWeight;
     private String ilfWeight;
-    private String eifWeidht;
+    private String eifWeight;
 
-    private List<Integer> vaf = null;
+    private int[] vaf;
     private int totalCount;
-    private languageSelection language;
+    private double functionPoint;
+    private String language = "java";
 
-    public FunctionPoint(languageSelection language){
+    public FunctionPoint(){
 
         totalCount = 0;
-        this.language = language;
+        functionPoint = 0;
+        vaf = new int[14];
+        for (int i = 0; i < 14; i++) {
+            vaf[i] = 0;
+        }
+    }
+
+    public double getFunctionPoint() {
+        return functionPoint;
+    }
+
+    public void setFunctionPoint(double functionPoint) {
+        this.functionPoint = functionPoint;
     }
 
     public int getEivalue() {
@@ -102,12 +117,12 @@ public class FunctionPoint implements Serializable {
         this.ilfWeight = ilfWeight;
     }
 
-    public String getEifWeidht() {
-        return eifWeidht;
+    public String getEifWeight() {
+        return eifWeight;
     }
 
-    public void setEifWeight(String eifWeidht) {
-        this.eifWeidht = eifWeidht;
+    public void setEifWeight(String eifWeight) {
+        this.eifWeight = eifWeight;
     }
 
     public int getTotalCount() {
@@ -118,19 +133,19 @@ public class FunctionPoint implements Serializable {
         this.totalCount = totalCount;
     }
 
-    public languageSelection getLanguage() {
+    public String getLanguage() {
         return language;
     }
 
-    public void setLanguage(languageSelection language) {
+    public void setLanguage(String language) {
         this.language = language;
     }
 
-    public List<Integer> getVaf() {
+    public int[] getVaf() {
         return vaf;
     }
 
-    public void setVaf(List<Integer> vaf) {
+    public void setVaf(int[] vaf) {
         this.vaf = vaf;
     }
 
@@ -148,8 +163,6 @@ public class FunctionPoint implements Serializable {
         }
         return sum;
     }
-
-
 
 
 }

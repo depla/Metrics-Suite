@@ -19,8 +19,10 @@ public class languageSelection implements ActionListener, Serializable {
 
     private HashMap<String,List<Integer>> languages = new HashMap<>();
     private List<Integer>linesOfCode;
+    private  DoneOnClickHandler mDoneOnClickHandler;
 
     public languageSelection(){
+
         frame = new JFrame();
         frame.setTitle("Langauge Selection");
         panel = new JPanel();
@@ -60,7 +62,15 @@ public class languageSelection implements ActionListener, Serializable {
         frame.add(button);
         frame.setSize(200,400);
 
-        frame.setVisible(true);
+        frame.setVisible(false);
+    }
+
+    public DoneOnClickHandler getmDoneOnClickHandler() {
+        return mDoneOnClickHandler;
+    }
+
+    public void setmDoneOnClickHandler(DoneOnClickHandler mDoneOnClickHandler) {
+        this.mDoneOnClickHandler = mDoneOnClickHandler;
     }
 
 
@@ -85,7 +95,8 @@ public class languageSelection implements ActionListener, Serializable {
     @Override
     public void actionPerformed(ActionEvent e){
         String i = e.getActionCommand();
-        if(i == "Done"){
+        if(i.equalsIgnoreCase("Done")){
+            this.mDoneOnClickHandler.setLanguage();
             setVisibility(false);
         }else {
             JRadioButton btn = (JRadioButton) e.getSource();
@@ -104,7 +115,7 @@ public class languageSelection implements ActionListener, Serializable {
     public void setVisibility(boolean b){
         frame.setVisible(b);
     }
-    public String getLangauge(){
+    public String getLanguage(){
         return language;
     }
 

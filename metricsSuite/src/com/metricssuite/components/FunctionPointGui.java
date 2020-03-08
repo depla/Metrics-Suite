@@ -8,28 +8,92 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.List;
 
-public class FunctionPointGui extends JPanel {
+public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandler, DoneOnClickHandler {
 
     private InputOutputPanel eiPanel;
     private InputOutputPanel eoPanel;
     private InputOutputPanel externalInquiriesPanel;
     private InputOutputPanel ilfPanel;
     private InputOutputPanel eifPanel;
-    private String dummy = "Java";
+    private JLabel totalLbl;
+    private JTextField totalTextfield;
+    private JButton functionPointBtn;
+    private JTextField fpTextfield;
+    private JButton vfBtn;
+    private JTextField vfTextfield;
+    private JButton computeSizeBtn;
+    private JLabel langLbl;
+    private JTextField languageTextfield;
+    private JTextField computeSizeTextfield;
+    private JButton changeLangBtn;
     private FunctionPoint functionPoint;
-    private static int eivalue = 0;
-    private static int eovalue = 0;
-    private static int externalInquiries = 0;
-    private static int ilfvalue = 0;
-    private static int eifvalue = 0;
     private Project project;
+    private VAF vaf;
+    private languageSelection languageSelection;
 
-
-    public FunctionPointGui(Project p){
+    public FunctionPointGui(Project p, languageSelection language) {
         this.project = p;
-        functionPoint = new FunctionPoint(new languageSelection());
+        this.languageSelection = language;
+        this.languageSelection.setmDoneOnClickHandler(this);
+        functionPoint = new FunctionPoint();
+        vaf = new VAF(this);
+        functionPoint.setVaf(vaf.getVAFValue());
+        project.addFunctionPoint(functionPoint);
+        initGui();
+        initListeners();
+    }
+
+
+    public FunctionPointGui(Project p, FunctionPoint fp, languageSelection language) {
+
+        this.functionPoint = fp;
+        this.project = p;
+        this.languageSelection = language;
+        this.languageSelection.setmDoneOnClickHandler(this);
+        vaf = new VAF(this);
+        initGui();
+        initListeners();
+
+        eiPanel.getTextfield().setText(String.valueOf(this.functionPoint.getEivalue()));
+        eoPanel.getTextfield().setText(String.valueOf(this.functionPoint.getEovalue()));
+        externalInquiriesPanel.getTextfield().setText(String.valueOf(this.functionPoint.getExternalInquiries()));
+        ilfPanel.getTextfield().setText(String.valueOf(this.functionPoint.getIlfvalue()));
+        eifPanel.getTextfield().setText(String.valueOf(this.functionPoint.getEifvalue()));
+
+        String weight = this.functionPoint.getEiWeight();
+
+        setWeights(eiPanel, weight);
+
+        weight = this.functionPoint.getEoWeight();
+
+        setWeights(eoPanel, weight);
+
+        weight = this.functionPoint.getExternalInqWeight();
+
+        setWeights(externalInquiriesPanel, weight);
+
+        weight = this.functionPoint.getIlfWeight();
+
+        setWeights(ilfPanel, weight);
+
+        weight = this.functionPoint.getEifWeight();
+
+        setWeights(eifPanel, weight);
+
+        totalTextfield.setText(String.valueOf(functionPoint.getTotalCount()));
+        languageTextfield.setText(functionPoint.getLanguage());
+        fpTextfield.setText(String.valueOf(functionPoint.getFunctionPoint()));
+        vaf.setList(functionPoint.getVaf());
+        vfTextfield.setText(String.valueOf(functionPoint.getVafTotal()));
+
+    }
+
+    private void initGui() {
+
         JPanel wf = new JPanel();
         wf.setMaximumSize(new Dimension(Integer.MAX_VALUE, 50));
         wf.setLayout(new FlowLayout());
@@ -47,11 +111,11 @@ public class FunctionPointGui extends JPanel {
 
 
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        eiPanel = new InputOutputPanel("External Inputs", new String[] {"3", "4", "6"});
-        eoPanel = new InputOutputPanel("External Outputs", new String[] {"4", "5", "7"});
-        externalInquiriesPanel = new InputOutputPanel("External Inquiries", new String[] {"3", "4", "6"});
-        ilfPanel = new InputOutputPanel("Internal Logical Files", new String[] {"7", "10", "15"});
-        eifPanel = new InputOutputPanel("External Interface Files", new String[] {"5", "7", "10"});
+        eiPanel = new InputOutputPanel("External Inputs", new String[]{"3", "4", "6"});
+        eoPanel = new InputOutputPanel("External Outputs", new String[]{"4", "5", "7"});
+        externalInquiriesPanel = new InputOutputPanel("External Inquiries", new String[]{"3", "4", "6"});
+        ilfPanel = new InputOutputPanel("Internal Logical Files", new String[]{"7", "10", "15"});
+        eifPanel = new InputOutputPanel("External Interface Files", new String[]{"5", "7", "10"});
         add(wf);
         add(labeling);
         add(eiPanel);
@@ -65,86 +129,95 @@ public class FunctionPointGui extends JPanel {
 
         constraints.weightx = 0.5;
 
-        JLabel totalLbl = new JLabel("Total Count");
+        totalLbl = new JLabel("Total Count");
         constraints.fill = GridBagConstraints.WEST;
         constraints.gridx = 0;
         constraints.gridy = 0;
         calcPanel.add(totalLbl, constraints);
 
-        JTextField totalTextfield = new JTextField();
-        constraints.insets = new Insets(0,0,0,10);
+        totalTextfield = new JTextField();
+        //totalTextfield.setEditable(false);
+        constraints.insets = new Insets(0, 0, 0, 10);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 3;
         constraints.gridy = 0;
         calcPanel.add(totalTextfield, constraints);
-       // constraints.insets = new Insets(0,0,0,0);
-        JButton functionPointBtn = new JButton("Compute FP");
+        // constraints.insets = new Insets(0,0,0,0);
+        functionPointBtn = new JButton("Compute FP");
         constraints.fill = GridBagConstraints.WEST;
         constraints.gridx = 0;
         constraints.gridy = 1;
         calcPanel.add(functionPointBtn, constraints);
 
-        JTextField fpTextfield = new JTextField();
+        fpTextfield = new JTextField();
+        fpTextfield.setEditable(false);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 3;
         constraints.gridy = 1;
         calcPanel.add(fpTextfield, constraints);
+        fpTextfield.setEditable(false);
 
-        JButton vfBtn = new JButton("Value Adjustments");
+        vfBtn = new JButton("Value Adjustments");
         constraints.fill = GridBagConstraints.WEST;
         constraints.gridx = 0;
         constraints.gridy = 2;
         calcPanel.add(vfBtn, constraints);
 
-        JTextField vfTextfield = new JTextField();
+        vfTextfield = new JTextField();
+        vfTextfield.setEditable(false);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 3;
         constraints.gridy = 2;
         calcPanel.add(vfTextfield, constraints);
 
-        JButton computeSizeBtn = new JButton("Compute Size");
+        computeSizeBtn = new JButton("Compute Size");
         constraints.fill = GridBagConstraints.WEST;
         constraints.gridx = 0;
         constraints.gridy = 3;
         calcPanel.add(computeSizeBtn, constraints);
 
-        JLabel langLbl = new JLabel("Current Language");
+        langLbl = new JLabel("Current Language");
         langLbl.setHorizontalAlignment(JLabel.RIGHT);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 1;
         constraints.gridy = 3;
         calcPanel.add(langLbl, constraints);
 
-        JTextField languageTextfield = new JTextField();
+        languageTextfield = new JTextField();
+        languageTextfield.setEditable(false);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 2;
         constraints.gridy = 3;
         calcPanel.add(languageTextfield, constraints);
 
-        JTextField computeSizeTextfield = new JTextField();
+        computeSizeTextfield = new JTextField();
+        computeSizeTextfield.setEditable(false);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 3;
         constraints.gridy = 3;
         calcPanel.add(computeSizeTextfield, constraints);
 
-        JButton changeLangBtn = new JButton("Change Language");
+        changeLangBtn = new JButton("Change Language");
         constraints.fill = GridBagConstraints.WEST;
         constraints.gridx = 0;
         constraints.gridy = 4;
         calcPanel.add(changeLangBtn, constraints);
 
         add(calcPanel);
+    }
 
+    private void setWeights(InputOutputPanel panel, String weight){
 
-        totalTextfield.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        for (Enumeration<AbstractButton> buttons = panel.getButtonGroup().getElements(); buttons.hasMoreElements(); ) {
+            AbstractButton button = buttons.nextElement();
 
-                int total = computeTotal();
-                totalTextfield.setText(String.valueOf(total));
-                functionPoint.setTotalCount(total);
+            if (button.getText().equalsIgnoreCase(weight)) {
+                button.setSelected(true);
             }
-        });
+        }
+    }
+
+    private void initListeners(){
 
         functionPointBtn.addActionListener(new ActionListener() {
             @Override
@@ -175,18 +248,83 @@ public class FunctionPointGui extends JPanel {
                 functionPoint.setIlfWeight(ilfPanel.getWeight());
 
                 //set function point field
+                functionPoint.setFunctionPoint(functionPoint.computeFP());
                 fpTextfield.setText(String.valueOf(functionPoint.computeFP()));
+
             }
         });
 
 
+        vfBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                vaf.setVisibility(true);
 
+            }
+        });
+
+        /*vaf.getDone().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                functionPoint.setVaf(vaf.getVAFValue());
+                vfTextfield.setText(String.valueOf(functionPoint.getVafTotal()));
+
+            }
+        });*/
+
+        changeLangBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                languageSelection.setVisibility(true);
+            }
+        });
+
+        /*languageTextfield.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                languageTextfield.setText(languageSelection.getLangauge());
+            }
+        });*/
+
+        computeSizeBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                List<Integer> list = languageSelection.getLinesOfCode();
+                computeSizeTextfield.setText(String.valueOf(list.get(0) * functionPoint.computeFP()));
+            }
+        });
+
+        totalTextfield.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                int total = computeTotal();
+                totalTextfield.setText(String.valueOf(total));
+                functionPoint.setTotalCount(total);
+            }
+        });
     }
 
-    public int computeTotal(){
+    public int computeTotal() {
 
-        return eiPanel.computedTotal()+ eoPanel.computedTotal() + externalInquiriesPanel.computedTotal() + eifPanel.computedTotal()
+        return eiPanel.computedTotal() + eoPanel.computedTotal() + externalInquiriesPanel.computedTotal() + eifPanel.computedTotal()
                 + ilfPanel.computedTotal();
     }
 
+    @Override
+    public void done() {
+
+        functionPoint.setVaf(vaf.getVAFValue());
+        vfTextfield.setText(String.valueOf(functionPoint.getVafTotal()));
+
+    }
+
+    @Override
+    public void setLanguage() {
+
+        String lang = languageSelection.getLanguage();
+        languageTextfield.setText(lang);
+        functionPoint.setLanguage(lang);
+
+    }
 }
