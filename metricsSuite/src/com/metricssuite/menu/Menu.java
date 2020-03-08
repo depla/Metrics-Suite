@@ -171,6 +171,12 @@ public class Menu extends JFrame implements ActionListener {
             {
                 System.out.println("chosen ms file: " + fileChooser.getSelectedFile().getAbsolutePath());
 
+                //save current project if there is one running
+                if(project != null)
+                {
+                    saveProject();
+                }
+
                 //read the project from the opened file
                 project = Project.readProject(absolutePath);
                 //clear out any old tabs first
