@@ -8,6 +8,7 @@ import com.metricssuite.model.FunctionPoint;
 import com.metricssuite.model.Project;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -159,6 +160,9 @@ public class Menu extends JFrame implements ActionListener {
 
         fileChooser.setCurrentDirectory(currentDirectory);
         fileChooser.setDialogTitle("Choose a file to open");
+
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("ms files", "ms");
+        fileChooser.setFileFilter(filter);
 
         if(fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
         {
