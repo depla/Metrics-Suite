@@ -36,6 +36,8 @@ public class Menu extends JFrame implements ActionListener {
         setVisible(true);
         language = new languageSelection();
     }
+
+
     protected JMenuBar createMenuBar() {
         JMenuBar menuBar = new JMenuBar(); //create menubar
 
@@ -86,8 +88,19 @@ public class Menu extends JFrame implements ActionListener {
         switch (i){
             case "New":
                 System.out.println("New Project");
-                project = new Project();
-                projectWindow = new NewProjectWindow(this, project);
+                //check if there is a project open or not
+                if(project == null)
+                {
+                    //create a new project
+                    project = new Project();
+                    projectWindow = new NewProjectWindow(this, project);
+                }
+                else //one is already open
+                {
+                    //pass a new null one
+                    Project newProject = null;
+                    projectWindow = new NewProjectWindow(this, newProject);
+                }
 
                 break;
             case "Open":
@@ -160,7 +173,12 @@ public class Menu extends JFrame implements ActionListener {
 
                 //read the project from the opened file
                 project = Project.readProject(absolutePath);
+                //clear out any old tabs first
+                clearTabs();
                 setTabsFromSaved();
+
+                //set header name
+                setHeaderWithName(project);
 
                 System.out.println(project.toString());
             }
@@ -185,6 +203,7 @@ public class Menu extends JFrame implements ActionListener {
         //else there is a project open
         else
         {
+            System.out.println("Saving : " + project.getProjectName());
             project.writeProject(project.getProjectName() + ".ms");
         }
     }
@@ -197,6 +216,34 @@ public class Menu extends JFrame implements ActionListener {
             //save it
             project.writeProject(project.getProjectName() + ".ms");
         }
+    }
+
+    public void setProject(Project project)
+    {
+        this.project = project;
+    }
+
+    public Project getProject()
+    {
+        return project;
+    }
+
+    public void save(Project project)
+    {
+        if(project != null)
+        {
+            project.writeProject(project.getProjectName() + ".ms");
+        }
+    }
+
+    public void setHeaderWithName(Project project)
+    {
+        setTitle("Metrics Suite - " + project.getProjectName());
+    }
+
+    public void clearTabs()
+    {
+        tabbedPane.removeAll();
     }
 
     public static void main(String []args) {

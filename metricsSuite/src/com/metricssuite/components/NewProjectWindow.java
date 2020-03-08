@@ -1,5 +1,6 @@
 package com.metricssuite.components;
 
+import com.metricssuite.menu.Menu;
 import com.metricssuite.model.Project;
 
 import javax.swing.*;
@@ -48,11 +49,13 @@ public class NewProjectWindow extends JFrame implements ActionListener
     private JPanel buttonPanel;
 
     private Project project;
+    private Menu mainFrame;
 
-    public NewProjectWindow(JFrame mainFrame, Project project)
+    public NewProjectWindow(Menu mainFrame, Project project)
     {
         super(TITLE);
         this.project = project;
+        this.mainFrame = mainFrame;
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setLayout(new BorderLayout());
 
@@ -122,11 +125,30 @@ public class NewProjectWindow extends JFrame implements ActionListener
         {
             if(checkTextFieldsContents())
             {
+                //if the passed in project was null, we already had an old project open
+                if(project == null)
+                {
+                    //save the current project
+                    mainFrame.save(mainFrame.getProject());
+
+                    //clear the old tabs
+                    mainFrame.clearTabs();
+
+                    //create a new project
+                    project = new Project();
+
+                    mainFrame.setProject(project);
+                }
+
+                //else it was not null
                 project.setProjectName(projectNameTextField.getText());
                 project.setProductName(productNameTextField.getText());
                 project.setCreatorName(creatorNameTextField.getText());
                 project.setComments(commentsTextArea.getText());
                 System.out.print(project.toString());
+
+                mainFrame.setHeaderWithName(project);
+
                 setVisible(false);
             }
             else
