@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.List;
 
@@ -117,6 +118,22 @@ public class languageSelection implements ActionListener, Serializable {
     }
     public String getLanguage(){
         return language;
+    }
+
+    public void setLanguage(String language){
+
+        for (Enumeration<AbstractButton> buttons = btnGroup.getElements(); buttons.hasMoreElements();) {
+            AbstractButton button = buttons.nextElement();
+            if (button.getText().equalsIgnoreCase(language)) {
+                button.setSelected(true);
+                this.language = button.getText();
+                if(languages.containsKey(button.getText())){
+                    this.linesOfCode = languages.get(button.getText());
+                    //this.language = button.getText();
+                }
+            }
+        }
+
     }
 
 }
