@@ -22,7 +22,7 @@ public class FunctionPoint implements Serializable {
     private String ilfWeight;
     private String eifWeight;
 
-    private List<Integer> vaf = new ArrayList<>(Collections.nCopies(14, 0));
+    private int[] vaf;
     private int totalCount;
     private double functionPoint;
     private String language = "java";
@@ -31,6 +31,10 @@ public class FunctionPoint implements Serializable {
 
         totalCount = 0;
         functionPoint = 0;
+        vaf = new int[14];
+        for (int i = 0; i < 14; i++) {
+            vaf[i] = 0;
+        }
     }
 
     public double getFunctionPoint() {
@@ -117,7 +121,7 @@ public class FunctionPoint implements Serializable {
         return eifWeight;
     }
 
-    public void setEifWeight(String eifWeidht) {
+    public void setEifWeight(String eifWeight) {
         this.eifWeight = eifWeight;
     }
 
@@ -137,11 +141,11 @@ public class FunctionPoint implements Serializable {
         this.language = language;
     }
 
-    public List<Integer> getVaf() {
+    public int[] getVaf() {
         return vaf;
     }
 
-    public void setVaf(List<Integer> vaf) {
+    public void setVaf(int[] vaf) {
         this.vaf = vaf;
     }
 
@@ -159,8 +163,6 @@ public class FunctionPoint implements Serializable {
         }
         return sum;
     }
-
-
 
 
 }

@@ -1,3 +1,5 @@
+
+
 package com.metricssuite.components;
 
 import javax.swing.*;
@@ -9,15 +11,28 @@ import java.util.List;
 
 public class VAF implements ActionListener {
     private JFrame frame;
-    private JPanel panel,panel1,panel2,panel3,panel4,panel5,panel6,panel7,panel8,panel9,
-            panel10,panel11, panel12,panel13,panel14;
+    private JPanel panel, panel1, panel2, panel3, panel4, panel5, panel6, panel7, panel8, panel9,
+            panel10, panel11, panel12, panel13, panel14;
     private JPanel bottom;
-    private JComboBox row1, row2, row3, row4, row5, row6, row7, row8, row9, row10, row11, row12, row13, row14;
-    private List<Integer> list;
+    private JComboBox row1, row2, row3, row4, row5, row6, row7, row8, row9, row10, row11, row12, row13, row14, row;
+    private int[] list;
     private JButton done;
+    private final VafDoneOnClickHandler mClickHandler;
 
-    public VAF(){
-        list = new ArrayList<>();
+    public interface VafDoneOnClickHandler{
+        void done();
+    }
+
+    public VAF(VafDoneOnClickHandler clickHandler) {
+        this.mClickHandler = clickHandler;
+        list = new int[14];
+        for (int i = 0; i < 14; i++) {
+            list[i] = 0;
+        }
+        getUI();
+    }
+
+    private void getUI() {
         frame = new JFrame();
         frame.setTitle("Value Adjustment Factors");
 
@@ -25,28 +40,30 @@ public class VAF implements ActionListener {
         panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
 
         frame.setSize(new Dimension(800, 800));
-        frame.setLayout(new GridLayout(16,1));
+        frame.setLayout(new GridLayout(16, 1));
 
         panel.add(new JLabel("Assign a value from 0 to 5 for each of the following Value Adjustment Factors:"));
-        panel1 = printLabelRow("Does the system require reliable backup and recovery processes? ",row1);
-        panel2 = printLabelRow("Are specialized data communications required to transfer information to or from the application? ",row2);
-        panel3 = printLabelRow("Are there distributed processing functions?",row3);
-        panel4 = printLabelRow("Is performance ctritical?", row4);
-        panel5 = printLabelRow("Will the system run in an existing, heavily utilized operational environment?", row5);
-        panel6 = printLabelRow("Does the system require online data entry",row6);
-        panel7 = printLabelRow("Does the online data entry require the input transaction to be built over multiple screens or operations ?", row7);
-        panel8 = printLabelRow("Are the internal logical files updated online?",row8);
-        panel9 = printLabelRow("Are the input, output, files or inquiries complex", row9);
-        panel10 = printLabelRow("Is the internal processing complex? ",row10);
-        panel11 = printLabelRow("Is the code designed to be reusable?",row11);
-        panel12 = printLabelRow("Are conversion and installation included the design",row12);
-        panel13 = printLabelRow("Is the system designed of multiple installation in different organizations?", row13);
-        panel14 = printLabelRow("Is the application designed to facilitate change and for ease of use by the user?",row14);
-        bottom= new JPanel();
+
+        panel1 = printLabelRow("Does the system require reliable backup and recovery processes? ", row1, "0");
+        panel2 = printLabelRow("Are specialized data communications required to transfer information to or from the application? ", row2, "1");
+        panel3 = printLabelRow("Are there distributed processing functions?", row3, "2");
+        panel4 = printLabelRow("Is performance critical?", row4, "3");
+        panel5 = printLabelRow("Will the system run in an existing, heavily utilized operational environment?", row5, "4");
+        panel6 = printLabelRow("Does the system require online data entry", row6, "5");
+        panel7 = printLabelRow("Does the online data entry require the input transaction to be built over multiple screens or operations ?", row7, "6");
+        panel8 = printLabelRow("Are the internal logical files updated online?", row8, "7");
+        panel9 = printLabelRow("Are the input, output, files or inquiries complex", row9, "8");
+        panel10 = printLabelRow("Is the internal processing complex? ", row10, "9");
+        panel11 = printLabelRow("Is the code designed to be reusable?", row11, "10");
+        panel12 = printLabelRow("Are conversion and installation included the design", row12, "11");
+        panel13 = printLabelRow("Is the system designed of multiple installation in different organizations?", row13, "12");
+        panel14 = printLabelRow("Is the application designed to facilitate change and for ease of use by the user?", row14, "13");
+        bottom = new JPanel();
+
 
         done = new JButton("Done");
+        done.addActionListener(this);
         JButton cancel = new JButton("Cancel");
-        //done.addActionListener(this);
         cancel.addActionListener(this);
         bottom.add(done);
         bottom.add(cancel);
@@ -67,81 +84,86 @@ public class VAF implements ActionListener {
         frame.add(panel14);
         frame.add(bottom);
 
-
         frame.pack();
         frame.setVisible(false);
-
     }
 
-    public JButton getDone() {
-        return done;
-    }
 
-    public void setDone(JButton done) {
-        this.done = done;
-    }
-
-    private JPanel printLabelRow(String st, JComboBox list){
+    private JPanel printLabelRow(String st, JComboBox cb, String name) {
 
         JPanel panel = new JPanel();
         JPanel leftPanel = new JPanel();
         JPanel rightPanel = new JPanel();
         panel.setLayout(new BorderLayout());
-        leftPanel.setLayout(new BoxLayout(leftPanel,BoxLayout.X_AXIS));
-        rightPanel.setLayout(new BoxLayout(rightPanel,BoxLayout.X_AXIS));
+        leftPanel.setLayout(new BoxLayout(leftPanel, BoxLayout.X_AXIS));
+        rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.X_AXIS));
 
         JLabel label = new JLabel(st);
         label.setAlignmentX(Component.LEFT_ALIGNMENT);
         leftPanel.add(label);
-        list = dropdown();
-        list.addActionListener(this);
-        list.setMaximumSize(new Dimension(80, 50));
-        list.setAlignmentX((Component.RIGHT_ALIGNMENT));
-        rightPanel.add(list);
 
-        panel.add(leftPanel,BorderLayout.LINE_START);
-        panel.add(rightPanel,BorderLayout.LINE_END);
+        cb = dropdown(name);
+        cb.addActionListener(this);
+        cb.setMaximumSize(new Dimension(80, 50));
+        cb.setAlignmentX((Component.RIGHT_ALIGNMENT));
+        rightPanel.add(cb);
+
+        panel.add(leftPanel, BorderLayout.LINE_START);
+        panel.add(rightPanel, BorderLayout.LINE_END);
         return panel;
     }
-    private JComboBox<Integer> dropdown(){
-        JComboBox<Integer> list = new JComboBox<>();
-        list.addItem(0);
-        list.addItem(1);
-        list.addItem(2);
-        list.addItem(3);
-        list.addItem(4);
-        list.addItem(5);
-        return list;
 
+    private JComboBox<Integer> dropdown(String name) {
+        JComboBox<Integer> jcb = new JComboBox<>();
+        jcb.setName(name);
+        jcb.addItem(0);
+        jcb.addItem(1);
+        jcb.addItem(2);
+        jcb.addItem(3);
+        jcb.addItem(4);
+        jcb.addItem(5);
+        jcb.setSelectedIndex(list[Integer.parseInt(name)]);
+
+        return jcb;
     }
 
-    public void actionPerformed(ActionEvent e){
+    public void actionPerformed(ActionEvent e) {
         String i = e.getActionCommand();
-        if (i.equalsIgnoreCase("Done")) {
+        //    System.out.println("event"+e.getSource());
+        if (i.equalsIgnoreCase("Cancel")) {
             setVisibility(false);
-        } else if(i.equalsIgnoreCase("cancel")) {
-            this.setVisibility(false);
-        } else {
+        }
+        else if(i.equalsIgnoreCase("Done")){
+            mClickHandler.done();
+            setVisibility(false);
+        }
+        else {
             JComboBox cb = (JComboBox) e.getSource();
+            int index = Integer.parseInt(cb.getName());
             int value = (int) cb.getSelectedItem();
-            list.add(value);
-            System.out.println(value);
+            this.list[index] = value;
         }
 
     }
-    public List<Integer> getVAFValue(){
+
+    public int[] getVAFValue() {
+        for (int i = 0; i < list.length; i++) {
+            System.out.print(list[i] + " ");
+        }
         return this.list;
     }
 
-    public void setList(List<Integer> list) {
-        this.list = list;
-    }
-
-    public void setVisibility(boolean b){
+    public void setVisibility(boolean b) {
         frame.setVisible(b);
     }
 
+    public void setList(int[] list) {
+        setDropdownValue(list);
+    }
 
-
+    private void setDropdownValue(int[] list) {
+        this.list = list;
+        getUI();
+    }
 
 }

@@ -16,8 +16,10 @@ public class languageSelection implements ActionListener {
     private String language;
     private HashMap<String,List<Integer>> languages = new HashMap<>();
     private List<Integer>linesOfCode;
+    private  DoneOnClickHandler mDoneOnClickHandler;
 
     public languageSelection(){
+
         frame = new JFrame();
         frame.setTitle("Langauge Selection");
         panel = new JPanel();
@@ -60,6 +62,14 @@ public class languageSelection implements ActionListener {
         frame.setVisible(false);
     }
 
+    public DoneOnClickHandler getmDoneOnClickHandler() {
+        return mDoneOnClickHandler;
+    }
+
+    public void setmDoneOnClickHandler(DoneOnClickHandler mDoneOnClickHandler) {
+        this.mDoneOnClickHandler = mDoneOnClickHandler;
+    }
+
     private JPanel getCheckbox(String text, int avg, int median, int low, int high ){
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel,BoxLayout.X_AXIS));
@@ -83,6 +93,7 @@ public class languageSelection implements ActionListener {
     public void actionPerformed(ActionEvent e){
         String i = e.getActionCommand();
         if(i.equalsIgnoreCase("Done")){
+            this.mDoneOnClickHandler.setLanguage();
             setVisibility(false);
         }else {
             JCheckBox cb = (JCheckBox) e.getSource();
@@ -102,7 +113,7 @@ public class languageSelection implements ActionListener {
     public void setVisibility(boolean b){
         frame.setVisible(b);
     }
-    public String getLangauge(){
+    public String getLanguage(){
         return language;
     }
 

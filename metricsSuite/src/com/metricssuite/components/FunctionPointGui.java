@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 
-public class FunctionPointGui extends JPanel {
+public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandler, DoneOnClickHandler {
 
     private InputOutputPanel eiPanel;
     private InputOutputPanel eoPanel;
@@ -38,8 +38,9 @@ public class FunctionPointGui extends JPanel {
     public FunctionPointGui(Project p, languageSelection language) {
         this.project = p;
         this.languageSelection = language;
+        this.languageSelection.setmDoneOnClickHandler(this);
         functionPoint = new FunctionPoint();
-        vaf = new VAF();
+        vaf = new VAF(this);
         functionPoint.setVaf(vaf.getVAFValue());
         project.addFunctionPoint(functionPoint);
         initGui();
@@ -52,7 +53,8 @@ public class FunctionPointGui extends JPanel {
         this.functionPoint = fp;
         this.project = p;
         this.languageSelection = language;
-        vaf = new VAF();
+        this.languageSelection.setmDoneOnClickHandler(this);
+        vaf = new VAF(this);
         initGui();
         initListeners();
 
@@ -85,6 +87,8 @@ public class FunctionPointGui extends JPanel {
         totalTextfield.setText(String.valueOf(functionPoint.getTotalCount()));
         languageTextfield.setText(functionPoint.getLanguage());
         fpTextfield.setText(String.valueOf(functionPoint.getFunctionPoint()));
+        vaf.setList(functionPoint.getVaf());
+        vfTextfield.setText(String.valueOf(functionPoint.getVafTotal()));
 
     }
 
@@ -132,7 +136,7 @@ public class FunctionPointGui extends JPanel {
         calcPanel.add(totalLbl, constraints);
 
         totalTextfield = new JTextField();
-        totalTextfield.setEditable(false);
+        //totalTextfield.setEditable(false);
         constraints.insets = new Insets(0, 0, 0, 10);
         constraints.fill = GridBagConstraints.HORIZONTAL;
         constraints.gridx = 3;
@@ -207,7 +211,7 @@ public class FunctionPointGui extends JPanel {
         for (Enumeration<AbstractButton> buttons = panel.getButtonGroup().getElements(); buttons.hasMoreElements(); ) {
             AbstractButton button = buttons.nextElement();
 
-            if (button.getText().equals(weight)) {
+            if (button.getText().equalsIgnoreCase(weight)) {
                 button.setSelected(true);
             }
         }
@@ -247,7 +251,6 @@ public class FunctionPointGui extends JPanel {
                 functionPoint.setFunctionPoint(functionPoint.computeFP());
                 fpTextfield.setText(String.valueOf(functionPoint.computeFP()));
 
-
             }
         });
 
@@ -260,14 +263,14 @@ public class FunctionPointGui extends JPanel {
             }
         });
 
-        vaf.getDone().addActionListener(new ActionListener() {
+        /*vaf.getDone().addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 functionPoint.setVaf(vaf.getVAFValue());
                 vfTextfield.setText(String.valueOf(functionPoint.getVafTotal()));
 
             }
-        });
+        });*/
 
         changeLangBtn.addActionListener(new ActionListener() {
             @Override
@@ -276,12 +279,12 @@ public class FunctionPointGui extends JPanel {
             }
         });
 
-        languageTextfield.addActionListener(new ActionListener() {
+        /*languageTextfield.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 languageTextfield.setText(languageSelection.getLangauge());
             }
-        });
+        });*/
 
         computeSizeBtn.addActionListener(new ActionListener() {
             @Override
@@ -308,4 +311,20 @@ public class FunctionPointGui extends JPanel {
                 + ilfPanel.computedTotal();
     }
 
+    @Override
+    public void done() {
+
+        functionPoint.setVaf(vaf.getVAFValue());
+        vfTextfield.setText(String.valueOf(functionPoint.getVafTotal()));
+
+    }
+
+    @Override
+    public void setLanguage() {
+
+        String lang = languageSelection.getLanguage();
+        languageTextfield.setText(lang);
+        functionPoint.setLanguage(lang);
+
+    }
 }
