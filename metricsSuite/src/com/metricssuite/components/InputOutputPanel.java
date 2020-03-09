@@ -47,7 +47,18 @@ public class InputOutputPanel extends JPanel {
                     if (button.isSelected()) {
                         setWeight(button.getText());
                         Integer buttonValue = Integer.parseInt(button.getText());
-                        total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
+                        Integer value = 0;
+
+                        try{
+
+                            value = Integer.parseInt(textfield.getText());
+
+
+                        }catch(NumberFormatException ex) {
+                            value = 0;
+                        }
+
+                        total.setText(String.valueOf( value * buttonValue));
 
                         if(name.equalsIgnoreCase("External Inputs")){
                             functionPoint.setEiWeight(button.getText());
@@ -90,7 +101,20 @@ public class InputOutputPanel extends JPanel {
                     if (button.isSelected()) {
                         setWeight(button.getText());
                         Integer buttonValue = Integer.parseInt(button.getText());
-                        total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
+
+                        Integer value = 0;
+
+                        try{
+
+                            value = Integer.parseInt(textfield.getText());
+
+
+                        }catch(NumberFormatException ex) {
+                            value = 0;
+                        }
+
+                        total.setText(String.valueOf( value * buttonValue));
+                       // total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
 
                         if(name.equalsIgnoreCase("External Inputs")){
                             functionPoint.setEiWeight(button.getText());
@@ -131,7 +155,20 @@ public class InputOutputPanel extends JPanel {
                     if (button.isSelected()) {
                         setWeight(button.getText());
                         Integer buttonValue = Integer.parseInt(button.getText());
-                        total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
+
+                        Integer value = 0;
+
+                        try{
+
+                            value = Integer.parseInt(textfield.getText());
+
+
+                        }catch(NumberFormatException ex) {
+                            value = 0;
+                        }
+
+                        total.setText(String.valueOf( value * buttonValue));
+                        //total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
 
                         if(name.equalsIgnoreCase("External Inputs")){
                             functionPoint.setEiWeight(button.getText());

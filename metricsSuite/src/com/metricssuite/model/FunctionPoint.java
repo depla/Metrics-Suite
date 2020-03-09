@@ -25,7 +25,7 @@ public class FunctionPoint implements Serializable {
     private int[] vaf;
     private int totalCount;
     private double functionPoint;
-    private String language = "java";
+    private String language = "";
 
     public FunctionPoint(){
 
