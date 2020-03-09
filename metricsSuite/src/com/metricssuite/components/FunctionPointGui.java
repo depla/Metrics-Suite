@@ -301,7 +301,7 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
             public void actionPerformed(ActionEvent e) {
                 List<Integer> list = languageSelection.getLinesOfCode();
                 double val = list.get(0) * functionPoint.computeFP();
-                computeSizeTextfield.setText(formatDouble(val));
+                computeSizeTextfield.setText(String.valueOf(Math.ceil(val)));
 
             }
         });
