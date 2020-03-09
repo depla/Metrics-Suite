@@ -64,7 +64,7 @@ public class Menu extends JFrame implements ActionListener {
         JMenu edit = new JMenu("Edit"); //create edit menu and items
 
         JMenu preferences = new JMenu("Preferences"); //create preferences menu and items
-        JMenuItem languages = new JMenuItem("languages");
+        JMenuItem languages = new JMenuItem("Languages");
         languages.addActionListener(this);
         preferences.add(languages);
 
@@ -112,7 +112,7 @@ public class Menu extends JFrame implements ActionListener {
                 System.out.println("Save");
                 saveProject();
                 break;
-            case "languages":
+            case "Languages":
 
                 language.setVisibility(true);
                 break;
