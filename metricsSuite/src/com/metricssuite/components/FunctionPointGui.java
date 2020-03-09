@@ -19,7 +19,7 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
     private InputOutputPanel externalInquiriesPanel;
     private InputOutputPanel ilfPanel;
     private InputOutputPanel eifPanel;
-    private JButton totalLbl;
+    private JLabel totalLbl;
     private JTextField totalTextfield;
     private JButton functionPointBtn;
     private JTextField fpTextfield;
@@ -38,7 +38,7 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
     public FunctionPointGui(Project p, languageSelection language) {
         this.project = p;
         this.languageSelection = language;
-        this.languageSelection.setmDoneOnClickHandler(this);
+        //this.languageSelection.setmDoneOnClickHandler(this);
         functionPoint = new FunctionPoint();
         vaf = new VAF(this);
         functionPoint.setVaf(vaf.getVAFValue());
@@ -53,7 +53,7 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
         this.functionPoint = fp;
         this.project = p;
         this.languageSelection = language;
-        this.languageSelection.setmDoneOnClickHandler(this);
+        //this.languageSelection.setmDoneOnClickHandler(this);
         vaf = new VAF(this);
         initGui();
         initListeners();
@@ -118,6 +118,14 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
         externalInquiriesPanel = new InputOutputPanel("External Inquiries", new String[]{"3", "4", "6"});
         ilfPanel = new InputOutputPanel("Internal Logical Files", new String[]{"7", "10", "15"});
         eifPanel = new InputOutputPanel("External Interface Files", new String[]{"5", "7", "10"});
+
+        eiPanel.setFunctionPoint(this.functionPoint);
+        eoPanel.setFunctionPoint(this.functionPoint);
+        externalInquiriesPanel.setFunctionPoint(this.functionPoint);
+        ilfPanel.setFunctionPoint(this.functionPoint);
+        eifPanel.setFunctionPoint(this.functionPoint);
+
+
         add(wf);
         add(labeling);
         add(eiPanel);
@@ -131,7 +139,7 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
 
         constraints.weightx = 0.5;
 
-        totalLbl = new JButton("Total Count");
+        totalLbl = new JLabel("Total Count");
         constraints.fill = GridBagConstraints.WEST;
         constraints.gridx = 0;
         constraints.gridy = 0;
@@ -213,7 +221,8 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
         for (Enumeration<AbstractButton> buttons = panel.getButtonGroup().getElements(); buttons.hasMoreElements(); ) {
             AbstractButton button = buttons.nextElement();
 
-            if (button.getText().equalsIgnoreCase(weight)) {
+            if (button.getText().equals(weight)) {
+                System.out.println(weight);
                 button.setSelected(true);
             }
         }
@@ -225,31 +234,43 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
             @Override
             public void actionPerformed(ActionEvent e) {
                 //set function point ei fields
-                int eival = Integer.parseInt(eiPanel.getTextfield().getText());
-                functionPoint.setEivalue(eival);
-                functionPoint.setEiWeight(eiPanel.getWeight());
+                /*int eival = Integer.parseInt(eiPanel.getTextfield().getText());*/
+                /*functionPoint.setEivalue(eival);*/
+                /*functionPoint.setEiWeight(eiPanel.getWeight());*/
+/*
+*/
 
-                //set function point eo fields
-                int eoval = Integer.parseInt(eoPanel.getTextfield().getText());
-                functionPoint.setEovalue(eoval);
-                functionPoint.setEoWeight(eoPanel.getWeight());
+                /*//set function point eo fields*/
+                /*int eoval = Integer.parseInt(eoPanel.getTextfield().getText());*/
+                /*functionPoint.setEovalue(eoval);*/
+                /*functionPoint.setEoWeight(eoPanel.getWeight());*/
+/*
+*/
 
-                //set function point external inquiries fields
-                int externalInq = Integer.parseInt(externalInquiriesPanel.getTextfield().getText());
-                functionPoint.setExternalInquiries(externalInq);
-                functionPoint.setExternalInqWeight(externalInquiriesPanel.getWeight());
+                /*//set function point external inquiries fields*/
+                /*int externalInq = Integer.parseInt(externalInquiriesPanel.getTextfield().getText());*/
+                /*functionPoint.setExternalInquiries(externalInq);*/
+                /*functionPoint.setExternalInqWeight(externalInquiriesPanel.getWeight());*/
+/*
+*/
 
-                //set function point eif fields
-                int eifval = Integer.parseInt(eifPanel.getTextfield().getText());
-                functionPoint.setEifvalue(eifval);
-                functionPoint.setEifWeight(eifPanel.getWeight());
+                /*//set function point eif fields*/
+                /*int eifval = Integer.parseInt(eifPanel.getTextfield().getText());*/
+                /*functionPoint.setEifvalue(eifval);*/
+                /*functionPoint.setEifWeight(eifPanel.getWeight());*/
+/*
+*/
 
-                //set function point ilf fields
-                int ilfval = Integer.parseInt(ilfPanel.getTextfield().getText());
-                functionPoint.setIlfvalue(ilfval);
-                functionPoint.setIlfWeight(ilfPanel.getWeight());
+                /*//set function point ilf fields*/
+                /*int ilfval = Integer.parseInt(ilfPanel.getTextfield().getText());*/
+                /*functionPoint.setIlfvalue(ilfval);*/
+                /*functionPoint.setIlfWeight(ilfPanel.getWeight());*/
 
                 //set function point field
+
+                int total = computeTotal();
+                totalTextfield.setText(String.valueOf(total));
+                functionPoint.setTotalCount(total);
                 functionPoint.setFunctionPoint(functionPoint.computeFP());
                 fpTextfield.setText(formatDouble(functionPoint.computeFP()));
 
@@ -265,30 +286,15 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
             }
         });
 
-        totalLbl.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                int total = computeTotal();
-                totalTextfield.setText(String.valueOf(total));
-                functionPoint.setTotalCount(total);
-
-            }
-        });
-
         changeLangBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 languageSelection.setVisibility(true);
+                languageSelection.setmDoneOnClickHandler(FunctionPointGui.this);
             }
         });
 
-        /*languageTextfield.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                languageTextfield.setText(languageSelection.getLangauge());
-            }
-        });*/
 
         computeSizeBtn.addActionListener(new ActionListener() {
             @Override
@@ -328,4 +334,5 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
         functionPoint.setLanguage(lang);
 
     }
+
 }

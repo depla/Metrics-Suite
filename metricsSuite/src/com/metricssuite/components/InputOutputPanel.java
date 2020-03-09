@@ -1,5 +1,7 @@
 package com.metricssuite.components;
 
+import com.metricssuite.model.FunctionPoint;
+
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -21,10 +23,11 @@ public class InputOutputPanel extends JPanel {
     private String name;
     private ButtonGroup buttonGroup;
     private String weight = "Average";
+    private FunctionPoint functionPoint;
 
-    public InputOutputPanel(String name, String[] factors){
+    public InputOutputPanel(String mName, String[] factors){
 
-        this.name = name;
+        this.name = mName;
         buttonGroup = new ButtonGroup();
         setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
         label = new JLabel(this.name);
@@ -45,6 +48,30 @@ public class InputOutputPanel extends JPanel {
                         setWeight(button.getText());
                         Integer buttonValue = Integer.parseInt(button.getText());
                         total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
+
+                        if(name.equalsIgnoreCase("External Inputs")){
+                            functionPoint.setEiWeight(button.getText());
+
+                        }
+                        if(name.equalsIgnoreCase("External Outputs")){
+
+                            functionPoint.setEoWeight(button.getText());
+
+                        }
+                        if(name.equalsIgnoreCase("External Inquiries")){
+
+                            functionPoint.setExternalInqWeight(button.getText());
+                        }
+                        if(name.equalsIgnoreCase("Internal Logical Files")){
+
+                            functionPoint.setIlfWeight(button.getText());
+
+                        }
+                        if(name.equalsIgnoreCase("External Interface Files")){
+
+                            functionPoint.setEifWeight(button.getText());
+
+                        }
                     }
                 }
 
@@ -64,6 +91,30 @@ public class InputOutputPanel extends JPanel {
                         setWeight(button.getText());
                         Integer buttonValue = Integer.parseInt(button.getText());
                         total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
+
+                        if(name.equalsIgnoreCase("External Inputs")){
+                            functionPoint.setEiWeight(button.getText());
+
+                        }
+                        if(name.equalsIgnoreCase("External Outputs")){
+
+                            functionPoint.setEoWeight(button.getText());
+
+                        }
+                        if(name.equalsIgnoreCase("External Inquiries")){
+
+                            functionPoint.setExternalInqWeight(button.getText());
+                        }
+                        if(name.equalsIgnoreCase("Internal Logical Files")){
+
+                            functionPoint.setIlfWeight(button.getText());
+
+                        }
+                        if(name.equalsIgnoreCase("External Interface Files")){
+
+                            functionPoint.setEifWeight(button.getText());
+
+                        }
                     }
                 }
             }
@@ -81,6 +132,30 @@ public class InputOutputPanel extends JPanel {
                         setWeight(button.getText());
                         Integer buttonValue = Integer.parseInt(button.getText());
                         total.setText(String.valueOf(Integer.parseInt(textfield.getText()) * buttonValue));
+
+                        if(name.equalsIgnoreCase("External Inputs")){
+                            functionPoint.setEiWeight(button.getText());
+
+                        }
+                        if(name.equalsIgnoreCase("External Outputs")){
+
+                            functionPoint.setEoWeight(button.getText());
+
+                        }
+                        if(name.equalsIgnoreCase("External Inquiries")){
+
+                            functionPoint.setExternalInqWeight(button.getText());
+                        }
+                        if(name.equalsIgnoreCase("Internal Logical Files")){
+
+                            functionPoint.setIlfWeight(button.getText());
+
+                        }
+                        if(name.equalsIgnoreCase("External Interface Files")){
+
+                            functionPoint.setEifWeight(button.getText());
+
+                        }
                     }
                 }
             }
@@ -165,6 +240,14 @@ public class InputOutputPanel extends JPanel {
         this.buttonGroup = buttonGroup;
     }
 
+    public FunctionPoint getFunctionPoint() {
+        return functionPoint;
+    }
+
+    public void setFunctionPoint(FunctionPoint functionPoint) {
+        this.functionPoint = functionPoint;
+    }
+
     public int computedTotal(){
         if(!total.getText().isEmpty()) {
             System.out.println(Integer.parseInt(total.getText()));
@@ -238,6 +321,35 @@ public class InputOutputPanel extends JPanel {
                 if (button.isSelected()) {
                     Integer buttonValue = Integer.parseInt(button.getText());
                     total.setText(String.valueOf(value * buttonValue));
+
+                    if(name.equalsIgnoreCase("External Inputs")){
+
+                        functionPoint.setEivalue(value);
+
+                    }
+                    if(name.equalsIgnoreCase("External Outputs")){
+
+                        functionPoint.setEovalue(value);
+
+
+                    }
+                    if(name.equalsIgnoreCase("External Inquiries")){
+                        functionPoint.setExternalInquiries(value);
+
+                    }
+                    if(name.equalsIgnoreCase("Internal Logical Files")){
+
+                        functionPoint.setIlfvalue(value);
+
+
+                    }
+                    if(name.equalsIgnoreCase("External Interface Files")){
+
+                        functionPoint.setEifvalue(value);
+
+
+                    }
+
                 }
             }
 
