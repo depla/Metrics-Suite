@@ -99,12 +99,16 @@ public class languageSelection implements ActionListener, Serializable {
     @Override
     public void actionPerformed(ActionEvent e){
         String i = e.getActionCommand();
-        if(i.equalsIgnoreCase("Done")){
-            this.mDoneOnClickHandler.setLanguage();
+        if (i.equalsIgnoreCase("Done")) {
+
+            if (this.mDoneOnClickHandler != null) {
+                this.mDoneOnClickHandler.setLanguage();
+            }
+
             setVisibility(false);
-        }else {
+        } else {
             JRadioButton btn = (JRadioButton) e.getSource();
-            if(languages.containsKey(btn.getText())){
+            if (languages.containsKey(btn.getText())) {
                 this.linesOfCode = languages.get(btn.getText());
                 this.language = btn.getText();
             }
