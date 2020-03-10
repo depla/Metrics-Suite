@@ -139,5 +139,8 @@ public class languageSelection implements ActionListener, Serializable {
 
     }
 
-
+    public HashMap<String, List<Integer>> getLanguages()
+    {
+        return languages;
+    }
 }

@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.List;
 
 public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandler, DoneOnClickHandler {
@@ -302,7 +303,11 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
 
                 if(!languageTextfield.getText().isEmpty()){
 
-                    List<Integer> list = languageSelection.getLinesOfCode();
+                    //get the hashmap in languageSelection
+                    HashMap<String,List<Integer>> languages = languageSelection.getLanguages();
+                    //get the list from the hashmap
+                    List<Integer> list = languages.get(languageTextfield.getText());
+
                     if (list != null) {
                         System.out.println(list.get(0) + " " + functionPoint.computeFP());
                         double val = list.get(0) * functionPoint.computeFP();
