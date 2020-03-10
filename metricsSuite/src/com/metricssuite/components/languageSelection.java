@@ -24,6 +24,7 @@ public class languageSelection implements ActionListener, Serializable {
 
     public languageSelection(){
 
+
         frame = new JFrame();
         frame.setTitle("Langauge Selection");
         panel = new JPanel();
@@ -65,6 +66,8 @@ public class languageSelection implements ActionListener, Serializable {
 
         frame.setVisible(false);
     }
+
+
 
     public DoneOnClickHandler getmDoneOnClickHandler() {
         return mDoneOnClickHandler;
@@ -135,5 +138,6 @@ public class languageSelection implements ActionListener, Serializable {
         }
 
     }
+
 
 }

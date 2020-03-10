@@ -299,9 +299,22 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
         computeSizeBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                List<Integer> list = languageSelection.getLinesOfCode();
-                double val = list.get(0) * functionPoint.computeFP();
-                computeSizeTextfield.setText(String.valueOf(Math.ceil(val)));
+
+                if(!languageTextfield.getText().isEmpty()){
+
+                    List<Integer> list = languageSelection.getLinesOfCode();
+                    if (list != null) {
+                        System.out.println(list.get(0) + " " + functionPoint.computeFP());
+                        double val = list.get(0) * functionPoint.computeFP();
+                        computeSizeTextfield.setText(String.valueOf((int) Math.ceil(val)));
+                    } else {
+                        computeSizeTextfield.setText(String.valueOf(0));
+                        JOptionPane.showMessageDialog(FunctionPointGui.this,
+                                "No language set.",
+                                "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+
+                }
 
             }
         });
