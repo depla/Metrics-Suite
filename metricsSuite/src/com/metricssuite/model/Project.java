@@ -3,6 +3,7 @@ package com.metricssuite.model;
 import javax.swing.table.DefaultTableModel;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Vector;
 
 public class Project implements Serializable
 {
@@ -12,7 +13,7 @@ public class Project implements Serializable
     private String comments;
 
     private ArrayList<FunctionPoint> functionPointArrayList;
-    private DefaultTableModel SMI;
+    private  Vector<Vector> SMI;
 
     /**
      * Default constructor
@@ -108,15 +109,15 @@ public Project(String projectName, String productName, String creatorName, Strin
 
     public void createSMI()
     {
-        this.SMI = new DefaultTableModel();
+        this.SMI = new Vector<>();
     }
 
-    public void setSMI(DefaultTableModel defaultTableModel)
+    public void setSMI(Vector<Vector> defaultTableModel)
     {
         this.SMI = defaultTableModel;
     }
 
-    public DefaultTableModel getSMI()
+    public Vector<Vector> getSMI()
     {
         return this.SMI;
     }

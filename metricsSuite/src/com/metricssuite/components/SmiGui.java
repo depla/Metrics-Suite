@@ -1,10 +1,13 @@
 package com.metricssuite.components;
 
+import com.metricssuite.model.Project;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Vector;
 
 public class SmiGui extends JPanel
 {
@@ -12,9 +15,7 @@ public class SmiGui extends JPanel
     private static final String SMI_HEADER = "Software Maturity Index";
     private static final String ADD_ROW = "Add row";
     private static final String COMPUTE_INDEX = "Compute Index";
-    private static final String [] COLUMN_NAMES = {"SMI", "Modules Added", "Modules Changed", "Modules Deleted",
-            "Total Modules"};
-
+    private static final Vector<String> COLUMN_NAMES = new Vector<>();
     //reference to a table
     private DefaultTableModel mPassedSmiDefaultTableModel;
 
@@ -25,10 +26,14 @@ public class SmiGui extends JPanel
     private JButton addRowButton;
     private JButton computeIndexButton;
 
-    public SmiGui(DefaultTableModel passedDefaultTable)
+    public SmiGui(Project project)
     {
-        //connect the passed smi table to the reference in this class
-        mPassedSmiDefaultTableModel = passedDefaultTable;
+        COLUMN_NAMES.add("SMI");
+        COLUMN_NAMES.add("Modules Added");
+        COLUMN_NAMES.add("Modules Changed");
+        COLUMN_NAMES.add("Modules Deleted");
+        COLUMN_NAMES.add("Total Modules");
+
 
         //instantiate components
         smiHeaderLabel = new JLabel(SMI_HEADER);
@@ -41,10 +46,17 @@ public class SmiGui extends JPanel
         //***********************************************************************
         smiJTable = new JTable();
 
-        mPassedSmiDefaultTableModel = (DefaultTableModel) smiJTable.getModel();
+       mPassedSmiDefaultTableModel = (DefaultTableModel) smiJTable.getModel();
+
+       if(project.getSMI() == null) {
+           project.setSMI(mPassedSmiDefaultTableModel.getDataVector());
+           mPassedSmiDefaultTableModel.setColumnIdentifiers(COLUMN_NAMES);
+       }else{
+           mPassedSmiDefaultTableModel.setDataVector(project.getSMI(), COLUMN_NAMES);
+       }
 
         //set the names of the columns
-        mPassedSmiDefaultTableModel.setColumnIdentifiers(COLUMN_NAMES);
+
 
         //make table visible
         smiJTable.setPreferredScrollableViewportSize(new Dimension(450, 320));
@@ -57,7 +69,12 @@ public class SmiGui extends JPanel
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                Object [] data = {0,0,0,0,0};
+                Vector<Object> data = new Vector<>();
+                data.add(0);
+                data.add(0);
+                data.add(0);
+                data.add(0);
+                data.add(0);
                 mPassedSmiDefaultTableModel.addRow(data);
 
             }

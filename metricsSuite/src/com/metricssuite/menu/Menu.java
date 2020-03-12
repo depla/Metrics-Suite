@@ -13,6 +13,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 public class Menu extends JFrame implements ActionListener {
     private JTabbedPane tabbedPane;
@@ -112,6 +113,7 @@ public class Menu extends JFrame implements ActionListener {
             case "Save":
                 System.out.println("Save");
                 saveProject();
+                System.out.println(project.getSMI().size());
                 break;
             case "Languages":
 
@@ -175,16 +177,16 @@ public class Menu extends JFrame implements ActionListener {
         else
         {
             //create the smi
-            project.createSMI();
+            //project.createSMI();
 
-            tabbedPane.addTab( "SMI", new SmiGui(project.getSMI()));
+            tabbedPane.addTab( "SMI", new SmiGui(project));
         }
 
     }
 
-    private void createSmiTab(DefaultTableModel smiDefaultTableModel)
+    private void createSmiTab(Project project)
     {
-        tabbedPane.addTab("SMI", new SmiGui(smiDefaultTableModel));
+        tabbedPane.addTab("SMI", new SmiGui(project));
     }
 
     private void setTabsFromSaved(){
@@ -194,10 +196,10 @@ public class Menu extends JFrame implements ActionListener {
 
         //create smi tab
         if(project.getSMI() != null)
-        {
-            createSmiTab(project.getSMI());
+        {   System.out.println("row count from saved smi: " + project.getSMI().size());
+            createSmiTab(project);
 
-            System.out.println("row count from saved smi: " + project.getSMI().getRowCount());
+
         }
     }
 
