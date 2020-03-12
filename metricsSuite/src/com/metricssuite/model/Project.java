@@ -1,5 +1,6 @@
 package com.metricssuite.model;
 
+import javax.swing.table.DefaultTableModel;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -11,6 +12,7 @@ public class Project implements Serializable
     private String comments;
 
     private ArrayList<FunctionPoint> functionPointArrayList;
+    private DefaultTableModel SMI;
 
     /**
      * Default constructor
@@ -22,6 +24,8 @@ public class Project implements Serializable
         creatorName = "";
         comments = "";
         functionPointArrayList = new ArrayList<>();
+        //SMI is null for a new project
+        SMI = null;
     }
 
     /**
@@ -40,6 +44,7 @@ public Project(String projectName, String productName, String creatorName, Strin
         this.creatorName = creatorName;
         this.comments = comments;
         this.functionPointArrayList = new ArrayList<FunctionPoint>();
+        this.SMI = null;
     }
 
     public String getProjectName()
@@ -99,6 +104,21 @@ public Project(String projectName, String productName, String creatorName, Strin
     public void addFunctionPoint(FunctionPoint functionPointToAdd)
     {
         this.functionPointArrayList.add(functionPointToAdd);
+    }
+
+    public void createSMI()
+    {
+        this.SMI = new DefaultTableModel();
+    }
+
+    public void setSMI(DefaultTableModel defaultTableModel)
+    {
+        this.SMI = defaultTableModel;
+    }
+
+    public DefaultTableModel getSMI()
+    {
+        return this.SMI;
     }
 
     /**
