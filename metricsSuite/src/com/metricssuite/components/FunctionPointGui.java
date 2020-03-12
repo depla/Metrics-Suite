@@ -354,6 +354,7 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
         String lang = languageSelection.getLanguage();
         languageTextfield.setText(lang);
         functionPoint.setLanguage(lang);
+        //languageSelection.setLang("");
 
     }
 

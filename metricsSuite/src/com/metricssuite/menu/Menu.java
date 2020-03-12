@@ -119,6 +119,7 @@ public class Menu extends JFrame implements ActionListener {
             
             case "Function Points":
                 createTab();
+                //language.setLang("");
                 break;
 
             case "Exit":

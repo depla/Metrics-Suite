@@ -147,4 +147,8 @@ public class languageSelection implements ActionListener, Serializable {
     {
         return languages;
     }
+
+    public void setLang(String s){
+        this.language = s;
+    }
 }
