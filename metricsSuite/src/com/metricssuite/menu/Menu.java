@@ -70,8 +70,11 @@ public class Menu extends JFrame implements ActionListener {
 
         JMenu metrics = new JMenu("Metrics"); //create metrics menu and items
         JMenuItem functionPoints = new JMenuItem("Function Points");
+        JMenuItem smi = new JMenuItem("SMI");
         functionPoints.addActionListener(this);
+        smi.addActionListener(this);
         metrics.add(functionPoints);
+        metrics.add(smi);
 
         JMenu help = new JMenu("Help"); //create help menu and items
 
@@ -120,6 +123,10 @@ public class Menu extends JFrame implements ActionListener {
             case "Function Points":
                 createTab();
                 //language.setLang("");
+                break;
+
+            case "SMI":
+                System.out.println("SMI");
                 break;
 
             case "Exit":
