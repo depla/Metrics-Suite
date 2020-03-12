@@ -6,6 +6,7 @@ import com.metricssuite.model.Project;
 
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -181,10 +182,23 @@ public class Menu extends JFrame implements ActionListener {
 
     }
 
+    private void createSmiTab(DefaultTableModel smiDefaultTableModel)
+    {
+        tabbedPane.addTab("SMI", new SmiGui(smiDefaultTableModel));
+    }
+
     private void setTabsFromSaved(){
 
         for(FunctionPoint point: project.getFunctionPointArrayList())
             createTab(point);
+
+        //create smi tab
+        if(project.getSMI() != null)
+        {
+            createSmiTab(project.getSMI());
+
+            System.out.println("row count from saved smi: " + project.getSMI().getRowCount());
+        }
     }
 
     private void createFileChooser()
