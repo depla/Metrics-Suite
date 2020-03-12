@@ -1,9 +1,6 @@
 package com.metricssuite.menu;
 
-import com.metricssuite.components.FunctionPointGui;
-import com.metricssuite.components.NewProjectWindow;
-import com.metricssuite.components.VAF;
-import com.metricssuite.components.languageSelection;
+import com.metricssuite.components.*;
 import com.metricssuite.model.FunctionPoint;
 import com.metricssuite.model.Project;
 
@@ -126,6 +123,7 @@ public class Menu extends JFrame implements ActionListener {
 
             case "SMI":
                 System.out.println("SMI");
+                createSmiTab();
                 break;
 
             case "Exit":
@@ -152,6 +150,18 @@ public class Menu extends JFrame implements ActionListener {
 
     private void createTab(FunctionPoint fp){
         tabbedPane.addTab( "Function Points", new FunctionPointGui(project, fp,language));
+    }
+
+    private void createSmiTab()
+    {
+        if(project == null)
+        {
+            JOptionPane.showMessageDialog(this,
+                    "Please open a project first.",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        tabbedPane.addTab( "SMI", new SmiGui());
     }
 
     private void setTabsFromSaved(){
@@ -265,6 +275,5 @@ public class Menu extends JFrame implements ActionListener {
 
     public static void main(String []args) {
         new Menu();
-
     }
 }
