@@ -154,6 +154,7 @@ public class Menu extends JFrame implements ActionListener {
 
     private void createSmiTab()
     {
+        //check to see if project is open
         if(project == null)
         {
             JOptionPane.showMessageDialog(this,
@@ -161,7 +162,23 @@ public class Menu extends JFrame implements ActionListener {
                     "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        tabbedPane.addTab( "SMI", new SmiGui());
+        //check if there is an smi already in the project
+        else if(project.getSMI() != null)
+        {
+            //project already has smi, show error message
+            JOptionPane.showMessageDialog(this,
+                    "Project has an SMI already.",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        //project does not have smi yet
+        else
+        {
+            //create the smi
+            project.createSMI();
+
+            tabbedPane.addTab( "SMI", new SmiGui(project.getSMI()));
+        }
+
     }
 
     private void setTabsFromSaved(){
