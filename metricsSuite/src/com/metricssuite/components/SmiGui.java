@@ -34,7 +34,7 @@ public class SmiGui extends JPanel
         smiHeaderLabel = new JLabel(SMI_HEADER);
 
         smiJTable = new JTable(mPassedSmiDefaultTableModel);
-        smiJTable.setDefaultEditor(Integer.class, new IntegerEditor(0, 100));
+        smiJTable.setDefaultEditor(Integer.class, new IntegerEditor(0, Integer.MAX_VALUE));
 
         //make table visible
         smiJTable.setPreferredScrollableViewportSize(new Dimension(450, 320));
