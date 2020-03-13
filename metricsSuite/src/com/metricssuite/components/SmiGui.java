@@ -1,6 +1,7 @@
 package com.metricssuite.components;
 
 import com.metricssuite.model.Project;
+import com.metricssuite.model.SmiTableModel;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -15,9 +16,8 @@ public class SmiGui extends JPanel
     private static final String SMI_HEADER = "Software Maturity Index";
     private static final String ADD_ROW = "Add row";
     private static final String COMPUTE_INDEX = "Compute Index";
-    private static final Vector<String> COLUMN_NAMES = new Vector<>();
     //reference to a table
-    private DefaultTableModel mPassedSmiDefaultTableModel;
+    private SmiTableModel mPassedSmiDefaultTableModel;
 
     //components
     private JLabel smiHeaderLabel;
@@ -28,35 +28,13 @@ public class SmiGui extends JPanel
 
     public SmiGui(Project project)
     {
-        COLUMN_NAMES.add("SMI");
-        COLUMN_NAMES.add("Modules Added");
-        COLUMN_NAMES.add("Modules Changed");
-        COLUMN_NAMES.add("Modules Deleted");
-        COLUMN_NAMES.add("Total Modules");
-
+        mPassedSmiDefaultTableModel = new SmiTableModel(project.getSMI());
 
         //instantiate components
         smiHeaderLabel = new JLabel(SMI_HEADER);
 
-        //***********************************************************************
-        // this line causes the DefaultTableModel in Project to not be serializable anymore
-        // causes NotSerializableException
-
-        //mPassedSmiDefaultTableModel.setColumnIdentifiers(COLUMN_NAMES);
-        //***********************************************************************
-        smiJTable = new JTable();
-
-       mPassedSmiDefaultTableModel = (DefaultTableModel) smiJTable.getModel();
-
-       if(project.getSMI() == null) {
-           project.setSMI(mPassedSmiDefaultTableModel.getDataVector());
-           mPassedSmiDefaultTableModel.setColumnIdentifiers(COLUMN_NAMES);
-       }else{
-           mPassedSmiDefaultTableModel.setDataVector(project.getSMI(), COLUMN_NAMES);
-       }
-
-        //set the names of the columns
-
+        smiJTable = new JTable(mPassedSmiDefaultTableModel);
+        smiJTable.setDefaultEditor(Integer.class, new IntegerEditor(0, 100));
 
         //make table visible
         smiJTable.setPreferredScrollableViewportSize(new Dimension(450, 320));
@@ -69,7 +47,7 @@ public class SmiGui extends JPanel
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                Vector<Object> data = new Vector<>();
+                Vector<Integer> data = new Vector<>();
                 data.add(0);
                 data.add(0);
                 data.add(0);
