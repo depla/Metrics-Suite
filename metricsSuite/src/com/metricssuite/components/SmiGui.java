@@ -54,6 +54,7 @@ public class SmiGui extends JPanel
                 data.add("");
                 data.add("");
                 mPassedSmiDefaultTableModel.addRow(data);
+                mPassedSmiDefaultTableModel.fireTableDataChanged();
 
             }
         });
@@ -83,6 +84,7 @@ public class SmiGui extends JPanel
                 double smi = ((totalModules - (modulesAdded + modulesChanged + modulesDeleted)) * 1.0)/totalModules;
 
                 lastRow.set(0, String.valueOf(smi));
+                mPassedSmiDefaultTableModel.fireTableDataChanged();
 
 
             }

@@ -59,6 +59,7 @@ public class SmiTableModel extends AbstractTableModel {
             String valS = (String)value;
             Integer valI = Integer.parseInt(valS);
             smi.get(row).set(col, String.valueOf(valI));
+
         }catch (NumberFormatException e){
             JOptionPane.showMessageDialog(jPanel,
                     "Must be an integer.",
@@ -80,7 +81,7 @@ public class SmiTableModel extends AbstractTableModel {
 
     public void addRow(Vector<String> data) {
         smi.add(data);
-        fireTableDataChanged();
+
     }
 
 }
