@@ -70,10 +70,11 @@ public class SmiTableModel extends AbstractTableModel {
 
     public boolean isCellEditable(int row, int col) {
 
-        if(row < smi.size()-1)
-            return false;
+        return row >= smi.size() - 1 && (col > 0 && col < 4);
+    }
 
-        return true;
+    public Vector<String> getLastRow(){
+        return smi.lastElement();
     }
 
 

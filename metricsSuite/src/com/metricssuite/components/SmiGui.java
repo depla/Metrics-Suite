@@ -63,6 +63,28 @@ public class SmiGui extends JPanel
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                int total;
+                if(mPassedSmiDefaultTableModel.getSmi().size() == 1){
+                    total = 0;
+                }else{
+                    int secontToLast = mPassedSmiDefaultTableModel.getSmi().size() - 2;
+                    Vector<String> secondToLastRow = mPassedSmiDefaultTableModel.getSmi().get(secontToLast);
+                    total = Integer.parseInt(secondToLastRow.get(4));
+                }
+                Vector<String> lastRow =  mPassedSmiDefaultTableModel.getLastRow();
+                int modulesAdded = Integer.parseInt(lastRow.get(1));
+                int modulesChanged = Integer.parseInt(lastRow.get(2));
+                int modulesDeleted = Integer.parseInt(lastRow.get(3));
+                //Integer totalModules = Integer.parseInt(lastRow.get(4));
+                lastRow.set(4, String.valueOf(total + modulesAdded - modulesDeleted));
+
+                int totalModules = Integer.parseInt(lastRow.get(4));
+
+                double smi = ((totalModules - (modulesAdded + modulesChanged + modulesDeleted)) * 1.0)/totalModules;
+
+                lastRow.set(0, String.valueOf(smi));
+
+
             }
         });
 
