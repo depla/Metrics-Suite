@@ -28,13 +28,13 @@ public class SmiGui extends JPanel
 
     public SmiGui(Project project)
     {
-        mPassedSmiDefaultTableModel = new SmiTableModel(project.getSMI());
+        mPassedSmiDefaultTableModel = new SmiTableModel(this, project.getSMI());
 
         //instantiate components
         smiHeaderLabel = new JLabel(SMI_HEADER);
 
         smiJTable = new JTable(mPassedSmiDefaultTableModel);
-        smiJTable.setDefaultEditor(Integer.class, new IntegerEditor(0, Integer.MAX_VALUE));
+        //smiJTable.setDefaultEditor(Integer.class, new IntegerEditor(0, Integer.MAX_VALUE));
 
         //make table visible
         smiJTable.setPreferredScrollableViewportSize(new Dimension(450, 320));
@@ -47,12 +47,12 @@ public class SmiGui extends JPanel
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                Vector<Integer> data = new Vector<>();
-                data.add(0);
-                data.add(0);
-                data.add(0);
-                data.add(0);
-                data.add(0);
+                Vector<String> data = new Vector<>();
+                data.add("");
+                data.add("");
+                data.add("");
+                data.add("");
+                data.add("");
                 mPassedSmiDefaultTableModel.addRow(data);
 
             }

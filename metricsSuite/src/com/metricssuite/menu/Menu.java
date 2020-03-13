@@ -177,7 +177,7 @@ public class Menu extends JFrame implements ActionListener {
         else
         {
             //create the smi
-            //project.createSMI();
+            project.createSMI();
 
             tabbedPane.addTab( "SMI", new SmiGui(project));
         }

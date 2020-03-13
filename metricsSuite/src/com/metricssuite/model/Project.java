@@ -13,7 +13,7 @@ public class Project implements Serializable
     private String comments;
 
     private ArrayList<FunctionPoint> functionPointArrayList;
-    private  Vector<Vector<Integer>> SMI;
+    private  Vector<Vector<String>> SMI;
 
     /**
      * Default constructor
@@ -26,7 +26,7 @@ public class Project implements Serializable
         comments = "";
         functionPointArrayList = new ArrayList<>();
         //SMI is null for a new project
-        SMI = new Vector<>();
+        SMI = null;
     }
 
     /**
@@ -112,12 +112,12 @@ public Project(String projectName, String productName, String creatorName, Strin
         this.SMI = new Vector<>();
     }
 
-    public void setSMI(Vector<Vector<Integer>> defaultTableModel)
+    public void setSMI(Vector<Vector<String>> defaultTableModel)
     {
         this.SMI = defaultTableModel;
     }
 
-    public Vector<Vector<Integer>> getSMI()
+    public Vector<Vector<String>> getSMI()
     {
         return this.SMI;
     }
