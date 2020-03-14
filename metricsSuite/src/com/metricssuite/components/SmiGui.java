@@ -27,6 +27,7 @@ public class SmiGui extends JPanel
 
     //panel for buttons
     private JPanel buttonPanel;
+    private boolean canAddRow = true;
 
     public SmiGui(Project project)
     {
@@ -58,8 +59,12 @@ public class SmiGui extends JPanel
                 data.add("0");
                 data.add("0");
                 data.add("");
-                mPassedSmiDefaultTableModel.addRow(data);
+                if(canAddRow) {
+                    mPassedSmiDefaultTableModel.addRow(data);
+                    canAddRow = false;
+                }
                 mPassedSmiDefaultTableModel.fireTableDataChanged();
+
 
             }
         });
@@ -90,7 +95,7 @@ public class SmiGui extends JPanel
 
                 lastRow.set(0, String.valueOf(smi));
                 mPassedSmiDefaultTableModel.fireTableDataChanged();
-
+                canAddRow = true;
 
             }
         });
