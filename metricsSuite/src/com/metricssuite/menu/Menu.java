@@ -11,8 +11,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Vector;
 
 public class Menu extends JFrame implements ActionListener {
@@ -113,7 +115,7 @@ public class Menu extends JFrame implements ActionListener {
             case "Save":
                 System.out.println("Save");
                 saveProject();
-                System.out.println(project.getSMI().size());
+                //System.out.println(project.getSMI().size());
                 break;
             case "Languages":
 
@@ -131,13 +133,91 @@ public class Menu extends JFrame implements ActionListener {
 
             case "Exit":
                 System.out.println("Exit");
-                exitProgramAutoSave();
-                //close program
-                System.exit(0);
+                //check if changes were made
+                //returns true if no changes were made
+                if(checkForChanges())
+                {
+                    //close program
+                    System.exit(0);
+                }
+                //this part means that there were changes
+                else
+                {
+                    //ask user if they want to save or discard
+                    int choice = createSaveChoiceDialog();
+
+                    //if they chose the red x button, choice becomes -1
+                    //so do not exit if it is -1
+                    if(choice != -1)
+                    {
+                        System.exit(0);
+                    }
+                }
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
+    }
+
+    private int createSaveChoiceDialog()
+    {
+        String[] options = {"Discard changes", "Save"};
+
+        int choice = JOptionPane.showOptionDialog(this,
+                "Would you like to save or discard your changes?",
+                "Save or discard changes?",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[1]);
+
+        //they chose to save
+        if(choice == 1)
+        {
+            saveProject();
+        }
+
+        return choice;
+    }
+
+    /**
+     * Checks to see if any changes were made
+     *
+     * @return true if they are the same (no changes), false if there were changes
+     */
+    private boolean checkForChanges()
+    {
+        //no project open so just return true by default
+        if(project == null)
+        {
+            return true;
+        }
+
+        File testFile = new File(project.getProjectName() + ".ms");
+        boolean fileExists = testFile.exists();
+
+        Project originalProject;
+
+        if(fileExists)
+        {
+            originalProject = Project.readProject(project.getProjectName() + ".ms");
+        }
+        else
+        {
+            System.out.println("checkForChanges() : .ms file does not exist yet");
+            return false;
+        }
+
+        if(originalProject.equals(project))
+        {
+            System.out.println("checkForChanges() : They are the same");
+            return true;
+        }
+
+        System.out.println("checkForChanges() : They are NOT the same");
+        return false;
+
     }
     private void createTab() {
 

@@ -3,6 +3,7 @@ package com.metricssuite.model;
 import javax.swing.table.DefaultTableModel;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Vector;
 
 public class Project implements Serializable
@@ -190,5 +191,40 @@ public Project(String projectName, String productName, String creatorName, Strin
                 ", creatorName='" + creatorName + '\'' +
                 ", comments='" + comments + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Project project = (Project) o;
+
+        if(this.SMI == null && project.SMI != null)
+        {
+            return false;
+        }
+
+        if(this.SMI != null && project.SMI != null)
+        {
+            return projectName.equals(project.projectName) &&
+                    productName.equals(project.productName) &&
+                    creatorName.equals(project.creatorName) &&
+                    comments.equals(project.comments) &&
+                    functionPointArrayList.equals(project.functionPointArrayList) &&
+                    SMI.equals(project.SMI);
+        }
+        else
+        {
+            return projectName.equals(project.projectName) &&
+                    productName.equals(project.productName) &&
+                    creatorName.equals(project.creatorName) &&
+                    comments.equals(project.comments) &&
+                    functionPointArrayList.equals(project.functionPointArrayList);
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(projectName, productName, creatorName, comments, functionPointArrayList, SMI);
     }
 }
