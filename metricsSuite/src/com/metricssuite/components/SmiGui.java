@@ -2,6 +2,7 @@ package com.metricssuite.components;
 
 import com.metricssuite.model.Project;
 import com.metricssuite.model.SmiTableModel;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -9,8 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Vector;
 
-public class SmiGui extends JPanel
-{
+public class SmiGui extends JPanel {
     //constant strings for header and buttons
     private static final String SMI_HEADER = "Software Maturity Index";
     private static final String ADD_ROW = "Add row";
@@ -27,10 +27,8 @@ public class SmiGui extends JPanel
 
     //panel for buttons
     private JPanel buttonPanel;
-    private boolean canAddRow = true;
 
-    public SmiGui(Project project)
-    {
+    public SmiGui(Project project) {
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 
         mPassedSmiDefaultTableModel = new SmiTableModel(this, project.getSMI());
@@ -52,17 +50,16 @@ public class SmiGui extends JPanel
         addRowButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                addRowButton.setEnabled(false);
                 Vector<String> data = new Vector<>();
                 data.add("");
                 data.add("0");
                 data.add("0");
                 data.add("0");
                 data.add("");
-                if(canAddRow) {
-                    mPassedSmiDefaultTableModel.addRow(data);
-                    canAddRow = false;
-                }
+                mPassedSmiDefaultTableModel.addRow(data);
+
+
                 mPassedSmiDefaultTableModel.fireTableDataChanged();
 
 
@@ -75,14 +72,14 @@ public class SmiGui extends JPanel
             public void actionPerformed(ActionEvent e) {
 
                 int total;
-                if(mPassedSmiDefaultTableModel.getSmi().size() == 1){
+                if (mPassedSmiDefaultTableModel.getSmi().size() == 1) {
                     total = 0;
-                }else{
+                } else {
                     int secontToLast = mPassedSmiDefaultTableModel.getSmi().size() - 2;
                     Vector<String> secondToLastRow = mPassedSmiDefaultTableModel.getSmi().get(secontToLast);
                     total = Integer.parseInt(secondToLastRow.get(4));
                 }
-                Vector<String> lastRow =  mPassedSmiDefaultTableModel.getLastRow();
+                Vector<String> lastRow = mPassedSmiDefaultTableModel.getLastRow();
                 int modulesAdded = Integer.parseInt(lastRow.get(1));
                 int modulesChanged = Integer.parseInt(lastRow.get(2));
                 int modulesDeleted = Integer.parseInt(lastRow.get(3));
@@ -91,11 +88,11 @@ public class SmiGui extends JPanel
 
                 int totalModules = Integer.parseInt(lastRow.get(4));
 
-                double smi = ((totalModules - (modulesAdded + modulesChanged + modulesDeleted)) * 1.0)/totalModules;
+                double smi = ((totalModules - (modulesAdded + modulesChanged + modulesDeleted)) * 1.0) / totalModules;
 
                 lastRow.set(0, String.valueOf(smi));
                 mPassedSmiDefaultTableModel.fireTableDataChanged();
-                canAddRow = true;
+                addRowButton.setEnabled(true);
 
             }
         });
