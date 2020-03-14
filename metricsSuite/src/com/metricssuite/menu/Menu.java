@@ -31,7 +31,7 @@ public class Menu extends JFrame implements ActionListener {
         getContentPane().add(BorderLayout.CENTER, tabbedPane);
         this.setJMenuBar(createMenuBar());
 
-        setTitle("Metrics Suite");
+        setTitle("CECS 543 Metrics Suite");
         setLocationRelativeTo(null);
         setSize(new Dimension(500, 500));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -378,7 +378,7 @@ public class Menu extends JFrame implements ActionListener {
 
     public void setHeaderWithName(Project project)
     {
-        setTitle("Metrics Suite - " + project.getProjectName());
+        setTitle("CECS 543 Metrics Suite - " + project.getProjectName());
     }
 
     public void clearTabs()
