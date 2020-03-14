@@ -160,6 +160,11 @@ public class NewProjectWindow extends JFrame implements ActionListener
         }
         else //user hit cancel
         {
+            if(mainFrame.getProject().getProjectName().equals(""))
+            {
+                mainFrame.setProject(null);
+            }
+
             dispose();
         }
     }
