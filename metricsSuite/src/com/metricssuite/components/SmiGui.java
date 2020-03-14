@@ -38,6 +38,7 @@ public class SmiGui extends JPanel
         smiHeaderLabel = new JLabel(SMI_HEADER);
 
         smiJTable = new JTable(mPassedSmiDefaultTableModel);
+        smiJTable.setGridColor(Color.BLACK);
         //smiJTable.setDefaultEditor(Integer.class, new IntegerEditor(0, Integer.MAX_VALUE));
 
         //make table visible
