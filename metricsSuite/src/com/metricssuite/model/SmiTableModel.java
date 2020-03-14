@@ -11,6 +11,7 @@ public class SmiTableModel extends AbstractTableModel {
     private JPanel jPanel;
 
     public SmiTableModel(JPanel j, Vector<Vector<String>> smi){
+
         COLUMN_NAMES.add("SMI");
         COLUMN_NAMES.add("Modules Added");
         COLUMN_NAMES.add("Modules Changed");
@@ -56,9 +57,13 @@ public class SmiTableModel extends AbstractTableModel {
     public void setValueAt(Object value, int row, int col) {
 
         try {
-            String valS = (String)value;
-            Integer valI = Integer.parseInt(valS);
-            smi.get(row).set(col, String.valueOf(valI));
+            if (!((String) value).isEmpty()) {
+                String valS = (String) value;
+                Integer valI = Integer.parseInt(valS);
+                smi.get(row).set(col, String.valueOf(valI));
+            } else {
+                smi.get(row).set(col, String.valueOf(0));
+            }
 
         }catch (NumberFormatException e){
             JOptionPane.showMessageDialog(jPanel,
