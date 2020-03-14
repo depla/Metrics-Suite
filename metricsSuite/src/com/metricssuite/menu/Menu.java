@@ -5,6 +5,8 @@ import com.metricssuite.model.FunctionPoint;
 import com.metricssuite.model.Project;
 
 import javax.swing.*;
+import javax.swing.event.MenuEvent;
+import javax.swing.event.MenuListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -84,6 +86,60 @@ public class Menu extends JFrame implements ActionListener {
         menuBar.add(preferences);
         menuBar.add(metrics);
         menuBar.add(help);
+
+        file.addMenuListener(new MenuListener() {
+            @Override
+            public void menuSelected(MenuEvent e) {
+                System.out.println("File");
+
+                if(project == null)
+                {
+                    save.setEnabled(false);
+                }
+                else
+                {
+                    save.setEnabled(true);
+                }
+            }
+
+            @Override
+            public void menuDeselected(MenuEvent e) {
+
+            }
+
+            @Override
+            public void menuCanceled(MenuEvent e) {
+
+            }
+        });
+
+        metrics.addMenuListener(new MenuListener() {
+            @Override
+            public void menuSelected(MenuEvent e) {
+                System.out.println("Metrics");
+
+                if(project == null)
+                {
+                    functionPoints.setEnabled(false);
+                    smi.setEnabled(false);
+                }
+                else
+                {
+                    functionPoints.setEnabled(true);
+                    smi.setEnabled(true);
+                }
+            }
+
+            @Override
+            public void menuDeselected(MenuEvent e) {
+
+            }
+
+            @Override
+            public void menuCanceled(MenuEvent e) {
+
+            }
+        });
 
         return menuBar;
     }
