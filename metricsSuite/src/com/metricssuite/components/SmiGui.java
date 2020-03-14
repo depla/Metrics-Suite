@@ -2,7 +2,6 @@ package com.metricssuite.components;
 
 import com.metricssuite.model.Project;
 import com.metricssuite.model.SmiTableModel;
-
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -26,8 +25,13 @@ public class SmiGui extends JPanel
     private JButton addRowButton;
     private JButton computeIndexButton;
 
+    //panel for buttons
+    JPanel buttonPanel;
+
     public SmiGui(Project project)
     {
+        setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
+
         mPassedSmiDefaultTableModel = new SmiTableModel(this, project.getSMI());
 
         //instantiate components
@@ -49,9 +53,9 @@ public class SmiGui extends JPanel
 
                 Vector<String> data = new Vector<>();
                 data.add("");
-                data.add("");
-                data.add("");
-                data.add("");
+                data.add("0");
+                data.add("0");
+                data.add("0");
                 data.add("");
                 mPassedSmiDefaultTableModel.addRow(data);
                 mPassedSmiDefaultTableModel.fireTableDataChanged();
@@ -90,11 +94,14 @@ public class SmiGui extends JPanel
             }
         });
 
-
+        smiHeaderLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         add(smiHeaderLabel);
         add(smiJScrollPane);
-        add(addRowButton);
-        add(computeIndexButton);
+
+        buttonPanel = new JPanel();
+        buttonPanel.add(addRowButton);
+        buttonPanel.add(computeIndexButton);
+        add(buttonPanel);
 
     }
 
