@@ -136,11 +136,9 @@ public class NewProjectWindow extends JFrame implements ActionListener
 
                     //create a new project
                     project = new Project();
-
-                    mainFrame.setProject(project);
                 }
 
-                //else it was not null
+                //else it was not null, we didnt have an old project open already
                 project.setProjectName(projectNameTextField.getText());
                 project.setProductName(productNameTextField.getText());
                 project.setCreatorName(creatorNameTextField.getText());
@@ -148,6 +146,8 @@ public class NewProjectWindow extends JFrame implements ActionListener
                 System.out.print(project.toString());
 
                 mainFrame.setHeaderWithName(project);
+
+                mainFrame.setProject(project);
 
                 setVisible(false);
             }
@@ -160,11 +160,6 @@ public class NewProjectWindow extends JFrame implements ActionListener
         }
         else //user hit cancel
         {
-            if(mainFrame.getProject().getProjectName().equals(""))
-            {
-                mainFrame.setProject(null);
-            }
-
             dispose();
         }
     }

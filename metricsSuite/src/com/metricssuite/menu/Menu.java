@@ -150,10 +150,11 @@ public class Menu extends JFrame implements ActionListener {
             case "New":
                 System.out.println("New Project");
                 //check if there is a project open or not
+                //there is not one open yet
                 if(project == null)
                 {
                     //create a new project
-                    project = new Project();
+                    Project project = new Project();
                     projectWindow = new NewProjectWindow(this, project);
                 }
                 else //one is already open
