@@ -26,7 +26,7 @@ public class SmiGui extends JPanel
     private JButton computeIndexButton;
 
     //panel for buttons
-    JPanel buttonPanel;
+    private JPanel buttonPanel;
 
     public SmiGui(Project project)
     {
