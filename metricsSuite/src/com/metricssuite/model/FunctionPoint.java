@@ -5,9 +5,7 @@ import javafx.util.Pair;
 
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class FunctionPoint implements Serializable {
 
@@ -16,11 +14,11 @@ public class FunctionPoint implements Serializable {
     private int externalInquiries = 0;
     private int ilfvalue = 0;
     private int eifvalue = 0;
-    private String eiWeight;
-    private String eoWeight;
-    private String externalInqWeight;
-    private String ilfWeight;
-    private String eifWeight;
+    private String eiWeight = "";
+    private String eoWeight = "";
+    private String externalInqWeight = "";
+    private String ilfWeight = "";
+    private String eifWeight = "";
 
     private int[] vaf;
     private int totalCount;
@@ -164,5 +162,33 @@ public class FunctionPoint implements Serializable {
         return sum;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FunctionPoint that = (FunctionPoint) o;
 
+        return eivalue == that.eivalue &&
+                eovalue == that.eovalue &&
+                externalInquiries == that.externalInquiries &&
+                ilfvalue == that.ilfvalue &&
+                eifvalue == that.eifvalue &&
+                totalCount == that.totalCount &&
+                Double.compare(that.functionPoint, functionPoint) == 0 &&
+                eiWeight.equals(that.eiWeight) &&
+                eoWeight.equals(that.eoWeight) &&
+                externalInqWeight.equals(that.externalInqWeight) &&
+                ilfWeight.equals(that.ilfWeight) &&
+                eifWeight.equals(that.eifWeight) &&
+                Arrays.equals(vaf, that.vaf) &&
+                language.equals(that.language);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(eivalue, eovalue, externalInquiries, ilfvalue, eifvalue, eiWeight, eoWeight,
+                externalInqWeight, ilfWeight, eifWeight, totalCount, functionPoint, language);
+        result = 31 * result + Arrays.hashCode(vaf);
+        return result;
+    }
 }

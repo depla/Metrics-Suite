@@ -16,7 +16,7 @@ public class languageSelection implements ActionListener, Serializable {
             panel10,panel11, panel12;
     private JButton button;
     private ButtonGroup btnGroup = new ButtonGroup();
-    private String language;
+    private String language = "";
 
     private HashMap<String,List<Integer>> languages = new HashMap<>();
     private List<Integer>linesOfCode;

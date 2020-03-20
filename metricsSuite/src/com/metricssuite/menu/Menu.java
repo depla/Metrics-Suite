@@ -1,20 +1,23 @@
 package com.metricssuite.menu;
 
-import com.metricssuite.components.FunctionPointGui;
-import com.metricssuite.components.NewProjectWindow;
-import com.metricssuite.components.VAF;
-import com.metricssuite.components.languageSelection;
+import com.metricssuite.components.*;
 import com.metricssuite.model.FunctionPoint;
 import com.metricssuite.model.Project;
 
 import javax.swing.*;
+import javax.swing.event.MenuEvent;
+import javax.swing.event.MenuListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.Vector;
 
 public class Menu extends JFrame implements ActionListener {
     private JTabbedPane tabbedPane;
@@ -30,7 +33,7 @@ public class Menu extends JFrame implements ActionListener {
         getContentPane().add(BorderLayout.CENTER, tabbedPane);
         this.setJMenuBar(createMenuBar());
 
-        setTitle("Metrics Suite");
+        setTitle("CECS 543 Metrics Suite");
         setLocationRelativeTo(null);
         setSize(new Dimension(500, 500));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -84,6 +87,60 @@ public class Menu extends JFrame implements ActionListener {
         menuBar.add(metrics);
         menuBar.add(help);
 
+        file.addMenuListener(new MenuListener() {
+            @Override
+            public void menuSelected(MenuEvent e) {
+                System.out.println("File");
+
+                if(project == null)
+                {
+                    save.setEnabled(false);
+                }
+                else
+                {
+                    save.setEnabled(true);
+                }
+            }
+
+            @Override
+            public void menuDeselected(MenuEvent e) {
+
+            }
+
+            @Override
+            public void menuCanceled(MenuEvent e) {
+
+            }
+        });
+
+        metrics.addMenuListener(new MenuListener() {
+            @Override
+            public void menuSelected(MenuEvent e) {
+                System.out.println("Metrics");
+
+                if(project == null)
+                {
+                    functionPoints.setEnabled(false);
+                    smi.setEnabled(false);
+                }
+                else
+                {
+                    functionPoints.setEnabled(true);
+                    smi.setEnabled(true);
+                }
+            }
+
+            @Override
+            public void menuDeselected(MenuEvent e) {
+
+            }
+
+            @Override
+            public void menuCanceled(MenuEvent e) {
+
+            }
+        });
+
         return menuBar;
     }
     public void actionPerformed(ActionEvent e) {
@@ -93,10 +150,11 @@ public class Menu extends JFrame implements ActionListener {
             case "New":
                 System.out.println("New Project");
                 //check if there is a project open or not
+                //there is not one open yet
                 if(project == null)
                 {
                     //create a new project
-                    project = new Project();
+                    Project project = new Project();
                     projectWindow = new NewProjectWindow(this, project);
                 }
                 else //one is already open
@@ -114,6 +172,7 @@ public class Menu extends JFrame implements ActionListener {
             case "Save":
                 System.out.println("Save");
                 saveProject();
+                //System.out.println(project.getSMI().size());
                 break;
             case "Languages":
 
@@ -127,17 +186,96 @@ public class Menu extends JFrame implements ActionListener {
 
             case "SMI":
                 System.out.println("SMI");
+                createSmiTab();
                 break;
 
             case "Exit":
                 System.out.println("Exit");
-                exitProgramAutoSave();
-                //close program
-                System.exit(0);
+                //check if changes were made
+                //returns true if no changes were made
+                if(checkForChanges())
+                {
+                    //close program
+                    System.exit(0);
+                }
+                //this part means that there were changes
+                else
+                {
+                    //ask user if they want to save or discard
+                    int choice = createSaveChoiceDialog();
+
+                    //if they chose the red x button, choice becomes -1
+                    //so do not exit if it is -1
+                    if(choice != -1)
+                    {
+                        System.exit(0);
+                    }
+                }
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
+    }
+
+    private int createSaveChoiceDialog()
+    {
+        String[] options = {"Discard changes", "Save"};
+
+        int choice = JOptionPane.showOptionDialog(this,
+                "Would you like to save or discard your changes?",
+                "Save or discard changes?",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,
+                options,
+                options[1]);
+
+        //they chose to save
+        if(choice == 1)
+        {
+            saveProject();
+        }
+
+        return choice;
+    }
+
+    /**
+     * Checks to see if any changes were made
+     *
+     * @return true if they are the same (no changes), false if there were changes
+     */
+    private boolean checkForChanges()
+    {
+        //no project open so just return true by default
+        if(project == null)
+        {
+            return true;
+        }
+
+        File testFile = new File(project.getProjectName() + ".ms");
+        boolean fileExists = testFile.exists();
+
+        Project originalProject;
+
+        if(fileExists)
+        {
+            originalProject = Project.readProject(project.getProjectName() + ".ms");
+        }
+        else
+        {
+            System.out.println("checkForChanges() : .ms file does not exist yet");
+            return false;
+        }
+
+        if(originalProject.equals(project))
+        {
+            System.out.println("checkForChanges() : They are the same");
+            return true;
+        }
+
+        System.out.println("checkForChanges() : They are NOT the same");
+        return false;
+
     }
     private void createTab() {
 
@@ -155,10 +293,52 @@ public class Menu extends JFrame implements ActionListener {
         tabbedPane.addTab( "Function Points", new FunctionPointGui(project, fp,language));
     }
 
+    private void createSmiTab()
+    {
+        //check to see if project is open
+        if(project == null)
+        {
+            JOptionPane.showMessageDialog(this,
+                    "Please open a project first.",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        //check if there is an smi already in the project
+        else if(project.getSMI() != null)
+        {
+            //project already has smi, show error message
+            JOptionPane.showMessageDialog(this,
+                    "Project has an SMI already.",
+                    "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        //project does not have smi yet
+        else
+        {
+            //create the smi
+            project.createSMI();
+
+            tabbedPane.addTab( "SMI", new SmiGui(project));
+        }
+
+    }
+
+    private void createSmiTab(Project project)
+    {
+        tabbedPane.addTab("SMI", new SmiGui(project));
+    }
+
     private void setTabsFromSaved(){
 
         for(FunctionPoint point: project.getFunctionPointArrayList())
             createTab(point);
+
+        //create smi tab
+        if(project.getSMI() != null)
+        {   System.out.println("row count from saved smi: " + project.getSMI().size());
+            createSmiTab(project);
+
+
+        }
     }
 
     private void createFileChooser()
@@ -256,7 +436,7 @@ public class Menu extends JFrame implements ActionListener {
 
     public void setHeaderWithName(Project project)
     {
-        setTitle("Metrics Suite - " + project.getProjectName());
+        setTitle("CECS 543 Metrics Suite - " + project.getProjectName());
     }
 
     public void clearTabs()
@@ -266,6 +446,5 @@ public class Menu extends JFrame implements ActionListener {
 
     public static void main(String []args) {
         new Menu();
-
     }
 }
