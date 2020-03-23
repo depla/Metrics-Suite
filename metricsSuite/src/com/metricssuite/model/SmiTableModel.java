@@ -60,7 +60,13 @@ public class SmiTableModel extends AbstractTableModel {
             if (!((String) value).isEmpty()) {
                 String valS = (String) value;
                 Integer valI = Integer.parseInt(valS);
-                smi.get(row).set(col, String.valueOf(valI));
+                if (valI < 0) {
+                    JOptionPane.showMessageDialog(jPanel,
+                            "Must be greater than 0.",
+                            "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    smi.get(row).set(col, String.valueOf(valI));
+                }
             } else {
                 smi.get(row).set(col, String.valueOf(0));
             }
