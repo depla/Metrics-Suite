@@ -51,7 +51,7 @@ public class SmiGui extends JPanel {
         smiJScrollPane = new JScrollPane(smiJTable);
 
         addRowButton = new JButton(ADD_ROW);
-        if(project.getSMI().lastElement().get(4).isEmpty()){
+        if(project.getSMI().size() > 0 && project.getSMI().lastElement().get(4).isEmpty()){
             addRowButton.setEnabled(false);
         }
         addRowButton.addActionListener(new ActionListener() {
