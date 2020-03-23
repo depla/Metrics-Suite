@@ -411,6 +411,10 @@ public class Menu extends JFrame implements ActionListener {
             JOptionPane.showMessageDialog(this,
                     "There is no open project. Unable to save.",
                     "Error", JOptionPane.ERROR_MESSAGE);
+        }else if(project.getSMI().size() == 1 && project.getSMI().lastElement().get(4).isEmpty()){
+            JOptionPane.showMessageDialog(this,
+                    "Total Modules must be computed before exiting",
+                    "Error", JOptionPane.ERROR_MESSAGE);
         }
         //else there is a project open
         else
