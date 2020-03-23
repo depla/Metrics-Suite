@@ -12,6 +12,8 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -36,7 +38,14 @@ public class Menu extends JFrame implements ActionListener {
         setTitle("CECS 543 Metrics Suite");
         setLocationRelativeTo(null);
         setSize(new Dimension(500, 500));
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                checkSaveOnExit();
+            }
+        });
+
         setVisible(true);
         language = new languageSelection();
     }
@@ -191,29 +200,34 @@ public class Menu extends JFrame implements ActionListener {
 
             case "Exit":
                 System.out.println("Exit");
-                //check if changes were made
-                //returns true if no changes were made
-                if(checkForChanges())
-                {
-                    //close program
-                    System.exit(0);
-                }
-                //this part means that there were changes
-                else
-                {
-                    //ask user if they want to save or discard
-                    int choice = createSaveChoiceDialog();
-
-                    //if they chose the red x button, choice becomes -1
-                    //so do not exit if it is -1
-                    if(choice != -1)
-                    {
-                        System.exit(0);
-                    }
-                }
+                checkSaveOnExit();
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
+        }
+    }
+
+    private void checkSaveOnExit()
+    {
+        //check if changes were made
+        //returns true if no changes were made
+        if(checkForChanges())
+        {
+            //close program
+            System.exit(0);
+        }
+        //this part means that there were changes
+        else
+        {
+            //ask user if they want to save or discard
+            int choice = createSaveChoiceDialog();
+
+            //if they chose the red x button, choice becomes -1
+            //so do not exit if it is -1
+            if(choice != -1)
+            {
+                System.exit(0);
+            }
         }
     }
 
