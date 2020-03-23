@@ -33,6 +33,10 @@ public class SmiGui extends JPanel {
 
         mPassedSmiDefaultTableModel = new SmiTableModel(this, project.getSMI());
 
+
+
+
+
         //instantiate components
         smiHeaderLabel = new JLabel(SMI_HEADER);
 
@@ -47,6 +51,9 @@ public class SmiGui extends JPanel {
         smiJScrollPane = new JScrollPane(smiJTable);
 
         addRowButton = new JButton(ADD_ROW);
+        if(project.getSMI().lastElement().get(4).isEmpty()){
+            addRowButton.setEnabled(false);
+        }
         addRowButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
