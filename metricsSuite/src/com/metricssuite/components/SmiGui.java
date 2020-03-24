@@ -114,7 +114,11 @@ public class SmiGui extends JPanel {
 
                 lastRow.set(0, String.valueOf(smi));
                 mPassedSmiDefaultTableModel.fireTableDataChanged();
-                addRowButton.setEnabled(true);
+
+                if(!mPassedSmiDefaultTableModel.getSmi().get(0).get(0).equalsIgnoreCase("NaN"))
+                {
+                    addRowButton.setEnabled(true);
+                }
 
             }
         });
