@@ -60,9 +60,9 @@ public class SmiGui extends JPanel {
                 addRowButton.setEnabled(false);
                 Vector<String> data = new Vector<>();
                 data.add("");
-                data.add("0");
-                data.add("0");
-                data.add("0");
+                data.add("");
+                data.add("");
+                data.add("");
                 data.add("");
                 mPassedSmiDefaultTableModel.addRow(data);
 
@@ -87,9 +87,24 @@ public class SmiGui extends JPanel {
                     total = Integer.parseInt(secondToLastRow.get(4));
                 }
                 Vector<String> lastRow = mPassedSmiDefaultTableModel.getLastRow();
-                int modulesAdded = Integer.parseInt(lastRow.get(1));
-                int modulesChanged = Integer.parseInt(lastRow.get(2));
-                int modulesDeleted = Integer.parseInt(lastRow.get(3));
+                int modulesAdded = 0;
+                int modulesChanged = 0;
+                int modulesDeleted = 0;
+                if(!lastRow.get(1).isEmpty()){
+                    modulesAdded = Integer.parseInt(lastRow.get(1));
+                }else{
+                    lastRow.set(1, "0");
+                }
+                if(!lastRow.get(2).isEmpty()){
+                    modulesChanged = Integer.parseInt(lastRow.get(2));
+                }else{
+                    lastRow.set(2, "0");
+                }
+                if(!lastRow.get(3).isEmpty()){
+                    modulesDeleted = Integer.parseInt(lastRow.get(3));
+                }else{
+                    lastRow.set(3, "0");
+                }
                 //Integer totalModules = Integer.parseInt(lastRow.get(4));
                 lastRow.set(4, String.valueOf(total + modulesAdded - modulesDeleted));
 
