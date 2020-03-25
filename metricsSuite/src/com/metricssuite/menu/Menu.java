@@ -16,10 +16,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Objects;
-import java.util.Vector;
 
 public class Menu extends JFrame implements ActionListener {
     private JTabbedPane tabbedPane;
@@ -237,6 +235,7 @@ public class Menu extends JFrame implements ActionListener {
 
             case "Add code":
                 System.out.println("Add code");
+                projectCodeFileChooser();
                 break;
 
             case "Project code statistics":
@@ -249,6 +248,29 @@ public class Menu extends JFrame implements ActionListener {
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
+        }
+    }
+
+    private void projectCodeFileChooser()
+    {
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setMultiSelectionEnabled(true);
+        File currentDirectory = new File(System.getProperty("user.dir"));
+
+        fileChooser.setCurrentDirectory(currentDirectory);
+        fileChooser.setDialogTitle("Choose a file(s) to open");
+
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("java files", "java");
+        fileChooser.setFileFilter(filter);
+
+        File [] selectedFiles;
+
+        if(fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
+        {
+            selectedFiles = fileChooser.getSelectedFiles();
+
+            //prints out the absolute paths of the selected files
+            System.out.println(Arrays.toString(selectedFiles));
         }
     }
 
