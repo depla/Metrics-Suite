@@ -88,12 +88,21 @@ public class Menu extends JFrame implements ActionListener {
         metrics.add(functionPoints);
         metrics.add(smi);
 
+        JMenu projectCode = new JMenu("Project Code");
+        JMenuItem addCode = new JMenuItem("Add code");
+        JMenuItem projectCodeStatistics = new JMenuItem("Project code statistics");
+        addCode.addActionListener(this);
+        projectCodeStatistics.addActionListener(this);
+        projectCode.add(addCode);
+        projectCode.add(projectCodeStatistics);
+
         JMenu help = new JMenu("Help"); //create help menu and items
 
         menuBar.add(file);  //add menus to menubar
         menuBar.add(edit);
         menuBar.add(preferences);
         menuBar.add(metrics);
+        menuBar.add(projectCode);
         menuBar.add(help);
 
         file.addMenuListener(new MenuListener() {
@@ -136,6 +145,34 @@ public class Menu extends JFrame implements ActionListener {
                 {
                     functionPoints.setEnabled(true);
                     smi.setEnabled(true);
+                }
+            }
+
+            @Override
+            public void menuDeselected(MenuEvent e) {
+
+            }
+
+            @Override
+            public void menuCanceled(MenuEvent e) {
+
+            }
+        });
+
+        projectCode.addMenuListener(new MenuListener() {
+            @Override
+            public void menuSelected(MenuEvent e) {
+                System.out.println("Project Code");
+
+                if(project == null)
+                {
+                    addCode.setEnabled(false);
+                    projectCodeStatistics.setEnabled(false);
+                }
+                else
+                {
+                    addCode.setEnabled(true);
+                    projectCodeStatistics.setEnabled(true);
                 }
             }
 
@@ -196,6 +233,14 @@ public class Menu extends JFrame implements ActionListener {
             case "SMI":
                 System.out.println("SMI");
                 createSmiTab();
+                break;
+
+            case "Add code":
+                System.out.println("Add code");
+                break;
+
+            case "Project code statistics":
+                System.out.println("Project code statistics");
                 break;
 
             case "Exit":
