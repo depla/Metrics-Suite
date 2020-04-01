@@ -4,6 +4,7 @@ import com.metricssuite.antlr.MetricsParser;
 import com.metricssuite.components.*;
 import com.metricssuite.model.FunctionPoint;
 import com.metricssuite.model.Project;
+import org.antlr.runtime.RecognitionException;
 
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
@@ -15,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
+import java.io.IOException;
 import java.util.*;
 
 public class Menu extends JFrame implements ActionListener {
@@ -217,7 +219,13 @@ public class Menu extends JFrame implements ActionListener {
                 break;
             case "Open":
                 System.out.println("open");
-                createFileChooser();
+                try {
+                    createFileChooser();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                } catch (RecognitionException ex) {
+                    ex.printStackTrace();
+                }
                 break;
             case "Save":
                 System.out.println("Save");
@@ -246,7 +254,13 @@ public class Menu extends JFrame implements ActionListener {
 
             case "Project code statistics":
                 System.out.println("Project code statistics");
-                projectCodeStatistics();
+                try {
+                    projectCodeStatistics();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                } catch (RecognitionException ex) {
+                    ex.printStackTrace();
+                }
                 break;
 
             case "Exit":
@@ -258,8 +272,7 @@ public class Menu extends JFrame implements ActionListener {
         }
     }
 
-    private void projectCodeStatistics()
-    {
+    private void projectCodeStatistics() throws IOException, RecognitionException {
         System.out.println(Arrays.toString(project.getSelectedFiles()));
 
         createHalMcMetricsTabs(project.getSelectedFiles());
@@ -425,8 +438,7 @@ public class Menu extends JFrame implements ActionListener {
         tabbedPane.addTab("SMI", new SmiGui(project));
     }
 
-    public void createHalMcMetricsTabs(File [] selectedFiles)
-    {
+    public void createHalMcMetricsTabs(File [] selectedFiles) throws IOException, RecognitionException {
         String fileName;
 
         for(int i = 0; i < selectedFiles.length; i++)
@@ -438,7 +450,7 @@ public class Menu extends JFrame implements ActionListener {
         }
     }
 
-    private void setTabsFromSaved(){
+    private void setTabsFromSaved() throws IOException, RecognitionException {
 
         for(FunctionPoint point: project.getFunctionPointArrayList())
             createTab(point);
@@ -456,8 +468,7 @@ public class Menu extends JFrame implements ActionListener {
         }
     }
 
-    private void createFileChooser()
-    {
+    private void createFileChooser() throws IOException, RecognitionException {
         JFileChooser fileChooser = new JFileChooser();
         File currentDirectory = new File(System.getProperty("user.dir"));
 

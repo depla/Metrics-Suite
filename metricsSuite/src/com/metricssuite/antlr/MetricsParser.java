@@ -8,11 +8,19 @@ import org.antlr.runtime.RecognitionException;
 
 public class MetricsParser
 {
-    public static String parse(File selectedFile)
+    public static String parse(File selectedFile) throws IOException, RecognitionException
     {
         String fileName;
         fileName = selectedFile.toString();
         fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
+
+        System.out.println("Parsing file: " + fileName);
+
+        JavaJavaLexer lexer = new JavaJavaLexer(new ANTLRFileStream(selectedFile.toString()));
+        CommonTokenStream tokens = new CommonTokenStream(lexer);
+        JavaJavaParser parser = new JavaJavaParser(tokens);
+
+        parser.compilationUnit();
 
         StringBuilder stringBuilder = new StringBuilder();
 
