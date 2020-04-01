@@ -1,5 +1,6 @@
 package com.metricssuite.menu;
 
+import com.metricssuite.antlr.MetricsParser;
 import com.metricssuite.components.*;
 import com.metricssuite.model.FunctionPoint;
 import com.metricssuite.model.Project;
@@ -8,16 +9,13 @@ import javax.swing.*;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.*;
-import java.util.List;
 
 public class Menu extends JFrame implements ActionListener {
     private JTabbedPane tabbedPane;
@@ -263,6 +261,8 @@ public class Menu extends JFrame implements ActionListener {
     private void projectCodeStatistics()
     {
         System.out.println(Arrays.toString(project.getSelectedFiles()));
+
+        createHalMcMetricsTabs(project.getSelectedFiles());
     }
 
     private void projectCodeFileChooser()
@@ -425,6 +425,19 @@ public class Menu extends JFrame implements ActionListener {
         tabbedPane.addTab("SMI", new SmiGui(project));
     }
 
+    public void createHalMcMetricsTabs(File [] selectedFiles)
+    {
+        String fileName;
+
+        for(int i = 0; i < selectedFiles.length; i++)
+        {
+            fileName = selectedFiles[i].toString();
+            fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
+
+            tabbedPane.addTab(fileName, new HalMcMetricGui(MetricsParser.parse(selectedFiles[i])));
+        }
+    }
+
     private void setTabsFromSaved(){
 
         for(FunctionPoint point: project.getFunctionPointArrayList())
@@ -434,8 +447,12 @@ public class Menu extends JFrame implements ActionListener {
         if(project.getSMI() != null)
         {   System.out.println("row count from saved smi: " + project.getSMI().size());
             createSmiTab(project);
+        }
 
-
+        //create halstead/mccabe tabs
+        if(project.getSelectedFiles() != null)
+        {
+            createHalMcMetricsTabs(project.getSelectedFiles());
         }
     }
 
