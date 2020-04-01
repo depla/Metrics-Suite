@@ -170,7 +170,15 @@ public class Menu extends JFrame implements ActionListener {
                 else
                 {
                     addCode.setEnabled(true);
-                    projectCodeStatistics.setEnabled(true);
+
+                    if(project.getSelectedFiles() != null)
+                    {
+                        projectCodeStatistics.setEnabled(true);
+                    }
+                    else
+                    {
+                        projectCodeStatistics.setEnabled(false);
+                    }
                 }
             }
 
@@ -240,6 +248,7 @@ public class Menu extends JFrame implements ActionListener {
 
             case "Project code statistics":
                 System.out.println("Project code statistics");
+                projectCodeStatistics();
                 break;
 
             case "Exit":
@@ -249,6 +258,11 @@ public class Menu extends JFrame implements ActionListener {
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
+    }
+
+    private void projectCodeStatistics()
+    {
+        System.out.println(Arrays.toString(project.getSelectedFiles()));
     }
 
     private void projectCodeFileChooser()
@@ -271,6 +285,9 @@ public class Menu extends JFrame implements ActionListener {
 
             //prints out the absolute paths of the selected files
             System.out.println(Arrays.toString(selectedFiles));
+
+            //set the selected files into the project
+            project.setSelectedFiles(selectedFiles);
         }
     }
 

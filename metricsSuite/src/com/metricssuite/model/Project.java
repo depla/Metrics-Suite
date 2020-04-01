@@ -3,6 +3,7 @@ package com.metricssuite.model;
 import javax.swing.table.DefaultTableModel;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.Vector;
 
@@ -14,7 +15,8 @@ public class Project implements Serializable
     private String comments;
 
     private ArrayList<FunctionPoint> functionPointArrayList;
-    private  Vector<Vector<String>> SMI;
+    private Vector<Vector<String>> SMI;
+    private File [] selectedFiles;
 
     /**
      * Default constructor
@@ -28,6 +30,7 @@ public class Project implements Serializable
         functionPointArrayList = new ArrayList<>();
         //SMI is null for a new project
         SMI = null;
+        selectedFiles = null;
     }
 
     /**
@@ -47,6 +50,7 @@ public Project(String projectName, String productName, String creatorName, Strin
         this.comments = comments;
         this.functionPointArrayList = new ArrayList<FunctionPoint>();
         this.SMI = null;
+        this.selectedFiles = null;
     }
 
     public String getProjectName()
@@ -121,6 +125,16 @@ public Project(String projectName, String productName, String creatorName, Strin
     public Vector<Vector<String>> getSMI()
     {
         return this.SMI;
+    }
+
+    public File[] getSelectedFiles()
+    {
+        return selectedFiles;
+    }
+
+    public void setSelectedFiles(File[] selectedFiles)
+    {
+        this.selectedFiles = selectedFiles;
     }
 
     /**
@@ -211,7 +225,8 @@ public Project(String projectName, String productName, String creatorName, Strin
                     creatorName.equals(project.creatorName) &&
                     comments.equals(project.comments) &&
                     functionPointArrayList.equals(project.functionPointArrayList) &&
-                    SMI.equals(project.SMI);
+                    SMI.equals(project.SMI) &&
+                    Arrays.equals(selectedFiles, project.selectedFiles);
         }
         else
         {
@@ -219,12 +234,15 @@ public Project(String projectName, String productName, String creatorName, Strin
                     productName.equals(project.productName) &&
                     creatorName.equals(project.creatorName) &&
                     comments.equals(project.comments) &&
-                    functionPointArrayList.equals(project.functionPointArrayList);
+                    functionPointArrayList.equals(project.functionPointArrayList) &&
+                    Arrays.equals(selectedFiles, project.selectedFiles);
         }
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(projectName, productName, creatorName, comments, functionPointArrayList, SMI);
+        int result = Objects.hash(projectName, productName, creatorName, comments, functionPointArrayList, SMI);
+        result = 31 * result + Arrays.hashCode(selectedFiles);
+        return result;
     }
 }
