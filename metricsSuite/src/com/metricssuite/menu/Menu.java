@@ -18,6 +18,7 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
+import java.util.List;
 
 public class Menu extends JFrame implements ActionListener {
     private JTabbedPane tabbedPane;
@@ -171,7 +172,7 @@ public class Menu extends JFrame implements ActionListener {
                 {
                     addCode.setEnabled(true);
 
-                    if(project.getSelectedFiles() != null)
+                    if(project.getSelectedFiles().size() != 0)
                     {
                         projectCodeStatistics.setEnabled(true);
                     }
@@ -273,7 +274,7 @@ public class Menu extends JFrame implements ActionListener {
     }
 
     private void projectCodeStatistics() throws IOException, RecognitionException {
-        System.out.println(Arrays.toString(project.getSelectedFiles()));
+        System.out.println(project.getSelectedFiles().toString());
 
         createHalMcMetricsTabs(project.getSelectedFiles());
     }
@@ -299,8 +300,11 @@ public class Menu extends JFrame implements ActionListener {
             //prints out the absolute paths of the selected files
             System.out.println(Arrays.toString(selectedFiles));
 
+            ArrayList<File> fileArrayList = new ArrayList<File>();
+            Collections.addAll(fileArrayList, selectedFiles);
+
             //set the selected files into the project
-            project.setSelectedFiles(selectedFiles);
+            project.setSelectedFiles(fileArrayList);
         }
     }
 
@@ -438,15 +442,15 @@ public class Menu extends JFrame implements ActionListener {
         tabbedPane.addTab("SMI", new SmiGui(project));
     }
 
-    public void createHalMcMetricsTabs(File [] selectedFiles) throws IOException, RecognitionException {
+    public void createHalMcMetricsTabs(ArrayList<File> selectedFiles) throws IOException, RecognitionException {
         String fileName;
 
-        for(int i = 0; i < selectedFiles.length; i++)
+        for(int i = 0; i < selectedFiles.size(); i++)
         {
-            fileName = selectedFiles[i].toString();
+            fileName = selectedFiles.get(i).toString();
             fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
 
-            tabbedPane.addTab(fileName, new HalMcMetricGui(MetricsParser.parse(selectedFiles[i])));
+            tabbedPane.addTab(fileName, new HalMcMetricGui(MetricsParser.parse(selectedFiles.get(i))));
         }
     }
 

@@ -16,7 +16,7 @@ public class Project implements Serializable
 
     private ArrayList<FunctionPoint> functionPointArrayList;
     private Vector<Vector<String>> SMI;
-    private File [] selectedFiles;
+    private ArrayList<File> selectedFiles;
 
     /**
      * Default constructor
@@ -30,7 +30,7 @@ public class Project implements Serializable
         functionPointArrayList = new ArrayList<>();
         //SMI is null for a new project
         SMI = null;
-        selectedFiles = null;
+        selectedFiles = new ArrayList<>();
     }
 
     /**
@@ -127,12 +127,12 @@ public Project(String projectName, String productName, String creatorName, Strin
         return this.SMI;
     }
 
-    public File[] getSelectedFiles()
+    public ArrayList<File> getSelectedFiles()
     {
         return selectedFiles;
     }
 
-    public void setSelectedFiles(File[] selectedFiles)
+    public void setSelectedFiles(ArrayList<File> selectedFiles)
     {
         this.selectedFiles = selectedFiles;
     }
@@ -226,7 +226,7 @@ public Project(String projectName, String productName, String creatorName, Strin
                     comments.equals(project.comments) &&
                     functionPointArrayList.equals(project.functionPointArrayList) &&
                     SMI.equals(project.SMI) &&
-                    Arrays.equals(selectedFiles, project.selectedFiles);
+                    selectedFiles.equals(project.selectedFiles);
         }
         else
         {
@@ -235,14 +235,12 @@ public Project(String projectName, String productName, String creatorName, Strin
                     creatorName.equals(project.creatorName) &&
                     comments.equals(project.comments) &&
                     functionPointArrayList.equals(project.functionPointArrayList) &&
-                    Arrays.equals(selectedFiles, project.selectedFiles);
+                    selectedFiles.equals(project.selectedFiles);
         }
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(projectName, productName, creatorName, comments, functionPointArrayList, SMI);
-        result = 31 * result + Arrays.hashCode(selectedFiles);
-        return result;
+        return Objects.hash(projectName, productName, creatorName, comments, functionPointArrayList, SMI, selectedFiles);
     }
 }
