@@ -303,8 +303,8 @@ public class Menu extends JFrame implements ActionListener {
             ArrayList<File> fileArrayList = new ArrayList<File>();
             Collections.addAll(fileArrayList, selectedFiles);
 
-            //set the selected files into the project
-            project.setSelectedFiles(fileArrayList);
+            //add the selected files into the project
+            project.addSelectedFiles(fileArrayList);
         }
     }
 

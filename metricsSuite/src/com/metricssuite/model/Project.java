@@ -137,6 +137,11 @@ public Project(String projectName, String productName, String creatorName, Strin
         this.selectedFiles = selectedFiles;
     }
 
+    public void addSelectedFiles(ArrayList<File> selectedFiles)
+    {
+        this.selectedFiles.addAll(selectedFiles);
+    }
+
     /**
      * Method to write to a file
      * @param fileName the file name to write to
