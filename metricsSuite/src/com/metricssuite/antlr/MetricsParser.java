@@ -75,7 +75,7 @@ public class MetricsParser
         stringBuilder.append("File length in bytes: ").append(selectedFile.length()).append("\n");
         stringBuilder.append("File white space: ").append(lexer.ws).append("\n");
         stringBuilder.append("File comment space in bytes:").append(lexer.commentcount).append("\n");
-        stringBuilder.append("comment percentage of file: ").append(100*lexer.commentcount/selectedFile.length()).append("%\n");
+        stringBuilder.append("Comment percentage of file: ").append(100*lexer.commentcount/selectedFile.length()).append("%\n");
         stringBuilder.append("Halstead metrics: \n");
         stringBuilder.append("  Unique operators: "+ uniqueOperators).append("\n");
         stringBuilder.append("  Unique operands: "+ uniqueOperands).append("\n");
