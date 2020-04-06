@@ -2,6 +2,8 @@ package com.metricssuite.antlr;
 
 import java.io.File;
 import java.io.IOException;
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -59,7 +61,12 @@ public class MetricsParser
         difficulty = (totalOperators/2)*(totalOperands/uniqueOperands);
         effort = volume * difficulty ;
         time = effort/18 ;
+        double time_min = time/60;
+        double time_hr = time/3600;
+        double time_month= time_hr/8/20;
         numBugs = (int)volume/3000;
+        DecimalFormat df = new DecimalFormat("#.####");
+        df.setRoundingMode(RoundingMode.CEILING);
         Set<String> mccabeValues = new LinkedHashSet<>();
         mccabeValues = metrics.getMcCabeValues();
 
@@ -76,9 +83,11 @@ public class MetricsParser
         stringBuilder.append("  Total operands: "+ totalOperands).append("\n");
         stringBuilder.append("  Program Length (N)= ").append(programLength).append("\n");
         stringBuilder.append("  Program vocabulary(n)= ").append(programVocab).append("\n");
-        stringBuilder.append("  Volume = ").append(volume).append("\n");
+        stringBuilder.append("  Volume = ").append(df.format(volume)).append("\n");
         stringBuilder.append("  Difficulty = ").append(difficulty).append("\n");
-        stringBuilder.append("  Effort = ").append(effort).append("\n");
+        stringBuilder.append("  Effort = ").append(df.format(effort));
+        stringBuilder.append(" Time = "+df.format(time)+"( "+ df.format(time_min) +" minutes or "+df.format(time_hr)+
+                " hours or "+ df.format(time_month)+" person months)\n");
         stringBuilder.append("  Bugs expected = ").append(numBugs).append("\n\n\n\n");
         stringBuilder.append("McCabe's Cyclomatic Complexity ").append("\n");
 
