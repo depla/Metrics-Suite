@@ -97,44 +97,44 @@ public class MetricsParser
 
 ///for debuggin only
         //Halstead Metrics
-        System.out.println("unique constant constants: "+ metrics.uniqueConstantsCount());
-        System.out.println("unique keyword constants: "+ metrics.uniqueKeywordsCount());
-        System.out.println("unique operators: "+ metrics.uniqueSpecialCount());
-        System.out.println("*********");
-
-
-        Set<String> specialCount = new LinkedHashSet<>();
-        specialCount = metrics.getUniqueSpecial();
-        System.out.println("operators: ");
-        for(String sp : specialCount){
-            System.out.print(sp+" ");
-        }
-        System.out.println("");
-
-        Set<String> uniqueConstant = new LinkedHashSet<>();
-        uniqueConstant= metrics.getUniqueConstants();
-
-        System.out.println("unique constants: ");
-        for(String ss : uniqueConstant){
-            System.out.print(ss+" ");
-        }
-        System.out.println(" ");
-
-        Set<String> uniqueKeywords = new LinkedHashSet<>();
-        uniqueKeywords= metrics.getUniqueKeywords();
-        System.out.println("unique keywords:");
-        for(String sss : uniqueKeywords){
-            System.out.print(sss+"  ");
-        }
-        System.out.println("");
-
-        Set<String> uniqueIndentifers = new LinkedHashSet<>();
-        uniqueIndentifers = metrics.getUniqueIndentifers();
-        System.out.println("unique indentifiers");
-        for(String ssdd : uniqueIndentifers){
-            System.out.print(ssdd+"  ");
-        }
-        System.out.println("");
+//        System.out.println("unique constant constants: "+ metrics.uniqueConstantsCount());
+//        System.out.println("unique keyword constants: "+ metrics.uniqueKeywordsCount());
+//        System.out.println("unique operators: "+ metrics.uniqueSpecialCount());
+//        System.out.println("*********");
+//
+//
+//        Set<String> specialCount = new LinkedHashSet<>();
+//        specialCount = metrics.getUniqueSpecial();
+//        System.out.println("operators: ");
+//        for(String sp : specialCount){
+//            System.out.print(sp+" ");
+//        }
+//        System.out.println("");
+//
+//        Set<String> uniqueConstant = new LinkedHashSet<>();
+//        uniqueConstant= metrics.getUniqueConstants();
+//
+//        System.out.println("unique constants: ");
+//        for(String ss : uniqueConstant){
+//            System.out.print(ss+" ");
+//        }
+//        System.out.println(" ");
+//
+//        Set<String> uniqueKeywords = new LinkedHashSet<>();
+//        uniqueKeywords= metrics.getUniqueKeywords();
+//        System.out.println("unique keywords:");
+//        for(String sss : uniqueKeywords){
+//            System.out.print(sss+"  ");
+//        }
+//        System.out.println("");
+//
+//        Set<String> uniqueIndentifers = new LinkedHashSet<>();
+//        uniqueIndentifers = metrics.getUniqueIndentifers();
+//        System.out.println("unique indentifiers");
+//        for(String ssdd : uniqueIndentifers){
+//            System.out.print(ssdd+"  ");
+//        }
+//        System.out.println("");
 
 
 
