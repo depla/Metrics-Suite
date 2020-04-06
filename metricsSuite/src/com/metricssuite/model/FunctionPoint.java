@@ -24,6 +24,7 @@ public class FunctionPoint implements Serializable {
     private int totalCount;
     private double functionPoint;
     private String language = "";
+    private String name = "no_name";
 
     public FunctionPoint(){
 
@@ -146,6 +147,13 @@ public class FunctionPoint implements Serializable {
     public void setVaf(int[] vaf) {
         this.vaf = vaf;
     }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public double computeFP(){
 
@@ -190,5 +198,10 @@ public class FunctionPoint implements Serializable {
                 externalInqWeight, ilfWeight, eifWeight, totalCount, functionPoint, language);
         result = 31 * result + Arrays.hashCode(vaf);
         return result;
+    }
+
+    @Override
+    public String toString(){
+        return name;
     }
 }

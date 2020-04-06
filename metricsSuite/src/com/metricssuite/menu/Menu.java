@@ -11,6 +11,7 @@ import javax.swing.*;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.tree.DefaultMutableTreeNode;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,14 +27,24 @@ public class Menu extends JFrame implements ActionListener {
     private NewProjectWindow projectWindow;
     private Project project;
     private languageSelection language;
-    private FunctionPointGui functionPoint;
-    private ArrayList openedTab = new ArrayList<>();;
+    //private FunctionPointGui functionPoint;
+    private ArrayList openedTab = new ArrayList<>();
+    private JTree tree;
+    private DefaultMutableTreeNode root;
     //private static VAF  v;
 
     public Menu() {
+        root = new DefaultMutableTreeNode("");
+        tree = new JTree(root);
+        JScrollPane treeView = new JScrollPane(tree);
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
+        splitPane.setLeftComponent(treeView);
+
+
         getContentPane().setLayout(new BorderLayout());
         tabbedPane = new JTabbedPane();
-        getContentPane().add(BorderLayout.CENTER, tabbedPane);
+        splitPane.setRightComponent(tabbedPane);
+        getContentPane().add(BorderLayout.CENTER, splitPane);
         this.setJMenuBar(createMenuBar());
 
         setTitle("CECS 543 Metrics Suite");
@@ -49,6 +60,7 @@ public class Menu extends JFrame implements ActionListener {
 
         setVisible(true);
         language = new languageSelection();
+
     }
 
 
@@ -224,6 +236,7 @@ public class Menu extends JFrame implements ActionListener {
                 System.out.println("open");
                 try {
                     createFileChooser();
+                    //createNodes(root);
                 } catch (IOException ex) {
                     ex.printStackTrace();
                 } catch (RecognitionException ex) {
@@ -403,11 +416,17 @@ public class Menu extends JFrame implements ActionListener {
                     "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        tabbedPane.addTab( "Function Points", new FunctionPointGui(project, language));
+
+        FunctionPointGui functionPointGui = new FunctionPointGui(project, language);
+        functionPointGui.setName("alex");
+        tabbedPane.addTab( "Function Points", functionPointGui);
+        root.add(new DefaultMutableTreeNode(functionPointGui));
     }
 
     private void createTab(FunctionPoint fp){
-        tabbedPane.addTab( "Function Points", new FunctionPointGui(project, fp,language));
+        FunctionPointGui functionPointGui = new FunctionPointGui(project, fp,language);
+        tabbedPane.addTab( "Function Points", functionPointGui);
+        root.add(new DefaultMutableTreeNode(functionPointGui));
     }
 
     private void createSmiTab()
@@ -433,15 +452,17 @@ public class Menu extends JFrame implements ActionListener {
         {
             //create the smi
             project.createSMI();
-
-            tabbedPane.addTab( "SMI", new SmiGui(project));
+            SmiGui smi = new SmiGui(project);
+            tabbedPane.addTab( "SMI", smi);
+            root.add(new DefaultMutableTreeNode(smi));
         }
 
     }
 
     private void createSmiTab(Project project)
-    {
-        tabbedPane.addTab("SMI", new SmiGui(project));
+    {   SmiGui smi = new SmiGui(project);
+        tabbedPane.addTab("SMI", smi);
+        root.add(new DefaultMutableTreeNode(smi));
     }
 
     public void createHalMcMetricsTabs(ArrayList<File> selectedFiles) throws IOException, RecognitionException {
@@ -456,7 +477,9 @@ public class Menu extends JFrame implements ActionListener {
                 openedTab.add(currentFilename);
 
                 MetricsParser metricParser = new MetricsParser();
-                tabbedPane.addTab(fileName, new HalMcMetricGui(metricParser.parse(selectedFiles.get(i))));
+                HalMcMetricGui halMcMetricGui = new HalMcMetricGui(metricParser.parse(selectedFiles.get(i)));
+                tabbedPane.addTab(fileName, halMcMetricGui);
+                root.add(new DefaultMutableTreeNode(selectedFiles.get(i).getName()));
             }
         }
 
@@ -582,6 +605,17 @@ public class Menu extends JFrame implements ActionListener {
     {
         tabbedPane.removeAll();
     }
+
+    /*private void createNodes(DefaultMutableTreeNode root){
+
+        for (int i = 0; i < project.getSelectedFiles().size(); i++){
+            root.add(new DefaultMutableTreeNode(project.getSelectedFiles().get(i)));
+        }
+        for(int i = 0; i < project.getFunctionPointArrayList().size(); i++){
+            root.add(new DefaultMutableTreeNode(project.getFunctionPointArrayList().get(i)));
+        }
+
+    }*/
 
 
 //    private void clearTab(String tabName) {
