@@ -8,11 +8,11 @@ options {backtrack=true; memoize=true;
 //@parser::namespace {OOPIES}
 //@lexer::namespace {OOPIES}
 @header {
-package metricssuite;
+package com.metricssuite.antlr;
 }
 
 @lexer::header {
-package metricssuite;
+package com.metricssuite.antlr;
 
 }
 @members {

@@ -1,21 +1,22 @@
 package com.metricssuite.menu;
 
+import com.metricssuite.antlr.MetricsParser;
 import com.metricssuite.components.*;
 import com.metricssuite.model.FunctionPoint;
 import com.metricssuite.model.Project;
+import org.antlr.runtime.RecognitionException;
 
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
@@ -170,7 +171,15 @@ public class Menu extends JFrame implements ActionListener {
                 else
                 {
                     addCode.setEnabled(true);
-                    projectCodeStatistics.setEnabled(true);
+
+                    if(project.getSelectedFiles().size() != 0)
+                    {
+                        projectCodeStatistics.setEnabled(true);
+                    }
+                    else
+                    {
+                        projectCodeStatistics.setEnabled(false);
+                    }
                 }
             }
 
@@ -211,7 +220,13 @@ public class Menu extends JFrame implements ActionListener {
                 break;
             case "Open":
                 System.out.println("open");
-                createFileChooser();
+                try {
+                    createFileChooser();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                } catch (RecognitionException ex) {
+                    ex.printStackTrace();
+                }
                 break;
             case "Save":
                 System.out.println("Save");
@@ -240,6 +255,13 @@ public class Menu extends JFrame implements ActionListener {
 
             case "Project code statistics":
                 System.out.println("Project code statistics");
+                try {
+                    projectCodeStatistics();
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                } catch (RecognitionException ex) {
+                    ex.printStackTrace();
+                }
                 break;
 
             case "Exit":
@@ -249,6 +271,12 @@ public class Menu extends JFrame implements ActionListener {
             default:
                 throw new IllegalStateException("Unexpected value: " + i);
         }
+    }
+
+    private void projectCodeStatistics() throws IOException, RecognitionException {
+        System.out.println(project.getSelectedFiles().toString());
+
+        createHalMcMetricsTabs(project.getSelectedFiles());
     }
 
     private void projectCodeFileChooser()
@@ -271,6 +299,12 @@ public class Menu extends JFrame implements ActionListener {
 
             //prints out the absolute paths of the selected files
             System.out.println(Arrays.toString(selectedFiles));
+
+            ArrayList<File> fileArrayList = new ArrayList<File>();
+            Collections.addAll(fileArrayList, selectedFiles);
+
+            //add the selected files into the project
+            project.addSelectedFiles(fileArrayList);
         }
     }
 
@@ -408,7 +442,19 @@ public class Menu extends JFrame implements ActionListener {
         tabbedPane.addTab("SMI", new SmiGui(project));
     }
 
-    private void setTabsFromSaved(){
+    public void createHalMcMetricsTabs(ArrayList<File> selectedFiles) throws IOException, RecognitionException {
+        String fileName;
+
+        for(int i = 0; i < selectedFiles.size(); i++)
+        {
+            fileName = selectedFiles.get(i).toString();
+            fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
+
+            tabbedPane.addTab(fileName, new HalMcMetricGui(MetricsParser.parse(selectedFiles.get(i))));
+        }
+    }
+
+    private void setTabsFromSaved() throws IOException, RecognitionException {
 
         for(FunctionPoint point: project.getFunctionPointArrayList())
             createTab(point);
@@ -417,13 +463,16 @@ public class Menu extends JFrame implements ActionListener {
         if(project.getSMI() != null)
         {   System.out.println("row count from saved smi: " + project.getSMI().size());
             createSmiTab(project);
+        }
 
-
+        //create halstead/mccabe tabs
+        if(project.getSelectedFiles() != null)
+        {
+            createHalMcMetricsTabs(project.getSelectedFiles());
         }
     }
 
-    private void createFileChooser()
-    {
+    private void createFileChooser() throws IOException, RecognitionException {
         JFileChooser fileChooser = new JFileChooser();
         File currentDirectory = new File(System.getProperty("user.dir"));
 
