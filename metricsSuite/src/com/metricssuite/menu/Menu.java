@@ -27,6 +27,7 @@ public class Menu extends JFrame implements ActionListener {
     private Project project;
     private languageSelection language;
     private FunctionPointGui functionPoint;
+    private ArrayList openedTab = new ArrayList<>();;
     //private static VAF  v;
 
     public Menu() {
@@ -444,15 +445,21 @@ public class Menu extends JFrame implements ActionListener {
     }
 
     public void createHalMcMetricsTabs(ArrayList<File> selectedFiles) throws IOException, RecognitionException {
+
         String fileName;
-        clearTabs();
         for(int i = 0; i < selectedFiles.size(); i++)
         {
             fileName = selectedFiles.get(i).toString();
+            String currentFilename= selectedFiles.get(i).getName().replaceAll(".java","");
             fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
-            MetricsParser metricParser = new MetricsParser();
-            tabbedPane.addTab(fileName, new HalMcMetricGui(metricParser.parse(selectedFiles.get(i))));
+            if(!openedTab.contains(currentFilename)){
+                openedTab.add(currentFilename);
+
+                MetricsParser metricParser = new MetricsParser();
+                tabbedPane.addTab(fileName, new HalMcMetricGui(metricParser.parse(selectedFiles.get(i))));
+            }
         }
+
     }
 
     private void setTabsFromSaved() throws IOException, RecognitionException {
@@ -469,6 +476,7 @@ public class Menu extends JFrame implements ActionListener {
         //create halstead/mccabe tabs
         if(project.getSelectedFiles() != null)
         {
+
             createHalMcMetricsTabs(project.getSelectedFiles());
         }
     }
@@ -574,6 +582,17 @@ public class Menu extends JFrame implements ActionListener {
     {
         tabbedPane.removeAll();
     }
+
+
+//    private void clearTab(String tabName) {
+//        for (int i = 0; i < tabbedPane.getTabCount(); i++) {
+//            String tabTitle = tabbedPane.getTitleAt(i);
+//            if (tabTitle.equals(tabName)) {
+//                tabbedPane.remove(i);
+//                break;
+//            }
+//        }
+//    }
 
     public static void main(String []args) {
         new Menu();
