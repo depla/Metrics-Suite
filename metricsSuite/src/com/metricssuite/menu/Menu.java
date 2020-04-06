@@ -1,5 +1,6 @@
 package com.metricssuite.menu;
 
+import com.metricssuite.antlr.JavaMetrics;
 import com.metricssuite.antlr.MetricsParser;
 import com.metricssuite.components.*;
 import com.metricssuite.model.FunctionPoint;
@@ -444,13 +445,13 @@ public class Menu extends JFrame implements ActionListener {
 
     public void createHalMcMetricsTabs(ArrayList<File> selectedFiles) throws IOException, RecognitionException {
         String fileName;
-
+        clearTabs();
         for(int i = 0; i < selectedFiles.size(); i++)
         {
             fileName = selectedFiles.get(i).toString();
             fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
-
-            tabbedPane.addTab(fileName, new HalMcMetricGui(MetricsParser.parse(selectedFiles.get(i))));
+            MetricsParser metricParser = new MetricsParser();
+            tabbedPane.addTab(fileName, new HalMcMetricGui(metricParser.parse(selectedFiles.get(i))));
         }
     }
 
