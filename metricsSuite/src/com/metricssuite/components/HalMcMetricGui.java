@@ -14,6 +14,7 @@ public class HalMcMetricGui extends JPanel
 
         parseTextArea = new JTextArea(parsedData);
         parseTextArea.setLineWrap(true);
+        parseTextArea.setEditable(false);
         parseScrollPane = new JScrollPane(parseTextArea);
 
         add(parseScrollPane, BorderLayout.CENTER);
