@@ -318,6 +318,10 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
 
             //add the selected files into the project
             project.addSelectedFiles(fileArrayList);
+
+            for(File file: project.getSelectedFiles()){
+                createNode(file);
+            }
         }
     }
 
