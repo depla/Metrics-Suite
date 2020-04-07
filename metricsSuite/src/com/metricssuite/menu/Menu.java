@@ -12,6 +12,7 @@ import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,7 +23,7 @@ import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
-public class Menu extends JFrame implements ActionListener {
+public class Menu extends JFrame implements ActionListener, NewProjectWindow.CreateProjectOnClickHandler {
     private JTabbedPane tabbedPane;
     private NewProjectWindow projectWindow;
     private Project project;
@@ -31,20 +32,14 @@ public class Menu extends JFrame implements ActionListener {
     private ArrayList openedTab = new ArrayList<>();
     private JTree tree;
     private DefaultMutableTreeNode root;
+
     //private static VAF  v;
 
     public Menu() {
-        root = new DefaultMutableTreeNode("");
-        tree = new JTree(root);
-        JScrollPane treeView = new JScrollPane(tree);
-        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
-        splitPane.setLeftComponent(treeView);
-
 
         getContentPane().setLayout(new BorderLayout());
         tabbedPane = new JTabbedPane();
-        splitPane.setRightComponent(tabbedPane);
-        getContentPane().add(BorderLayout.CENTER, splitPane);
+
         this.setJMenuBar(createMenuBar());
 
         setTitle("CECS 543 Metrics Suite");
@@ -58,8 +53,9 @@ public class Menu extends JFrame implements ActionListener {
             }
         });
 
-        setVisible(true);
         language = new languageSelection();
+
+        setVisible(true);
 
     }
 
@@ -223,14 +219,16 @@ public class Menu extends JFrame implements ActionListener {
                     //create a new project
                     Project project = new Project();
                     projectWindow = new NewProjectWindow(this, project);
+
                 }
                 else //one is already open
                 {
                     //pass a new null one
                     Project newProject = null;
                     projectWindow = new NewProjectWindow(this, newProject);
-                }
 
+                }
+                projectWindow.setmOnClickHandler(this);
                 break;
             case "Open":
                 System.out.println("open");
@@ -420,7 +418,13 @@ public class Menu extends JFrame implements ActionListener {
         FunctionPointGui functionPointGui = new FunctionPointGui(project, language);
         functionPointGui.setName("alex");
         tabbedPane.addTab( "Function Points", functionPointGui);
-        root.add(new DefaultMutableTreeNode(functionPointGui));
+        createNode(functionPointGui);
+    }
+
+    private void createNode(Object object){
+        DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
+        root.add(new DefaultMutableTreeNode(object));
+        model.reload(root);
     }
 
     private void createTab(FunctionPoint fp){
@@ -454,7 +458,7 @@ public class Menu extends JFrame implements ActionListener {
             project.createSMI();
             SmiGui smi = new SmiGui(project);
             tabbedPane.addTab( "SMI", smi);
-            root.add(new DefaultMutableTreeNode(smi));
+            createNode(smi);
         }
 
     }
@@ -534,6 +538,7 @@ public class Menu extends JFrame implements ActionListener {
                 //read the project from the opened file
                 project = Project.readProject(absolutePath);
                 //clear out any old tabs first
+                createJtree(project.getProjectName());
                 clearTabs();
                 setTabsFromSaved();
 
@@ -606,6 +611,23 @@ public class Menu extends JFrame implements ActionListener {
         tabbedPane.removeAll();
     }
 
+    public void createJtree(String projectName){
+        root = new DefaultMutableTreeNode(projectName);
+        tree = new JTree(root);
+        JScrollPane treeView = new JScrollPane(tree);
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
+        splitPane.setLeftComponent(treeView);
+        splitPane.setRightComponent(tabbedPane);
+        getContentPane().add(BorderLayout.CENTER, splitPane);
+    }
+
+    @Override
+    public void done(String projectName) {
+
+        createJtree(projectName);
+
+    }
+
     /*private void createNodes(DefaultMutableTreeNode root){
 
         for (int i = 0; i < project.getSelectedFiles().size(); i++){
@@ -631,4 +653,5 @@ public class Menu extends JFrame implements ActionListener {
     public static void main(String []args) {
         new Menu();
     }
+
 }
