@@ -29,10 +29,9 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
     private Project project;
     private languageSelection language;
     //private FunctionPointGui functionPoint;
-    private ArrayList openedTab = new ArrayList<>();
+    private ArrayList<String> openedTab = new ArrayList<>();
     private JTree tree;
     private DefaultMutableTreeNode root;
-    private Map<String, Component> componentMap;
     int pH = 0;
 
     //private static VAF  v;
@@ -41,7 +40,6 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
 
         getContentPane().setLayout(new BorderLayout());
         tabbedPane = new JTabbedPane();
-        componentMap = new LinkedHashMap<>();
 
         this.setJMenuBar(createMenuBar());
 
@@ -239,9 +237,7 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
                 try {
                     createFileChooser();
                     //createNodes(root);
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                } catch (RecognitionException ex) {
+                } catch (IOException | RecognitionException ex) {
                     ex.printStackTrace();
                 }
                 break;
@@ -274,19 +270,13 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
                 System.out.println("Project code statistics");
                 try {
                     projectCodeStatistics();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                } catch (RecognitionException ex) {
+                } catch (IOException | RecognitionException ex) {
                     ex.printStackTrace();
                 }
                 break;
 
             case "Exit":
                 System.out.println("Exit");
-                Set<String> set = componentMap.keySet();
-                for(String c: set){
-                    System.out.println(c);
-                }
                 checkSaveOnExit();
                 break;
             default:
@@ -429,7 +419,6 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         String aa = "alex" + String.valueOf(pH);
         functionPointGui.getFunctionPoint().setName(aa);
         tabbedPane.addTab( aa, functionPointGui);
-        componentMap.put(aa, functionPointGui);
         createNode(new ComponentInfo(functionPointGui.getFunctionPoint().getName(), functionPointGui));
     }
 
@@ -442,7 +431,6 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
     private void createTab(FunctionPoint fp){
         FunctionPointGui functionPointGui = new FunctionPointGui(project, fp,language);
         tabbedPane.addTab( fp.getName(), functionPointGui);
-        componentMap.put(fp.getName(), functionPointGui);
         createNode(new ComponentInfo(fp.getName(), functionPointGui));
     }
 
@@ -472,7 +460,6 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
             SmiGui smi = new SmiGui(project);
             tabbedPane.addTab( "SMI", smi);
             createNode(new ComponentInfo("SMI", smi));
-            componentMap.put("SMI", smi);
         }
 
     }
@@ -481,7 +468,6 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
     {   SmiGui smi = new SmiGui(project);
         tabbedPane.addTab("SMI", smi);
         createNode(new ComponentInfo("SMI", smi));
-        componentMap.put("SMI", smi);
     }
 
     public void createHalMcMetricsTabs(ArrayList<File> selectedFiles) throws IOException, RecognitionException {
@@ -499,7 +485,6 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
                 HalMcMetricGui halMcMetricGui = new HalMcMetricGui(metricParser.parse(selectedFiles.get(i)));
                 tabbedPane.addTab(fileName, halMcMetricGui);
                 createNode(new ComponentInfo(fileName, halMcMetricGui));
-                componentMap.put(fileName, halMcMetricGui);
             }
         }
 
@@ -694,13 +679,34 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
                     public void actionPerformed(ActionEvent e) {
 
                         if(component instanceof FunctionPointGui){
-                            System.out.println("fpgui");
+                            System.out.println(((FunctionPointGui) component).getFunctionPoint().getName());
+                            ArrayList<FunctionPoint> fpList = project.getFunctionPointArrayList();
+                            for(int i = 0; i < fpList.size(); i++){
+                                FunctionPoint fp = fpList.get(i);
+                                if(fp.getName().equalsIgnoreCase(node.toString())){
+                                    fpList.remove(i);
+                                    break;
+                                }
+
+                            }
                         }
                         else if (component instanceof HalMcMetricGui){
-                            System.out.println("hal");
+                            System.out.println(node.toString());
                         }else{
-                            System.out.println("smi");
+                            project.setSMI(null);
+
                         }
+
+                        for(int i = 0; i < tabbedPane.getTabCount(); i++){
+
+                            if(tabbedPane.getTitleAt(i).equalsIgnoreCase(node.toString())){
+                                tabbedPane.removeTabAt(i);
+                            }
+                        }
+                        //root.remove(node);
+                        DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
+                        root.remove(node);
+                        model.reload(root);
 
                     }
                 });
@@ -744,14 +750,15 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         createJtree(projectName);
 
     }
-    private class ComponentInfo{
-        public String cName;
-        public Component component;
 
-    public ComponentInfo(String cName, Component component) {
-        this.cName = cName;
-        this.component = component;
-    }
+    private class ComponentInfo {
+        String cName;
+        Component component;
+
+        ComponentInfo(String cName, Component component) {
+            this.cName = cName;
+            this.component = component;
+        }
 
     public String toString(){
         return cName;
