@@ -427,10 +427,10 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         FunctionPointGui functionPointGui = new FunctionPointGui(project, language);
         pH++;
         String aa = "alex" + String.valueOf(pH);
-        functionPointGui.setName(aa);
+        functionPointGui.getFunctionPoint().setName(aa);
         tabbedPane.addTab( aa, functionPointGui);
         componentMap.put(aa, functionPointGui);
-        createNode(new ComponentInfo(functionPointGui.getName(), functionPointGui));
+        createNode(new ComponentInfo(functionPointGui.getFunctionPoint().getName(), functionPointGui));
     }
 
     private void createNode(ComponentInfo object){
@@ -744,28 +744,6 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         createJtree(projectName);
 
     }
-
-    /*private void createNodes(DefaultMutableTreeNode root){
-
-        for (int i = 0; i < project.getSelectedFiles().size(); i++){
-            root.add(new DefaultMutableTreeNode(project.getSelectedFiles().get(i)));
-        }
-        for(int i = 0; i < project.getFunctionPointArrayList().size(); i++){
-            root.add(new DefaultMutableTreeNode(project.getFunctionPointArrayList().get(i)));
-        }
-
-    }*/
-
-
-//    private void clearTab(String tabName) {
-//        for (int i = 0; i < tabbedPane.getTabCount(); i++) {
-//            String tabTitle = tabbedPane.getTitleAt(i);
-//            if (tabTitle.equals(tabName)) {
-//                tabbedPane.remove(i);
-//                break;
-//            }
-//        }
-//    }
     private class ComponentInfo{
         public String cName;
         public Component component;
