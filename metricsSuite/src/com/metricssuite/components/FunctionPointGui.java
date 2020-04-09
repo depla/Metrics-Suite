@@ -31,6 +31,15 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
     private JTextField languageTextfield;
     private JTextField computeSizeTextfield;
     private JButton changeLangBtn;
+
+    public FunctionPoint getFunctionPoint() {
+        return functionPoint;
+    }
+
+    public void setFunctionPoint(FunctionPoint functionPoint) {
+        this.functionPoint = functionPoint;
+    }
+
     private FunctionPoint functionPoint;
     private Project project;
     private VAF vaf;
@@ -366,13 +375,10 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
         return panelName;
     }
 
-    public void setName(String name) {
-        this.panelName = name;
-        functionPoint.setName(name);
-    }
+
 
     @Override
     public String toString(){
-        return panelName;
+        return this.getName();
     }
 }

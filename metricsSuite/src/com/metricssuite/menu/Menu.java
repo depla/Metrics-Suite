@@ -10,20 +10,20 @@ import org.antlr.runtime.RecognitionException;
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreePath;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
-public class Menu extends JFrame implements ActionListener, NewProjectWindow.CreateProjectOnClickHandler {
+public class Menu extends JFrame implements ActionListener, TreeSelectionListener, NewProjectWindow.CreateProjectOnClickHandler {
     private JTabbedPane tabbedPane;
     private NewProjectWindow projectWindow;
     private Project project;
@@ -32,6 +32,8 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
     private ArrayList openedTab = new ArrayList<>();
     private JTree tree;
     private DefaultMutableTreeNode root;
+    private Map<String, Component> componentMap;
+    int pH = 0;
 
     //private static VAF  v;
 
@@ -39,12 +41,13 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
 
         getContentPane().setLayout(new BorderLayout());
         tabbedPane = new JTabbedPane();
+        componentMap = new LinkedHashMap<>();
 
         this.setJMenuBar(createMenuBar());
 
         setTitle("CECS 543 Metrics Suite");
         setLocationRelativeTo(null);
-        setSize(new Dimension(500, 500));
+        setSize(new Dimension(600, 600));
         
         addWindowListener(new WindowAdapter() {
             @Override
@@ -54,8 +57,9 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
         });
 
         language = new languageSelection();
-
         setVisible(true);
+
+
 
     }
 
@@ -279,6 +283,10 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
 
             case "Exit":
                 System.out.println("Exit");
+                Set<String> set = componentMap.keySet();
+                for(String c: set){
+                    System.out.println(c);
+                }
                 checkSaveOnExit();
                 break;
             default:
@@ -318,10 +326,7 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
 
             //add the selected files into the project
             project.addSelectedFiles(fileArrayList);
-
-            for(File file: project.getSelectedFiles()){
-                createNode(file);
-            }
+            
         }
     }
 
@@ -420,12 +425,15 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
         }
 
         FunctionPointGui functionPointGui = new FunctionPointGui(project, language);
-        functionPointGui.setName("alex");
-        tabbedPane.addTab( "Function Points", functionPointGui);
-        createNode(functionPointGui);
+        pH++;
+        String aa = "alex" + String.valueOf(pH);
+        functionPointGui.setName(aa);
+        tabbedPane.addTab( aa, functionPointGui);
+        componentMap.put(aa, functionPointGui);
+        createNode(new ComponentInfo(functionPointGui.getName(), functionPointGui));
     }
 
-    private void createNode(Object object){
+    private void createNode(ComponentInfo object){
         DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
         root.add(new DefaultMutableTreeNode(object));
         model.reload(root);
@@ -433,8 +441,9 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
 
     private void createTab(FunctionPoint fp){
         FunctionPointGui functionPointGui = new FunctionPointGui(project, fp,language);
-        tabbedPane.addTab( "Function Points", functionPointGui);
-        root.add(new DefaultMutableTreeNode(functionPointGui));
+        tabbedPane.addTab( fp.getName(), functionPointGui);
+        componentMap.put(fp.getName(), functionPointGui);
+        createNode(new ComponentInfo(fp.getName(), functionPointGui));
     }
 
     private void createSmiTab()
@@ -462,7 +471,8 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
             project.createSMI();
             SmiGui smi = new SmiGui(project);
             tabbedPane.addTab( "SMI", smi);
-            createNode(smi);
+            createNode(new ComponentInfo("SMI", smi));
+            componentMap.put("SMI", smi);
         }
 
     }
@@ -470,7 +480,8 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
     private void createSmiTab(Project project)
     {   SmiGui smi = new SmiGui(project);
         tabbedPane.addTab("SMI", smi);
-        root.add(new DefaultMutableTreeNode(smi));
+        createNode(new ComponentInfo("SMI", smi));
+        componentMap.put("SMI", smi);
     }
 
     public void createHalMcMetricsTabs(ArrayList<File> selectedFiles) throws IOException, RecognitionException {
@@ -487,7 +498,8 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
                 MetricsParser metricParser = new MetricsParser();
                 HalMcMetricGui halMcMetricGui = new HalMcMetricGui(metricParser.parse(selectedFiles.get(i)));
                 tabbedPane.addTab(fileName, halMcMetricGui);
-                root.add(new DefaultMutableTreeNode(selectedFiles.get(i).getName()));
+                createNode(new ComponentInfo(fileName, halMcMetricGui));
+                componentMap.put(fileName, halMcMetricGui);
             }
         }
 
@@ -618,11 +630,112 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
     public void createJtree(String projectName){
         root = new DefaultMutableTreeNode(projectName);
         tree = new JTree(root);
+
+        tree.addTreeSelectionListener(this);
         JScrollPane treeView = new JScrollPane(tree);
+
+        treeView.setMinimumSize(new Dimension(100, 500));
+        tabbedPane.setMinimumSize(new Dimension(400, 500));
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
+
         splitPane.setLeftComponent(treeView);
         splitPane.setRightComponent(tabbedPane);
-        getContentPane().add(BorderLayout.CENTER, splitPane);
+        splitPane.setPreferredSize(new Dimension(500, 500));
+        getContentPane().add(splitPane);
+
+        MouseAdapter ma = new MouseAdapter() {
+            private void myPopupEvent(MouseEvent e) {
+                int x = e.getX();
+                int y = e.getY();
+                //tree = (JTree)e.getSource();
+                TreePath path = tree.getPathForLocation(x, y);
+                if (path == null)
+                    return;
+
+                tree.setSelectionPath(path);
+
+                DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
+                ComponentInfo info = (ComponentInfo) node.getUserObject();
+                Component component = info.component;
+
+                JPopupMenu popup = new JPopupMenu();
+                JMenuItem open = new JMenuItem("Open");
+                JMenuItem close = new JMenuItem("Close");
+                JMenuItem delete = new JMenuItem("Delete");
+                open.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+
+                        for(int i = 0; i < tabbedPane.getTabCount(); i++){
+
+                            if(tabbedPane.getTitleAt(i).equalsIgnoreCase(node.toString())){
+
+                                return;
+                            }
+                        }
+
+                        tabbedPane.addTab(node.toString(), info.component);
+
+                    }
+                });
+                close.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        for(int i = 0; i < tabbedPane.getTabCount(); i++){
+
+                            if(tabbedPane.getTitleAt(i).equalsIgnoreCase(node.toString())){
+                                tabbedPane.removeTabAt(i);
+                            }
+                        }
+                    }
+                });
+                delete.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+
+                        if(component instanceof FunctionPointGui){
+                            System.out.println("fpgui");
+                        }
+                        else if (component instanceof HalMcMetricGui){
+                            System.out.println("hal");
+                        }else{
+                            System.out.println("smi");
+                        }
+
+                    }
+                });
+                popup.add(open);
+                popup.add(close);
+                popup.addSeparator();
+                popup.add(delete);
+
+
+
+                popup.show(tree, x, y);
+            }
+            public void mousePressed(MouseEvent e) {
+                if (e.isPopupTrigger()) myPopupEvent(e);
+            }
+            public void mouseReleased(MouseEvent e) {
+                if (e.isPopupTrigger()) myPopupEvent(e);
+            }
+        };
+        tree.addMouseListener(ma);
+        setVisible(true);
+
+    }
+
+    @Override
+    public void valueChanged(TreeSelectionEvent e) {
+        DefaultMutableTreeNode node = (DefaultMutableTreeNode)
+                tree.getLastSelectedPathComponent();
+
+        if (node == null) return;
+        /*if(root.getIndex(node) > -1) {
+            System.out.println(root.getIndex(node));
+            tabbedPane.removeTabAt(root.getIndex(node));
+        }*/
+
     }
 
     @Override
@@ -653,9 +766,22 @@ public class Menu extends JFrame implements ActionListener, NewProjectWindow.Cre
 //            }
 //        }
 //    }
+    private class ComponentInfo{
+        public String cName;
+        public Component component;
 
+    public ComponentInfo(String cName, Component component) {
+        this.cName = cName;
+        this.component = component;
+    }
+
+    public String toString(){
+        return cName;
+    }
+}
     public static void main(String []args) {
         new Menu();
+
     }
 
 }
