@@ -28,13 +28,9 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
     private NewProjectWindow projectWindow;
     private Project project;
     private languageSelection language;
-    //private FunctionPointGui functionPoint;
     private ArrayList<String> openedTab = new ArrayList<>();
     private JTree tree;
     private DefaultMutableTreeNode root;
-    int pH = 0;
-
-    //private static VAF  v;
 
     public Menu() {
 
@@ -45,7 +41,7 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
 
         setTitle("CECS 543 Metrics Suite");
         setLocationRelativeTo(null);
-        setSize(new Dimension(600, 600));
+        setSize(new Dimension(850, 650));
         
         addWindowListener(new WindowAdapter() {
             @Override
@@ -74,22 +70,79 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         fpNamePanel.add(fpNameTextfield);
         fpNamePanel.add(saveFpName);
         fpNamePanel.add(cancel);
-        saveFpName.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                createTab(fpNameTextfield.getText());
-                frame.setVisible(false);
-            }
+        saveFpName.addActionListener(e -> {
+            createTab(fpNameTextfield.getText());
+            frame.setVisible(false);
         });
 
-        cancel.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.setVisible(false);
-            }
-        });
+        cancel.addActionListener(e -> frame.setVisible(false));
 
         frame.add(fpNamePanel);
+        frame.setLocationRelativeTo(this);
+        frame.setVisible(true);
+    }
+
+    private void createDeleteGui(Component component, DefaultMutableTreeNode node){
+
+        JFrame frame = new JFrame();
+        frame.setSize(new Dimension(250, 150));
+        JPanel deletePanel = new JPanel();
+        JLabel deleteLabel = new JLabel("Are you sure you want to delete?");
+        JButton yesBtn = new JButton("Yes");
+        JButton cancel = new JButton("Cancel");
+        deletePanel.setLayout(new GridLayout(3, 1));
+        //fpNamePanel.setSize(new Dimension(50, 50));
+        deletePanel.add(deleteLabel);
+        deletePanel.add(yesBtn);
+        deletePanel.add(cancel);
+        yesBtn.addActionListener(e -> {
+
+            frame.setVisible(false);
+
+            if(component instanceof FunctionPointGui){
+                System.out.println(((FunctionPointGui) component).getFunctionPoint().getName());
+                ArrayList<FunctionPoint> fpList = project.getFunctionPointArrayList();
+                for(int i = 0; i < fpList.size(); i++){
+                    FunctionPoint fp = fpList.get(i);
+                    if(fp.getName().equalsIgnoreCase(node.toString())){
+                        fpList.remove(i);
+                        break;
+                    }
+
+                }
+            }
+            else if (component instanceof HalMcMetricGui){
+
+                ArrayList<File> files = project.getSelectedFiles();
+                for (int i = 0; i < files.size(); i++){
+                    System.out.println(files.get(i).toString() + " " + node.toString());
+                    String fileName = files.get(i).toString();
+                    fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
+                    if (fileName.equalsIgnoreCase(node.toString())) {
+                        files.remove(i);
+                        break;
+                    }
+                }
+            }else{
+                project.setSMI(null);
+
+            }
+
+            for(int i = 0; i < tabbedPane.getTabCount(); i++){
+
+                if(tabbedPane.getTitleAt(i).equalsIgnoreCase(node.toString())){
+                    tabbedPane.removeTabAt(i);
+                }
+            }
+            //root.remove(node);
+            DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
+            root.remove(node);
+            model.reload(root);
+        });
+
+        cancel.addActionListener(e -> frame.setVisible(false));
+
+        frame.add(deletePanel);
         frame.setLocationRelativeTo(this);
         frame.setVisible(true);
     }
@@ -651,8 +704,8 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         tree.addTreeSelectionListener(this);
         JScrollPane treeView = new JScrollPane(tree);
 
-        treeView.setMinimumSize(new Dimension(100, 500));
-        tabbedPane.setMinimumSize(new Dimension(400, 500));
+        treeView.setMinimumSize(new Dimension(150, 500));
+        tabbedPane.setMinimumSize(new Dimension(350, 500));
         JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
 
         splitPane.setLeftComponent(treeView);
@@ -661,7 +714,7 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         getContentPane().add(splitPane);
 
         MouseAdapter ma = new MouseAdapter() {
-            private void myPopupEvent(MouseEvent e) {
+            private void popupEvent(MouseEvent e) {
                 int x = e.getX();
                 int y = e.getY();
                 //tree = (JTree)e.getSource();
@@ -672,6 +725,10 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
                 tree.setSelectionPath(path);
 
                 DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
+
+                if(node == root || node.toString().equalsIgnoreCase(project.getProjectName()))
+                    return;
+
                 ComponentInfo info = (ComponentInfo) node.getUserObject();
                 Component component = info.component;
 
@@ -710,35 +767,7 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
                     @Override
                     public void actionPerformed(ActionEvent e) {
 
-                        if(component instanceof FunctionPointGui){
-                            System.out.println(((FunctionPointGui) component).getFunctionPoint().getName());
-                            ArrayList<FunctionPoint> fpList = project.getFunctionPointArrayList();
-                            for(int i = 0; i < fpList.size(); i++){
-                                FunctionPoint fp = fpList.get(i);
-                                if(fp.getName().equalsIgnoreCase(node.toString())){
-                                    fpList.remove(i);
-                                    break;
-                                }
-
-                            }
-                        }
-                        else if (component instanceof HalMcMetricGui){
-                            System.out.println(node.toString());
-                        }else{
-                            project.setSMI(null);
-
-                        }
-
-                        for(int i = 0; i < tabbedPane.getTabCount(); i++){
-
-                            if(tabbedPane.getTitleAt(i).equalsIgnoreCase(node.toString())){
-                                tabbedPane.removeTabAt(i);
-                            }
-                        }
-                        //root.remove(node);
-                        DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
-                        root.remove(node);
-                        model.reload(root);
+                        createDeleteGui(component, node);
 
                     }
                 });
@@ -752,10 +781,10 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
                 popup.show(tree, x, y);
             }
             public void mousePressed(MouseEvent e) {
-                if (e.isPopupTrigger()) myPopupEvent(e);
+                if (e.isPopupTrigger()) popupEvent(e);
             }
             public void mouseReleased(MouseEvent e) {
-                if (e.isPopupTrigger()) myPopupEvent(e);
+                if (e.isPopupTrigger()) popupEvent(e);
             }
         };
         tree.addMouseListener(ma);
