@@ -752,14 +752,11 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
 
                     }
                 });
-                close.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        for(int i = 0; i < tabbedPane.getTabCount(); i++){
+                close.addActionListener(e1 -> {
+                    for(int i = 0; i < tabbedPane.getTabCount(); i++){
 
-                            if(tabbedPane.getTitleAt(i).equalsIgnoreCase(node.toString())){
-                                tabbedPane.removeTabAt(i);
-                            }
+                        if(tabbedPane.getTitleAt(i).equalsIgnoreCase(node.toString())){
+                            tabbedPane.removeTabAt(i);
                         }
                     }
                 });
