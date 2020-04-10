@@ -60,7 +60,39 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
 
 
     }
+    private void createFpNameGui(){
+        JFrame frame = new JFrame();
+        frame.setSize(new Dimension(250, 150));
+        JPanel fpNamePanel = new JPanel();
+        JLabel fpNameLabel = new JLabel("Enter Function Point name");
+        JTextField fpNameTextfield = new JTextField();
+        JButton saveFpName = new JButton("Save");
+        JButton cancel = new JButton("Cancel");
+        fpNamePanel.setLayout(new GridLayout(4, 1));
+        //fpNamePanel.setSize(new Dimension(50, 50));
+        fpNamePanel.add(fpNameLabel);
+        fpNamePanel.add(fpNameTextfield);
+        fpNamePanel.add(saveFpName);
+        fpNamePanel.add(cancel);
+        saveFpName.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                createTab(fpNameTextfield.getText());
+                frame.setVisible(false);
+            }
+        });
 
+        cancel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.setVisible(false);
+            }
+        });
+
+        frame.add(fpNamePanel);
+        frame.setLocationRelativeTo(this);
+        frame.setVisible(true);
+    }
 
     protected JMenuBar createMenuBar() {
         JMenuBar menuBar = new JMenuBar(); //create menubar
@@ -252,8 +284,9 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
                 break;
             
             case "Function Points":
-                createTab();
+                //createTab();
                 //language.setLang("");
+                createFpNameGui();
                 break;
 
             case "SMI":
@@ -404,7 +437,7 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         return false;
 
     }
-    private void createTab() {
+    private void createTab(String fpName) {
 
         if(project == null)
         {
@@ -415,10 +448,9 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         }
 
         FunctionPointGui functionPointGui = new FunctionPointGui(project, language);
-        pH++;
-        String aa = "alex" + String.valueOf(pH);
-        functionPointGui.getFunctionPoint().setName(aa);
-        tabbedPane.addTab( aa, functionPointGui);
+
+        functionPointGui.getFunctionPoint().setName(fpName);
+        tabbedPane.addTab(fpName, functionPointGui);
         createNode(new ComponentInfo(functionPointGui.getFunctionPoint().getName(), functionPointGui));
     }
 
