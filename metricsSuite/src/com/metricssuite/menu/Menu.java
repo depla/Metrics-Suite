@@ -155,9 +155,9 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
                 }
             }
             //root.remove(node);
-            //DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
+            DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
             root.remove(node);
-            //model.reload(root);
+            model.reload(root);
         });
 
         cancel.addActionListener(e -> frame.setVisible(false));
