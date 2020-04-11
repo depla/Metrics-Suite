@@ -71,8 +71,18 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         fpNamePanel.add(saveFpName);
         fpNamePanel.add(cancel);
         saveFpName.addActionListener(e -> {
-            createTab(fpNameTextfield.getText());
-            frame.setVisible(false);
+
+
+            if(!checkIfFpExists(fpNameTextfield.getText())){
+                createTab(fpNameTextfield.getText());
+                frame.setVisible(false);}
+            else{
+                JOptionPane.showMessageDialog(this,
+                        "Name already exists, choose another.",
+                        "Error", JOptionPane.ERROR_MESSAGE);
+                frame.setVisible(true);
+            }
+
         });
 
         cancel.addActionListener(e -> frame.setVisible(false));
@@ -80,6 +90,16 @@ public class Menu extends JFrame implements ActionListener, TreeSelectionListene
         frame.add(fpNamePanel);
         frame.setLocationRelativeTo(this);
         frame.setVisible(true);
+    }
+
+    private boolean checkIfFpExists(String fp){
+        ArrayList<FunctionPoint> list = project.getFunctionPointArrayList();
+
+        for(FunctionPoint f: list){
+            if(f.getName().equalsIgnoreCase(fp))
+                return true;
+        }
+        return false;
     }
 
     private void createDeleteGui(Component component, DefaultMutableTreeNode node){
