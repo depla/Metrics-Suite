@@ -39,7 +39,8 @@ public class Menu extends JFrame implements ActionListener {
         setTitle("CECS 543 Metrics Suite");
         setLocationRelativeTo(null);
         setSize(new Dimension(500, 500));
-        
+
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -325,6 +326,12 @@ public class Menu extends JFrame implements ActionListener {
             //ask user if they want to save or discard
             int choice = createSaveChoiceDialog();
 
+            //they chose to save
+            if(choice == 1)
+            {
+                saveProject();
+            }
+
             //if they chose the red x button, choice becomes -1
             //so do not exit if it is -1
             if(choice != -1)
@@ -346,12 +353,6 @@ public class Menu extends JFrame implements ActionListener {
                 null,
                 options,
                 options[1]);
-
-        //they chose to save
-        if(choice == 1)
-        {
-            saveProject();
-        }
 
         return choice;
     }
