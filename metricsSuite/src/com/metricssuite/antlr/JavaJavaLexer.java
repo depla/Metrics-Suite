@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g 2020-04-05 17:48:46
+// $ANTLR 3.5.1 /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g 2020-04-12 17:08:59
 
 package com.metricssuite.antlr;
 
@@ -3358,7 +3358,7 @@ public class JavaJavaLexer extends Lexer {
 					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:944:42: .
 					{
 					matchAny(); 
-					commentcount++;
+					commentcount++;System.out.println("block comment: "+commentcount);
 					}
 					break;
 
@@ -3386,20 +3386,29 @@ public class JavaJavaLexer extends Lexer {
 		try {
 			int _type = LINE_COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:5: ( '//' . (~ ( ( '\\n' | '\\r' ) ) )* ( '\\r' )? '\\n' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:7: '//' . (~ ( ( '\\n' | '\\r' ) ) )* ( '\\r' )? '\\n'
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:5: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( options {greedy=false; } : . ) ( '\\r' )? '\\n' )
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:7: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( options {greedy=false; } : . ) ( '\\r' )? '\\n'
 			{
 			match("//"); 
 
-			matchAny(); 
-			commentcount++;
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:31: (~ ( ( '\\n' | '\\r' ) ) )*
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:12: (~ ( ( '\\n' | '\\r' ) ) )*
 			loop28:
 			while (true) {
 				int alt28=2;
 				int LA28_0 = input.LA(1);
 				if ( ((LA28_0 >= '\u0000' && LA28_0 <= '\t')||(LA28_0 >= '\u000B' && LA28_0 <= '\f')||(LA28_0 >= '\u000E' && LA28_0 <= '\uFFFF')) ) {
-					alt28=1;
+					int LA28_1 = input.LA(2);
+					if ( ((LA28_1 >= '\u0000' && LA28_1 <= '\t')||(LA28_1 >= '\u000B' && LA28_1 <= '\uFFFF')) ) {
+						alt28=1;
+					}
+					else if ( (LA28_1=='\n') ) {
+						int LA28_4 = input.LA(3);
+						if ( (LA28_4=='\n'||LA28_4=='\r') ) {
+							alt28=1;
+						}
+
+					}
+
 				}
 
 				switch (alt28) {
@@ -3422,8 +3431,14 @@ public class JavaJavaLexer extends Lexer {
 				}
 			}
 
-			/*INSERT COUNT*/  
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:70: ( '\\r' )?
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:31: ( options {greedy=false; } : . )
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:57: .
+			{
+			matchAny(); 
+			commentcount++;
+			}
+
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:77: ( '\\r' )?
 			int alt29=2;
 			int LA29_0 = input.LA(1);
 			if ( (LA29_0=='\r') ) {
@@ -3431,7 +3446,7 @@ public class JavaJavaLexer extends Lexer {
 			}
 			switch (alt29) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:70: '\\r'
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:948:77: '\\r'
 					{
 					match('\r'); 
 					}

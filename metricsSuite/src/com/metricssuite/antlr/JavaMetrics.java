@@ -5,21 +5,29 @@ import java.util.Set;
 
 public class JavaMetrics
 {
-    static Set<String> uniqueKeywords = new LinkedHashSet<String>();
-    static Set<String> uniqueIdentifiers= new LinkedHashSet<String>();
+    static Set<String> uniqueKeywords;
+    static Set<String> uniqueIdentifiers;
 
-    static Set<Symbol> uIDSym=new LinkedHashSet<Symbol>();
+    static Set<Symbol> uIDSym;
 
-    static Set<String> uniqueConstants = new LinkedHashSet<String>();
-    static Set<String> uniqueSpecial = new LinkedHashSet<String>();
+    static Set<String> uniqueConstants;
+    static Set<String> uniqueSpecial;
 
-    static Set<String> uniqueOperator = new LinkedHashSet<>();
-    static Set<String>  uniqueOperand = new LinkedHashSet<>();
+    static Set<String> uniqueOperator;
+    static Set<String>  uniqueOperand;
 
     static Set<String> mccabeValues;
 
     public JavaMetrics(){
         mccabeValues = new LinkedHashSet<String>();
+        uniqueKeywords = new LinkedHashSet<String>();
+        uniqueIdentifiers= new LinkedHashSet<String>();
+        uIDSym=new LinkedHashSet<Symbol>();
+        uniqueConstants = new LinkedHashSet<String>();
+        uniqueSpecial = new LinkedHashSet<String>();
+        uniqueOperator = new LinkedHashSet<>();
+        uniqueOperand = new LinkedHashSet<>();
+
     }
 
     public int uniqueConstantsCount(){
@@ -61,5 +69,11 @@ public class JavaMetrics
     public static Set<String> getMcCabeValues(){
         return mccabeValues;
     }
-
+    public static Set<Symbol> getSymbol(){return uIDSym;}
+    public int uniqueOperatorCount(){
+        return uniqueOperator.size();
+    }
+    public static Set<String> getUniqueOperator(){
+        return uniqueOperator;
+    }
 }
