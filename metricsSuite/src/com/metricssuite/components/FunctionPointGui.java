@@ -31,16 +31,27 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
     private JTextField languageTextfield;
     private JTextField computeSizeTextfield;
     private JButton changeLangBtn;
+
+    public FunctionPoint getFunctionPoint() {
+        return functionPoint;
+    }
+
+    public void setFunctionPoint(FunctionPoint functionPoint) {
+        this.functionPoint = functionPoint;
+    }
+
     private FunctionPoint functionPoint;
     private Project project;
     private VAF vaf;
     private languageSelection languageSelection;
+    private String panelName;
 
     public FunctionPointGui(Project p, languageSelection language) {
         this.project = p;
         this.languageSelection = language;
         //this.languageSelection.setmDoneOnClickHandler(this);
         functionPoint = new FunctionPoint();
+
         vaf = new VAF(this);
         functionPoint.setVaf(vaf.getVAFValue());
         project.addFunctionPoint(functionPoint);
@@ -59,6 +70,7 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
         this.project = p;
         this.languageSelection = language;
         //this.languageSelection.setmDoneOnClickHandler(this);
+        this.setName(fp.getName());
         vaf = new VAF(this);
         initGui();
         initListeners();
@@ -358,4 +370,15 @@ public class FunctionPointGui extends JPanel implements VAF.VafDoneOnClickHandle
 
     }
 
+
+    public String getName() {
+        return panelName;
+    }
+
+
+
+    @Override
+    public String toString(){
+        return this.getName();
+    }
 }

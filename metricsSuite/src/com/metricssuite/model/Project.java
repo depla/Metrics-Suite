@@ -218,7 +218,8 @@ public Project(String projectName, String productName, String creatorName, Strin
         if (o == null || getClass() != o.getClass()) return false;
         Project project = (Project) o;
 
-        if(this.SMI == null && project.SMI != null)
+        if(this.SMI == null && project.SMI != null ||
+            this.SMI != null && project.SMI == null)
         {
             return false;
         }

@@ -10,36 +10,39 @@ import org.antlr.runtime.RecognitionException;
 import javax.swing.*;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreePath;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
+import java.awt.event.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
 import java.util.List;
 
-public class Menu extends JFrame implements ActionListener {
+public class Menu extends JFrame implements ActionListener, TreeSelectionListener, NewProjectWindow.CreateProjectOnClickHandler {
     private JTabbedPane tabbedPane;
     private NewProjectWindow projectWindow;
     private Project project;
     private languageSelection language;
-    private FunctionPointGui functionPoint;
-    private ArrayList openedTab = new ArrayList<>();;
-    //private static VAF  v;
+    private ArrayList<String> openedTab = new ArrayList<>();
+    private JTree tree;
+    private DefaultMutableTreeNode root;
 
     public Menu() {
+
         getContentPane().setLayout(new BorderLayout());
         tabbedPane = new JTabbedPane();
-        getContentPane().add(BorderLayout.CENTER, tabbedPane);
+
         this.setJMenuBar(createMenuBar());
 
         setTitle("CECS 543 Metrics Suite");
         setLocationRelativeTo(null);
-        setSize(new Dimension(500, 500));
-
+        setSize(new Dimension(850, 650));
+      
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             @Override
@@ -48,10 +51,122 @@ public class Menu extends JFrame implements ActionListener {
             }
         });
 
-        setVisible(true);
         language = new languageSelection();
+        setVisible(true);
+
+
+
+    }
+    private void createFpNameGui(){
+        JFrame frame = new JFrame();
+        frame.setSize(new Dimension(250, 150));
+        JPanel fpNamePanel = new JPanel();
+        JLabel fpNameLabel = new JLabel("Enter Function Point name");
+        JTextField fpNameTextfield = new JTextField();
+        JButton saveFpName = new JButton("Save");
+        JButton cancel = new JButton("Cancel");
+        fpNamePanel.setLayout(new GridLayout(4, 1));
+        //fpNamePanel.setSize(new Dimension(50, 50));
+        fpNamePanel.add(fpNameLabel);
+        fpNamePanel.add(fpNameTextfield);
+        fpNamePanel.add(saveFpName);
+        fpNamePanel.add(cancel);
+        saveFpName.addActionListener(e -> {
+
+
+            if(!checkIfFpExists(fpNameTextfield.getText())){
+                createTab(fpNameTextfield.getText());
+                frame.setVisible(false);}
+            else{
+                JOptionPane.showMessageDialog(this,
+                        "Name already exists, choose another.",
+                        "Error", JOptionPane.ERROR_MESSAGE);
+                frame.setVisible(true);
+            }
+
+        });
+
+        cancel.addActionListener(e -> frame.setVisible(false));
+
+        frame.add(fpNamePanel);
+        frame.setLocationRelativeTo(this);
+        frame.setVisible(true);
     }
 
+    private boolean checkIfFpExists(String fp){
+        ArrayList<FunctionPoint> list = project.getFunctionPointArrayList();
+
+        for(FunctionPoint f: list){
+            if(f.getName().equalsIgnoreCase(fp))
+                return true;
+        }
+        return false;
+    }
+
+    private void createDeleteGui(Component component, DefaultMutableTreeNode node){
+
+        JFrame frame = new JFrame();
+        frame.setSize(new Dimension(250, 150));
+        JPanel deletePanel = new JPanel();
+        JLabel deleteLabel = new JLabel("Are you sure you want to delete?");
+        JButton yesBtn = new JButton("Yes");
+        JButton cancel = new JButton("Cancel");
+        deletePanel.setLayout(new GridLayout(3, 1));
+        //fpNamePanel.setSize(new Dimension(50, 50));
+        deletePanel.add(deleteLabel);
+        deletePanel.add(yesBtn);
+        deletePanel.add(cancel);
+        yesBtn.addActionListener(e -> {
+
+            frame.setVisible(false);
+
+            if(component instanceof FunctionPointGui){
+                System.out.println(((FunctionPointGui) component).getFunctionPoint().getName());
+                ArrayList<FunctionPoint> fpList = project.getFunctionPointArrayList();
+                for(int i = 0; i < fpList.size(); i++){
+                    FunctionPoint fp = fpList.get(i);
+                    if(fp.getName().equalsIgnoreCase(node.toString())){
+                        fpList.remove(i);
+                        break;
+                    }
+
+                }
+            }
+            else if (component instanceof HalMcMetricGui){
+
+                ArrayList<File> files = project.getSelectedFiles();
+                for (int i = 0; i < files.size(); i++){
+                    System.out.println(files.get(i).toString() + " " + node.toString());
+                    String fileName = files.get(i).toString();
+                    fileName = fileName.substring(fileName.lastIndexOf("/") + 1);
+                    if (fileName.equalsIgnoreCase(node.toString())) {
+                        files.remove(i);
+                        break;
+                    }
+                }
+            }else{
+                project.setSMI(null);
+
+            }
+
+            for(int i = 0; i < tabbedPane.getTabCount(); i++){
+
+                if(tabbedPane.getTitleAt(i).equalsIgnoreCase(node.toString())){
+                    tabbedPane.removeTabAt(i);
+                }
+            }
+            //root.remove(node);
+            DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
+            root.remove(node);
+            model.reload(root);
+        });
+
+        cancel.addActionListener(e -> frame.setVisible(false));
+
+        frame.add(deletePanel);
+        frame.setLocationRelativeTo(this);
+        frame.setVisible(true);
+    }
 
     protected JMenuBar createMenuBar() {
         JMenuBar menuBar = new JMenuBar(); //create menubar
@@ -212,22 +327,23 @@ public class Menu extends JFrame implements ActionListener {
                     //create a new project
                     Project project = new Project();
                     projectWindow = new NewProjectWindow(this, project);
+
                 }
                 else //one is already open
                 {
                     //pass a new null one
                     Project newProject = null;
                     projectWindow = new NewProjectWindow(this, newProject);
-                }
 
+                }
+                projectWindow.setmOnClickHandler(this);
                 break;
             case "Open":
                 System.out.println("open");
                 try {
                     createFileChooser();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                } catch (RecognitionException ex) {
+                    //createNodes(root);
+                } catch (IOException | RecognitionException ex) {
                     ex.printStackTrace();
                 }
                 break;
@@ -242,8 +358,9 @@ public class Menu extends JFrame implements ActionListener {
                 break;
             
             case "Function Points":
-                createTab();
+                //createTab();
                 //language.setLang("");
+                createFpNameGui();
                 break;
 
             case "SMI":
@@ -260,9 +377,7 @@ public class Menu extends JFrame implements ActionListener {
                 System.out.println("Project code statistics");
                 try {
                     projectCodeStatistics();
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                } catch (RecognitionException ex) {
+                } catch (IOException | RecognitionException ex) {
                     ex.printStackTrace();
                 }
                 break;
@@ -308,6 +423,7 @@ public class Menu extends JFrame implements ActionListener {
 
             //add the selected files into the project
             project.addSelectedFiles(fileArrayList);
+            
         }
     }
 
@@ -395,7 +511,7 @@ public class Menu extends JFrame implements ActionListener {
         return false;
 
     }
-    private void createTab() {
+    private void createTab(String fpName) {
 
         if(project == null)
         {
@@ -404,11 +520,24 @@ public class Menu extends JFrame implements ActionListener {
                     "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
-        tabbedPane.addTab( "Function Points", new FunctionPointGui(project, language));
+
+        FunctionPointGui functionPointGui = new FunctionPointGui(project, language);
+
+        functionPointGui.getFunctionPoint().setName(fpName);
+        tabbedPane.addTab(fpName, functionPointGui);
+        createNode(new ComponentInfo(functionPointGui.getFunctionPoint().getName(), functionPointGui));
+    }
+
+    private void createNode(ComponentInfo object){
+        DefaultTreeModel model = (DefaultTreeModel)tree.getModel();
+        root.add(new DefaultMutableTreeNode(object));
+        model.reload(root);
     }
 
     private void createTab(FunctionPoint fp){
-        tabbedPane.addTab( "Function Points", new FunctionPointGui(project, fp,language));
+        FunctionPointGui functionPointGui = new FunctionPointGui(project, fp,language);
+        tabbedPane.addTab( fp.getName(), functionPointGui);
+        createNode(new ComponentInfo(fp.getName(), functionPointGui));
     }
 
     private void createSmiTab()
@@ -434,15 +563,17 @@ public class Menu extends JFrame implements ActionListener {
         {
             //create the smi
             project.createSMI();
-
-            tabbedPane.addTab( "SMI", new SmiGui(project));
+            SmiGui smi = new SmiGui(project);
+            tabbedPane.addTab( "SMI", smi);
+            createNode(new ComponentInfo("SMI", smi));
         }
 
     }
 
     private void createSmiTab(Project project)
-    {
-        tabbedPane.addTab("SMI", new SmiGui(project));
+    {   SmiGui smi = new SmiGui(project);
+        tabbedPane.addTab("SMI", smi);
+        createNode(new ComponentInfo("SMI", smi));
     }
 
     public void createHalMcMetricsTabs(ArrayList<File> selectedFiles) throws IOException, RecognitionException {
@@ -457,7 +588,9 @@ public class Menu extends JFrame implements ActionListener {
                 openedTab.add(currentFilename);
 
                 MetricsParser metricParser = new MetricsParser();
-                tabbedPane.addTab(fileName, new HalMcMetricGui(metricParser.parse(selectedFiles.get(i))));
+                HalMcMetricGui halMcMetricGui = new HalMcMetricGui(metricParser.parse(selectedFiles.get(i)));
+                tabbedPane.addTab(fileName, halMcMetricGui);
+                createNode(new ComponentInfo(fileName, halMcMetricGui));
             }
         }
 
@@ -512,6 +645,7 @@ public class Menu extends JFrame implements ActionListener {
                 //read the project from the opened file
                 project = Project.readProject(absolutePath);
                 //clear out any old tabs first
+                createJtree(project.getProjectName());
                 clearTabs();
                 setTabsFromSaved();
 
@@ -584,18 +718,134 @@ public class Menu extends JFrame implements ActionListener {
         tabbedPane.removeAll();
     }
 
+    public void createJtree(String projectName){
+        root = new DefaultMutableTreeNode(projectName);
+        tree = new JTree(root);
 
-//    private void clearTab(String tabName) {
-//        for (int i = 0; i < tabbedPane.getTabCount(); i++) {
-//            String tabTitle = tabbedPane.getTitleAt(i);
-//            if (tabTitle.equals(tabName)) {
-//                tabbedPane.remove(i);
-//                break;
-//            }
-//        }
-//    }
+        tree.addTreeSelectionListener(this);
+        JScrollPane treeView = new JScrollPane(tree);
 
+        treeView.setMinimumSize(new Dimension(150, 500));
+        tabbedPane.setMinimumSize(new Dimension(350, 500));
+        JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT);
+
+        splitPane.setLeftComponent(treeView);
+        splitPane.setRightComponent(tabbedPane);
+        splitPane.setPreferredSize(new Dimension(500, 500));
+        getContentPane().add(splitPane);
+
+        MouseAdapter ma = new MouseAdapter() {
+            private void popupEvent(MouseEvent e) {
+                int x = e.getX();
+                int y = e.getY();
+                //tree = (JTree)e.getSource();
+                TreePath path = tree.getPathForLocation(x, y);
+                if (path == null)
+                    return;
+
+                tree.setSelectionPath(path);
+
+                DefaultMutableTreeNode node = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
+
+                if(node == root || node.toString().equalsIgnoreCase(project.getProjectName()))
+                    return;
+
+                ComponentInfo info = (ComponentInfo) node.getUserObject();
+                Component component = info.component;
+
+                JPopupMenu popup = new JPopupMenu();
+                JMenuItem open = new JMenuItem("Open");
+                JMenuItem close = new JMenuItem("Close");
+                JMenuItem delete = new JMenuItem("Delete");
+                open.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+
+                        for(int i = 0; i < tabbedPane.getTabCount(); i++){
+
+                            if(tabbedPane.getTitleAt(i).equalsIgnoreCase(node.toString())){
+
+                                return;
+                            }
+                        }
+
+                        tabbedPane.addTab(node.toString(), info.component);
+
+                    }
+                });
+                close.addActionListener(e1 -> {
+                    for(int i = 0; i < tabbedPane.getTabCount(); i++){
+
+                        if(tabbedPane.getTitleAt(i).equalsIgnoreCase(node.toString())){
+                            tabbedPane.removeTabAt(i);
+                        }
+                    }
+                });
+                delete.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+
+                        createDeleteGui(component, node);
+
+                    }
+                });
+                popup.add(open);
+                popup.add(close);
+                popup.addSeparator();
+                popup.add(delete);
+
+
+
+                popup.show(tree, x, y);
+            }
+            public void mousePressed(MouseEvent e) {
+                if (e.isPopupTrigger()) popupEvent(e);
+            }
+            public void mouseReleased(MouseEvent e) {
+                if (e.isPopupTrigger()) popupEvent(e);
+            }
+        };
+        tree.addMouseListener(ma);
+        setVisible(true);
+
+    }
+
+    @Override
+    public void valueChanged(TreeSelectionEvent e) {
+        DefaultMutableTreeNode node = (DefaultMutableTreeNode)
+                tree.getLastSelectedPathComponent();
+
+        if (node == null) return;
+        /*if(root.getIndex(node) > -1) {
+            System.out.println(root.getIndex(node));
+            tabbedPane.removeTabAt(root.getIndex(node));
+        }*/
+
+    }
+
+    @Override
+    public void done(String projectName) {
+
+        createJtree(projectName);
+
+    }
+
+    private class ComponentInfo {
+        String cName;
+        Component component;
+
+        ComponentInfo(String cName, Component component) {
+            this.cName = cName;
+            this.component = component;
+        }
+
+    public String toString(){
+        return cName;
+    }
+}
     public static void main(String []args) {
         new Menu();
+
     }
+
 }

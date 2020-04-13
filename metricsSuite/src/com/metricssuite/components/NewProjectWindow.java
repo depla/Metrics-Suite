@@ -51,6 +51,12 @@ public class NewProjectWindow extends JFrame implements ActionListener
     private Project project;
     private Menu mainFrame;
 
+    private CreateProjectOnClickHandler mOnClickHandler;
+
+    public interface CreateProjectOnClickHandler{
+        void done(String projectName);
+    }
+
     public NewProjectWindow(Menu mainFrame, Project project)
     {
         super(TITLE);
@@ -148,6 +154,7 @@ public class NewProjectWindow extends JFrame implements ActionListener
                 mainFrame.setHeaderWithName(project);
 
                 mainFrame.setProject(project);
+                mOnClickHandler.done(project.getProjectName());
 
                 setVisible(false);
             }
@@ -174,6 +181,10 @@ public class NewProjectWindow extends JFrame implements ActionListener
         }
 
         return true;
+    }
+
+    public void setmOnClickHandler(CreateProjectOnClickHandler mOnClickHandler) {
+        this.mOnClickHandler = mOnClickHandler;
     }
 
 }

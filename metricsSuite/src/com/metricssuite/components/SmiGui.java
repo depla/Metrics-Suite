@@ -29,6 +29,7 @@ public class SmiGui extends JPanel {
     private JPanel buttonPanel;
 
     public SmiGui(Project project) {
+        this.setName("SMI");
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 
         mPassedSmiDefaultTableModel = new SmiTableModel(this, project.getSMI());
