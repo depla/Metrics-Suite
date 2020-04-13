@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.LinkedHashSet;
+import java.util.Scanner;
 import java.util.Set;
 
 import org.antlr.runtime.ANTLRFileStream;
@@ -50,6 +51,33 @@ public class MetricsParser
 
         parser.compilationUnit();
 
+        //******************************************************************************
+        Scanner sc = new Scanner(selectedFile);
+
+        StringBuilder sb = new StringBuilder();
+
+        //read each line in the file and form a string
+        while (sc.hasNextLine())
+        {
+            sb.append(sc.nextLine()).append("\n");
+        }
+
+        String stringFromFile = sb.toString();
+
+        //remove all comments using REGEX
+        String clean = stringFromFile.replaceAll("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","");
+
+        //print out length of the strings,
+        System.out.println("length with comments: " + stringFromFile.length());
+        System.out.println("length without comments: " + clean.length());
+        //System.out.println(clean);
+
+        int numCommentsBytes = stringFromFile.length() - clean.length();
+
+
+        //******************************************************************************
+
+
         //Halstead Metrics calculation
         uniqueOperators = metrics.uniqueSpecialCount()+metrics.uniqueKeywordsCount();//good
         uniqueOperands = metrics.uniqueConstantsCount()+ metrics.UniqueIndentifersCount();//good
@@ -74,8 +102,8 @@ public class MetricsParser
         stringBuilder.append("File name: ").append(fileName).append("\n");
         stringBuilder.append("File length in bytes: ").append(selectedFile.length()).append("\n");
         stringBuilder.append("File white space: ").append(lexer.ws).append("\n");
-        stringBuilder.append("File comment space in bytes:").append(lexer.commentcount).append("\n");
-        stringBuilder.append("Comment percentage of file: ").append(df.format(100* (double)lexer.commentcount/selectedFile.length())).append("%\n");
+        stringBuilder.append("File comment space in bytes:").append(numCommentsBytes).append("\n");
+        stringBuilder.append("Comment percentage of file: ").append(df.format(100* (double)numCommentsBytes/selectedFile.length())).append("%\n");
         stringBuilder.append("Halstead metrics: \n");
         stringBuilder.append("  Unique operators: "+ uniqueOperators).append("\n");
         stringBuilder.append("  Unique operands: "+ uniqueOperands).append("\n");
