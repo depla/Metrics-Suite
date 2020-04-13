@@ -12,4 +12,5 @@ public class Symbol
         this.primitiveType = primitiveType;
         this.classOrMethodName = classOrMethodName;
     }
+
 }

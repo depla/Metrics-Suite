@@ -27,7 +27,7 @@ public class MetricsParser
     static double difficulty = 0;
     static double effort = 0;
     static double time = 0;
-    static int numBugs = 0;
+    static double numBugs = 0;
 
     public MetricsParser(){
         metrics = new JavaMetrics();
@@ -50,21 +50,21 @@ public class MetricsParser
 
         parser.compilationUnit();
 
-        //Halstead calculation
-        uniqueOperators = metrics.uniqueSpecialCount()+metrics.uniqueKeywordsCount();
-        uniqueOperands = metrics.uniqueConstantsCount()+ metrics.UniqueIndentifersCount();
-        totalOperators = parser.specialcount;
-        totalOperands = lexer.constantcount + parser.identcount;
+        //Halstead Metrics calculation
+        uniqueOperators = metrics.uniqueSpecialCount()+metrics.uniqueKeywordsCount();//good
+        uniqueOperands = metrics.uniqueConstantsCount()+ metrics.UniqueIndentifersCount();//good
+        totalOperators = parser.specialcount+ parser.keywordCount;//off for xxx.java
+        totalOperands = lexer.constantcount + parser.identcount;//good
         programLength = totalOperands + totalOperators;
         programVocab = uniqueOperands + uniqueOperators ;
         volume = programLength * (Math.log(programVocab)/Math.log(2));
-        difficulty = (totalOperators/2)*(totalOperands/uniqueOperands);
+        difficulty = (uniqueOperators/2)*(totalOperands/uniqueOperands);
         effort = volume * difficulty ;
         time = effort/18 ;
         double time_min = time/60;
         double time_hr = time/3600;
         double time_month= time_hr/8/20;
-        numBugs = (int)volume/3000;
+        numBugs = volume/3000;
         DecimalFormat df = new DecimalFormat("#.####");
         df.setRoundingMode(RoundingMode.CEILING);
         Set<String> mccabeValues = new LinkedHashSet<>();
@@ -75,7 +75,7 @@ public class MetricsParser
         stringBuilder.append("File length in bytes: ").append(selectedFile.length()).append("\n");
         stringBuilder.append("File white space: ").append(lexer.ws).append("\n");
         stringBuilder.append("File comment space in bytes:").append(lexer.commentcount).append("\n");
-        stringBuilder.append("Comment percentage of file: ").append(100*lexer.commentcount/selectedFile.length()).append("%\n");
+        stringBuilder.append("Comment percentage of file: ").append(df.format(100* (double)lexer.commentcount/selectedFile.length())).append("%\n");
         stringBuilder.append("Halstead metrics: \n");
         stringBuilder.append("  Unique operators: "+ uniqueOperators).append("\n");
         stringBuilder.append("  Unique operands: "+ uniqueOperands).append("\n");
@@ -95,19 +95,28 @@ public class MetricsParser
             stringBuilder.append("  "+ sd).append("\n");
         }
 
-///for debuggin only
+
+
+
+        //for debuggin only
         //Halstead Metrics
 //        System.out.println("unique constant constants: "+ metrics.uniqueConstantsCount());
 //        System.out.println("unique keyword constants: "+ metrics.uniqueKeywordsCount());
 //        System.out.println("unique operators: "+ metrics.uniqueSpecialCount());
 //        System.out.println("*********");
-//
-//
 //        Set<String> specialCount = new LinkedHashSet<>();
 //        specialCount = metrics.getUniqueSpecial();
 //        System.out.println("operators: ");
 //        for(String sp : specialCount){
-//            System.out.print(sp+" ");
+//            System.out.print(sp +" ");
+//        }
+//        System.out.println("");
+//
+//        Set<String> uniqueOperator = new LinkedHashSet<>();
+//        uniqueOperator = metrics.getUniqueOperator();
+//        System.out.println("extra operators: ");
+//        for(String spp : uniqueOperator){
+//            System.out.print(spp+ " ");
 //        }
 //        System.out.println("");
 //
@@ -135,10 +144,6 @@ public class MetricsParser
 //            System.out.print(ssdd+"  ");
 //        }
 //        System.out.println("");
-
-
-
-
 
         return stringBuilder.toString();
     }

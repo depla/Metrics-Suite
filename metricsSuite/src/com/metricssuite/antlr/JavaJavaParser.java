@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g 2020-04-05 17:48:45
+// $ANTLR 3.5.1 /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g 2020-04-12 17:08:59
 
 package com.metricssuite.antlr;
 
@@ -212,7 +212,7 @@ public class JavaJavaParser extends Parser {
 	    void s(String sp){ 
 	         specialcount++; 
 	        // System.out.println(sp);
-	         JavaMetrics.uniqueSpecial.add("sp:  "+sp);
+	         JavaMetrics.uniqueSpecial.add("special count:  "+sp);
 	    }
 	    void id(String s){
 	    	identcount++;
@@ -1139,7 +1139,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal26_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("public");}
+					if ( state.backtracking==0 ) {/*keywordCount++;JavaMetrics.uniqueKeywords.add("public");operatorCount++;JavaMetrics.uniqueOperator.add("public");*/}
 					}
 					break;
 				case 3 :
@@ -1154,7 +1154,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal27_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("protected");}
+					if ( state.backtracking==0 ) {/*keywordCount++;JavaMetrics.uniqueKeywords.add("protected");operatorCount++;JavaMetrics.uniqueOperator.add("protected");*/}
 					}
 					break;
 				case 4 :
@@ -1169,7 +1169,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal28_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++; JavaMetrics.uniqueKeywords.add("private");}
+					if ( state.backtracking==0 ) {/*keywordCount++; JavaMetrics.uniqueKeywords.add("private"); operatorCount++;JavaMetrics.uniqueOperator.add("private");*/}
 					}
 					break;
 				case 5 :
@@ -1184,7 +1184,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal29_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("abstract");}
+					if ( state.backtracking==0 ) {/*keywordCount++;JavaMetrics.uniqueKeywords.add("abstract"); operatorCount++;JavaMetrics.uniqueOperator.add("abstract");*/}
 					}
 					break;
 				case 6 :
@@ -1199,7 +1199,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal30_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("static");}
+					if ( state.backtracking==0 ) {/*keywordCount++;JavaMetrics.uniqueKeywords.add("static"); operatorCount++;JavaMetrics.uniqueOperator.add("static");*/}
 					}
 					break;
 				case 7 :
@@ -1214,7 +1214,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal31_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("final");}
+					if ( state.backtracking==0 ) {/*keywordCount++;JavaMetrics.uniqueKeywords.add("final");/*operatorCount++;JavaMetrics.uniqueOperator.add("final");*/}
 					}
 					break;
 				case 8 :
@@ -1229,7 +1229,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal32_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("strictfp");}
+					if ( state.backtracking==0 ) {/*keywordCount++;JavaMetrics.uniqueKeywords.add("strictfp");/*operatorCount++;JavaMetrics.uniqueOperator.add("strictfp");*/}
 					}
 					break;
 
@@ -1487,8 +1487,8 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) { className=(Identifier37!=null?Identifier37.getText():null); classCount++;}
-			if ( state.backtracking==0 ) {keywordCount++; JavaMetrics.uniqueKeywords.add("class"); id((Identifier37!=null?Identifier37.getText():null));}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:153: ( typeParameters )?
+			if ( state.backtracking==0 ) {keywordCount++; JavaMetrics.uniqueKeywords.add("class"); id((Identifier37!=null?Identifier37.getText():null));operatorCount++;JavaMetrics.uniqueOperator.add("class");}
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:209: ( typeParameters )?
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0==49) ) {
@@ -1496,7 +1496,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt17) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:153: typeParameters
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:209: typeParameters
 					{
 					pushFollow(FOLLOW_typeParameters_in_normalClassDeclaration505);
 					typeParameters38=typeParameters();
@@ -1525,7 +1525,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal39_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("extends");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("extends");operatorCount++;JavaMetrics.uniqueOperator.add("extends");}
 					pushFollow(FOLLOW_type_in_normalClassDeclaration520);
 					type40=type();
 					state._fsp--;
@@ -1553,7 +1553,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal41_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("implements");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("implements");operatorCount++;JavaMetrics.uniqueOperator.add("implements");}
 					pushFollow(FOLLOW_typeList_in_normalClassDeclaration538);
 					typeList42=typeList();
 					state._fsp--;
@@ -1636,14 +1636,14 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal44_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("<"); operatorCount++;}
+			if ( state.backtracking==0 ) {s("<");}
 			pushFollow(FOLLOW_typeParameter_in_typeParameters577);
 			typeParameter45=typeParameter();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, typeParameter45.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:53: ( ',' typeParameter )*
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:36: ( ',' typeParameter )*
 			loop20:
 			while (true) {
 				int alt20=2;
@@ -1654,7 +1654,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt20) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:54: ',' typeParameter
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:37: ',' typeParameter
 					{
 					char_literal46=(Token)match(input,39,FOLLOW_39_in_typeParameters580); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -1662,7 +1662,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal46_tree);
 					}
 
-					if ( state.backtracking==0 ) {s(","); operatorCount++;}
+					if ( state.backtracking==0 ) {s(",");}
 					pushFollow(FOLLOW_typeParameter_in_typeParameters583);
 					typeParameter47=typeParameter();
 					state._fsp--;
@@ -3099,7 +3099,7 @@ public class JavaJavaParser extends Parser {
 
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("static");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("static");operatorCount++; JavaMetrics.uniqueOperator.add("static");}
 					pushFollow(FOLLOW_block_in_classBodyDeclaration1013);
 					block93=block();
 					state._fsp--;
@@ -3296,7 +3296,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal98_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("void");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("void");operatorCount++; JavaMetrics.uniqueOperator.add("void");}
 					Identifier99=(Token)match(input,Identifier,FOLLOW_Identifier_in_memberDecl1075); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					Identifier99_tree = (Object)adaptor.create(Identifier99);
@@ -4107,7 +4107,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal125_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("void");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("void");operatorCount++; JavaMetrics.uniqueOperator.add("void");}
 					Identifier126=(Token)match(input,Identifier,FOLLOW_Identifier_in_interfaceMemberDecl1349); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					Identifier126_tree = (Object)adaptor.create(Identifier126);
@@ -4446,7 +4446,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal139_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("throws");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("throws");operatorCount++; JavaMetrics.uniqueOperator.add("throws");}
 					pushFollow(FOLLOW_qualifiedNameList_in_methodDeclaratorRest1488);
 					qualifiedNameList140=qualifiedNameList();
 					state._fsp--;
@@ -4581,7 +4581,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal144_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("throws");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("throws");operatorCount++; JavaMetrics.uniqueOperator.add("throws");}
 					pushFollow(FOLLOW_qualifiedNameList_in_voidMethodDeclaratorRest1557);
 					qualifiedNameList145=qualifiedNameList();
 					state._fsp--;
@@ -4755,7 +4755,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal151_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("throws");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("throws");operatorCount++; JavaMetrics.uniqueOperator.add("throws");}
 					pushFollow(FOLLOW_qualifiedNameList_in_interfaceMethodDeclaratorRest1638);
 					qualifiedNameList152=qualifiedNameList();
 					state._fsp--;
@@ -4876,7 +4876,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal156_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("void");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("void");operatorCount++; JavaMetrics.uniqueOperator.add("void");}
 					}
 					break;
 
@@ -6063,7 +6063,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal194_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("public");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("public");operatorCount++; JavaMetrics.uniqueOperator.add("public");}
 					}
 					break;
 				case 3 :
@@ -6078,7 +6078,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal195_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("protected");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("protected");operatorCount++; JavaMetrics.uniqueOperator.add("protected");}
 					}
 					break;
 				case 4 :
@@ -6093,7 +6093,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal196_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++; JavaMetrics.uniqueKeywords.add("private");}
+					if ( state.backtracking==0 ) {keywordCount++; JavaMetrics.uniqueKeywords.add("private");operatorCount++; JavaMetrics.uniqueOperator.add("private");}
 					}
 					break;
 				case 5 :
@@ -6108,7 +6108,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal197_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++; JavaMetrics.uniqueKeywords.add("static");}
+					if ( state.backtracking==0 ) {keywordCount++; JavaMetrics.uniqueKeywords.add("static");operatorCount++; JavaMetrics.uniqueOperator.add("static");}
 					}
 					break;
 				case 6 :
@@ -6123,7 +6123,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal198_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("abstract");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("abstract");operatorCount++; JavaMetrics.uniqueOperator.add("abstract");}
 					}
 					break;
 				case 7 :
@@ -6138,7 +6138,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal199_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("final");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("final");operatorCount++; JavaMetrics.uniqueOperator.add("final");}
 					}
 					break;
 				case 8 :
@@ -6153,7 +6153,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal200_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("native");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("native"); operatorCount++; JavaMetrics.uniqueOperator.add("native");}
 					}
 					break;
 				case 9 :
@@ -6168,7 +6168,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal201_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("synchronized");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("synchronized");operatorCount++; JavaMetrics.uniqueOperator.add("synchronized");}
 					}
 					break;
 				case 10 :
@@ -6183,7 +6183,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal202_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("transient");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("transient");operatorCount++; JavaMetrics.uniqueOperator.add("transient");}
 					}
 					break;
 				case 11 :
@@ -6198,7 +6198,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal203_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("volatile");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("volatile");operatorCount++; JavaMetrics.uniqueOperator.add("volatile");}
 					}
 					break;
 				case 12 :
@@ -6213,7 +6213,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal204_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("strictfp");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("strictfp");operatorCount++; JavaMetrics.uniqueOperator.add("strictfp");}
 					}
 					break;
 
@@ -6835,7 +6835,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal218_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++; PrimitiveType = "boolean"; JavaMetrics.uniqueKeywords.add("boolean");}
+					if ( state.backtracking==0 ) {keywordCount++; PrimitiveType = "boolean"; JavaMetrics.uniqueKeywords.add("boolean");operatorCount++; JavaMetrics.uniqueOperator.add("boolean");}
 					}
 					break;
 				case 2 :
@@ -6850,7 +6850,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal219_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "char";  JavaMetrics.uniqueKeywords.add("char");}
+					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "char";  JavaMetrics.uniqueKeywords.add("char");operatorCount++; JavaMetrics.uniqueOperator.add("char");}
 					}
 					break;
 				case 3 :
@@ -6865,7 +6865,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal220_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "byte"; JavaMetrics.uniqueKeywords.add("byte");}
+					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "byte"; JavaMetrics.uniqueKeywords.add("byte");operatorCount++; JavaMetrics.uniqueOperator.add("byte");}
 					}
 					break;
 				case 4 :
@@ -6880,7 +6880,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal221_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "short"; JavaMetrics.uniqueKeywords.add("short");}
+					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "short"; JavaMetrics.uniqueKeywords.add("short");operatorCount++; JavaMetrics.uniqueOperator.add("short");}
 					}
 					break;
 				case 5 :
@@ -6895,7 +6895,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal222_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "int"; JavaMetrics.uniqueKeywords.add("int");}
+					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "int"; JavaMetrics.uniqueKeywords.add("int");operatorCount++; JavaMetrics.uniqueOperator.add("int");}
 					}
 					break;
 				case 6 :
@@ -6910,7 +6910,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal223_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "long"; JavaMetrics.uniqueKeywords.add("long");}
+					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "long"; JavaMetrics.uniqueKeywords.add("long"); operatorCount++; JavaMetrics.uniqueOperator.add("long");}
 					}
 					break;
 				case 7 :
@@ -6925,7 +6925,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal224_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "float"; JavaMetrics.uniqueKeywords.add("float");}
+					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "float"; JavaMetrics.uniqueKeywords.add("float");operatorCount++; JavaMetrics.uniqueOperator.add("float");}
 					}
 					break;
 				case 8 :
@@ -6940,7 +6940,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal225_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "double"; JavaMetrics.uniqueKeywords.add("double");}
+					if ( state.backtracking==0 ) {keywordCount++;  PrimitiveType = "double"; JavaMetrics.uniqueKeywords.add("double");operatorCount++; JavaMetrics.uniqueOperator.add("double");}
 					}
 					break;
 
@@ -7021,7 +7021,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal226_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("final");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("final");operatorCount++; JavaMetrics.uniqueOperator.add("final");}
 					}
 					break;
 				case 2 :
@@ -7103,14 +7103,14 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal228_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("<"); operatorCount++;}
+			if ( state.backtracking==0 ) {s("<");}
 			pushFollow(FOLLOW_typeArgument_in_typeArguments2487);
 			typeArgument229=typeArgument();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, typeArgument229.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:53: ( ',' typeArgument )*
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:36: ( ',' typeArgument )*
 			loop75:
 			while (true) {
 				int alt75=2;
@@ -7121,7 +7121,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt75) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:54: ',' typeArgument
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:37: ',' typeArgument
 					{
 					char_literal230=(Token)match(input,39,FOLLOW_39_in_typeArguments2490); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -7129,7 +7129,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal230_tree);
 					}
 
-					if ( state.backtracking==0 ) {s(","); operatorCount++;}
+					if ( state.backtracking==0 ) {s(",");}
 					pushFollow(FOLLOW_typeArgument_in_typeArguments2493);
 					typeArgument231=typeArgument();
 					state._fsp--;
@@ -7150,7 +7150,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal232_tree);
 			}
 
-			if ( state.backtracking==0 ) {s(">"); operatorCount++;}
+			if ( state.backtracking==0 ) {s(">");}
 			}
 
 			retval.stop = input.LT(-1);
@@ -7396,7 +7396,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal239_tree);
 					}
 
-					if ( state.backtracking==0 ) {s(","); operatorCount++;}
+					if ( state.backtracking==0 ) {s(","); }
 					pushFollow(FOLLOW_qualifiedName_in_qualifiedNameList2578);
 					qualifiedName240=qualifiedName();
 					state._fsp--;
@@ -7473,8 +7473,8 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal241_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("("); operatorCount++;}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:40: ( formalParameterDecls )?
+			if ( state.backtracking==0 ) {s("("); }
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:24: ( formalParameterDecls )?
 			int alt80=2;
 			int LA80_0 = input.LA(1);
 			if ( (LA80_0==Identifier||LA80_0==54||LA80_0==60||LA80_0==62||LA80_0==65||LA80_0==70||LA80_0==74||LA80_0==76||LA80_0==82||LA80_0==84||LA80_0==93) ) {
@@ -7482,7 +7482,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt80) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:40: formalParameterDecls
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:24: formalParameterDecls
 					{
 					pushFollow(FOLLOW_formalParameterDecls_in_formalParameters2603);
 					formalParameterDecls242=formalParameterDecls();
@@ -7501,7 +7501,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal243_tree);
 			}
 
-			if ( state.backtracking==0 ) {s(")");operatorCount++;}
+			if ( state.backtracking==0 ) {s(")");}
 			}
 
 			retval.stop = input.LT(-1);
@@ -7673,7 +7673,7 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, char_literal248_tree);
 							}
 
-							if ( state.backtracking==0 ) {s(","); operatorCount++;}
+							if ( state.backtracking==0 ) {s(","); }
 							pushFollow(FOLLOW_formalParameterDecls_in_formalParameterDeclsRest2668);
 							formalParameterDecls249=formalParameterDecls();
 							state._fsp--;
@@ -7829,8 +7829,8 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal253_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("{"); operatorCount++;}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:39: ( explicitConstructorInvocation )?
+			if ( state.backtracking==0 ) {s("{");}
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: ( explicitConstructorInvocation )?
 			int alt83=2;
 			switch ( input.LA(1) ) {
 				case 49:
@@ -8025,7 +8025,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt83) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:39: explicitConstructorInvocation
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: explicitConstructorInvocation
 					{
 					pushFollow(FOLLOW_explicitConstructorInvocation_in_constructorBody2728);
 					explicitConstructorInvocation254=explicitConstructorInvocation();
@@ -8038,7 +8038,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:70: ( blockStatement )*
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:53: ( blockStatement )*
 			loop84:
 			while (true) {
 				int alt84=2;
@@ -8049,7 +8049,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt84) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:70: blockStatement
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:53: blockStatement
 					{
 					pushFollow(FOLLOW_blockStatement_in_constructorBody2731);
 					blockStatement255=blockStatement();
@@ -8071,7 +8071,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal256_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("}"); operatorCount++; System.out.println("McCabe for " + methodName + " = " + (mmc+1)); JavaMetrics.mccabeValues.add(methodName + " = " + (mmc+1)); mmc = 0;}
+			if ( state.backtracking==0 ) {s("}"); System.out.println("McCabe for " + methodName + " = " + (mmc+1)); JavaMetrics.mccabeValues.add(methodName + " = " + (mmc+1)); mmc = 0;}
 			}
 
 			retval.stop = input.LT(-1);
@@ -8303,8 +8303,8 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal263_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:426:47: ( nonWildcardTypeArguments )?
+					if ( state.backtracking==0 ) {s("."); }
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:426:31: ( nonWildcardTypeArguments )?
 					int alt87=2;
 					int LA87_0 = input.LA(1);
 					if ( (LA87_0==49) ) {
@@ -8312,7 +8312,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt87) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:426:47: nonWildcardTypeArguments
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:426:31: nonWildcardTypeArguments
 							{
 							pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2788);
 							nonWildcardTypeArguments264=nonWildcardTypeArguments();
@@ -8343,7 +8343,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal267_tree);
 					}
 
-					if ( state.backtracking==0 ) {s(";"); operatorCount++;}
+					if ( state.backtracking==0 ) {s(";"); }
 					}
 					break;
 
@@ -8835,7 +8835,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal278_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("true");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("true");operatorCount++; JavaMetrics.uniqueOperator.add("true");}
 					}
 					break;
 				case 2 :
@@ -8850,7 +8850,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal279_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("false");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("false"); operatorCount++; JavaMetrics.uniqueOperator.add("false");}
 					}
 					break;
 
@@ -9033,8 +9033,8 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal283_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("("); operatorCount++;}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:61: ( elementValuePairs | elementValue )?
+					if ( state.backtracking==0 ) {s("(");}
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:44: ( elementValuePairs | elementValue )?
 					int alt94=3;
 					int LA94_0 = input.LA(1);
 					if ( (LA94_0==Identifier) ) {
@@ -9051,7 +9051,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt94) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:63: elementValuePairs
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:46: elementValuePairs
 							{
 							pushFollow(FOLLOW_elementValuePairs_in_annotation3049);
 							elementValuePairs284=elementValuePairs();
@@ -9062,7 +9062,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:83: elementValue
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:66: elementValue
 							{
 							pushFollow(FOLLOW_elementValue_in_annotation3053);
 							elementValue285=elementValue();
@@ -9081,7 +9081,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal286_tree);
 					}
 
-					if ( state.backtracking==0 ) {s(")"); operatorCount++;}
+					if ( state.backtracking==0 ) {s(")");}
 					}
 					break;
 
@@ -9265,7 +9265,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal290_tree);
 					}
 
-					if ( state.backtracking==0 ) {s(","); operatorCount++;}
+					if ( state.backtracking==0 ) {s(",");}
 					pushFollow(FOLLOW_elementValuePair_in_elementValuePairs3124);
 					elementValuePair291=elementValuePair();
 					state._fsp--;
@@ -9349,7 +9349,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal293_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("=");operatorCount++;}
+			if ( state.backtracking==0 ) {s("=");}
 			pushFollow(FOLLOW_elementValue_in_elementValuePair3153);
 			elementValue294=elementValue();
 			state._fsp--;
@@ -9566,8 +9566,8 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal298_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("{");operatorCount++;}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:38: ( elementValue ( ',' elementValue )* )?
+			if ( state.backtracking==0 ) {s("{");}
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:22: ( elementValue ( ',' elementValue )* )?
 			int alt100=2;
 			int LA100_0 = input.LA(1);
 			if ( ((LA100_0 >= CharacterLiteral && LA100_0 <= DecimalLiteral)||LA100_0==FloatingPointLiteral||(LA100_0 >= HexLiteral && LA100_0 <= Identifier)||(LA100_0 >= OctalLiteral && LA100_0 <= StringLiteral)||LA100_0==25||LA100_0==32||(LA100_0 >= 36 && LA100_0 <= 37)||(LA100_0 >= 40 && LA100_0 <= 41)||LA100_0==54||LA100_0==60||LA100_0==62||LA100_0==65||LA100_0==70||LA100_0==73||LA100_0==76||LA100_0==82||LA100_0==84||(LA100_0 >= 86 && LA100_0 <= 87)||LA100_0==93||LA100_0==96||LA100_0==99||LA100_0==103||LA100_0==105||LA100_0==108||LA100_0==113) ) {
@@ -9575,7 +9575,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt100) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:39: elementValue ( ',' elementValue )*
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:23: elementValue ( ',' elementValue )*
 					{
 					pushFollow(FOLLOW_elementValue_in_elementValueArrayInitializer3223);
 					elementValue299=elementValue();
@@ -9583,7 +9583,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, elementValue299.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:52: ( ',' elementValue )*
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:36: ( ',' elementValue )*
 					loop99:
 					while (true) {
 						int alt99=2;
@@ -9598,7 +9598,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt99) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:53: ',' elementValue
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:37: ',' elementValue
 							{
 							char_literal300=(Token)match(input,39,FOLLOW_39_in_elementValueArrayInitializer3226); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -9606,7 +9606,7 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, char_literal300_tree);
 							}
 
-							if ( state.backtracking==0 ) {s(",");operatorCount++;}
+							if ( state.backtracking==0 ) {s(",");}
 							pushFollow(FOLLOW_elementValue_in_elementValueArrayInitializer3229);
 							elementValue301=elementValue();
 							state._fsp--;
@@ -9626,7 +9626,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:99: ( ',' )?
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:67: ( ',' )?
 			int alt101=2;
 			int LA101_0 = input.LA(1);
 			if ( (LA101_0==39) ) {
@@ -9634,7 +9634,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt101) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:100: ','
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:68: ','
 					{
 					char_literal302=(Token)match(input,39,FOLLOW_39_in_elementValueArrayInitializer3236); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -9653,7 +9653,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal303_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("}");operatorCount++;}
+			if ( state.backtracking==0 ) {s("}");}
 			}
 
 			retval.stop = input.LT(-1);
@@ -9799,8 +9799,8 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal308_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("{"); operatorCount++;}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:39: ( annotationTypeElementDeclaration )*
+			if ( state.backtracking==0 ) {s("{"); }
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:23: ( annotationTypeElementDeclaration )*
 			loop102:
 			while (true) {
 				int alt102=2;
@@ -9811,7 +9811,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt102) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:40: annotationTypeElementDeclaration
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:24: annotationTypeElementDeclaration
 					{
 					pushFollow(FOLLOW_annotationTypeElementDeclaration_in_annotationTypeBody3300);
 					annotationTypeElementDeclaration309=annotationTypeElementDeclaration();
@@ -9833,7 +9833,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal310_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("}"); operatorCount++;}
+			if ( state.backtracking==0 ) {s("}"); }
 			}
 
 			retval.stop = input.LT(-1);
@@ -10350,15 +10350,15 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal327_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("("); operatorCount++;}
+			if ( state.backtracking==0 ) {s("("); }
 			char_literal328=(Token)match(input,33,FOLLOW_33_in_annotationMethodRest3474); if (state.failed) return retval;
 			if ( state.backtracking==0 ) {
 			char_literal328_tree = (Object)adaptor.create(char_literal328);
 			adaptor.addChild(root_0, char_literal328_tree);
 			}
 
-			if ( state.backtracking==0 ) {s(")");operatorCount++;}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:107: ( defaultValue )?
+			if ( state.backtracking==0 ) {s(")");}
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:75: ( defaultValue )?
 			int alt109=2;
 			int LA109_0 = input.LA(1);
 			if ( (LA109_0==68) ) {
@@ -10366,7 +10366,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt109) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:107: defaultValue
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:75: defaultValue
 					{
 					pushFollow(FOLLOW_defaultValue_in_annotationMethodRest3479);
 					defaultValue329=defaultValue();
@@ -10566,8 +10566,8 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal333_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("{"); operatorCount++;}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:40: ( blockStatement )*
+			if ( state.backtracking==0 ) {s("{");}
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:23: ( blockStatement )*
 			loop110:
 			while (true) {
 				int alt110=2;
@@ -10578,7 +10578,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt110) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:40: blockStatement
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:23: blockStatement
 					{
 					pushFollow(FOLLOW_blockStatement_in_block3555);
 					blockStatement334=blockStatement();
@@ -10600,7 +10600,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal335_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("}"); operatorCount++;}
+			if ( state.backtracking==0 ) {s("}"); }
 			}
 
 			retval.stop = input.LT(-1);
@@ -10977,7 +10977,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal340_tree);
 			}
 
-			if ( state.backtracking==0 ) {s(";"); operatorCount++;}
+			if ( state.backtracking==0 ) {s(";");}
 			}
 
 			retval.stop = input.LT(-1);
@@ -11482,7 +11482,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal351_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("if"); mmc++;}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("if"); mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("if");}
 					pushFollow(FOLLOW_parExpression_in_statement3733);
 					parExpression352=parExpression();
 					state._fsp--;
@@ -11495,7 +11495,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, statement353.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:99: ( options {k=1; } : 'else' statement )?
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:154: ( options {k=1; } : 'else' statement )?
 					int alt114=2;
 					int LA114_0 = input.LA(1);
 					if ( (LA114_0==71) ) {
@@ -11506,7 +11506,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt114) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:115: 'else' statement
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:170: 'else' statement
 							{
 							string_literal354=(Token)match(input,71,FOLLOW_71_in_statement3745); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -11514,7 +11514,7 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, string_literal354_tree);
 							}
 
-							if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("else");}
+							if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("else"); operatorCount++; JavaMetrics.uniqueOperator.add("else");}
 							pushFollow(FOLLOW_statement_in_statement3749);
 							statement355=statement();
 							state._fsp--;
@@ -11540,14 +11540,14 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal356_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("for");mmc++;}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("for");mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("for");}
 					char_literal357=(Token)match(input,32,FOLLOW_32_in_statement3765); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					char_literal357_tree = (Object)adaptor.create(char_literal357);
 					adaptor.addChild(root_0, char_literal357_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("("); operatorCount++;}
+					if ( state.backtracking==0 ) {s("(");}
 					pushFollow(FOLLOW_forControl_in_statement3769);
 					forControl358=forControl();
 					state._fsp--;
@@ -11560,7 +11560,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal359_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("}");operatorCount++;}
+					if ( state.backtracking==0 ) {s("}");}
 					pushFollow(FOLLOW_statement_in_statement3775);
 					statement360=statement();
 					state._fsp--;
@@ -11581,7 +11581,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal361_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("while"); mmc++;}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("while"); mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("while");}
 					pushFollow(FOLLOW_parExpression_in_statement3788);
 					parExpression362=parExpression();
 					state._fsp--;
@@ -11608,7 +11608,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal364_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("do");mmc++;}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("do");mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("do");}
 					pushFollow(FOLLOW_statement_in_statement3804);
 					statement365=statement();
 					state._fsp--;
@@ -11621,7 +11621,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal366_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("while");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("while"); operatorCount++; JavaMetrics.uniqueOperator.add("while");}
 					pushFollow(FOLLOW_parExpression_in_statement3810);
 					parExpression367=parExpression();
 					state._fsp--;
@@ -11634,7 +11634,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal368_tree);
 					}
 
-					if ( state.backtracking==0 ) {s(";"); operatorCount++;}
+					if ( state.backtracking==0 ) {s(";");}
 					}
 					break;
 				case 7 :
@@ -11649,7 +11649,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal369_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("try");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("try"); operatorCount++; JavaMetrics.uniqueOperator.add("try");}
 					pushFollow(FOLLOW_block_in_statement3827);
 					block370=block();
 					state._fsp--;
@@ -11709,7 +11709,7 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, string_literal372_tree);
 							}
 
-							if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("finally");}
+							if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("finally");operatorCount++; JavaMetrics.uniqueOperator.add("finally");}
 							pushFollow(FOLLOW_block_in_statement3844);
 							block373=block();
 							state._fsp--;
@@ -11738,7 +11738,7 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, string_literal375_tree);
 							}
 
-							if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("finally");}
+							if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("finally"); operatorCount++; JavaMetrics.uniqueOperator.add("finally");}
 							pushFollow(FOLLOW_block_in_statement3873);
 							block376=block();
 							state._fsp--;
@@ -11764,7 +11764,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal377_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("switch");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("switch"); operatorCount++; JavaMetrics.uniqueOperator.add("switch");}
 					pushFollow(FOLLOW_parExpression_in_statement3897);
 					parExpression378=parExpression();
 					state._fsp--;
@@ -11830,8 +11830,8 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal385_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("return");}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:561:77: ( expression )?
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("return"); operatorCount++; JavaMetrics.uniqueOperator.add("return");}
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:561:136: ( expression )?
 					int alt116=2;
 					int LA116_0 = input.LA(1);
 					if ( ((LA116_0 >= CharacterLiteral && LA116_0 <= DecimalLiteral)||LA116_0==FloatingPointLiteral||(LA116_0 >= HexLiteral && LA116_0 <= Identifier)||(LA116_0 >= OctalLiteral && LA116_0 <= StringLiteral)||LA116_0==25||LA116_0==32||(LA116_0 >= 36 && LA116_0 <= 37)||(LA116_0 >= 40 && LA116_0 <= 41)||LA116_0==60||LA116_0==62||LA116_0==65||LA116_0==70||LA116_0==73||LA116_0==76||LA116_0==82||LA116_0==84||(LA116_0 >= 86 && LA116_0 <= 87)||LA116_0==93||LA116_0==96||LA116_0==99||LA116_0==103||LA116_0==105||LA116_0==113) ) {
@@ -11839,7 +11839,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt116) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:561:77: expression
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:561:136: expression
 							{
 							pushFollow(FOLLOW_expression_in_statement3932);
 							expression386=expression();
@@ -11858,7 +11858,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal387_tree);
 					}
 
-					if ( state.backtracking==0 ) {s(";");}
+					if ( state.backtracking==0 ) {s(";"); }
 					}
 					break;
 				case 11 :
@@ -11873,7 +11873,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal388_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("throw");}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("throw"); operatorCount++; JavaMetrics.uniqueOperator.add("throw");}
 					pushFollow(FOLLOW_expression_in_statement3950);
 					expression389=expression();
 					state._fsp--;
@@ -11901,8 +11901,8 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal391_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("break"); /*System.out.println("FOUND BREAK");*/}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:563:113: ( Identifier )?
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("break"); /*System.out.println("FOUND BREAK");*/operatorCount++; JavaMetrics.uniqueOperator.add("break");}
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:563:170: ( Identifier )?
 					int alt117=2;
 					int LA117_0 = input.LA(1);
 					if ( (LA117_0==Identifier) ) {
@@ -11910,7 +11910,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt117) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:563:113: Identifier
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:563:170: Identifier
 							{
 							Identifier392=(Token)match(input,Identifier,FOLLOW_Identifier_in_statement3967); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -11945,8 +11945,8 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal394_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("continue");}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:564:81: ( Identifier )?
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("continue");operatorCount++; JavaMetrics.uniqueOperator.add("continue");}
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:564:141: ( Identifier )?
 					int alt118=2;
 					int LA118_0 = input.LA(1);
 					if ( (LA118_0==Identifier) ) {
@@ -11954,7 +11954,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt118) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:564:81: Identifier
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:564:141: Identifier
 							{
 							Identifier395=(Token)match(input,Identifier,FOLLOW_Identifier_in_statement3987); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -12191,7 +12191,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, string_literal405_tree);
 			}
 
-			if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("catch");}
+			if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("catch"); operatorCount++; JavaMetrics.uniqueOperator.add("catch");}
 			char_literal406=(Token)match(input,32,FOLLOW_32_in_catchClause4091); if (state.failed) return retval;
 			if ( state.backtracking==0 ) {
 			char_literal406_tree = (Object)adaptor.create(char_literal406);
@@ -12645,7 +12645,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal416_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("case");mmc++;}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("case");mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("case");}
 					pushFollow(FOLLOW_constantExpression_in_switchLabel4209);
 					constantExpression417=constantExpression();
 					state._fsp--;
@@ -12672,7 +12672,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal419_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("case");mmc++;}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("case");mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("case");}
 					pushFollow(FOLLOW_enumConstantName_in_switchLabel4225);
 					enumConstantName420=enumConstantName();
 					state._fsp--;
@@ -12699,7 +12699,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, string_literal422_tree);
 					}
 
-					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("defult");mmc++;}
+					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("defult");mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("default");}
 					char_literal423=(Token)match(input,47,FOLLOW_47_in_switchLabel4241); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					char_literal423_tree = (Object)adaptor.create(char_literal423);
@@ -16960,7 +16960,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal547_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
+					if ( state.backtracking==0 ) {s("."); }
 					string_literal548=(Token)match(input,66,FOLLOW_66_in_primary5700); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal548_tree = (Object)adaptor.create(string_literal548);
@@ -17158,14 +17158,14 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, char_literal549_tree);
 							}
 
-							if ( state.backtracking==0 ) {s("[");operatorCount++;}
+							if ( state.backtracking==0 ) {s("[");}
 							char_literal550=(Token)match(input,56,FOLLOW_56_in_identifierSuffix5725); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
 							char_literal550_tree = (Object)adaptor.create(char_literal550);
 							adaptor.addChild(root_0, char_literal550_tree);
 							}
 
-							if ( state.backtracking==0 ) {s("]"); operatorCount++;}
+							if ( state.backtracking==0 ) {s("]"); }
 							}
 							break;
 
@@ -17184,7 +17184,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal551_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
+					if ( state.backtracking==0 ) {s(".");}
 					string_literal552=(Token)match(input,66,FOLLOW_66_in_identifierSuffix5735); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal552_tree = (Object)adaptor.create(string_literal552);
@@ -17237,7 +17237,7 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, char_literal555_tree);
 							}
 
-							if ( state.backtracking==0 ) {s("]"); operatorCount++;}
+							if ( state.backtracking==0 ) {s("]"); }
 							}
 							break;
 
@@ -17278,7 +17278,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal557_tree);
 					}
 
-					if ( state.backtracking==0 ) {s(".");  operatorCount++;}
+					if ( state.backtracking==0 ) {s(".");  }
 					string_literal558=(Token)match(input,66,FOLLOW_66_in_identifierSuffix5783); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal558_tree = (Object)adaptor.create(string_literal558);
@@ -17300,7 +17300,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal559_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
+					if ( state.backtracking==0 ) {s("."); }
 					pushFollow(FOLLOW_explicitGenericInvocation_in_identifierSuffix5798);
 					explicitGenericInvocation560=explicitGenericInvocation();
 					state._fsp--;
@@ -17321,7 +17321,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal561_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
+					if ( state.backtracking==0 ) {s("."); }
 					string_literal562=(Token)match(input,99,FOLLOW_99_in_identifierSuffix5812); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal562_tree = (Object)adaptor.create(string_literal562);
@@ -17343,7 +17343,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal563_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
+					if ( state.backtracking==0 ) {s("."); }
 					string_literal564=(Token)match(input,96,FOLLOW_96_in_identifierSuffix5827); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal564_tree = (Object)adaptor.create(string_literal564);
@@ -17371,7 +17371,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal566_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
+					if ( state.backtracking==0 ) {s("."); }
 					string_literal567=(Token)match(input,86,FOLLOW_86_in_identifierSuffix5845); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal567_tree = (Object)adaptor.create(string_literal567);
@@ -17800,7 +17800,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal580_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("["); operatorCount++;}
+			if ( state.backtracking==0 ) {s("[");}
 			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:802:9: ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* )
 			int alt172=2;
 			int LA172_0 = input.LA(1);
@@ -17847,14 +17847,14 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, char_literal582_tree);
 							}
 
-							if ( state.backtracking==0 ) {s("["); operatorCount++;}
+							if ( state.backtracking==0 ) {s("["); }
 							char_literal583=(Token)match(input,56,FOLLOW_56_in_arrayCreatorRest5990); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
 							char_literal583_tree = (Object)adaptor.create(char_literal583);
 							adaptor.addChild(root_0, char_literal583_tree);
 							}
 
-							if ( state.backtracking==0 ) {s("]");operatorCount++;}
+							if ( state.backtracking==0 ) {s("]");}
 							}
 							break;
 
@@ -17886,8 +17886,8 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal586_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("]");operatorCount++;}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:54: ( '[' expression ']' )*
+					if ( state.backtracking==0 ) {s("]");}
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:38: ( '[' expression ']' )*
 					loop170:
 					while (true) {
 						int alt170=2;
@@ -17902,7 +17902,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt170) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:55: '[' expression ']'
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:39: '[' expression ']'
 							{
 							char_literal587=(Token)match(input,55,FOLLOW_55_in_arrayCreatorRest6017); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -17910,7 +17910,7 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, char_literal587_tree);
 							}
 
-							if ( state.backtracking==0 ) {s("[");operatorCount++;}
+							if ( state.backtracking==0 ) {s("[");}
 							pushFollow(FOLLOW_expression_in_arrayCreatorRest6020);
 							expression588=expression();
 							state._fsp--;
@@ -17923,7 +17923,7 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, char_literal589_tree);
 							}
 
-							if ( state.backtracking==0 ) {s("]");operatorCount++;}
+							if ( state.backtracking==0 ) {s("]");}
 							}
 							break;
 
@@ -17932,7 +17932,7 @@ public class JavaJavaParser extends Parser {
 						}
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:127: ( '[' ']' )*
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:79: ( '[' ']' )*
 					loop171:
 					while (true) {
 						int alt171=2;
@@ -17947,7 +17947,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt171) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:128: '[' ']'
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:80: '[' ']'
 							{
 							char_literal590=(Token)match(input,55,FOLLOW_55_in_arrayCreatorRest6029); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -17955,14 +17955,14 @@ public class JavaJavaParser extends Parser {
 							adaptor.addChild(root_0, char_literal590_tree);
 							}
 
-							if ( state.backtracking==0 ) {s("["); operatorCount++;}
+							if ( state.backtracking==0 ) {s("["); }
 							char_literal591=(Token)match(input,56,FOLLOW_56_in_arrayCreatorRest6032); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
 							char_literal591_tree = (Object)adaptor.create(char_literal591);
 							adaptor.addChild(root_0, char_literal591_tree);
 							}
 
-							if ( state.backtracking==0 ) {s("]");operatorCount++;}
+							if ( state.backtracking==0 ) {s("]");}
 							}
 							break;
 
@@ -18338,7 +18338,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal600_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
+					if ( state.backtracking==0 ) {s("."); }
 					Identifier601=(Token)match(input,Identifier,FOLLOW_Identifier_in_selector6154); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					Identifier601_tree = (Object)adaptor.create(Identifier601);
@@ -18346,7 +18346,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {if(primitive) id((Identifier601!=null?Identifier601.getText():null));}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:90: ( arguments )?
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:74: ( arguments )?
 					int alt174=2;
 					int LA174_0 = input.LA(1);
 					if ( (LA174_0==32) ) {
@@ -18354,7 +18354,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt174) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:90: arguments
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:74: arguments
 							{
 							pushFollow(FOLLOW_arguments_in_selector6159);
 							arguments602=arguments();
@@ -18381,7 +18381,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal603_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
+					if ( state.backtracking==0 ) {s("."); }
 					string_literal604=(Token)match(input,99,FOLLOW_99_in_selector6174); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal604_tree = (Object)adaptor.create(string_literal604);
@@ -18403,7 +18403,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal605_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
+					if ( state.backtracking==0 ) {s("."); }
 					string_literal606=(Token)match(input,96,FOLLOW_96_in_selector6190); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal606_tree = (Object)adaptor.create(string_literal606);
@@ -18431,7 +18431,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal608_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("."); operatorCount++;}
+					if ( state.backtracking==0 ) {s("."); }
 					string_literal609=(Token)match(input,86,FOLLOW_86_in_selector6208); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					string_literal609_tree = (Object)adaptor.create(string_literal609);
@@ -18459,7 +18459,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal611_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("["); operatorCount++;}
+					if ( state.backtracking==0 ) {s("["); }
 					pushFollow(FOLLOW_expression_in_selector6227);
 					expression612=expression();
 					state._fsp--;
@@ -18472,7 +18472,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal613_tree);
 					}
 
-					if ( state.backtracking==0 ) {s("]"); operatorCount++;}
+					if ( state.backtracking==0 ) {s("]"); }
 					}
 					break;
 
@@ -18570,7 +18570,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal615_tree);
 					}
 
-					if ( state.backtracking==0 ) {s(".");operatorCount++;}
+					if ( state.backtracking==0 ) {s(".");}
 					Identifier616=(Token)match(input,Identifier,FOLLOW_Identifier_in_superSuffix6268); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
 					Identifier616_tree = (Object)adaptor.create(Identifier616);
@@ -18578,7 +18578,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {if(primitive) id((Identifier616!=null?Identifier616.getText():null));}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:829:88: ( arguments )?
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:829:72: ( arguments )?
 					int alt176=2;
 					int LA176_0 = input.LA(1);
 					if ( (LA176_0==32) ) {
@@ -18586,7 +18586,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt176) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:829:88: arguments
+							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:829:72: arguments
 							{
 							pushFollow(FOLLOW_arguments_in_superSuffix6272);
 							arguments617=arguments();
@@ -18663,8 +18663,8 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal618_tree);
 			}
 
-			if ( state.backtracking==0 ) {s("("); operatorCount++;}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:39: ( expressionList )?
+			if ( state.backtracking==0 ) {s("("); }
+			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:23: ( expressionList )?
 			int alt178=2;
 			int LA178_0 = input.LA(1);
 			if ( ((LA178_0 >= CharacterLiteral && LA178_0 <= DecimalLiteral)||LA178_0==FloatingPointLiteral||(LA178_0 >= HexLiteral && LA178_0 <= Identifier)||(LA178_0 >= OctalLiteral && LA178_0 <= StringLiteral)||LA178_0==25||LA178_0==32||(LA178_0 >= 36 && LA178_0 <= 37)||(LA178_0 >= 40 && LA178_0 <= 41)||LA178_0==60||LA178_0==62||LA178_0==65||LA178_0==70||LA178_0==73||LA178_0==76||LA178_0==82||LA178_0==84||(LA178_0 >= 86 && LA178_0 <= 87)||LA178_0==93||LA178_0==96||LA178_0==99||LA178_0==103||LA178_0==105||LA178_0==113) ) {
@@ -18672,7 +18672,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt178) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:39: expressionList
+					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:23: expressionList
 					{
 					pushFollow(FOLLOW_expressionList_in_arguments6295);
 					expressionList619=expressionList();
@@ -18691,7 +18691,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal620_tree);
 			}
 
-			if ( state.backtracking==0 ) {s(")"); operatorCount++;}
+			if ( state.backtracking==0 ) {s(")"); }
 			}
 
 			retval.stop = input.LT(-1);
@@ -18851,8 +18851,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred113_JavaJava
 	public final void synpred113_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:39: ( explicitConstructorInvocation )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:39: explicitConstructorInvocation
+		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: ( explicitConstructorInvocation )
+		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: explicitConstructorInvocation
 		{
 		pushFollow(FOLLOW_explicitConstructorInvocation_in_synpred113_JavaJava2728);
 		explicitConstructorInvocation();
@@ -18958,8 +18958,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred157_JavaJava
 	public final void synpred157_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:115: ( 'else' statement )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:115: 'else' statement
+		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:170: ( 'else' statement )
+		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:170: 'else' statement
 		{
 		match(input,71,FOLLOW_71_in_synpred157_JavaJava3745); if (state.failed) return;
 
@@ -19374,8 +19374,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred262_JavaJava
 	public final void synpred262_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:55: ( '[' expression ']' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:55: '[' expression ']'
+		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:39: ( '[' expression ']' )
+		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:39: '[' expression ']'
 		{
 		match(input,55,FOLLOW_55_in_synpred262_JavaJava6017); if (state.failed) return;
 

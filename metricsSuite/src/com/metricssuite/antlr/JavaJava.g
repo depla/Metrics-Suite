@@ -51,7 +51,7 @@ package com.metricssuite.antlr;
     void s(String sp){ 
          specialcount++; 
         // System.out.println(sp);
-         JavaMetrics.uniqueSpecial.add("sp:  "+sp);
+         JavaMetrics.uniqueSpecial.add("special count:  "+sp);
     }
     void id(String s){
     	identcount++;
@@ -115,13 +115,13 @@ classOrInterfaceModifiers
 
 classOrInterfaceModifier
     :   annotation   // class or interface
-    |   'public'     {keywordCount++;JavaMetrics.uniqueKeywords.add("public");}// class or interface
-    |   'protected'  {keywordCount++;JavaMetrics.uniqueKeywords.add("protected");}// class or interface
-    |   'private'    {keywordCount++; JavaMetrics.uniqueKeywords.add("private");}// class or interface
-    |   'abstract'   {keywordCount++;JavaMetrics.uniqueKeywords.add("abstract");}// class or interface
-    |   'static'     {keywordCount++;JavaMetrics.uniqueKeywords.add("static");}// class or interface
-    |   'final'      {keywordCount++;JavaMetrics.uniqueKeywords.add("final");}// class only -- does not apply to interfaces
-    |   'strictfp'   {keywordCount++;JavaMetrics.uniqueKeywords.add("strictfp");}// class or interface
+    |   'public'     {/*keywordCount++;JavaMetrics.uniqueKeywords.add("public");operatorCount++;JavaMetrics.uniqueOperator.add("public");*/}// class or interface
+    |   'protected'  {/*keywordCount++;JavaMetrics.uniqueKeywords.add("protected");operatorCount++;JavaMetrics.uniqueOperator.add("protected");*/}// class or interface
+    |   'private'    {/*keywordCount++; JavaMetrics.uniqueKeywords.add("private"); operatorCount++;JavaMetrics.uniqueOperator.add("private");*/}// class or interface
+    |   'abstract'   {/*keywordCount++;JavaMetrics.uniqueKeywords.add("abstract"); operatorCount++;JavaMetrics.uniqueOperator.add("abstract");*/}// class or interface
+    |   'static'     {/*keywordCount++;JavaMetrics.uniqueKeywords.add("static"); operatorCount++;JavaMetrics.uniqueOperator.add("static");*/}// class or interface
+    |   'final'      {/*keywordCount++;JavaMetrics.uniqueKeywords.add("final");/*operatorCount++;JavaMetrics.uniqueOperator.add("final");*/}// class only -- does not apply to interfaces
+    |   'strictfp'   {/*keywordCount++;JavaMetrics.uniqueKeywords.add("strictfp");/*operatorCount++;JavaMetrics.uniqueOperator.add("strictfp");*/}// class or interface
     ;
 
 modifiers
@@ -134,14 +134,14 @@ classDeclaration
     ;
     
 normalClassDeclaration
-    :   'class' Identifier { className=$Identifier.text; classCount++;}{keywordCount++; JavaMetrics.uniqueKeywords.add("class"); id($Identifier.text);} typeParameters?
-        ('extends' {keywordCount++;JavaMetrics.uniqueKeywords.add("extends");}type)? 
-        ('implements' {keywordCount++;JavaMetrics.uniqueKeywords.add("implements");} typeList )?
+    :   'class' Identifier { className=$Identifier.text; classCount++;}{keywordCount++; JavaMetrics.uniqueKeywords.add("class"); id($Identifier.text);operatorCount++;JavaMetrics.uniqueOperator.add("class");} typeParameters?
+        ('extends' {keywordCount++;JavaMetrics.uniqueKeywords.add("extends");operatorCount++;JavaMetrics.uniqueOperator.add("extends");}type)? 
+        ('implements' {keywordCount++;JavaMetrics.uniqueKeywords.add("implements");operatorCount++;JavaMetrics.uniqueOperator.add("implements");} typeList )?
         classBody
     ;
     
 typeParameters
-    :   '<'{s("<"); operatorCount++;} typeParameter (','{s(","); operatorCount++;} typeParameter)* '>' {s(">");}
+    :   '<'{s("<");} typeParameter (','{s(",");} typeParameter)* '>' {s(">");}
         ;
 
 typeParameter
@@ -195,14 +195,14 @@ interfaceBody
 
 classBodyDeclaration
     :   ';' {s(";");}
-    |   'static' ?{keywordCount++;JavaMetrics.uniqueKeywords.add("static");}   block
+    |   'static' ?{keywordCount++;JavaMetrics.uniqueKeywords.add("static");operatorCount++; JavaMetrics.uniqueOperator.add("static");}   block
     |   modifiers memberDecl
     ;
     
 memberDecl
     :   {inMethod=true;} genericMethodOrConstructorDecl
     |   memberDeclaration
-    |   {inMethod=true;} 'void'{keywordCount++;JavaMetrics.uniqueKeywords.add("void");} Identifier {id($Identifier.text); methodName = $Identifier.text;}  voidMethodDeclaratorRest
+    |   {inMethod=true;} 'void'{keywordCount++;JavaMetrics.uniqueKeywords.add("void");operatorCount++; JavaMetrics.uniqueOperator.add("void");} Identifier {id($Identifier.text); methodName = $Identifier.text;}  voidMethodDeclaratorRest
     |   {inMethod=true;} Identifier {{id($Identifier.text);} methodName = $Identifier.text;}  constructorDeclaratorRest
     |   interfaceDeclaration
     |   classDeclaration
@@ -244,7 +244,7 @@ interfaceBodyDeclaration
 interfaceMemberDecl
     :   interfaceMethodOrFieldDecl
     |   interfaceGenericMethodDecl
-    |   'void'{keywordCount++;JavaMetrics.uniqueKeywords.add("void");} Identifier { id($Identifier.text);  methodName = $Identifier.text;} voidInterfaceMethodDeclaratorRest
+    |   'void'{keywordCount++;JavaMetrics.uniqueKeywords.add("void");operatorCount++; JavaMetrics.uniqueOperator.add("void");} Identifier { id($Identifier.text);  methodName = $Identifier.text;} voidInterfaceMethodDeclaratorRest
     |   interfaceDeclaration
     |   classDeclaration
     ;
@@ -260,25 +260,25 @@ interfaceMethodOrFieldRest
     
 methodDeclaratorRest
     :   formalParameters ('[' {s("[");} ']'{s("]");})*
-        ('throws' {keywordCount++;JavaMetrics.uniqueKeywords.add("throws");} qualifiedNameList)?
+        ('throws' {keywordCount++;JavaMetrics.uniqueKeywords.add("throws");operatorCount++; JavaMetrics.uniqueOperator.add("throws");} qualifiedNameList)?
         (   methodBody
         |   ';'
         )
     ;
     
 voidMethodDeclaratorRest
-    :   formalParameters ('throws'{keywordCount++;JavaMetrics.uniqueKeywords.add("throws");} qualifiedNameList)?
+    :   formalParameters ('throws'{keywordCount++;JavaMetrics.uniqueKeywords.add("throws");operatorCount++; JavaMetrics.uniqueOperator.add("throws");} qualifiedNameList)?
         (   methodBody
         |   ';' {s(";");}
         )
     ;
     
 interfaceMethodDeclaratorRest
-    :  formalParameters ('[' {s("[");} ']' {s("]");})* ('throws'{keywordCount++;JavaMetrics.uniqueKeywords.add("throws");} qualifiedNameList)? ';' {s(";");}
+    :  formalParameters ('[' {s("[");} ']' {s("]");})* ('throws'{keywordCount++;JavaMetrics.uniqueKeywords.add("throws");operatorCount++; JavaMetrics.uniqueOperator.add("throws");} qualifiedNameList)? ';' {s(";");}
     ;
     
 interfaceGenericMethodDecl
-    :   typeParameters (type | 'void' {keywordCount++;JavaMetrics.uniqueKeywords.add("void");}) Identifier {if(primitive) id($Identifier.text);}
+    :   typeParameters (type | 'void' {keywordCount++;JavaMetrics.uniqueKeywords.add("void");operatorCount++; JavaMetrics.uniqueOperator.add("void");}) Identifier {if(primitive) id($Identifier.text);}
         interfaceMethodDeclaratorRest
     ;
     
@@ -335,17 +335,17 @@ arrayInitializer
 
 modifier
     :   annotation
-    |   'public'  {keywordCount++;JavaMetrics.uniqueKeywords.add("public");}
-    |   'protected' {keywordCount++;JavaMetrics.uniqueKeywords.add("protected");}
-    |   'private' {keywordCount++; JavaMetrics.uniqueKeywords.add("private");}
-    |   'static' 	{keywordCount++; JavaMetrics.uniqueKeywords.add("static");}
-    |   'abstract'	{keywordCount++;JavaMetrics.uniqueKeywords.add("abstract");}
-    |   'final'		{keywordCount++;JavaMetrics.uniqueKeywords.add("final");}
-    |   'native'    {keywordCount++;JavaMetrics.uniqueKeywords.add("native");}
-    |   'synchronized' {keywordCount++;JavaMetrics.uniqueKeywords.add("synchronized");}
-    |   'transient'   {keywordCount++;JavaMetrics.uniqueKeywords.add("transient");}
-    |   'volatile'  {keywordCount++;JavaMetrics.uniqueKeywords.add("volatile");}
-    |   'strictfp'  {keywordCount++;JavaMetrics.uniqueKeywords.add("strictfp");}
+    |   'public'  {keywordCount++;JavaMetrics.uniqueKeywords.add("public");operatorCount++; JavaMetrics.uniqueOperator.add("public");}
+    |   'protected' {keywordCount++;JavaMetrics.uniqueKeywords.add("protected");operatorCount++; JavaMetrics.uniqueOperator.add("protected");}
+    |   'private' {keywordCount++; JavaMetrics.uniqueKeywords.add("private");operatorCount++; JavaMetrics.uniqueOperator.add("private");}
+    |   'static' 	{keywordCount++; JavaMetrics.uniqueKeywords.add("static");operatorCount++; JavaMetrics.uniqueOperator.add("static");}
+    |   'abstract'	{keywordCount++;JavaMetrics.uniqueKeywords.add("abstract");operatorCount++; JavaMetrics.uniqueOperator.add("abstract");}
+    |   'final'		{keywordCount++;JavaMetrics.uniqueKeywords.add("final");operatorCount++; JavaMetrics.uniqueOperator.add("final");}
+    |   'native'    {keywordCount++;JavaMetrics.uniqueKeywords.add("native"); operatorCount++; JavaMetrics.uniqueOperator.add("native");}
+    |   'synchronized' {keywordCount++;JavaMetrics.uniqueKeywords.add("synchronized");operatorCount++; JavaMetrics.uniqueOperator.add("synchronized");}
+    |   'transient'   {keywordCount++;JavaMetrics.uniqueKeywords.add("transient");operatorCount++; JavaMetrics.uniqueOperator.add("transient");}
+    |   'volatile'  {keywordCount++;JavaMetrics.uniqueKeywords.add("volatile");operatorCount++; JavaMetrics.uniqueOperator.add("volatile");}
+    |   'strictfp'  {keywordCount++;JavaMetrics.uniqueKeywords.add("strictfp");operatorCount++; JavaMetrics.uniqueOperator.add("strictfp");}
     ;
 
 packageOrTypeName
@@ -372,23 +372,23 @@ classOrInterfaceType
 	;
 
 primitiveType
-    :   'boolean'	{keywordCount++; PrimitiveType = "boolean"; JavaMetrics.uniqueKeywords.add("boolean");}
-    |   'char'		{keywordCount++;  PrimitiveType = "char";  JavaMetrics.uniqueKeywords.add("char");}
-    |   'byte'		{keywordCount++;  PrimitiveType = "byte"; JavaMetrics.uniqueKeywords.add("byte");}
-    |   'short'		{keywordCount++;  PrimitiveType = "short"; JavaMetrics.uniqueKeywords.add("short");}
-    |   'int' 		{keywordCount++;  PrimitiveType = "int"; JavaMetrics.uniqueKeywords.add("int");}
-    |   'long'		{keywordCount++;  PrimitiveType = "long"; JavaMetrics.uniqueKeywords.add("long");}
-    |   'float'		{keywordCount++;  PrimitiveType = "float"; JavaMetrics.uniqueKeywords.add("float");}
-    |   'double' 	{keywordCount++;  PrimitiveType = "double"; JavaMetrics.uniqueKeywords.add("double");}
+    :   'boolean'	{keywordCount++; PrimitiveType = "boolean"; JavaMetrics.uniqueKeywords.add("boolean");operatorCount++; JavaMetrics.uniqueOperator.add("boolean");}
+    |   'char'		{keywordCount++;  PrimitiveType = "char";  JavaMetrics.uniqueKeywords.add("char");operatorCount++; JavaMetrics.uniqueOperator.add("char");}
+    |   'byte'		{keywordCount++;  PrimitiveType = "byte"; JavaMetrics.uniqueKeywords.add("byte");operatorCount++; JavaMetrics.uniqueOperator.add("byte");}
+    |   'short'		{keywordCount++;  PrimitiveType = "short"; JavaMetrics.uniqueKeywords.add("short");operatorCount++; JavaMetrics.uniqueOperator.add("short");}
+    |   'int' 		{keywordCount++;  PrimitiveType = "int"; JavaMetrics.uniqueKeywords.add("int");operatorCount++; JavaMetrics.uniqueOperator.add("int");}
+    |   'long'		{keywordCount++;  PrimitiveType = "long"; JavaMetrics.uniqueKeywords.add("long"); operatorCount++; JavaMetrics.uniqueOperator.add("long");}
+    |   'float'		{keywordCount++;  PrimitiveType = "float"; JavaMetrics.uniqueKeywords.add("float");operatorCount++; JavaMetrics.uniqueOperator.add("float");}
+    |   'double' 	{keywordCount++;  PrimitiveType = "double"; JavaMetrics.uniqueKeywords.add("double");operatorCount++; JavaMetrics.uniqueOperator.add("double");}
     ;
 
 variableModifier
-    :   'final'{keywordCount++;JavaMetrics.uniqueKeywords.add("final");}
+    :   'final'{keywordCount++;JavaMetrics.uniqueKeywords.add("final");operatorCount++; JavaMetrics.uniqueOperator.add("final");}
     |   annotation
     ;
 
 typeArguments
-    :   '<' {s("<"); operatorCount++;} typeArgument (','{s(","); operatorCount++;} typeArgument)* '>'{s(">"); operatorCount++;}
+    :   '<' {s("<");} typeArgument (','{s(",");} typeArgument)* '>'{s(">");}
     ;
     
 typeArgument
@@ -397,11 +397,11 @@ typeArgument
     ;
     
 qualifiedNameList
-    :   qualifiedName (',' {s(","); operatorCount++;} qualifiedName)*
+    :   qualifiedName (',' {s(","); } qualifiedName)*
     ;
 
 formalParameters
-    :   '(' {s("("); operatorCount++;} formalParameterDecls? ')' {s(")");operatorCount++;} 
+    :   '(' {s("("); } formalParameterDecls? ')' {s(")");} 
     ;
     
 formalParameterDecls
@@ -409,7 +409,7 @@ formalParameterDecls
     ;
     
 formalParameterDeclsRest
-    :   variableDeclaratorId (',' {s(","); operatorCount++;} formalParameterDecls)?
+    :   variableDeclaratorId (',' {s(","); } formalParameterDecls)?
     |   '...' variableDeclaratorId
     ;
     
@@ -418,12 +418,12 @@ methodBody
     ;
 
 constructorBody
-    :   '{'{s("{"); operatorCount++;} explicitConstructorInvocation? blockStatement* '}' {s("}"); operatorCount++; System.out.println("McCabe for " + methodName + " = " + (mmc+1)); JavaMetrics.mccabeValues.add(methodName + " = " + (mmc+1)); mmc = 0;}
+    :   '{'{s("{");} explicitConstructorInvocation? blockStatement* '}' {s("}"); System.out.println("McCabe for " + methodName + " = " + (mmc+1)); JavaMetrics.mccabeValues.add(methodName + " = " + (mmc+1)); mmc = 0;}
     ;
 
 explicitConstructorInvocation
     :   nonWildcardTypeArguments? ('this'{keywordCount++;JavaMetrics.uniqueKeywords.add("this");} | 'super' {keywordCount++;JavaMetrics.uniqueKeywords.add("super");}) arguments ';' {s(";");}
-    |   primary '.' {s("."); operatorCount++;}nonWildcardTypeArguments? 'super' arguments ';' {s(";"); operatorCount++;}
+    |   primary '.' {s("."); }nonWildcardTypeArguments? 'super' arguments ';' {s(";"); }
     ;
 
 
@@ -447,8 +447,8 @@ integerLiteral
     ;
 
 booleanLiteral
-    :   'true' {keywordCount++;JavaMetrics.uniqueKeywords.add("true");}
-    |   'false'{keywordCount++;JavaMetrics.uniqueKeywords.add("false");}
+    :   'true' {keywordCount++;JavaMetrics.uniqueKeywords.add("true");operatorCount++; JavaMetrics.uniqueOperator.add("true");}
+    |   'false'{keywordCount++;JavaMetrics.uniqueKeywords.add("false"); operatorCount++; JavaMetrics.uniqueOperator.add("false");}
     ;
 
 // ANNOTATIONS
@@ -458,7 +458,7 @@ annotations
     ;
 
 annotation
-    :   '@' annotationName ( '(' {s("("); operatorCount++;} ( elementValuePairs | elementValue )? ')' {s(")"); operatorCount++;}  )?
+    :   '@' annotationName ( '(' {s("(");} ( elementValuePairs | elementValue )? ')' {s(")");}  )?
     ;
     
 annotationName
@@ -466,11 +466,11 @@ annotationName
     ;
 
 elementValuePairs
-    :   elementValuePair (',' {s(","); operatorCount++;} elementValuePair)*
+    :   elementValuePair (',' {s(",");} elementValuePair)*
     ;
 
 elementValuePair
-    :   Identifier { id($Identifier.text);} '=' {s("=");operatorCount++;} elementValue
+    :   Identifier { id($Identifier.text);} '=' {s("=");} elementValue
     ;
     
 elementValue
@@ -480,7 +480,7 @@ elementValue
     ;
     
 elementValueArrayInitializer
-    :   '{' {s("{");operatorCount++;}(elementValue (','{s(",");operatorCount++;} elementValue)*)? (',')?  '}'{s("}");operatorCount++;}
+    :   '{' {s("{");}(elementValue (','{s(",");} elementValue)*)? (',')?  '}'{s("}");}
     ;
     
 annotationTypeDeclaration
@@ -488,7 +488,7 @@ annotationTypeDeclaration
     ;
     
 annotationTypeBody
-    :   '{' {s("{"); operatorCount++;}(annotationTypeElementDeclaration)* '}'{s("}"); operatorCount++;}
+    :   '{' {s("{"); }(annotationTypeElementDeclaration)* '}'{s("}"); }
     ;
     
 annotationTypeElementDeclaration
@@ -509,7 +509,7 @@ annotationMethodOrConstantRest
     ;
     
 annotationMethodRest
-    :   Identifier {id($Identifier.text);} '(' {s("("); operatorCount++;}  ')' {s(")");operatorCount++;}  defaultValue?
+    :   Identifier {id($Identifier.text);} '(' {s("("); }  ')' {s(")");}  defaultValue?
     ;
     
 annotationConstantRest
@@ -523,7 +523,7 @@ defaultValue
 // STATEMENTS / BLOCKS
 
 block
-    :   '{' {s("{"); operatorCount++;} blockStatement* '}' {s("}"); operatorCount++;}
+    :   '{' {s("{");} blockStatement* '}' {s("}"); }
     ;
     
 blockStatement
@@ -533,7 +533,7 @@ blockStatement
     ;
     
 localVariableDeclarationStatement
-    :    localVariableDeclaration {primitive=false;}';' {s(";"); operatorCount++;}
+    :    localVariableDeclaration {primitive=false;}';' {s(";");}
     ;
 
 localVariableDeclaration
@@ -547,21 +547,21 @@ variableModifiers
 statement
     : block
     |   ASSERT expression (':' expression)? ';'
-    |   'if'{keywordCount++;JavaMetrics.uniqueKeywords.add("if"); mmc++;} parExpression statement (options {k=1;}:'else' {keywordCount++;JavaMetrics.uniqueKeywords.add("else");} statement)?
-    |   'for' {keywordCount++;JavaMetrics.uniqueKeywords.add("for");mmc++;} '(' {s("("); operatorCount++;} forControl ')' {s("}");operatorCount++;} statement
-    |   'while'{keywordCount++;JavaMetrics.uniqueKeywords.add("while"); mmc++;} parExpression  statement
-    |   'do'{keywordCount++;JavaMetrics.uniqueKeywords.add("do");mmc++;} statement 'while' {keywordCount++;JavaMetrics.uniqueKeywords.add("while");} parExpression ';' {s(";"); operatorCount++;}
-    |   'try'{keywordCount++;JavaMetrics.uniqueKeywords.add("try");} block
-        ( catches 'finally' {keywordCount++;JavaMetrics.uniqueKeywords.add("finally");}block
+    |   'if'{keywordCount++;JavaMetrics.uniqueKeywords.add("if"); mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("if");} parExpression statement (options {k=1;}:'else' {keywordCount++;JavaMetrics.uniqueKeywords.add("else"); operatorCount++; JavaMetrics.uniqueOperator.add("else");} statement)?
+    |   'for' {keywordCount++;JavaMetrics.uniqueKeywords.add("for");mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("for");} '(' {s("(");} forControl ')' {s("}");} statement
+    |   'while'{keywordCount++;JavaMetrics.uniqueKeywords.add("while"); mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("while");} parExpression  statement
+    |   'do'{keywordCount++;JavaMetrics.uniqueKeywords.add("do");mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("do");} statement 'while' {keywordCount++;JavaMetrics.uniqueKeywords.add("while"); operatorCount++; JavaMetrics.uniqueOperator.add("while");} parExpression ';' {s(";");}
+    |   'try'{keywordCount++;JavaMetrics.uniqueKeywords.add("try"); operatorCount++; JavaMetrics.uniqueOperator.add("try");} block
+        ( catches 'finally' {keywordCount++;JavaMetrics.uniqueKeywords.add("finally");operatorCount++; JavaMetrics.uniqueOperator.add("finally");}block
         | catches
-        |   'finally'{keywordCount++;JavaMetrics.uniqueKeywords.add("finally");} block
+        |   'finally'{keywordCount++;JavaMetrics.uniqueKeywords.add("finally"); operatorCount++; JavaMetrics.uniqueOperator.add("finally");} block
         )
-    |   'switch'{keywordCount++;JavaMetrics.uniqueKeywords.add("switch");}  parExpression '{' switchBlockStatementGroups '}'
+    |   'switch'{keywordCount++;JavaMetrics.uniqueKeywords.add("switch"); operatorCount++; JavaMetrics.uniqueOperator.add("switch");}  parExpression '{' switchBlockStatementGroups '}'
     |   'synchronized'{keywordCount++;JavaMetrics.uniqueKeywords.add("synchronized");} parExpression block
-    |   'return' {keywordCount++;JavaMetrics.uniqueKeywords.add("return");} expression? ';' {s(";");}
-    |   'throw'{keywordCount++;JavaMetrics.uniqueKeywords.add("throw");} expression ';' {s(";");}
-    |   'break' {keywordCount++;JavaMetrics.uniqueKeywords.add("break"); /*System.out.println("FOUND BREAK");*/}Identifier? {if(primitive) id($Identifier.text);}';' {s(";");}
-    |   'continue' {keywordCount++;JavaMetrics.uniqueKeywords.add("continue");} Identifier?  { id($Identifier.text);}';' {s(";");}
+    |   'return' {keywordCount++;JavaMetrics.uniqueKeywords.add("return"); operatorCount++; JavaMetrics.uniqueOperator.add("return");} expression? ';' {s(";"); }
+    |   'throw'{keywordCount++;JavaMetrics.uniqueKeywords.add("throw"); operatorCount++; JavaMetrics.uniqueOperator.add("throw");} expression ';' {s(";");}
+    |   'break' {keywordCount++;JavaMetrics.uniqueKeywords.add("break"); /*System.out.println("FOUND BREAK");*/operatorCount++; JavaMetrics.uniqueOperator.add("break");}Identifier? {if(primitive) id($Identifier.text);}';' {s(";");}
+    |   'continue' {keywordCount++;JavaMetrics.uniqueKeywords.add("continue");operatorCount++; JavaMetrics.uniqueOperator.add("continue");} Identifier?  { id($Identifier.text);}';' {s(";");}
     |   ';' {s(";");}
     |   statementExpression ';'  {s(";");}
     |   Identifier {if(primitive) id($Identifier.text);} ':' statement
@@ -572,7 +572,7 @@ catches
     ;
     
 catchClause
-    :   'catch' {keywordCount++;JavaMetrics.uniqueKeywords.add("catch");}'(' {s("(");} formalParameter ')'{s(")");}  block
+    :   'catch' {keywordCount++;JavaMetrics.uniqueKeywords.add("catch"); operatorCount++; JavaMetrics.uniqueOperator.add("catch");}'(' {s("(");} formalParameter ')'{s(")");}  block
     ;
 
 formalParameter
@@ -592,9 +592,9 @@ switchBlockStatementGroup
     ;
     
 switchLabel
-    :   'case'{keywordCount++;JavaMetrics.uniqueKeywords.add("case");mmc++;} constantExpression ':'
-    |   'case' {keywordCount++;JavaMetrics.uniqueKeywords.add("case");mmc++;} enumConstantName ':'
-    |   'default' {keywordCount++;JavaMetrics.uniqueKeywords.add("defult");mmc++;} ':'
+    :   'case'{keywordCount++;JavaMetrics.uniqueKeywords.add("case");mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("case");} constantExpression ':'
+    |   'case' {keywordCount++;JavaMetrics.uniqueKeywords.add("case");mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("case");} enumConstantName ':'
+    |   'default' {keywordCount++;JavaMetrics.uniqueKeywords.add("defult");mmc++; operatorCount++; JavaMetrics.uniqueOperator.add("default");} ':'
     ;
     
 forControl
@@ -769,18 +769,18 @@ primary
     |   'new'{keywordCount++;JavaMetrics.uniqueKeywords.add("new");} creator
     |   I1=Identifier {{id($I1.text);}} ('.' {s(".");} I4=Identifier)*  identifierSuffix? 
     |   primitiveType ('['{s("[");} ']'{s("]");})* '.' 'class' {keywordCount++;JavaMetrics.uniqueKeywords.add("class");}
-    |   'void'{keywordCount++;JavaMetrics.uniqueKeywords.add("void");} '.' {s("."); operatorCount++;} 'class'{keywordCount++;JavaMetrics.uniqueKeywords.add("class");}
+    |   'void'{keywordCount++;JavaMetrics.uniqueKeywords.add("void");} '.' {s("."); } 'class'{keywordCount++;JavaMetrics.uniqueKeywords.add("class");}
     ;
 
 identifierSuffix
-    :   ('[' {s("[");operatorCount++;} ']' {s("]"); operatorCount++;})+ '.' {s("."); operatorCount++;} 'class'{keywordCount++;JavaMetrics.uniqueKeywords.add("class");}
-    |   ('[' {s("[");} expression ']' {s("]"); operatorCount++;})+ // can also be matched by selector, but do here
+    :   ('[' {s("[");} ']' {s("]"); })+ '.' {s(".");} 'class'{keywordCount++;JavaMetrics.uniqueKeywords.add("class");}
+    |   ('[' {s("[");} expression ']' {s("]"); })+ // can also be matched by selector, but do here
     |   arguments 
-    |   '.' {s(".");  operatorCount++;} 'class'{keywordCount++;JavaMetrics.uniqueKeywords.add("class");}
-    |   '.' {s("."); operatorCount++;} explicitGenericInvocation
-    |   '.' {s("."); operatorCount++;} 'this'{keywordCount++;JavaMetrics.uniqueKeywords.add("this");}
-    |   '.' {s("."); operatorCount++;} 'super' arguments {keywordCount++;JavaMetrics.uniqueKeywords.add("super");}
-    |   '.' {s("."); operatorCount++;} 'new' {keywordCount++;JavaMetrics.uniqueKeywords.add("new");}innerCreator
+    |   '.' {s(".");  } 'class'{keywordCount++;JavaMetrics.uniqueKeywords.add("class");}
+    |   '.' {s("."); } explicitGenericInvocation
+    |   '.' {s("."); } 'this'{keywordCount++;JavaMetrics.uniqueKeywords.add("this");}
+    |   '.' {s("."); } 'super' arguments {keywordCount++;JavaMetrics.uniqueKeywords.add("super");}
+    |   '.' {s("."); } 'new' {keywordCount++;JavaMetrics.uniqueKeywords.add("new");}innerCreator
     ;
 
 creator
@@ -798,9 +798,9 @@ innerCreator
     ;
 
 arrayCreatorRest
-    :   '['{s("["); operatorCount++;}
-        (   ']' ('['{s("["); operatorCount++;} ']' {s("]");operatorCount++;})* arrayInitializer
-        |   expression ']' {s("]");operatorCount++;} ('['{s("[");operatorCount++;} expression ']' {s("]");operatorCount++;})* ('['{s("["); operatorCount++;} ']'{s("]");operatorCount++;})*
+    :   '['{s("[");}
+        (   ']' ('['{s("["); } ']' {s("]");})* arrayInitializer
+        |   expression ']' {s("]");} ('['{s("[");} expression ']' {s("]");})* ('['{s("["); } ']'{s("]");})*
         )
     ;
 
@@ -817,20 +817,20 @@ nonWildcardTypeArguments
     ;
     
 selector
-    :   '.' {s("."); operatorCount++;} Identifier  {if(primitive) id($Identifier.text);} arguments?
-    |   '.' {s("."); operatorCount++;} 'this' {keywordCount++;JavaMetrics.uniqueKeywords.add("this");}
-    |   '.' {s("."); operatorCount++;} 'super' superSuffix {keywordCount++;JavaMetrics.uniqueKeywords.add("super");}
-    |   '.' {s("."); operatorCount++;} 'new'  {keywordCount++;JavaMetrics.uniqueKeywords.add("new");} innerCreator
-    |   '[' {s("["); operatorCount++;} expression ']' {s("]"); operatorCount++;}
+    :   '.' {s("."); } Identifier  {if(primitive) id($Identifier.text);} arguments?
+    |   '.' {s("."); } 'this' {keywordCount++;JavaMetrics.uniqueKeywords.add("this");}
+    |   '.' {s("."); } 'super' superSuffix {keywordCount++;JavaMetrics.uniqueKeywords.add("super");}
+    |   '.' {s("."); } 'new'  {keywordCount++;JavaMetrics.uniqueKeywords.add("new");} innerCreator
+    |   '[' {s("["); } expression ']' {s("]"); }
     ;
     
 superSuffix
     :   arguments
-    |   '.' {s(".");operatorCount++;} Identifier {if(primitive) id($Identifier.text);} arguments?
+    |   '.' {s(".");} Identifier {if(primitive) id($Identifier.text);} arguments?
     ;
 
 arguments
-    :   '(' {s("("); operatorCount++;}expressionList? ')'{s(")"); operatorCount++;} 
+    :   '(' {s("("); }expressionList? ')'{s(")"); } 
     ;
 
 // LEXER
@@ -941,9 +941,9 @@ WS  :  (' '{ws++;}|'\r'{ws++;}|'\t'{ws++;}|'\u000C'{ws++;}|'\n'{ws++;}) {$channe
     ;
 
 COMMENT
-    :   '/*' ( options {greedy=false;} : .{commentcount++;} )* '*/' {$channel=HIDDEN;}
+    :   '/*' ( options {greedy=false;} : .{commentcount++;System.out.println("block comment: "+commentcount);} )* '*/' {$channel=HIDDEN;}
     ;
 
 LINE_COMMENT
-    : '//' .{commentcount++;} ~( ('\n' |'\r'))* {/*INSERT COUNT*/  } '\r'? '\n' {$channel=HIDDEN;}
+    : '//' ~( ('\n' |'\r') )* (options {greedy=false;}: .{commentcount++;} )'\r' ? '\n'  {$channel=HIDDEN;}
     ;
