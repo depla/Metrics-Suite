@@ -52,6 +52,7 @@ public class MetricsParser
         parser.compilationUnit();
 
         //******************************************************************************
+        //Trying to compute comment bytes
         Scanner sc = new Scanner(selectedFile);
 
         StringBuilder sb = new StringBuilder();
