@@ -53,14 +53,14 @@ public class MetricsParser
 
         //******************************************************************************
         //Trying to compute comment bytes
-        Scanner sc = new Scanner(selectedFile);
+        Scanner scanner = new Scanner(selectedFile);
 
         StringBuilder sb = new StringBuilder();
 
         //read each line in the file and form a string
-        while (sc.hasNextLine())
+        while(scanner.hasNextLine())
         {
-            sb.append(sc.nextLine()).append("\n");
+            sb.append(scanner.nextLine()).append("\n");
         }
 
         String stringFromFile = sb.toString();
