@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g 2020-04-12 17:08:59
+// $ANTLR 3.5.1 /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g 2020-04-13 17:11:05
 
 package com.metricssuite.antlr;
 
@@ -173,7 +173,7 @@ public class JavaJavaParser extends Parser {
 		return adaptor;
 	}
 	@Override public String[] getTokenNames() { return JavaJavaParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "/Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g"; }
+	@Override public String getGrammarFileName() { return "/Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g"; }
 
 
 	    public int cc = 0, ec=0;
@@ -242,7 +242,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "compilationUnit"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:87:1: compilationUnit : ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) | ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:87:1: compilationUnit : ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) | ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* );
 	public final JavaJavaParser.compilationUnit_return compilationUnit() throws RecognitionException {
 		JavaJavaParser.compilationUnit_return retval = new JavaJavaParser.compilationUnit_return();
 		retval.start = input.LT(1);
@@ -264,7 +264,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 1) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:88:5: ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) | ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:88:5: ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) | ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )* )
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0==54) ) {
@@ -290,7 +290,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt8) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:88:9: annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:88:9: annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -301,7 +301,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, annotations1.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:9: ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:9: ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
 					int alt4=2;
 					int LA4_0 = input.LA(1);
 					if ( (LA4_0==88) ) {
@@ -320,7 +320,7 @@ public class JavaJavaParser extends Parser {
 
 					switch (alt4) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:13: packageDeclaration ( importDeclaration )* ( typeDeclaration )*
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:13: packageDeclaration ( importDeclaration )* ( typeDeclaration )*
 							{
 							pushFollow(FOLLOW_packageDeclaration_in_compilationUnit87);
 							packageDeclaration2=packageDeclaration();
@@ -328,7 +328,7 @@ public class JavaJavaParser extends Parser {
 							if (state.failed) return retval;
 							if ( state.backtracking==0 ) adaptor.addChild(root_0, packageDeclaration2.getTree());
 
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:32: ( importDeclaration )*
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:32: ( importDeclaration )*
 							loop1:
 							while (true) {
 								int alt1=2;
@@ -339,7 +339,7 @@ public class JavaJavaParser extends Parser {
 
 								switch (alt1) {
 								case 1 :
-									// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:32: importDeclaration
+									// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:32: importDeclaration
 									{
 									pushFollow(FOLLOW_importDeclaration_in_compilationUnit89);
 									importDeclaration3=importDeclaration();
@@ -355,7 +355,7 @@ public class JavaJavaParser extends Parser {
 								}
 							}
 
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:51: ( typeDeclaration )*
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:51: ( typeDeclaration )*
 							loop2:
 							while (true) {
 								int alt2=2;
@@ -366,7 +366,7 @@ public class JavaJavaParser extends Parser {
 
 								switch (alt2) {
 								case 1 :
-									// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:51: typeDeclaration
+									// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:51: typeDeclaration
 									{
 									pushFollow(FOLLOW_typeDeclaration_in_compilationUnit92);
 									typeDeclaration4=typeDeclaration();
@@ -385,7 +385,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:13: classOrInterfaceDeclaration ( typeDeclaration )*
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:13: classOrInterfaceDeclaration ( typeDeclaration )*
 							{
 							pushFollow(FOLLOW_classOrInterfaceDeclaration_in_compilationUnit107);
 							classOrInterfaceDeclaration5=classOrInterfaceDeclaration();
@@ -393,7 +393,7 @@ public class JavaJavaParser extends Parser {
 							if (state.failed) return retval;
 							if ( state.backtracking==0 ) adaptor.addChild(root_0, classOrInterfaceDeclaration5.getTree());
 
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:41: ( typeDeclaration )*
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:41: ( typeDeclaration )*
 							loop3:
 							while (true) {
 								int alt3=2;
@@ -404,7 +404,7 @@ public class JavaJavaParser extends Parser {
 
 								switch (alt3) {
 								case 1 :
-									// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:41: typeDeclaration
+									// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:41: typeDeclaration
 									{
 									pushFollow(FOLLOW_typeDeclaration_in_compilationUnit109);
 									typeDeclaration6=typeDeclaration();
@@ -428,12 +428,12 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:9: ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:9: ( packageDeclaration )? ( importDeclaration )* ( typeDeclaration )*
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:9: ( packageDeclaration )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:9: ( packageDeclaration )?
 					int alt5=2;
 					int LA5_0 = input.LA(1);
 					if ( (LA5_0==88) ) {
@@ -441,7 +441,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt5) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:9: packageDeclaration
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:9: packageDeclaration
 							{
 							pushFollow(FOLLOW_packageDeclaration_in_compilationUnit130);
 							packageDeclaration7=packageDeclaration();
@@ -454,7 +454,7 @@ public class JavaJavaParser extends Parser {
 
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:29: ( importDeclaration )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:29: ( importDeclaration )*
 					loop6:
 					while (true) {
 						int alt6=2;
@@ -465,7 +465,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt6) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:29: importDeclaration
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:29: importDeclaration
 							{
 							pushFollow(FOLLOW_importDeclaration_in_compilationUnit133);
 							importDeclaration8=importDeclaration();
@@ -481,7 +481,7 @@ public class JavaJavaParser extends Parser {
 						}
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:48: ( typeDeclaration )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:48: ( typeDeclaration )*
 					loop7:
 					while (true) {
 						int alt7=2;
@@ -492,7 +492,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt7) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:48: typeDeclaration
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:92:48: typeDeclaration
 							{
 							pushFollow(FOLLOW_typeDeclaration_in_compilationUnit136);
 							typeDeclaration9=typeDeclaration();
@@ -542,7 +542,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "packageDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:95:1: packageDeclaration : 'package' qualifiedName ';' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:95:1: packageDeclaration : 'package' qualifiedName ';' ;
 	public final JavaJavaParser.packageDeclaration_return packageDeclaration() throws RecognitionException {
 		JavaJavaParser.packageDeclaration_return retval = new JavaJavaParser.packageDeclaration_return();
 		retval.start = input.LT(1);
@@ -560,8 +560,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 2) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:96:5: ( 'package' qualifiedName ';' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:96:9: 'package' qualifiedName ';'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:96:5: ( 'package' qualifiedName ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:96:9: 'package' qualifiedName ';'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -618,7 +618,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "importDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:99:1: importDeclaration : 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:99:1: importDeclaration : 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';' ;
 	public final JavaJavaParser.importDeclaration_return importDeclaration() throws RecognitionException {
 		JavaJavaParser.importDeclaration_return retval = new JavaJavaParser.importDeclaration_return();
 		retval.start = input.LT(1);
@@ -642,8 +642,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 3) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:5: ( 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:9: 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:5: ( 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:9: 'import' ( 'static' )? qualifiedName ( '.' '*' )? ';'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -655,7 +655,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {importKWCount++;}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:37: ( 'static' )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:37: ( 'static' )?
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0==94) ) {
@@ -663,7 +663,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt9) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:37: 'static'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:37: 'static'
 					{
 					string_literal14=(Token)match(input,94,FOLLOW_94_in_importDeclaration190); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -683,7 +683,7 @@ public class JavaJavaParser extends Parser {
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, qualifiedName15.getTree());
 
 			if ( state.backtracking==0 ) {importIDCount++;}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:80: ( '.' '*' )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:80: ( '.' '*' )?
 			int alt10=2;
 			int LA10_0 = input.LA(1);
 			if ( (LA10_0==43) ) {
@@ -691,7 +691,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt10) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:81: '.' '*'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:100:81: '.' '*'
 					{
 					char_literal16=(Token)match(input,43,FOLLOW_43_in_importDeclaration198); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -751,7 +751,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "typeDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:103:1: typeDeclaration : ( classOrInterfaceDeclaration | ';' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:103:1: typeDeclaration : ( classOrInterfaceDeclaration | ';' );
 	public final JavaJavaParser.typeDeclaration_return typeDeclaration() throws RecognitionException {
 		JavaJavaParser.typeDeclaration_return retval = new JavaJavaParser.typeDeclaration_return();
 		retval.start = input.LT(1);
@@ -767,7 +767,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 4) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:104:5: ( classOrInterfaceDeclaration | ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:104:5: ( classOrInterfaceDeclaration | ';' )
 			int alt11=2;
 			int LA11_0 = input.LA(1);
 			if ( (LA11_0==ENUM||LA11_0==54||LA11_0==59||LA11_0==66||LA11_0==74||LA11_0==83||(LA11_0 >= 89 && LA11_0 <= 91)||(LA11_0 >= 94 && LA11_0 <= 95)) ) {
@@ -786,7 +786,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt11) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:104:9: classOrInterfaceDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:104:9: classOrInterfaceDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -800,7 +800,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:105:9: ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:105:9: ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -846,7 +846,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "classOrInterfaceDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:108:1: classOrInterfaceDeclaration : classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration ) ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:108:1: classOrInterfaceDeclaration : classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration ) ;
 	public final JavaJavaParser.classOrInterfaceDeclaration_return classOrInterfaceDeclaration() throws RecognitionException {
 		JavaJavaParser.classOrInterfaceDeclaration_return retval = new JavaJavaParser.classOrInterfaceDeclaration_return();
 		retval.start = input.LT(1);
@@ -862,8 +862,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 5) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:109:5: ( classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration ) )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:109:9: classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:109:5: ( classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration ) )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:109:9: classOrInterfaceModifiers ( classDeclaration | interfaceDeclaration )
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -874,7 +874,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, classOrInterfaceModifiers21.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:109:35: ( classDeclaration | interfaceDeclaration )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:109:35: ( classDeclaration | interfaceDeclaration )
 			int alt12=2;
 			int LA12_0 = input.LA(1);
 			if ( (LA12_0==ENUM||LA12_0==66) ) {
@@ -893,7 +893,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt12) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:109:36: classDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:109:36: classDeclaration
 					{
 					pushFollow(FOLLOW_classDeclaration_in_classOrInterfaceDeclaration270);
 					classDeclaration22=classDeclaration();
@@ -904,7 +904,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:109:55: interfaceDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:109:55: interfaceDeclaration
 					{
 					pushFollow(FOLLOW_interfaceDeclaration_in_classOrInterfaceDeclaration274);
 					interfaceDeclaration23=interfaceDeclaration();
@@ -949,7 +949,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "classOrInterfaceModifiers"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:112:1: classOrInterfaceModifiers : ( classOrInterfaceModifier )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:112:1: classOrInterfaceModifiers : ( classOrInterfaceModifier )* ;
 	public final JavaJavaParser.classOrInterfaceModifiers_return classOrInterfaceModifiers() throws RecognitionException {
 		JavaJavaParser.classOrInterfaceModifiers_return retval = new JavaJavaParser.classOrInterfaceModifiers_return();
 		retval.start = input.LT(1);
@@ -963,13 +963,13 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 6) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:113:5: ( ( classOrInterfaceModifier )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:113:9: ( classOrInterfaceModifier )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:113:5: ( ( classOrInterfaceModifier )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:113:9: ( classOrInterfaceModifier )*
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:113:9: ( classOrInterfaceModifier )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:113:9: ( classOrInterfaceModifier )*
 			loop13:
 			while (true) {
 				int alt13=2;
@@ -987,7 +987,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt13) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:113:9: classOrInterfaceModifier
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:113:9: classOrInterfaceModifier
 					{
 					pushFollow(FOLLOW_classOrInterfaceModifier_in_classOrInterfaceModifiers298);
 					classOrInterfaceModifier24=classOrInterfaceModifier();
@@ -1035,7 +1035,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "classOrInterfaceModifier"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:116:1: classOrInterfaceModifier : ( annotation | 'public' | 'protected' | 'private' | 'abstract' | 'static' | 'final' | 'strictfp' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:116:1: classOrInterfaceModifier : ( annotation | 'public' | 'protected' | 'private' | 'abstract' | 'static' | 'final' | 'strictfp' );
 	public final JavaJavaParser.classOrInterfaceModifier_return classOrInterfaceModifier() throws RecognitionException {
 		JavaJavaParser.classOrInterfaceModifier_return retval = new JavaJavaParser.classOrInterfaceModifier_return();
 		retval.start = input.LT(1);
@@ -1063,7 +1063,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 7) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:117:5: ( annotation | 'public' | 'protected' | 'private' | 'abstract' | 'static' | 'final' | 'strictfp' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:117:5: ( annotation | 'public' | 'protected' | 'private' | 'abstract' | 'static' | 'final' | 'strictfp' )
 			int alt14=8;
 			switch ( input.LA(1) ) {
 			case 54:
@@ -1114,7 +1114,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt14) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:117:9: annotation
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:117:9: annotation
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1128,7 +1128,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:118:9: 'public'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:118:9: 'public'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1143,7 +1143,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:119:9: 'protected'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:119:9: 'protected'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1158,7 +1158,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:120:9: 'private'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:120:9: 'private'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1173,7 +1173,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:121:9: 'abstract'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:121:9: 'abstract'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1188,7 +1188,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:122:9: 'static'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:122:9: 'static'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1203,7 +1203,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:123:9: 'final'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:123:9: 'final'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1218,7 +1218,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:124:9: 'strictfp'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:124:9: 'strictfp'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1264,7 +1264,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "modifiers"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:127:1: modifiers : ( modifier )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:127:1: modifiers : ( modifier )* ;
 	public final JavaJavaParser.modifiers_return modifiers() throws RecognitionException {
 		JavaJavaParser.modifiers_return retval = new JavaJavaParser.modifiers_return();
 		retval.start = input.LT(1);
@@ -1278,13 +1278,13 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 8) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:128:5: ( ( modifier )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:128:9: ( modifier )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:128:5: ( ( modifier )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:128:9: ( modifier )*
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:128:9: ( modifier )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:128:9: ( modifier )*
 			loop15:
 			while (true) {
 				int alt15=2;
@@ -1302,7 +1302,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt15) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:128:9: modifier
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:128:9: modifier
 					{
 					pushFollow(FOLLOW_modifier_in_modifiers445);
 					modifier33=modifier();
@@ -1350,7 +1350,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "classDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:131:1: classDeclaration : ( normalClassDeclaration | enumDeclaration );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:131:1: classDeclaration : ( normalClassDeclaration | enumDeclaration );
 	public final JavaJavaParser.classDeclaration_return classDeclaration() throws RecognitionException {
 		JavaJavaParser.classDeclaration_return retval = new JavaJavaParser.classDeclaration_return();
 		retval.start = input.LT(1);
@@ -1365,7 +1365,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 9) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:132:5: ( normalClassDeclaration | enumDeclaration )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:132:5: ( normalClassDeclaration | enumDeclaration )
 			int alt16=2;
 			int LA16_0 = input.LA(1);
 			if ( (LA16_0==66) ) {
@@ -1384,7 +1384,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt16) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:132:9: normalClassDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:132:9: normalClassDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1398,7 +1398,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:133:9: enumDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:133:9: enumDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -1443,7 +1443,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "normalClassDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:136:1: normalClassDeclaration : 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:136:1: normalClassDeclaration : 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody ;
 	public final JavaJavaParser.normalClassDeclaration_return normalClassDeclaration() throws RecognitionException {
 		JavaJavaParser.normalClassDeclaration_return retval = new JavaJavaParser.normalClassDeclaration_return();
 		retval.start = input.LT(1);
@@ -1468,8 +1468,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 10) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:5: ( 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:9: 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:5: ( 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:9: 'class' Identifier ( typeParameters )? ( 'extends' type )? ( 'implements' typeList )? classBody
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -1488,7 +1488,7 @@ public class JavaJavaParser extends Parser {
 
 			if ( state.backtracking==0 ) { className=(Identifier37!=null?Identifier37.getText():null); classCount++;}
 			if ( state.backtracking==0 ) {keywordCount++; JavaMetrics.uniqueKeywords.add("class"); id((Identifier37!=null?Identifier37.getText():null));operatorCount++;JavaMetrics.uniqueOperator.add("class");}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:209: ( typeParameters )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:209: ( typeParameters )?
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0==49) ) {
@@ -1496,7 +1496,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt17) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:209: typeParameters
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:137:209: typeParameters
 					{
 					pushFollow(FOLLOW_typeParameters_in_normalClassDeclaration505);
 					typeParameters38=typeParameters();
@@ -1509,7 +1509,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:138:9: ( 'extends' type )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:138:9: ( 'extends' type )?
 			int alt18=2;
 			int LA18_0 = input.LA(1);
 			if ( (LA18_0==72) ) {
@@ -1517,7 +1517,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt18) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:138:10: 'extends' type
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:138:10: 'extends' type
 					{
 					string_literal39=(Token)match(input,72,FOLLOW_72_in_normalClassDeclaration517); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -1537,7 +1537,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:139:9: ( 'implements' typeList )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:139:9: ( 'implements' typeList )?
 			int alt19=2;
 			int LA19_0 = input.LA(1);
 			if ( (LA19_0==79) ) {
@@ -1545,7 +1545,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt19) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:139:10: 'implements' typeList
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:139:10: 'implements' typeList
 					{
 					string_literal41=(Token)match(input,79,FOLLOW_79_in_normalClassDeclaration534); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -1603,7 +1603,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "typeParameters"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:143:1: typeParameters : '<' typeParameter ( ',' typeParameter )* '>' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:143:1: typeParameters : '<' typeParameter ( ',' typeParameter )* '>' ;
 	public final JavaJavaParser.typeParameters_return typeParameters() throws RecognitionException {
 		JavaJavaParser.typeParameters_return retval = new JavaJavaParser.typeParameters_return();
 		retval.start = input.LT(1);
@@ -1624,8 +1624,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 11) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:5: ( '<' typeParameter ( ',' typeParameter )* '>' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:9: '<' typeParameter ( ',' typeParameter )* '>'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:5: ( '<' typeParameter ( ',' typeParameter )* '>' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:9: '<' typeParameter ( ',' typeParameter )* '>'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -1643,7 +1643,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, typeParameter45.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:36: ( ',' typeParameter )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:36: ( ',' typeParameter )*
 			loop20:
 			while (true) {
 				int alt20=2;
@@ -1654,7 +1654,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt20) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:37: ',' typeParameter
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:144:37: ',' typeParameter
 					{
 					char_literal46=(Token)match(input,39,FOLLOW_39_in_typeParameters580); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -1716,7 +1716,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "typeParameter"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:147:1: typeParameter : Identifier ( 'extends' typeBound )? ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:147:1: typeParameter : Identifier ( 'extends' typeBound )? ;
 	public final JavaJavaParser.typeParameter_return typeParameter() throws RecognitionException {
 		JavaJavaParser.typeParameter_return retval = new JavaJavaParser.typeParameter_return();
 		retval.start = input.LT(1);
@@ -1734,8 +1734,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 12) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:148:5: ( Identifier ( 'extends' typeBound )? )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:148:9: Identifier ( 'extends' typeBound )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:148:5: ( Identifier ( 'extends' typeBound )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:148:9: Identifier ( 'extends' typeBound )?
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -1746,7 +1746,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, Identifier49_tree);
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:148:19: ( 'extends' typeBound )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:148:19: ( 'extends' typeBound )?
 			int alt21=2;
 			int LA21_0 = input.LA(1);
 			if ( (LA21_0==72) ) {
@@ -1754,7 +1754,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt21) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:148:20: 'extends' typeBound
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:148:20: 'extends' typeBound
 					{
 					string_literal50=(Token)match(input,72,FOLLOW_72_in_typeParameter614); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -1806,7 +1806,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "typeBound"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:151:1: typeBound : type ( '&' type )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:151:1: typeBound : type ( '&' type )* ;
 	public final JavaJavaParser.typeBound_return typeBound() throws RecognitionException {
 		JavaJavaParser.typeBound_return retval = new JavaJavaParser.typeBound_return();
 		retval.start = input.LT(1);
@@ -1823,8 +1823,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 13) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:152:5: ( type ( '&' type )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:152:9: type ( '&' type )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:152:5: ( type ( '&' type )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:152:9: type ( '&' type )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -1835,7 +1835,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, type52.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:152:14: ( '&' type )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:152:14: ( '&' type )*
 			loop22:
 			while (true) {
 				int alt22=2;
@@ -1846,7 +1846,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt22) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:152:15: '&' type
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:152:15: '&' type
 					{
 					char_literal53=(Token)match(input,30,FOLLOW_30_in_typeBound649); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -1900,7 +1900,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "enumDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:155:1: enumDeclaration : ENUM Identifier ( 'implements' typeList )? enumBody ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:155:1: enumDeclaration : ENUM Identifier ( 'implements' typeList )? enumBody ;
 	public final JavaJavaParser.enumDeclaration_return enumDeclaration() throws RecognitionException {
 		JavaJavaParser.enumDeclaration_return retval = new JavaJavaParser.enumDeclaration_return();
 		retval.start = input.LT(1);
@@ -1921,8 +1921,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 14) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:156:5: ( ENUM Identifier ( 'implements' typeList )? enumBody )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:156:9: ENUM Identifier ( 'implements' typeList )? enumBody
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:156:5: ( ENUM Identifier ( 'implements' typeList )? enumBody )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:156:9: ENUM Identifier ( 'implements' typeList )? enumBody
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -1939,7 +1939,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, Identifier56_tree);
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:156:25: ( 'implements' typeList )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:156:25: ( 'implements' typeList )?
 			int alt23=2;
 			int LA23_0 = input.LA(1);
 			if ( (LA23_0==79) ) {
@@ -1947,7 +1947,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt23) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:156:26: 'implements' typeList
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:156:26: 'implements' typeList
 					{
 					string_literal57=(Token)match(input,79,FOLLOW_79_in_enumDeclaration677); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -2005,7 +2005,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "enumBody"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:159:1: enumBody : '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:159:1: enumBody : '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' ;
 	public final JavaJavaParser.enumBody_return enumBody() throws RecognitionException {
 		JavaJavaParser.enumBody_return retval = new JavaJavaParser.enumBody_return();
 		retval.start = input.LT(1);
@@ -2026,8 +2026,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 15) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:5: ( '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:9: '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:5: ( '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:9: '{' ( enumConstants )? ( ',' )? ( enumBodyDeclarations )? '}'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -2039,7 +2039,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("{");}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:23: ( enumConstants )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:23: ( enumConstants )?
 			int alt24=2;
 			int LA24_0 = input.LA(1);
 			if ( (LA24_0==Identifier||LA24_0==54) ) {
@@ -2047,7 +2047,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt24) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:23: enumConstants
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:23: enumConstants
 					{
 					pushFollow(FOLLOW_enumConstants_in_enumBody708);
 					enumConstants61=enumConstants();
@@ -2060,7 +2060,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:38: ( ',' )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:38: ( ',' )?
 			int alt25=2;
 			int LA25_0 = input.LA(1);
 			if ( (LA25_0==39) ) {
@@ -2068,7 +2068,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt25) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:38: ','
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:38: ','
 					{
 					char_literal62=(Token)match(input,39,FOLLOW_39_in_enumBody711); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -2081,7 +2081,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:43: ( enumBodyDeclarations )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:43: ( enumBodyDeclarations )?
 			int alt26=2;
 			int LA26_0 = input.LA(1);
 			if ( (LA26_0==48) ) {
@@ -2089,7 +2089,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt26) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:43: enumBodyDeclarations
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:160:43: enumBodyDeclarations
 					{
 					pushFollow(FOLLOW_enumBodyDeclarations_in_enumBody714);
 					enumBodyDeclarations63=enumBodyDeclarations();
@@ -2141,7 +2141,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "enumConstants"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:163:1: enumConstants : enumConstant ( ',' enumConstant )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:163:1: enumConstants : enumConstant ( ',' enumConstant )* ;
 	public final JavaJavaParser.enumConstants_return enumConstants() throws RecognitionException {
 		JavaJavaParser.enumConstants_return retval = new JavaJavaParser.enumConstants_return();
 		retval.start = input.LT(1);
@@ -2158,8 +2158,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 16) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:164:5: ( enumConstant ( ',' enumConstant )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:164:9: enumConstant ( ',' enumConstant )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:164:5: ( enumConstant ( ',' enumConstant )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:164:9: enumConstant ( ',' enumConstant )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -2170,7 +2170,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, enumConstant65.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:164:22: ( ',' enumConstant )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:164:22: ( ',' enumConstant )*
 			loop27:
 			while (true) {
 				int alt27=2;
@@ -2185,7 +2185,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt27) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:164:23: ',' enumConstant
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:164:23: ',' enumConstant
 					{
 					char_literal66=(Token)match(input,39,FOLLOW_39_in_enumConstants741); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -2240,7 +2240,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "enumConstant"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:167:1: enumConstant : ( annotations )? Identifier ( arguments )? ( classBody )? ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:167:1: enumConstant : ( annotations )? Identifier ( arguments )? ( classBody )? ;
 	public final JavaJavaParser.enumConstant_return enumConstant() throws RecognitionException {
 		JavaJavaParser.enumConstant_return retval = new JavaJavaParser.enumConstant_return();
 		retval.start = input.LT(1);
@@ -2258,13 +2258,13 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 17) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:5: ( ( annotations )? Identifier ( arguments )? ( classBody )? )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:9: ( annotations )? Identifier ( arguments )? ( classBody )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:5: ( ( annotations )? Identifier ( arguments )? ( classBody )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:9: ( annotations )? Identifier ( arguments )? ( classBody )?
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:9: ( annotations )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:9: ( annotations )?
 			int alt28=2;
 			int LA28_0 = input.LA(1);
 			if ( (LA28_0==54) ) {
@@ -2272,7 +2272,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt28) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:9: annotations
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:9: annotations
 					{
 					pushFollow(FOLLOW_annotations_in_enumConstant770);
 					annotations68=annotations();
@@ -2291,7 +2291,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, Identifier69_tree);
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:33: ( arguments )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:33: ( arguments )?
 			int alt29=2;
 			int LA29_0 = input.LA(1);
 			if ( (LA29_0==32) ) {
@@ -2299,7 +2299,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt29) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:33: arguments
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:33: arguments
 					{
 					pushFollow(FOLLOW_arguments_in_enumConstant775);
 					arguments70=arguments();
@@ -2312,7 +2312,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:44: ( classBody )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:44: ( classBody )?
 			int alt30=2;
 			int LA30_0 = input.LA(1);
 			if ( (LA30_0==108) ) {
@@ -2320,7 +2320,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt30) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:44: classBody
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:168:44: classBody
 					{
 					pushFollow(FOLLOW_classBody_in_enumConstant778);
 					classBody71=classBody();
@@ -2365,7 +2365,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "enumBodyDeclarations"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:171:1: enumBodyDeclarations : ';' ( classBodyDeclaration )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:171:1: enumBodyDeclarations : ';' ( classBodyDeclaration )* ;
 	public final JavaJavaParser.enumBodyDeclarations_return enumBodyDeclarations() throws RecognitionException {
 		JavaJavaParser.enumBodyDeclarations_return retval = new JavaJavaParser.enumBodyDeclarations_return();
 		retval.start = input.LT(1);
@@ -2381,8 +2381,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 18) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:172:5: ( ';' ( classBodyDeclaration )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:172:9: ';' ( classBodyDeclaration )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:172:5: ( ';' ( classBodyDeclaration )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:172:9: ';' ( classBodyDeclaration )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -2393,7 +2393,7 @@ public class JavaJavaParser extends Parser {
 			adaptor.addChild(root_0, char_literal72_tree);
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:172:13: ( classBodyDeclaration )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:172:13: ( classBodyDeclaration )*
 			loop31:
 			while (true) {
 				int alt31=2;
@@ -2404,7 +2404,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt31) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:172:14: classBodyDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:172:14: classBodyDeclaration
 					{
 					pushFollow(FOLLOW_classBodyDeclaration_in_enumBodyDeclarations805);
 					classBodyDeclaration73=classBodyDeclaration();
@@ -2452,7 +2452,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "interfaceDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:175:1: interfaceDeclaration : ( normalInterfaceDeclaration | annotationTypeDeclaration );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:175:1: interfaceDeclaration : ( normalInterfaceDeclaration | annotationTypeDeclaration );
 	public final JavaJavaParser.interfaceDeclaration_return interfaceDeclaration() throws RecognitionException {
 		JavaJavaParser.interfaceDeclaration_return retval = new JavaJavaParser.interfaceDeclaration_return();
 		retval.start = input.LT(1);
@@ -2467,7 +2467,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 19) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:176:5: ( normalInterfaceDeclaration | annotationTypeDeclaration )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:176:5: ( normalInterfaceDeclaration | annotationTypeDeclaration )
 			int alt32=2;
 			int LA32_0 = input.LA(1);
 			if ( (LA32_0==83) ) {
@@ -2486,7 +2486,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt32) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:176:9: normalInterfaceDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:176:9: normalInterfaceDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -2500,7 +2500,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:177:9: annotationTypeDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:177:9: annotationTypeDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -2545,7 +2545,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "normalInterfaceDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:180:1: normalInterfaceDeclaration : 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:180:1: normalInterfaceDeclaration : 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody ;
 	public final JavaJavaParser.normalInterfaceDeclaration_return normalInterfaceDeclaration() throws RecognitionException {
 		JavaJavaParser.normalInterfaceDeclaration_return retval = new JavaJavaParser.normalInterfaceDeclaration_return();
 		retval.start = input.LT(1);
@@ -2567,8 +2567,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 20) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:5: ( 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:9: 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:5: ( 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:9: 'interface' Identifier ( typeParameters )? ( 'extends' typeList )? interfaceBody
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -2587,7 +2587,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {id((Identifier77!=null?Identifier77.getText():null));}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:118: ( typeParameters )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:118: ( typeParameters )?
 			int alt33=2;
 			int LA33_0 = input.LA(1);
 			if ( (LA33_0==49) ) {
@@ -2595,7 +2595,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt33) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:118: typeParameters
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:118: typeParameters
 					{
 					pushFollow(FOLLOW_typeParameters_in_normalInterfaceDeclaration871);
 					typeParameters78=typeParameters();
@@ -2608,7 +2608,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:134: ( 'extends' typeList )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:134: ( 'extends' typeList )?
 			int alt34=2;
 			int LA34_0 = input.LA(1);
 			if ( (LA34_0==72) ) {
@@ -2616,7 +2616,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt34) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:135: 'extends' typeList
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:181:135: 'extends' typeList
 					{
 					string_literal79=(Token)match(input,72,FOLLOW_72_in_normalInterfaceDeclaration875); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -2674,7 +2674,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "typeList"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:184:1: typeList : type ( ',' type )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:184:1: typeList : type ( ',' type )* ;
 	public final JavaJavaParser.typeList_return typeList() throws RecognitionException {
 		JavaJavaParser.typeList_return retval = new JavaJavaParser.typeList_return();
 		retval.start = input.LT(1);
@@ -2691,8 +2691,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 21) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:185:5: ( type ( ',' type )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:185:9: type ( ',' type )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:185:5: ( type ( ',' type )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:185:9: type ( ',' type )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -2703,7 +2703,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, type82.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:185:14: ( ',' type )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:185:14: ( ',' type )*
 			loop35:
 			while (true) {
 				int alt35=2;
@@ -2714,7 +2714,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt35) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:185:15: ',' type
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:185:15: ',' type
 					{
 					char_literal83=(Token)match(input,39,FOLLOW_39_in_typeList908); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -2769,7 +2769,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "classBody"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:188:1: classBody : '{' ( classBodyDeclaration )* '}' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:188:1: classBody : '{' ( classBodyDeclaration )* '}' ;
 	public final JavaJavaParser.classBody_return classBody() throws RecognitionException {
 		JavaJavaParser.classBody_return retval = new JavaJavaParser.classBody_return();
 		retval.start = input.LT(1);
@@ -2787,8 +2787,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 22) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:189:5: ( '{' ( classBodyDeclaration )* '}' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:189:9: '{' ( classBodyDeclaration )* '}'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:189:5: ( '{' ( classBodyDeclaration )* '}' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:189:9: '{' ( classBodyDeclaration )* '}'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -2800,7 +2800,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("{");}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:189:23: ( classBodyDeclaration )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:189:23: ( classBodyDeclaration )*
 			loop36:
 			while (true) {
 				int alt36=2;
@@ -2811,7 +2811,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt36) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:189:23: classBodyDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:189:23: classBodyDeclaration
 					{
 					pushFollow(FOLLOW_classBodyDeclaration_in_classBody941);
 					classBodyDeclaration86=classBodyDeclaration();
@@ -2866,7 +2866,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "interfaceBody"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:192:1: interfaceBody : '{' ( interfaceBodyDeclaration )* '}' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:192:1: interfaceBody : '{' ( interfaceBodyDeclaration )* '}' ;
 	public final JavaJavaParser.interfaceBody_return interfaceBody() throws RecognitionException {
 		JavaJavaParser.interfaceBody_return retval = new JavaJavaParser.interfaceBody_return();
 		retval.start = input.LT(1);
@@ -2884,8 +2884,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 23) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:193:5: ( '{' ( interfaceBodyDeclaration )* '}' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:193:9: '{' ( interfaceBodyDeclaration )* '}'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:193:5: ( '{' ( interfaceBodyDeclaration )* '}' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:193:9: '{' ( interfaceBodyDeclaration )* '}'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -2897,7 +2897,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("{");}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:193:22: ( interfaceBodyDeclaration )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:193:22: ( interfaceBodyDeclaration )*
 			loop37:
 			while (true) {
 				int alt37=2;
@@ -2908,7 +2908,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt37) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:193:22: interfaceBodyDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:193:22: interfaceBodyDeclaration
 					{
 					pushFollow(FOLLOW_interfaceBodyDeclaration_in_interfaceBody971);
 					interfaceBodyDeclaration89=interfaceBodyDeclaration();
@@ -2963,7 +2963,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "classBodyDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:196:1: classBodyDeclaration : ( ';' | ( 'static' )? block | modifiers memberDecl );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:196:1: classBodyDeclaration : ( ';' | ( 'static' )? block | modifiers memberDecl );
 	public final JavaJavaParser.classBodyDeclaration_return classBodyDeclaration() throws RecognitionException {
 		JavaJavaParser.classBodyDeclaration_return retval = new JavaJavaParser.classBodyDeclaration_return();
 		retval.start = input.LT(1);
@@ -2983,7 +2983,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 24) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:197:5: ( ';' | ( 'static' )? block | modifiers memberDecl )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:197:5: ( ';' | ( 'static' )? block | modifiers memberDecl )
 			int alt39=3;
 			switch ( input.LA(1) ) {
 			case 48:
@@ -3058,7 +3058,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt39) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:197:9: ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:197:9: ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -3073,12 +3073,12 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:198:9: ( 'static' )? block
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:198:9: ( 'static' )? block
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:198:9: ( 'static' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:198:9: ( 'static' )?
 					int alt38=2;
 					int LA38_0 = input.LA(1);
 					if ( (LA38_0==94) ) {
@@ -3086,7 +3086,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt38) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:198:9: 'static'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:198:9: 'static'
 							{
 							string_literal92=(Token)match(input,94,FOLLOW_94_in_classBodyDeclaration1006); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -3109,7 +3109,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:199:9: modifiers memberDecl
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:199:9: modifiers memberDecl
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -3160,7 +3160,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "memberDecl"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:202:1: memberDecl : ( genericMethodOrConstructorDecl | memberDeclaration | 'void' Identifier voidMethodDeclaratorRest | Identifier constructorDeclaratorRest | interfaceDeclaration | classDeclaration );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:202:1: memberDecl : ( genericMethodOrConstructorDecl | memberDeclaration | 'void' Identifier voidMethodDeclaratorRest | Identifier constructorDeclaratorRest | interfaceDeclaration | classDeclaration );
 	public final JavaJavaParser.memberDecl_return memberDecl() throws RecognitionException {
 		JavaJavaParser.memberDecl_return retval = new JavaJavaParser.memberDecl_return();
 		retval.start = input.LT(1);
@@ -3185,7 +3185,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 25) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:203:5: ( genericMethodOrConstructorDecl | memberDeclaration | 'void' Identifier voidMethodDeclaratorRest | Identifier constructorDeclaratorRest | interfaceDeclaration | classDeclaration )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:203:5: ( genericMethodOrConstructorDecl | memberDeclaration | 'void' Identifier voidMethodDeclaratorRest | Identifier constructorDeclaratorRest | interfaceDeclaration | classDeclaration )
 			int alt40=6;
 			switch ( input.LA(1) ) {
 			case 49:
@@ -3255,7 +3255,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt40) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:203:9: genericMethodOrConstructorDecl
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:203:9: genericMethodOrConstructorDecl
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -3270,7 +3270,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:204:9: memberDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:204:9: memberDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -3284,7 +3284,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:205:9: 'void' Identifier voidMethodDeclaratorRest
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:205:9: 'void' Identifier voidMethodDeclaratorRest
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -3313,7 +3313,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:206:9: Identifier constructorDeclaratorRest
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:206:9: Identifier constructorDeclaratorRest
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -3335,7 +3335,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:207:9: interfaceDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:207:9: interfaceDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -3349,7 +3349,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:208:9: classDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:208:9: classDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -3394,7 +3394,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "memberDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:211:1: memberDeclaration : type ( methodDeclaration | fieldDeclaration ) ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:211:1: memberDeclaration : type ( methodDeclaration | fieldDeclaration ) ;
 	public final JavaJavaParser.memberDeclaration_return memberDeclaration() throws RecognitionException {
 		JavaJavaParser.memberDeclaration_return retval = new JavaJavaParser.memberDeclaration_return();
 		retval.start = input.LT(1);
@@ -3410,8 +3410,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 26) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:212:5: ( type ( methodDeclaration | fieldDeclaration ) )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:212:9: type ( methodDeclaration | fieldDeclaration )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:212:5: ( type ( methodDeclaration | fieldDeclaration ) )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:212:9: type ( methodDeclaration | fieldDeclaration )
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -3422,7 +3422,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, type105.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:212:14: ( methodDeclaration | fieldDeclaration )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:212:14: ( methodDeclaration | fieldDeclaration )
 			int alt41=2;
 			int LA41_0 = input.LA(1);
 			if ( (LA41_0==Identifier) ) {
@@ -3458,7 +3458,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt41) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:212:15: methodDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:212:15: methodDeclaration
 					{
 					if ( state.backtracking==0 ) {inMethod=true;}
 					pushFollow(FOLLOW_methodDeclaration_in_memberDeclaration1145);
@@ -3470,7 +3470,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:212:54: fieldDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:212:54: fieldDeclaration
 					{
 					if ( state.backtracking==0 ) {inMethod=false;}
 					pushFollow(FOLLOW_fieldDeclaration_in_memberDeclaration1153);
@@ -3516,7 +3516,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "genericMethodOrConstructorDecl"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:215:1: genericMethodOrConstructorDecl : typeParameters genericMethodOrConstructorRest ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:215:1: genericMethodOrConstructorDecl : typeParameters genericMethodOrConstructorRest ;
 	public final JavaJavaParser.genericMethodOrConstructorDecl_return genericMethodOrConstructorDecl() throws RecognitionException {
 		JavaJavaParser.genericMethodOrConstructorDecl_return retval = new JavaJavaParser.genericMethodOrConstructorDecl_return();
 		retval.start = input.LT(1);
@@ -3531,8 +3531,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 27) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:216:5: ( typeParameters genericMethodOrConstructorRest )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:216:9: typeParameters genericMethodOrConstructorRest
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:216:5: ( typeParameters genericMethodOrConstructorRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:216:9: typeParameters genericMethodOrConstructorRest
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -3581,7 +3581,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "genericMethodOrConstructorRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:219:1: genericMethodOrConstructorRest : ( ( type | 'void' ) Identifier methodDeclaratorRest | Identifier constructorDeclaratorRest );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:219:1: genericMethodOrConstructorRest : ( ( type | 'void' ) Identifier methodDeclaratorRest | Identifier constructorDeclaratorRest );
 	public final JavaJavaParser.genericMethodOrConstructorRest_return genericMethodOrConstructorRest() throws RecognitionException {
 		JavaJavaParser.genericMethodOrConstructorRest_return retval = new JavaJavaParser.genericMethodOrConstructorRest_return();
 		retval.start = input.LT(1);
@@ -3603,7 +3603,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 28) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:220:5: ( ( type | 'void' ) Identifier methodDeclaratorRest | Identifier constructorDeclaratorRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:220:5: ( ( type | 'void' ) Identifier methodDeclaratorRest | Identifier constructorDeclaratorRest )
 			int alt43=2;
 			int LA43_0 = input.LA(1);
 			if ( (LA43_0==Identifier) ) {
@@ -3642,12 +3642,12 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt43) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:220:9: ( type | 'void' ) Identifier methodDeclaratorRest
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:220:9: ( type | 'void' ) Identifier methodDeclaratorRest
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:220:9: ( type | 'void' )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:220:9: ( type | 'void' )
 					int alt42=2;
 					int LA42_0 = input.LA(1);
 					if ( (LA42_0==Identifier||LA42_0==60||LA42_0==62||LA42_0==65||LA42_0==70||LA42_0==76||LA42_0==82||LA42_0==84||LA42_0==93) ) {
@@ -3666,7 +3666,7 @@ public class JavaJavaParser extends Parser {
 
 					switch (alt42) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:220:10: type
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:220:10: type
 							{
 							pushFollow(FOLLOW_type_in_genericMethodOrConstructorRest1199);
 							type110=type();
@@ -3677,7 +3677,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:220:17: 'void'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:220:17: 'void'
 							{
 							string_literal111=(Token)match(input,105,FOLLOW_105_in_genericMethodOrConstructorRest1203); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -3706,7 +3706,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:221:9: Identifier constructorDeclaratorRest
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:221:9: Identifier constructorDeclaratorRest
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -3758,7 +3758,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "methodDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:224:1: methodDeclaration : Identifier methodDeclaratorRest ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:224:1: methodDeclaration : Identifier methodDeclaratorRest ;
 	public final JavaJavaParser.methodDeclaration_return methodDeclaration() throws RecognitionException {
 		JavaJavaParser.methodDeclaration_return retval = new JavaJavaParser.methodDeclaration_return();
 		retval.start = input.LT(1);
@@ -3774,8 +3774,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 29) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:225:5: ( Identifier methodDeclaratorRest )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:225:9: Identifier methodDeclaratorRest
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:225:5: ( Identifier methodDeclaratorRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:225:9: Identifier methodDeclaratorRest
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -3832,7 +3832,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "fieldDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:235:1: fieldDeclaration : variableDeclarators ';' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:235:1: fieldDeclaration : variableDeclarators ';' ;
 	public final JavaJavaParser.fieldDeclaration_return fieldDeclaration() throws RecognitionException {
 		JavaJavaParser.fieldDeclaration_return retval = new JavaJavaParser.fieldDeclaration_return();
 		retval.start = input.LT(1);
@@ -3848,8 +3848,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 30) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:236:5: ( variableDeclarators ';' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:236:8: variableDeclarators ';'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:236:5: ( variableDeclarators ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:236:8: variableDeclarators ';'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -3899,7 +3899,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "interfaceBodyDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:239:1: interfaceBodyDeclaration : ( modifiers interfaceMemberDecl | ';' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:239:1: interfaceBodyDeclaration : ( modifiers interfaceMemberDecl | ';' );
 	public final JavaJavaParser.interfaceBodyDeclaration_return interfaceBodyDeclaration() throws RecognitionException {
 		JavaJavaParser.interfaceBodyDeclaration_return retval = new JavaJavaParser.interfaceBodyDeclaration_return();
 		retval.start = input.LT(1);
@@ -3916,7 +3916,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 31) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:240:5: ( modifiers interfaceMemberDecl | ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:240:5: ( modifiers interfaceMemberDecl | ';' )
 			int alt44=2;
 			int LA44_0 = input.LA(1);
 			if ( (LA44_0==ENUM||LA44_0==Identifier||LA44_0==49||LA44_0==54||(LA44_0 >= 59 && LA44_0 <= 60)||LA44_0==62||(LA44_0 >= 65 && LA44_0 <= 66)||LA44_0==70||LA44_0==74||LA44_0==76||(LA44_0 >= 82 && LA44_0 <= 85)||(LA44_0 >= 89 && LA44_0 <= 91)||(LA44_0 >= 93 && LA44_0 <= 95)||LA44_0==98||LA44_0==102||(LA44_0 >= 105 && LA44_0 <= 106)) ) {
@@ -3935,7 +3935,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt44) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:240:9: modifiers interfaceMemberDecl
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:240:9: modifiers interfaceMemberDecl
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -3955,7 +3955,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:241:9: ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:241:9: ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -4000,7 +4000,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "interfaceMemberDecl"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:244:1: interfaceMemberDecl : ( interfaceMethodOrFieldDecl | interfaceGenericMethodDecl | 'void' Identifier voidInterfaceMethodDeclaratorRest | interfaceDeclaration | classDeclaration );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:244:1: interfaceMemberDecl : ( interfaceMethodOrFieldDecl | interfaceGenericMethodDecl | 'void' Identifier voidInterfaceMethodDeclaratorRest | interfaceDeclaration | classDeclaration );
 	public final JavaJavaParser.interfaceMemberDecl_return interfaceMemberDecl() throws RecognitionException {
 		JavaJavaParser.interfaceMemberDecl_return retval = new JavaJavaParser.interfaceMemberDecl_return();
 		retval.start = input.LT(1);
@@ -4022,7 +4022,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 32) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:245:5: ( interfaceMethodOrFieldDecl | interfaceGenericMethodDecl | 'void' Identifier voidInterfaceMethodDeclaratorRest | interfaceDeclaration | classDeclaration )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:245:5: ( interfaceMethodOrFieldDecl | interfaceGenericMethodDecl | 'void' Identifier voidInterfaceMethodDeclaratorRest | interfaceDeclaration | classDeclaration )
 			int alt45=5;
 			switch ( input.LA(1) ) {
 			case Identifier:
@@ -4068,7 +4068,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt45) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:245:9: interfaceMethodOrFieldDecl
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:245:9: interfaceMethodOrFieldDecl
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -4082,7 +4082,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:246:9: interfaceGenericMethodDecl
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:246:9: interfaceGenericMethodDecl
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -4096,7 +4096,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:247:9: 'void' Identifier voidInterfaceMethodDeclaratorRest
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:247:9: 'void' Identifier voidInterfaceMethodDeclaratorRest
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -4124,7 +4124,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:248:9: interfaceDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:248:9: interfaceDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -4138,7 +4138,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:249:9: classDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:249:9: classDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -4183,7 +4183,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "interfaceMethodOrFieldDecl"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:252:1: interfaceMethodOrFieldDecl : type Identifier interfaceMethodOrFieldRest ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:252:1: interfaceMethodOrFieldDecl : type Identifier interfaceMethodOrFieldRest ;
 	public final JavaJavaParser.interfaceMethodOrFieldDecl_return interfaceMethodOrFieldDecl() throws RecognitionException {
 		JavaJavaParser.interfaceMethodOrFieldDecl_return retval = new JavaJavaParser.interfaceMethodOrFieldDecl_return();
 		retval.start = input.LT(1);
@@ -4200,8 +4200,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 33) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:253:5: ( type Identifier interfaceMethodOrFieldRest )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:253:9: type Identifier interfaceMethodOrFieldRest
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:253:5: ( type Identifier interfaceMethodOrFieldRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:253:9: type Identifier interfaceMethodOrFieldRest
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -4257,7 +4257,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "interfaceMethodOrFieldRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:256:1: interfaceMethodOrFieldRest : ( constantDeclaratorsRest ';' | interfaceMethodDeclaratorRest );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:256:1: interfaceMethodOrFieldRest : ( constantDeclaratorsRest ';' | interfaceMethodDeclaratorRest );
 	public final JavaJavaParser.interfaceMethodOrFieldRest_return interfaceMethodOrFieldRest() throws RecognitionException {
 		JavaJavaParser.interfaceMethodOrFieldRest_return retval = new JavaJavaParser.interfaceMethodOrFieldRest_return();
 		retval.start = input.LT(1);
@@ -4274,7 +4274,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 34) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:257:5: ( constantDeclaratorsRest ';' | interfaceMethodDeclaratorRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:257:5: ( constantDeclaratorsRest ';' | interfaceMethodDeclaratorRest )
 			int alt46=2;
 			int LA46_0 = input.LA(1);
 			if ( (LA46_0==50||LA46_0==55) ) {
@@ -4293,7 +4293,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt46) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:257:9: constantDeclaratorsRest ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:257:9: constantDeclaratorsRest ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -4314,7 +4314,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:258:9: interfaceMethodDeclaratorRest
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:258:9: interfaceMethodDeclaratorRest
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -4359,7 +4359,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "methodDeclaratorRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:261:1: methodDeclaratorRest : formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' ) ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:261:1: methodDeclaratorRest : formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' ) ;
 	public final JavaJavaParser.methodDeclaratorRest_return methodDeclaratorRest() throws RecognitionException {
 		JavaJavaParser.methodDeclaratorRest_return retval = new JavaJavaParser.methodDeclaratorRest_return();
 		retval.start = input.LT(1);
@@ -4383,8 +4383,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 35) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:262:5: ( formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' ) )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:262:9: formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:262:5: ( formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' ) )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:262:9: formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ( methodBody | ';' )
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -4395,7 +4395,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, formalParameters136.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:262:26: ( '[' ']' )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:262:26: ( '[' ']' )*
 			loop47:
 			while (true) {
 				int alt47=2;
@@ -4406,7 +4406,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt47) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:262:27: '[' ']'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:262:27: '[' ']'
 					{
 					char_literal137=(Token)match(input,55,FOLLOW_55_in_methodDeclaratorRest1466); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -4430,7 +4430,7 @@ public class JavaJavaParser extends Parser {
 				}
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:263:9: ( 'throws' qualifiedNameList )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:263:9: ( 'throws' qualifiedNameList )?
 			int alt48=2;
 			int LA48_0 = input.LA(1);
 			if ( (LA48_0==101) ) {
@@ -4438,7 +4438,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt48) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:263:10: 'throws' qualifiedNameList
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:263:10: 'throws' qualifiedNameList
 					{
 					string_literal139=(Token)match(input,101,FOLLOW_101_in_methodDeclaratorRest1484); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -4458,7 +4458,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:264:9: ( methodBody | ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:264:9: ( methodBody | ';' )
 			int alt49=2;
 			int LA49_0 = input.LA(1);
 			if ( (LA49_0==108) ) {
@@ -4477,7 +4477,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt49) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:264:13: methodBody
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:264:13: methodBody
 					{
 					pushFollow(FOLLOW_methodBody_in_methodDeclaratorRest1504);
 					methodBody141=methodBody();
@@ -4488,7 +4488,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:265:13: ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:265:13: ';'
 					{
 					char_literal142=(Token)match(input,48,FOLLOW_48_in_methodDeclaratorRest1518); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -4533,7 +4533,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "voidMethodDeclaratorRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:269:1: voidMethodDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' ) ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:269:1: voidMethodDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' ) ;
 	public final JavaJavaParser.voidMethodDeclaratorRest_return voidMethodDeclaratorRest() throws RecognitionException {
 		JavaJavaParser.voidMethodDeclaratorRest_return retval = new JavaJavaParser.voidMethodDeclaratorRest_return();
 		retval.start = input.LT(1);
@@ -4553,8 +4553,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 36) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:270:5: ( formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' ) )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:270:9: formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:270:5: ( formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' ) )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:270:9: formalParameters ( 'throws' qualifiedNameList )? ( methodBody | ';' )
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -4565,7 +4565,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, formalParameters143.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:270:26: ( 'throws' qualifiedNameList )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:270:26: ( 'throws' qualifiedNameList )?
 			int alt50=2;
 			int LA50_0 = input.LA(1);
 			if ( (LA50_0==101) ) {
@@ -4573,7 +4573,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt50) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:270:27: 'throws' qualifiedNameList
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:270:27: 'throws' qualifiedNameList
 					{
 					string_literal144=(Token)match(input,101,FOLLOW_101_in_voidMethodDeclaratorRest1554); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -4593,7 +4593,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:271:9: ( methodBody | ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:271:9: ( methodBody | ';' )
 			int alt51=2;
 			int LA51_0 = input.LA(1);
 			if ( (LA51_0==108) ) {
@@ -4612,7 +4612,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt51) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:271:13: methodBody
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:271:13: methodBody
 					{
 					pushFollow(FOLLOW_methodBody_in_voidMethodDeclaratorRest1573);
 					methodBody146=methodBody();
@@ -4623,7 +4623,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:272:13: ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:272:13: ';'
 					{
 					char_literal147=(Token)match(input,48,FOLLOW_48_in_voidMethodDeclaratorRest1587); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -4669,7 +4669,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "interfaceMethodDeclaratorRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:276:1: interfaceMethodDeclaratorRest : formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:276:1: interfaceMethodDeclaratorRest : formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' ;
 	public final JavaJavaParser.interfaceMethodDeclaratorRest_return interfaceMethodDeclaratorRest() throws RecognitionException {
 		JavaJavaParser.interfaceMethodDeclaratorRest_return retval = new JavaJavaParser.interfaceMethodDeclaratorRest_return();
 		retval.start = input.LT(1);
@@ -4692,8 +4692,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 37) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:5: ( formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:8: formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:5: ( formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:8: formalParameters ( '[' ']' )* ( 'throws' qualifiedNameList )? ';'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -4704,7 +4704,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, formalParameters148.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:25: ( '[' ']' )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:25: ( '[' ']' )*
 			loop52:
 			while (true) {
 				int alt52=2;
@@ -4715,7 +4715,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt52) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:26: '[' ']'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:26: '[' ']'
 					{
 					char_literal149=(Token)match(input,55,FOLLOW_55_in_interfaceMethodDeclaratorRest1624); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -4739,7 +4739,7 @@ public class JavaJavaParser extends Parser {
 				}
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:56: ( 'throws' qualifiedNameList )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:56: ( 'throws' qualifiedNameList )?
 			int alt53=2;
 			int LA53_0 = input.LA(1);
 			if ( (LA53_0==101) ) {
@@ -4747,7 +4747,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt53) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:57: 'throws' qualifiedNameList
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:277:57: 'throws' qualifiedNameList
 					{
 					string_literal151=(Token)match(input,101,FOLLOW_101_in_interfaceMethodDeclaratorRest1635); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -4806,7 +4806,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "interfaceGenericMethodDecl"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:280:1: interfaceGenericMethodDecl : typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:280:1: interfaceGenericMethodDecl : typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest ;
 	public final JavaJavaParser.interfaceGenericMethodDecl_return interfaceGenericMethodDecl() throws RecognitionException {
 		JavaJavaParser.interfaceGenericMethodDecl_return retval = new JavaJavaParser.interfaceGenericMethodDecl_return();
 		retval.start = input.LT(1);
@@ -4826,8 +4826,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 38) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:281:5: ( typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:281:9: typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:281:5: ( typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:281:9: typeParameters ( type | 'void' ) Identifier interfaceMethodDeclaratorRest
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -4838,7 +4838,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, typeParameters154.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:281:24: ( type | 'void' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:281:24: ( type | 'void' )
 			int alt54=2;
 			int LA54_0 = input.LA(1);
 			if ( (LA54_0==Identifier||LA54_0==60||LA54_0==62||LA54_0==65||LA54_0==70||LA54_0==76||LA54_0==82||LA54_0==84||LA54_0==93) ) {
@@ -4857,7 +4857,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt54) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:281:25: type
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:281:25: type
 					{
 					pushFollow(FOLLOW_type_in_interfaceGenericMethodDecl1670);
 					type155=type();
@@ -4868,7 +4868,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:281:32: 'void'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:281:32: 'void'
 					{
 					string_literal156=(Token)match(input,105,FOLLOW_105_in_interfaceGenericMethodDecl1674); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -4927,7 +4927,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "voidInterfaceMethodDeclaratorRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:285:1: voidInterfaceMethodDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? ';' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:285:1: voidInterfaceMethodDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? ';' ;
 	public final JavaJavaParser.voidInterfaceMethodDeclaratorRest_return voidInterfaceMethodDeclaratorRest() throws RecognitionException {
 		JavaJavaParser.voidInterfaceMethodDeclaratorRest_return retval = new JavaJavaParser.voidInterfaceMethodDeclaratorRest_return();
 		retval.start = input.LT(1);
@@ -4946,8 +4946,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 39) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:286:5: ( formalParameters ( 'throws' qualifiedNameList )? ';' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:286:8: formalParameters ( 'throws' qualifiedNameList )? ';'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:286:5: ( formalParameters ( 'throws' qualifiedNameList )? ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:286:8: formalParameters ( 'throws' qualifiedNameList )? ';'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -4958,7 +4958,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, formalParameters159.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:286:25: ( 'throws' qualifiedNameList )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:286:25: ( 'throws' qualifiedNameList )?
 			int alt55=2;
 			int LA55_0 = input.LA(1);
 			if ( (LA55_0==101) ) {
@@ -4966,7 +4966,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt55) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:286:26: 'throws' qualifiedNameList
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:286:26: 'throws' qualifiedNameList
 					{
 					string_literal160=(Token)match(input,101,FOLLOW_101_in_voidInterfaceMethodDeclaratorRest1716); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -5025,7 +5025,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "constructorDeclaratorRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:289:1: constructorDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? constructorBody ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:289:1: constructorDeclaratorRest : formalParameters ( 'throws' qualifiedNameList )? constructorBody ;
 	public final JavaJavaParser.constructorDeclaratorRest_return constructorDeclaratorRest() throws RecognitionException {
 		JavaJavaParser.constructorDeclaratorRest_return retval = new JavaJavaParser.constructorDeclaratorRest_return();
 		retval.start = input.LT(1);
@@ -5043,8 +5043,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 40) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:290:5: ( formalParameters ( 'throws' qualifiedNameList )? constructorBody )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:290:9: formalParameters ( 'throws' qualifiedNameList )? constructorBody
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:290:5: ( formalParameters ( 'throws' qualifiedNameList )? constructorBody )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:290:9: formalParameters ( 'throws' qualifiedNameList )? constructorBody
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -5055,7 +5055,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, formalParameters163.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:290:26: ( 'throws' qualifiedNameList )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:290:26: ( 'throws' qualifiedNameList )?
 			int alt56=2;
 			int LA56_0 = input.LA(1);
 			if ( (LA56_0==101) ) {
@@ -5063,7 +5063,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt56) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:290:27: 'throws' qualifiedNameList
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:290:27: 'throws' qualifiedNameList
 					{
 					string_literal164=(Token)match(input,101,FOLLOW_101_in_constructorDeclaratorRest1751); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -5121,7 +5121,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "constantDeclarator"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:293:1: constantDeclarator : Identifier constantDeclaratorRest ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:293:1: constantDeclarator : Identifier constantDeclaratorRest ;
 	public final JavaJavaParser.constantDeclarator_return constantDeclarator() throws RecognitionException {
 		JavaJavaParser.constantDeclarator_return retval = new JavaJavaParser.constantDeclarator_return();
 		retval.start = input.LT(1);
@@ -5137,8 +5137,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 41) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:294:5: ( Identifier constantDeclaratorRest )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:294:9: Identifier constantDeclaratorRest
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:294:5: ( Identifier constantDeclaratorRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:294:9: Identifier constantDeclaratorRest
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -5188,7 +5188,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "variableDeclarators"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:297:1: variableDeclarators : variableDeclarator ( ',' variableDeclarator )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:297:1: variableDeclarators : variableDeclarator ( ',' variableDeclarator )* ;
 	public final JavaJavaParser.variableDeclarators_return variableDeclarators() throws RecognitionException {
 		JavaJavaParser.variableDeclarators_return retval = new JavaJavaParser.variableDeclarators_return();
 		retval.start = input.LT(1);
@@ -5205,8 +5205,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 42) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:298:5: ( variableDeclarator ( ',' variableDeclarator )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:298:9: variableDeclarator ( ',' variableDeclarator )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:298:5: ( variableDeclarator ( ',' variableDeclarator )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:298:9: variableDeclarator ( ',' variableDeclarator )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -5217,7 +5217,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, variableDeclarator169.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:298:28: ( ',' variableDeclarator )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:298:28: ( ',' variableDeclarator )*
 			loop57:
 			while (true) {
 				int alt57=2;
@@ -5228,7 +5228,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt57) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:298:29: ',' variableDeclarator
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:298:29: ',' variableDeclarator
 					{
 					char_literal170=(Token)match(input,39,FOLLOW_39_in_variableDeclarators1808); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -5284,7 +5284,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "variableDeclarator"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:301:1: variableDeclarator : variableDeclaratorId ( '=' variableInitializer )? ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:301:1: variableDeclarator : variableDeclaratorId ( '=' variableInitializer )? ;
 	public final JavaJavaParser.variableDeclarator_return variableDeclarator() throws RecognitionException {
 		JavaJavaParser.variableDeclarator_return retval = new JavaJavaParser.variableDeclarator_return();
 		retval.start = input.LT(1);
@@ -5301,8 +5301,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 43) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:302:5: ( variableDeclaratorId ( '=' variableInitializer )? )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:302:9: variableDeclaratorId ( '=' variableInitializer )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:302:5: ( variableDeclaratorId ( '=' variableInitializer )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:302:9: variableDeclaratorId ( '=' variableInitializer )?
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -5313,7 +5313,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, variableDeclaratorId172.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:302:30: ( '=' variableInitializer )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:302:30: ( '=' variableInitializer )?
 			int alt58=2;
 			int LA58_0 = input.LA(1);
 			if ( (LA58_0==50) ) {
@@ -5321,7 +5321,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt58) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:302:31: '=' variableInitializer
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:302:31: '=' variableInitializer
 					{
 					char_literal173=(Token)match(input,50,FOLLOW_50_in_variableDeclarator1838); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -5373,7 +5373,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "constantDeclaratorsRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:305:1: constantDeclaratorsRest : constantDeclaratorRest ( ',' constantDeclarator )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:305:1: constantDeclaratorsRest : constantDeclaratorRest ( ',' constantDeclarator )* ;
 	public final JavaJavaParser.constantDeclaratorsRest_return constantDeclaratorsRest() throws RecognitionException {
 		JavaJavaParser.constantDeclaratorsRest_return retval = new JavaJavaParser.constantDeclaratorsRest_return();
 		retval.start = input.LT(1);
@@ -5390,8 +5390,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 44) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:306:5: ( constantDeclaratorRest ( ',' constantDeclarator )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:306:9: constantDeclaratorRest ( ',' constantDeclarator )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:306:5: ( constantDeclaratorRest ( ',' constantDeclarator )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:306:9: constantDeclaratorRest ( ',' constantDeclarator )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -5402,7 +5402,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, constantDeclaratorRest175.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:306:32: ( ',' constantDeclarator )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:306:32: ( ',' constantDeclarator )*
 			loop59:
 			while (true) {
 				int alt59=2;
@@ -5413,7 +5413,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt59) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:306:33: ',' constantDeclarator
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:306:33: ',' constantDeclarator
 					{
 					char_literal176=(Token)match(input,39,FOLLOW_39_in_constantDeclaratorsRest1870); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -5468,7 +5468,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "constantDeclaratorRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:309:1: constantDeclaratorRest : ( '[' ']' )* '=' variableInitializer ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:309:1: constantDeclaratorRest : ( '[' ']' )* '=' variableInitializer ;
 	public final JavaJavaParser.constantDeclaratorRest_return constantDeclaratorRest() throws RecognitionException {
 		JavaJavaParser.constantDeclaratorRest_return retval = new JavaJavaParser.constantDeclaratorRest_return();
 		retval.start = input.LT(1);
@@ -5488,13 +5488,13 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 45) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:310:5: ( ( '[' ']' )* '=' variableInitializer )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:310:9: ( '[' ']' )* '=' variableInitializer
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:310:5: ( ( '[' ']' )* '=' variableInitializer )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:310:9: ( '[' ']' )* '=' variableInitializer
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:310:9: ( '[' ']' )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:310:9: ( '[' ']' )*
 			loop60:
 			while (true) {
 				int alt60=2;
@@ -5505,7 +5505,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt60) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:310:10: '[' ']'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:310:10: '[' ']'
 					{
 					char_literal178=(Token)match(input,55,FOLLOW_55_in_constantDeclaratorRest1896); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -5574,7 +5574,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "variableDeclaratorId"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:313:1: variableDeclaratorId : Identifier ( '[' ']' )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:313:1: variableDeclaratorId : Identifier ( '[' ']' )* ;
 	public final JavaJavaParser.variableDeclaratorId_return variableDeclaratorId() throws RecognitionException {
 		JavaJavaParser.variableDeclaratorId_return retval = new JavaJavaParser.variableDeclaratorId_return();
 		retval.start = input.LT(1);
@@ -5593,8 +5593,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 46) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:314:5: ( Identifier ( '[' ']' )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:314:9: Identifier ( '[' ']' )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:314:5: ( Identifier ( '[' ']' )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:314:9: Identifier ( '[' ']' )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -5616,7 +5616,7 @@ public class JavaJavaParser extends Parser {
 			                                         
 			                      }    
 			                    }
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:324:23: ( '[' ']' )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:324:23: ( '[' ']' )*
 			loop61:
 			while (true) {
 				int alt61=2;
@@ -5627,7 +5627,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt61) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:324:24: '[' ']'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:324:24: '[' ']'
 					{
 					char_literal183=(Token)match(input,55,FOLLOW_55_in_variableDeclaratorId1940); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -5683,7 +5683,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "variableInitializer"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:327:1: variableInitializer : ( arrayInitializer | expression );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:327:1: variableInitializer : ( arrayInitializer | expression );
 	public final JavaJavaParser.variableInitializer_return variableInitializer() throws RecognitionException {
 		JavaJavaParser.variableInitializer_return retval = new JavaJavaParser.variableInitializer_return();
 		retval.start = input.LT(1);
@@ -5698,7 +5698,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 47) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:328:5: ( arrayInitializer | expression )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:328:5: ( arrayInitializer | expression )
 			int alt62=2;
 			int LA62_0 = input.LA(1);
 			if ( (LA62_0==108) ) {
@@ -5717,7 +5717,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt62) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:328:9: arrayInitializer
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:328:9: arrayInitializer
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -5731,7 +5731,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:329:9: expression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:329:9: expression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -5776,7 +5776,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "arrayInitializer"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:332:1: arrayInitializer : '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:332:1: arrayInitializer : '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}' ;
 	public final JavaJavaParser.arrayInitializer_return arrayInitializer() throws RecognitionException {
 		JavaJavaParser.arrayInitializer_return retval = new JavaJavaParser.arrayInitializer_return();
 		retval.start = input.LT(1);
@@ -5799,8 +5799,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 48) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:5: ( '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:9: '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:5: ( '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:9: '{' ( variableInitializer ( ',' variableInitializer )* ( ',' )? )? '}'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -5812,7 +5812,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("{");}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:22: ( variableInitializer ( ',' variableInitializer )* ( ',' )? )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:22: ( variableInitializer ( ',' variableInitializer )* ( ',' )? )?
 			int alt65=2;
 			int LA65_0 = input.LA(1);
 			if ( ((LA65_0 >= CharacterLiteral && LA65_0 <= DecimalLiteral)||LA65_0==FloatingPointLiteral||(LA65_0 >= HexLiteral && LA65_0 <= Identifier)||(LA65_0 >= OctalLiteral && LA65_0 <= StringLiteral)||LA65_0==25||LA65_0==32||(LA65_0 >= 36 && LA65_0 <= 37)||(LA65_0 >= 40 && LA65_0 <= 41)||LA65_0==60||LA65_0==62||LA65_0==65||LA65_0==70||LA65_0==73||LA65_0==76||LA65_0==82||LA65_0==84||(LA65_0 >= 86 && LA65_0 <= 87)||LA65_0==93||LA65_0==96||LA65_0==99||LA65_0==103||LA65_0==105||LA65_0==108||LA65_0==113) ) {
@@ -5820,7 +5820,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt65) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:23: variableInitializer ( ',' variableInitializer )* ( ',' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:23: variableInitializer ( ',' variableInitializer )* ( ',' )?
 					{
 					pushFollow(FOLLOW_variableInitializer_in_arrayInitializer2007);
 					variableInitializer188=variableInitializer();
@@ -5828,7 +5828,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, variableInitializer188.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:43: ( ',' variableInitializer )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:43: ( ',' variableInitializer )*
 					loop63:
 					while (true) {
 						int alt63=2;
@@ -5843,7 +5843,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt63) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:44: ',' variableInitializer
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:44: ',' variableInitializer
 							{
 							char_literal189=(Token)match(input,39,FOLLOW_39_in_arrayInitializer2010); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -5866,7 +5866,7 @@ public class JavaJavaParser extends Parser {
 						}
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:80: ( ',' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:80: ( ',' )?
 					int alt64=2;
 					int LA64_0 = input.LA(1);
 					if ( (LA64_0==39) ) {
@@ -5874,7 +5874,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt64) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:81: ','
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:333:81: ','
 							{
 							char_literal191=(Token)match(input,39,FOLLOW_39_in_arrayInitializer2019); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -5931,7 +5931,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "modifier"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:336:1: modifier : ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:336:1: modifier : ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' );
 	public final JavaJavaParser.modifier_return modifier() throws RecognitionException {
 		JavaJavaParser.modifier_return retval = new JavaJavaParser.modifier_return();
 		retval.start = input.LT(1);
@@ -5967,7 +5967,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 49) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:337:5: ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:337:5: ( annotation | 'public' | 'protected' | 'private' | 'static' | 'abstract' | 'final' | 'native' | 'synchronized' | 'transient' | 'volatile' | 'strictfp' )
 			int alt66=12;
 			switch ( input.LA(1) ) {
 			case 54:
@@ -6038,7 +6038,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt66) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:337:9: annotation
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:337:9: annotation
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6052,7 +6052,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:338:9: 'public'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:338:9: 'public'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6067,7 +6067,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:339:9: 'protected'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:339:9: 'protected'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6082,7 +6082,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:340:9: 'private'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:340:9: 'private'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6097,7 +6097,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:341:9: 'static'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:341:9: 'static'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6112,7 +6112,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:342:9: 'abstract'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:342:9: 'abstract'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6127,7 +6127,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:343:9: 'final'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:343:9: 'final'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6142,7 +6142,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:344:9: 'native'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:344:9: 'native'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6157,7 +6157,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 9 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:345:9: 'synchronized'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:345:9: 'synchronized'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6172,7 +6172,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 10 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:346:9: 'transient'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:346:9: 'transient'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6187,7 +6187,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 11 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:347:9: 'volatile'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:347:9: 'volatile'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6202,7 +6202,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 12 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:348:9: 'strictfp'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:348:9: 'strictfp'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6248,7 +6248,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "packageOrTypeName"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:351:1: packageOrTypeName : qualifiedName ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:351:1: packageOrTypeName : qualifiedName ;
 	public final JavaJavaParser.packageOrTypeName_return packageOrTypeName() throws RecognitionException {
 		JavaJavaParser.packageOrTypeName_return retval = new JavaJavaParser.packageOrTypeName_return();
 		retval.start = input.LT(1);
@@ -6262,8 +6262,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 50) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:352:5: ( qualifiedName )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:352:9: qualifiedName
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:352:5: ( qualifiedName )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:352:9: qualifiedName
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -6306,7 +6306,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "enumConstantName"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:355:1: enumConstantName : Identifier ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:355:1: enumConstantName : Identifier ;
 	public final JavaJavaParser.enumConstantName_return enumConstantName() throws RecognitionException {
 		JavaJavaParser.enumConstantName_return retval = new JavaJavaParser.enumConstantName_return();
 		retval.start = input.LT(1);
@@ -6321,8 +6321,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 51) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:356:5: ( Identifier )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:356:9: Identifier
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:356:5: ( Identifier )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:356:9: Identifier
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -6366,7 +6366,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "typeName"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:359:1: typeName : qualifiedName ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:359:1: typeName : qualifiedName ;
 	public final JavaJavaParser.typeName_return typeName() throws RecognitionException {
 		JavaJavaParser.typeName_return retval = new JavaJavaParser.typeName_return();
 		retval.start = input.LT(1);
@@ -6380,8 +6380,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 52) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:360:5: ( qualifiedName )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:360:9: qualifiedName
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:360:5: ( qualifiedName )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:360:9: qualifiedName
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -6424,7 +6424,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "type"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:363:1: type : ( classOrInterfaceType ( '[' ']' )* | primitiveType ( '[' ']' )* );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:363:1: type : ( classOrInterfaceType ( '[' ']' )* | primitiveType ( '[' ']' )* );
 	public final JavaJavaParser.type_return type() throws RecognitionException {
 		JavaJavaParser.type_return retval = new JavaJavaParser.type_return();
 		retval.start = input.LT(1);
@@ -6447,7 +6447,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 53) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:364:2: ( classOrInterfaceType ( '[' ']' )* | primitiveType ( '[' ']' )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:364:2: ( classOrInterfaceType ( '[' ']' )* | primitiveType ( '[' ']' )* )
 			int alt69=2;
 			int LA69_0 = input.LA(1);
 			if ( (LA69_0==Identifier) ) {
@@ -6466,7 +6466,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt69) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:364:4: classOrInterfaceType ( '[' ']' )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:364:4: classOrInterfaceType ( '[' ']' )*
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6477,7 +6477,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, classOrInterfaceType208.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:364:25: ( '[' ']' )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:364:25: ( '[' ']' )*
 					loop67:
 					while (true) {
 						int alt67=2;
@@ -6488,7 +6488,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt67) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:364:26: '[' ']'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:364:26: '[' ']'
 							{
 							char_literal209=(Token)match(input,55,FOLLOW_55_in_type2264); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -6515,7 +6515,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:365:4: primitiveType ( '[' ']' )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:365:4: primitiveType ( '[' ']' )*
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6527,7 +6527,7 @@ public class JavaJavaParser extends Parser {
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, primitiveType211.getTree());
 
 					if ( state.backtracking==0 ) {primitive=true;}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:365:35: ( '[' ']' )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:365:35: ( '[' ']' )*
 					loop68:
 					while (true) {
 						int alt68=2;
@@ -6538,7 +6538,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt68) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:365:36: '[' ']'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:365:36: '[' ']'
 							{
 							char_literal212=(Token)match(input,55,FOLLOW_55_in_type2282); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -6596,7 +6596,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "classOrInterfaceType"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:370:1: classOrInterfaceType : I7= Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:370:1: classOrInterfaceType : I7= Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )* ;
 	public final JavaJavaParser.classOrInterfaceType_return classOrInterfaceType() throws RecognitionException {
 		JavaJavaParser.classOrInterfaceType_return retval = new JavaJavaParser.classOrInterfaceType_return();
 		retval.start = input.LT(1);
@@ -6617,8 +6617,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 54) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:2: (I7= Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:4: I7= Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:2: (I7= Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:4: I7= Identifier ( typeArguments )? ( '.' Identifier ( typeArguments )? )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -6630,7 +6630,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) { id((I7!=null?I7.getText():null));}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:35: ( typeArguments )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:35: ( typeArguments )?
 			int alt70=2;
 			int LA70_0 = input.LA(1);
 			if ( (LA70_0==49) ) {
@@ -6641,7 +6641,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt70) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:35: typeArguments
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:35: typeArguments
 					{
 					pushFollow(FOLLOW_typeArguments_in_classOrInterfaceType2309);
 					typeArguments214=typeArguments();
@@ -6654,7 +6654,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:50: ( '.' Identifier ( typeArguments )? )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:50: ( '.' Identifier ( typeArguments )? )*
 			loop72:
 			while (true) {
 				int alt72=2;
@@ -6665,7 +6665,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt72) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:51: '.' Identifier ( typeArguments )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:51: '.' Identifier ( typeArguments )?
 					{
 					char_literal215=(Token)match(input,43,FOLLOW_43_in_classOrInterfaceType2313); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -6680,7 +6680,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, Identifier216_tree);
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:76: ( typeArguments )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:76: ( typeArguments )?
 					int alt71=2;
 					int LA71_0 = input.LA(1);
 					if ( (LA71_0==49) ) {
@@ -6691,7 +6691,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt71) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:76: typeArguments
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:371:76: typeArguments
 							{
 							pushFollow(FOLLOW_typeArguments_in_classOrInterfaceType2319);
 							typeArguments217=typeArguments();
@@ -6744,7 +6744,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "primitiveType"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:374:1: primitiveType : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:374:1: primitiveType : ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' );
 	public final JavaJavaParser.primitiveType_return primitiveType() throws RecognitionException {
 		JavaJavaParser.primitiveType_return retval = new JavaJavaParser.primitiveType_return();
 		retval.start = input.LT(1);
@@ -6773,7 +6773,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 55) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:375:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:375:5: ( 'boolean' | 'char' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' )
 			int alt73=8;
 			switch ( input.LA(1) ) {
 			case 60:
@@ -6824,7 +6824,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt73) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:375:9: 'boolean'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:375:9: 'boolean'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6839,7 +6839,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:376:9: 'char'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:376:9: 'char'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6854,7 +6854,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:377:9: 'byte'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:377:9: 'byte'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6869,7 +6869,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:378:9: 'short'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:378:9: 'short'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6884,7 +6884,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:379:9: 'int'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:379:9: 'int'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6899,7 +6899,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:380:9: 'long'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:380:9: 'long'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6914,7 +6914,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:381:9: 'float'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:381:9: 'float'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6929,7 +6929,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:382:9: 'double'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:382:9: 'double'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -6975,7 +6975,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "variableModifier"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:385:1: variableModifier : ( 'final' | annotation );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:385:1: variableModifier : ( 'final' | annotation );
 	public final JavaJavaParser.variableModifier_return variableModifier() throws RecognitionException {
 		JavaJavaParser.variableModifier_return retval = new JavaJavaParser.variableModifier_return();
 		retval.start = input.LT(1);
@@ -6991,7 +6991,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 56) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:386:5: ( 'final' | annotation )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:386:5: ( 'final' | annotation )
 			int alt74=2;
 			int LA74_0 = input.LA(1);
 			if ( (LA74_0==74) ) {
@@ -7010,7 +7010,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt74) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:386:9: 'final'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:386:9: 'final'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -7025,7 +7025,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:387:9: annotation
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:387:9: annotation
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -7070,7 +7070,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "typeArguments"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:390:1: typeArguments : '<' typeArgument ( ',' typeArgument )* '>' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:390:1: typeArguments : '<' typeArgument ( ',' typeArgument )* '>' ;
 	public final JavaJavaParser.typeArguments_return typeArguments() throws RecognitionException {
 		JavaJavaParser.typeArguments_return retval = new JavaJavaParser.typeArguments_return();
 		retval.start = input.LT(1);
@@ -7091,8 +7091,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 57) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:5: ( '<' typeArgument ( ',' typeArgument )* '>' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:9: '<' typeArgument ( ',' typeArgument )* '>'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:5: ( '<' typeArgument ( ',' typeArgument )* '>' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:9: '<' typeArgument ( ',' typeArgument )* '>'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -7110,7 +7110,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, typeArgument229.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:36: ( ',' typeArgument )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:36: ( ',' typeArgument )*
 			loop75:
 			while (true) {
 				int alt75=2;
@@ -7121,7 +7121,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt75) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:37: ',' typeArgument
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:391:37: ',' typeArgument
 					{
 					char_literal230=(Token)match(input,39,FOLLOW_39_in_typeArguments2490); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -7183,7 +7183,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "typeArgument"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:394:1: typeArgument : ( type | '?' ( ( 'extends' | 'super' ) type )? );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:394:1: typeArgument : ( type | '?' ( ( 'extends' | 'super' ) type )? );
 	public final JavaJavaParser.typeArgument_return typeArgument() throws RecognitionException {
 		JavaJavaParser.typeArgument_return retval = new JavaJavaParser.typeArgument_return();
 		retval.start = input.LT(1);
@@ -7204,7 +7204,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 58) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:395:5: ( type | '?' ( ( 'extends' | 'super' ) type )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:395:5: ( type | '?' ( ( 'extends' | 'super' ) type )? )
 			int alt78=2;
 			int LA78_0 = input.LA(1);
 			if ( (LA78_0==Identifier||LA78_0==60||LA78_0==62||LA78_0==65||LA78_0==70||LA78_0==76||LA78_0==82||LA78_0==84||LA78_0==93) ) {
@@ -7223,7 +7223,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt78) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:395:9: type
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:395:9: type
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -7237,7 +7237,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:9: '?' ( ( 'extends' | 'super' ) type )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:9: '?' ( ( 'extends' | 'super' ) type )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -7248,7 +7248,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal234_tree);
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:13: ( ( 'extends' | 'super' ) type )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:13: ( ( 'extends' | 'super' ) type )?
 					int alt77=2;
 					int LA77_0 = input.LA(1);
 					if ( (LA77_0==72||LA77_0==96) ) {
@@ -7256,9 +7256,9 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt77) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:14: ( 'extends' | 'super' ) type
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:14: ( 'extends' | 'super' ) type
 							{
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:14: ( 'extends' | 'super' )
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:14: ( 'extends' | 'super' )
 							int alt76=2;
 							int LA76_0 = input.LA(1);
 							if ( (LA76_0==72) ) {
@@ -7277,7 +7277,7 @@ public class JavaJavaParser extends Parser {
 
 							switch (alt76) {
 								case 1 :
-									// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:15: 'extends'
+									// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:15: 'extends'
 									{
 									string_literal235=(Token)match(input,72,FOLLOW_72_in_typeArgument2535); if (state.failed) return retval;
 									if ( state.backtracking==0 ) {
@@ -7289,7 +7289,7 @@ public class JavaJavaParser extends Parser {
 									}
 									break;
 								case 2 :
-									// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:86: 'super'
+									// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:396:86: 'super'
 									{
 									string_literal236=(Token)match(input,96,FOLLOW_96_in_typeArgument2540); if (state.failed) return retval;
 									if ( state.backtracking==0 ) {
@@ -7348,7 +7348,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "qualifiedNameList"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:399:1: qualifiedNameList : qualifiedName ( ',' qualifiedName )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:399:1: qualifiedNameList : qualifiedName ( ',' qualifiedName )* ;
 	public final JavaJavaParser.qualifiedNameList_return qualifiedNameList() throws RecognitionException {
 		JavaJavaParser.qualifiedNameList_return retval = new JavaJavaParser.qualifiedNameList_return();
 		retval.start = input.LT(1);
@@ -7365,8 +7365,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 59) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:400:5: ( qualifiedName ( ',' qualifiedName )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:400:9: qualifiedName ( ',' qualifiedName )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:400:5: ( qualifiedName ( ',' qualifiedName )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:400:9: qualifiedName ( ',' qualifiedName )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -7377,7 +7377,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, qualifiedName238.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:400:23: ( ',' qualifiedName )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:400:23: ( ',' qualifiedName )*
 			loop79:
 			while (true) {
 				int alt79=2;
@@ -7388,7 +7388,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt79) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:400:24: ',' qualifiedName
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:400:24: ',' qualifiedName
 					{
 					char_literal239=(Token)match(input,39,FOLLOW_39_in_qualifiedNameList2574); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -7443,7 +7443,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "formalParameters"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:403:1: formalParameters : '(' ( formalParameterDecls )? ')' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:403:1: formalParameters : '(' ( formalParameterDecls )? ')' ;
 	public final JavaJavaParser.formalParameters_return formalParameters() throws RecognitionException {
 		JavaJavaParser.formalParameters_return retval = new JavaJavaParser.formalParameters_return();
 		retval.start = input.LT(1);
@@ -7461,8 +7461,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 60) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:5: ( '(' ( formalParameterDecls )? ')' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:9: '(' ( formalParameterDecls )? ')'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:5: ( '(' ( formalParameterDecls )? ')' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:9: '(' ( formalParameterDecls )? ')'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -7474,7 +7474,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("("); }
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:24: ( formalParameterDecls )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:24: ( formalParameterDecls )?
 			int alt80=2;
 			int LA80_0 = input.LA(1);
 			if ( (LA80_0==Identifier||LA80_0==54||LA80_0==60||LA80_0==62||LA80_0==65||LA80_0==70||LA80_0==74||LA80_0==76||LA80_0==82||LA80_0==84||LA80_0==93) ) {
@@ -7482,7 +7482,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt80) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:24: formalParameterDecls
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:404:24: formalParameterDecls
 					{
 					pushFollow(FOLLOW_formalParameterDecls_in_formalParameters2603);
 					formalParameterDecls242=formalParameterDecls();
@@ -7534,7 +7534,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "formalParameterDecls"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:407:1: formalParameterDecls : variableModifiers type formalParameterDeclsRest ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:407:1: formalParameterDecls : variableModifiers type formalParameterDeclsRest ;
 	public final JavaJavaParser.formalParameterDecls_return formalParameterDecls() throws RecognitionException {
 		JavaJavaParser.formalParameterDecls_return retval = new JavaJavaParser.formalParameterDecls_return();
 		retval.start = input.LT(1);
@@ -7550,8 +7550,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 61) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:408:5: ( variableModifiers type formalParameterDeclsRest )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:408:9: variableModifiers type formalParameterDeclsRest
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:408:5: ( variableModifiers type formalParameterDeclsRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:408:9: variableModifiers type formalParameterDeclsRest
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -7607,7 +7607,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "formalParameterDeclsRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:411:1: formalParameterDeclsRest : ( variableDeclaratorId ( ',' formalParameterDecls )? | '...' variableDeclaratorId );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:411:1: formalParameterDeclsRest : ( variableDeclaratorId ( ',' formalParameterDecls )? | '...' variableDeclaratorId );
 	public final JavaJavaParser.formalParameterDeclsRest_return formalParameterDeclsRest() throws RecognitionException {
 		JavaJavaParser.formalParameterDeclsRest_return retval = new JavaJavaParser.formalParameterDeclsRest_return();
 		retval.start = input.LT(1);
@@ -7627,7 +7627,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 62) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:412:5: ( variableDeclaratorId ( ',' formalParameterDecls )? | '...' variableDeclaratorId )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:412:5: ( variableDeclaratorId ( ',' formalParameterDecls )? | '...' variableDeclaratorId )
 			int alt82=2;
 			int LA82_0 = input.LA(1);
 			if ( (LA82_0==Identifier) ) {
@@ -7646,7 +7646,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt82) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:412:9: variableDeclaratorId ( ',' formalParameterDecls )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:412:9: variableDeclaratorId ( ',' formalParameterDecls )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -7657,7 +7657,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, variableDeclaratorId247.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:412:30: ( ',' formalParameterDecls )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:412:30: ( ',' formalParameterDecls )?
 					int alt81=2;
 					int LA81_0 = input.LA(1);
 					if ( (LA81_0==39) ) {
@@ -7665,7 +7665,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt81) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:412:31: ',' formalParameterDecls
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:412:31: ',' formalParameterDecls
 							{
 							char_literal248=(Token)match(input,39,FOLLOW_39_in_formalParameterDeclsRest2664); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -7688,7 +7688,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:413:9: '...' variableDeclaratorId
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:413:9: '...' variableDeclaratorId
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -7739,7 +7739,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "methodBody"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:416:1: methodBody : block ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:416:1: methodBody : block ;
 	public final JavaJavaParser.methodBody_return methodBody() throws RecognitionException {
 		JavaJavaParser.methodBody_return retval = new JavaJavaParser.methodBody_return();
 		retval.start = input.LT(1);
@@ -7753,8 +7753,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 63) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:417:5: ( block )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:417:8: block
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:417:5: ( block )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:417:8: block
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -7798,7 +7798,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "constructorBody"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:420:1: constructorBody : '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:420:1: constructorBody : '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' ;
 	public final JavaJavaParser.constructorBody_return constructorBody() throws RecognitionException {
 		JavaJavaParser.constructorBody_return retval = new JavaJavaParser.constructorBody_return();
 		retval.start = input.LT(1);
@@ -7817,8 +7817,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 64) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:5: ( '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:9: '{' ( explicitConstructorInvocation )? ( blockStatement )* '}'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:5: ( '{' ( explicitConstructorInvocation )? ( blockStatement )* '}' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:9: '{' ( explicitConstructorInvocation )? ( blockStatement )* '}'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -7830,7 +7830,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("{");}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: ( explicitConstructorInvocation )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: ( explicitConstructorInvocation )?
 			int alt83=2;
 			switch ( input.LA(1) ) {
 				case 49:
@@ -8025,7 +8025,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt83) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: explicitConstructorInvocation
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: explicitConstructorInvocation
 					{
 					pushFollow(FOLLOW_explicitConstructorInvocation_in_constructorBody2728);
 					explicitConstructorInvocation254=explicitConstructorInvocation();
@@ -8038,7 +8038,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:53: ( blockStatement )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:53: ( blockStatement )*
 			loop84:
 			while (true) {
 				int alt84=2;
@@ -8049,7 +8049,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt84) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:53: blockStatement
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:53: blockStatement
 					{
 					pushFollow(FOLLOW_blockStatement_in_constructorBody2731);
 					blockStatement255=blockStatement();
@@ -8104,7 +8104,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "explicitConstructorInvocation"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:424:1: explicitConstructorInvocation : ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:424:1: explicitConstructorInvocation : ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' );
 	public final JavaJavaParser.explicitConstructorInvocation_return explicitConstructorInvocation() throws RecognitionException {
 		JavaJavaParser.explicitConstructorInvocation_return retval = new JavaJavaParser.explicitConstructorInvocation_return();
 		retval.start = input.LT(1);
@@ -8134,7 +8134,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 65) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:5: ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:5: ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' | primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';' )
 			int alt88=2;
 			switch ( input.LA(1) ) {
 			case 49:
@@ -8199,12 +8199,12 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt88) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: ( nonWildcardTypeArguments )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: ( nonWildcardTypeArguments )?
 					int alt85=2;
 					int LA85_0 = input.LA(1);
 					if ( (LA85_0==49) ) {
@@ -8212,7 +8212,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt85) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: nonWildcardTypeArguments
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: nonWildcardTypeArguments
 							{
 							pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2755);
 							nonWildcardTypeArguments257=nonWildcardTypeArguments();
@@ -8225,7 +8225,7 @@ public class JavaJavaParser extends Parser {
 
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:35: ( 'this' | 'super' )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:35: ( 'this' | 'super' )
 					int alt86=2;
 					int LA86_0 = input.LA(1);
 					if ( (LA86_0==99) ) {
@@ -8244,7 +8244,7 @@ public class JavaJavaParser extends Parser {
 
 					switch (alt86) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:36: 'this'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:36: 'this'
 							{
 							string_literal258=(Token)match(input,99,FOLLOW_99_in_explicitConstructorInvocation2759); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -8256,7 +8256,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:101: 'super'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:101: 'super'
 							{
 							string_literal259=(Token)match(input,96,FOLLOW_96_in_explicitConstructorInvocation2764); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -8286,7 +8286,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:426:9: primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:426:9: primary '.' ( nonWildcardTypeArguments )? 'super' arguments ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8304,7 +8304,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {s("."); }
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:426:31: ( nonWildcardTypeArguments )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:426:31: ( nonWildcardTypeArguments )?
 					int alt87=2;
 					int LA87_0 = input.LA(1);
 					if ( (LA87_0==49) ) {
@@ -8312,7 +8312,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt87) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:426:31: nonWildcardTypeArguments
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:426:31: nonWildcardTypeArguments
 							{
 							pushFollow(FOLLOW_nonWildcardTypeArguments_in_explicitConstructorInvocation2788);
 							nonWildcardTypeArguments264=nonWildcardTypeArguments();
@@ -8378,7 +8378,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "qualifiedName"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:430:1: qualifiedName : I1= Identifier ( '.' I2= Identifier )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:430:1: qualifiedName : I1= Identifier ( '.' I2= Identifier )* ;
 	public final JavaJavaParser.qualifiedName_return qualifiedName() throws RecognitionException {
 		JavaJavaParser.qualifiedName_return retval = new JavaJavaParser.qualifiedName_return();
 		retval.start = input.LT(1);
@@ -8397,8 +8397,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 66) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:431:5: (I1= Identifier ( '.' I2= Identifier )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:431:9: I1= Identifier ( '.' I2= Identifier )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:431:5: (I1= Identifier ( '.' I2= Identifier )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:431:9: I1= Identifier ( '.' I2= Identifier )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -8410,7 +8410,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {myID  = (I1!=null?I1.getText():null);}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:431:43: ( '.' I2= Identifier )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:431:43: ( '.' I2= Identifier )*
 			loop89:
 			while (true) {
 				int alt89=2;
@@ -8425,7 +8425,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt89) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:431:44: '.' I2= Identifier
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:431:44: '.' I2= Identifier
 					{
 					char_literal268=(Token)match(input,43,FOLLOW_43_in_qualifiedName2824); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -8481,7 +8481,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "literal"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:434:1: literal : ( integerLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | booleanLiteral | 'null' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:434:1: literal : ( integerLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | booleanLiteral | 'null' );
 	public final JavaJavaParser.literal_return literal() throws RecognitionException {
 		JavaJavaParser.literal_return retval = new JavaJavaParser.literal_return();
 		retval.start = input.LT(1);
@@ -8504,7 +8504,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 67) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:435:5: ( integerLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | booleanLiteral | 'null' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:435:5: ( integerLiteral | FloatingPointLiteral | CharacterLiteral | StringLiteral | booleanLiteral | 'null' )
 			int alt90=6;
 			switch ( input.LA(1) ) {
 			case DecimalLiteral:
@@ -8548,7 +8548,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt90) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:435:9: integerLiteral
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:435:9: integerLiteral
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8562,7 +8562,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:436:9: FloatingPointLiteral
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:436:9: FloatingPointLiteral
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8577,7 +8577,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:437:9: CharacterLiteral
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:437:9: CharacterLiteral
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8592,7 +8592,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:438:9: StringLiteral
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:438:9: StringLiteral
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8607,7 +8607,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:439:9: booleanLiteral
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:439:9: booleanLiteral
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8621,7 +8621,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:440:9: 'null'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:440:9: 'null'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8667,7 +8667,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "integerLiteral"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:443:1: integerLiteral : ( HexLiteral | OctalLiteral | DecimalLiteral );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:443:1: integerLiteral : ( HexLiteral | OctalLiteral | DecimalLiteral );
 	public final JavaJavaParser.integerLiteral_return integerLiteral() throws RecognitionException {
 		JavaJavaParser.integerLiteral_return retval = new JavaJavaParser.integerLiteral_return();
 		retval.start = input.LT(1);
@@ -8686,7 +8686,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 68) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:444:5: ( HexLiteral | OctalLiteral | DecimalLiteral )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:444:5: ( HexLiteral | OctalLiteral | DecimalLiteral )
 			int alt91=3;
 			switch ( input.LA(1) ) {
 			case HexLiteral:
@@ -8712,7 +8712,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt91) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:444:9: HexLiteral
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:444:9: HexLiteral
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8727,7 +8727,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:445:9: OctalLiteral
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:445:9: OctalLiteral
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8742,7 +8742,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:446:9: DecimalLiteral
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:446:9: DecimalLiteral
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8788,7 +8788,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "booleanLiteral"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:449:1: booleanLiteral : ( 'true' | 'false' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:449:1: booleanLiteral : ( 'true' | 'false' );
 	public final JavaJavaParser.booleanLiteral_return booleanLiteral() throws RecognitionException {
 		JavaJavaParser.booleanLiteral_return retval = new JavaJavaParser.booleanLiteral_return();
 		retval.start = input.LT(1);
@@ -8805,7 +8805,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 69) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:450:5: ( 'true' | 'false' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:450:5: ( 'true' | 'false' )
 			int alt92=2;
 			int LA92_0 = input.LA(1);
 			if ( (LA92_0==103) ) {
@@ -8824,7 +8824,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt92) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:450:9: 'true'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:450:9: 'true'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8839,7 +8839,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:451:9: 'false'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:451:9: 'false'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -8885,7 +8885,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "annotations"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:456:1: annotations : ( annotation )+ ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:456:1: annotations : ( annotation )+ ;
 	public final JavaJavaParser.annotations_return annotations() throws RecognitionException {
 		JavaJavaParser.annotations_return retval = new JavaJavaParser.annotations_return();
 		retval.start = input.LT(1);
@@ -8899,13 +8899,13 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 70) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:5: ( ( annotation )+ )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:9: ( annotation )+
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:5: ( ( annotation )+ )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:9: ( annotation )+
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:9: ( annotation )+
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:9: ( annotation )+
 			int cnt93=0;
 			loop93:
 			while (true) {
@@ -8925,7 +8925,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt93) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:9: annotation
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:9: annotation
 					{
 					pushFollow(FOLLOW_annotation_in_annotations3017);
 					annotation280=annotation();
@@ -8977,7 +8977,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "annotation"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:460:1: annotation : '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )? ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:460:1: annotation : '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )? ;
 	public final JavaJavaParser.annotation_return annotation() throws RecognitionException {
 		JavaJavaParser.annotation_return retval = new JavaJavaParser.annotation_return();
 		retval.start = input.LT(1);
@@ -8999,8 +8999,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 71) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:5: ( '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )? )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:9: '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:5: ( '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:9: '@' annotationName ( '(' ( elementValuePairs | elementValue )? ')' )?
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -9017,7 +9017,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, annotationName282.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:28: ( '(' ( elementValuePairs | elementValue )? ')' )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:28: ( '(' ( elementValuePairs | elementValue )? ')' )?
 			int alt95=2;
 			int LA95_0 = input.LA(1);
 			if ( (LA95_0==32) ) {
@@ -9025,7 +9025,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt95) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:30: '(' ( elementValuePairs | elementValue )? ')'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:30: '(' ( elementValuePairs | elementValue )? ')'
 					{
 					char_literal283=(Token)match(input,32,FOLLOW_32_in_annotation3043); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -9034,7 +9034,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {s("(");}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:44: ( elementValuePairs | elementValue )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:44: ( elementValuePairs | elementValue )?
 					int alt94=3;
 					int LA94_0 = input.LA(1);
 					if ( (LA94_0==Identifier) ) {
@@ -9051,7 +9051,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt94) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:46: elementValuePairs
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:46: elementValuePairs
 							{
 							pushFollow(FOLLOW_elementValuePairs_in_annotation3049);
 							elementValuePairs284=elementValuePairs();
@@ -9062,7 +9062,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:66: elementValue
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:461:66: elementValue
 							{
 							pushFollow(FOLLOW_elementValue_in_annotation3053);
 							elementValue285=elementValue();
@@ -9119,7 +9119,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "annotationName"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:464:1: annotationName : t1= Identifier ( '.' Identifier )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:464:1: annotationName : t1= Identifier ( '.' Identifier )* ;
 	public final JavaJavaParser.annotationName_return annotationName() throws RecognitionException {
 		JavaJavaParser.annotationName_return retval = new JavaJavaParser.annotationName_return();
 		retval.start = input.LT(1);
@@ -9138,8 +9138,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 72) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:465:5: (t1= Identifier ( '.' Identifier )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:465:7: t1= Identifier ( '.' Identifier )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:465:5: (t1= Identifier ( '.' Identifier )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:465:7: t1= Identifier ( '.' Identifier )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -9151,7 +9151,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {id((t1!=null?t1.getText():null)); }
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:465:38: ( '.' Identifier )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:465:38: ( '.' Identifier )*
 			loop96:
 			while (true) {
 				int alt96=2;
@@ -9162,7 +9162,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt96) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:465:39: '.' Identifier
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:465:39: '.' Identifier
 					{
 					char_literal287=(Token)match(input,43,FOLLOW_43_in_annotationName3092); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -9217,7 +9217,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "elementValuePairs"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:468:1: elementValuePairs : elementValuePair ( ',' elementValuePair )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:468:1: elementValuePairs : elementValuePair ( ',' elementValuePair )* ;
 	public final JavaJavaParser.elementValuePairs_return elementValuePairs() throws RecognitionException {
 		JavaJavaParser.elementValuePairs_return retval = new JavaJavaParser.elementValuePairs_return();
 		retval.start = input.LT(1);
@@ -9234,8 +9234,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 73) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:469:5: ( elementValuePair ( ',' elementValuePair )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:469:9: elementValuePair ( ',' elementValuePair )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:469:5: ( elementValuePair ( ',' elementValuePair )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:469:9: elementValuePair ( ',' elementValuePair )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -9246,7 +9246,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, elementValuePair289.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:469:26: ( ',' elementValuePair )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:469:26: ( ',' elementValuePair )*
 			loop97:
 			while (true) {
 				int alt97=2;
@@ -9257,7 +9257,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt97) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:469:27: ',' elementValuePair
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:469:27: ',' elementValuePair
 					{
 					char_literal290=(Token)match(input,39,FOLLOW_39_in_elementValuePairs3120); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -9312,7 +9312,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "elementValuePair"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:472:1: elementValuePair : Identifier '=' elementValue ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:472:1: elementValuePair : Identifier '=' elementValue ;
 	public final JavaJavaParser.elementValuePair_return elementValuePair() throws RecognitionException {
 		JavaJavaParser.elementValuePair_return retval = new JavaJavaParser.elementValuePair_return();
 		retval.start = input.LT(1);
@@ -9330,8 +9330,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 74) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:473:5: ( Identifier '=' elementValue )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:473:9: Identifier '=' elementValue
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:473:5: ( Identifier '=' elementValue )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:473:9: Identifier '=' elementValue
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -9388,7 +9388,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "elementValue"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:476:1: elementValue : ( conditionalExpression | annotation | elementValueArrayInitializer );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:476:1: elementValue : ( conditionalExpression | annotation | elementValueArrayInitializer );
 	public final JavaJavaParser.elementValue_return elementValue() throws RecognitionException {
 		JavaJavaParser.elementValue_return retval = new JavaJavaParser.elementValue_return();
 		retval.start = input.LT(1);
@@ -9404,7 +9404,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 75) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:477:5: ( conditionalExpression | annotation | elementValueArrayInitializer )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:477:5: ( conditionalExpression | annotation | elementValueArrayInitializer )
 			int alt98=3;
 			switch ( input.LA(1) ) {
 			case CharacterLiteral:
@@ -9458,7 +9458,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt98) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:477:9: conditionalExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:477:9: conditionalExpression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -9472,7 +9472,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:478:9: annotation
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:478:9: annotation
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -9486,7 +9486,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:479:9: elementValueArrayInitializer
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:479:9: elementValueArrayInitializer
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -9531,7 +9531,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "elementValueArrayInitializer"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:482:1: elementValueArrayInitializer : '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:482:1: elementValueArrayInitializer : '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}' ;
 	public final JavaJavaParser.elementValueArrayInitializer_return elementValueArrayInitializer() throws RecognitionException {
 		JavaJavaParser.elementValueArrayInitializer_return retval = new JavaJavaParser.elementValueArrayInitializer_return();
 		retval.start = input.LT(1);
@@ -9554,8 +9554,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 76) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:5: ( '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:9: '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:5: ( '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:9: '{' ( elementValue ( ',' elementValue )* )? ( ',' )? '}'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -9567,7 +9567,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("{");}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:22: ( elementValue ( ',' elementValue )* )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:22: ( elementValue ( ',' elementValue )* )?
 			int alt100=2;
 			int LA100_0 = input.LA(1);
 			if ( ((LA100_0 >= CharacterLiteral && LA100_0 <= DecimalLiteral)||LA100_0==FloatingPointLiteral||(LA100_0 >= HexLiteral && LA100_0 <= Identifier)||(LA100_0 >= OctalLiteral && LA100_0 <= StringLiteral)||LA100_0==25||LA100_0==32||(LA100_0 >= 36 && LA100_0 <= 37)||(LA100_0 >= 40 && LA100_0 <= 41)||LA100_0==54||LA100_0==60||LA100_0==62||LA100_0==65||LA100_0==70||LA100_0==73||LA100_0==76||LA100_0==82||LA100_0==84||(LA100_0 >= 86 && LA100_0 <= 87)||LA100_0==93||LA100_0==96||LA100_0==99||LA100_0==103||LA100_0==105||LA100_0==108||LA100_0==113) ) {
@@ -9575,7 +9575,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt100) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:23: elementValue ( ',' elementValue )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:23: elementValue ( ',' elementValue )*
 					{
 					pushFollow(FOLLOW_elementValue_in_elementValueArrayInitializer3223);
 					elementValue299=elementValue();
@@ -9583,7 +9583,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, elementValue299.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:36: ( ',' elementValue )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:36: ( ',' elementValue )*
 					loop99:
 					while (true) {
 						int alt99=2;
@@ -9598,7 +9598,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt99) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:37: ',' elementValue
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:37: ',' elementValue
 							{
 							char_literal300=(Token)match(input,39,FOLLOW_39_in_elementValueArrayInitializer3226); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -9626,7 +9626,7 @@ public class JavaJavaParser extends Parser {
 
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:67: ( ',' )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:67: ( ',' )?
 			int alt101=2;
 			int LA101_0 = input.LA(1);
 			if ( (LA101_0==39) ) {
@@ -9634,7 +9634,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt101) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:68: ','
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:483:68: ','
 					{
 					char_literal302=(Token)match(input,39,FOLLOW_39_in_elementValueArrayInitializer3236); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -9686,7 +9686,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "annotationTypeDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:486:1: annotationTypeDeclaration : '@' 'interface' Identifier annotationTypeBody ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:486:1: annotationTypeDeclaration : '@' 'interface' Identifier annotationTypeBody ;
 	public final JavaJavaParser.annotationTypeDeclaration_return annotationTypeDeclaration() throws RecognitionException {
 		JavaJavaParser.annotationTypeDeclaration_return retval = new JavaJavaParser.annotationTypeDeclaration_return();
 		retval.start = input.LT(1);
@@ -9706,8 +9706,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 77) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:487:5: ( '@' 'interface' Identifier annotationTypeBody )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:487:9: '@' 'interface' Identifier annotationTypeBody
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:487:5: ( '@' 'interface' Identifier annotationTypeBody )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:487:9: '@' 'interface' Identifier annotationTypeBody
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -9769,7 +9769,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "annotationTypeBody"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:490:1: annotationTypeBody : '{' ( annotationTypeElementDeclaration )* '}' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:490:1: annotationTypeBody : '{' ( annotationTypeElementDeclaration )* '}' ;
 	public final JavaJavaParser.annotationTypeBody_return annotationTypeBody() throws RecognitionException {
 		JavaJavaParser.annotationTypeBody_return retval = new JavaJavaParser.annotationTypeBody_return();
 		retval.start = input.LT(1);
@@ -9787,8 +9787,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 78) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:5: ( '{' ( annotationTypeElementDeclaration )* '}' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:9: '{' ( annotationTypeElementDeclaration )* '}'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:5: ( '{' ( annotationTypeElementDeclaration )* '}' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:9: '{' ( annotationTypeElementDeclaration )* '}'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -9800,7 +9800,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("{"); }
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:23: ( annotationTypeElementDeclaration )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:23: ( annotationTypeElementDeclaration )*
 			loop102:
 			while (true) {
 				int alt102=2;
@@ -9811,7 +9811,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt102) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:24: annotationTypeElementDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:491:24: annotationTypeElementDeclaration
 					{
 					pushFollow(FOLLOW_annotationTypeElementDeclaration_in_annotationTypeBody3300);
 					annotationTypeElementDeclaration309=annotationTypeElementDeclaration();
@@ -9866,7 +9866,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "annotationTypeElementDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:494:1: annotationTypeElementDeclaration : modifiers annotationTypeElementRest ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:494:1: annotationTypeElementDeclaration : modifiers annotationTypeElementRest ;
 	public final JavaJavaParser.annotationTypeElementDeclaration_return annotationTypeElementDeclaration() throws RecognitionException {
 		JavaJavaParser.annotationTypeElementDeclaration_return retval = new JavaJavaParser.annotationTypeElementDeclaration_return();
 		retval.start = input.LT(1);
@@ -9881,8 +9881,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 79) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:495:5: ( modifiers annotationTypeElementRest )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:495:9: modifiers annotationTypeElementRest
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:495:5: ( modifiers annotationTypeElementRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:495:9: modifiers annotationTypeElementRest
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -9931,7 +9931,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "annotationTypeElementRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:498:1: annotationTypeElementRest : ( type annotationMethodOrConstantRest ';' | normalClassDeclaration ( ';' )? | normalInterfaceDeclaration ( ';' )? | enumDeclaration ( ';' )? | annotationTypeDeclaration ( ';' )? );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:498:1: annotationTypeElementRest : ( type annotationMethodOrConstantRest ';' | normalClassDeclaration ( ';' )? | normalInterfaceDeclaration ( ';' )? | enumDeclaration ( ';' )? | annotationTypeDeclaration ( ';' )? );
 	public final JavaJavaParser.annotationTypeElementRest_return annotationTypeElementRest() throws RecognitionException {
 		JavaJavaParser.annotationTypeElementRest_return retval = new JavaJavaParser.annotationTypeElementRest_return();
 		retval.start = input.LT(1);
@@ -9960,7 +9960,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 80) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:499:5: ( type annotationMethodOrConstantRest ';' | normalClassDeclaration ( ';' )? | normalInterfaceDeclaration ( ';' )? | enumDeclaration ( ';' )? | annotationTypeDeclaration ( ';' )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:499:5: ( type annotationMethodOrConstantRest ';' | normalClassDeclaration ( ';' )? | normalInterfaceDeclaration ( ';' )? | enumDeclaration ( ';' )? | annotationTypeDeclaration ( ';' )? )
 			int alt107=5;
 			switch ( input.LA(1) ) {
 			case Identifier:
@@ -10004,7 +10004,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt107) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:499:9: type annotationMethodOrConstantRest ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:499:9: type annotationMethodOrConstantRest ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -10030,7 +10030,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:500:9: normalClassDeclaration ( ';' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:500:9: normalClassDeclaration ( ';' )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -10041,7 +10041,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, normalClassDeclaration316.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:500:32: ( ';' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:500:32: ( ';' )?
 					int alt103=2;
 					int LA103_0 = input.LA(1);
 					if ( (LA103_0==48) ) {
@@ -10049,7 +10049,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt103) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:500:32: ';'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:500:32: ';'
 							{
 							char_literal317=(Token)match(input,48,FOLLOW_48_in_annotationTypeElementRest3369); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -10065,7 +10065,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:501:9: normalInterfaceDeclaration ( ';' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:501:9: normalInterfaceDeclaration ( ';' )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -10076,7 +10076,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, normalInterfaceDeclaration318.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:501:36: ( ';' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:501:36: ( ';' )?
 					int alt104=2;
 					int LA104_0 = input.LA(1);
 					if ( (LA104_0==48) ) {
@@ -10084,7 +10084,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt104) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:501:36: ';'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:501:36: ';'
 							{
 							char_literal319=(Token)match(input,48,FOLLOW_48_in_annotationTypeElementRest3382); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -10100,7 +10100,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:502:9: enumDeclaration ( ';' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:502:9: enumDeclaration ( ';' )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -10111,7 +10111,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, enumDeclaration320.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:502:25: ( ';' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:502:25: ( ';' )?
 					int alt105=2;
 					int LA105_0 = input.LA(1);
 					if ( (LA105_0==48) ) {
@@ -10119,7 +10119,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt105) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:502:25: ';'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:502:25: ';'
 							{
 							char_literal321=(Token)match(input,48,FOLLOW_48_in_annotationTypeElementRest3395); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -10135,7 +10135,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:503:9: annotationTypeDeclaration ( ';' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:503:9: annotationTypeDeclaration ( ';' )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -10146,7 +10146,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, annotationTypeDeclaration322.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:503:35: ( ';' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:503:35: ( ';' )?
 					int alt106=2;
 					int LA106_0 = input.LA(1);
 					if ( (LA106_0==48) ) {
@@ -10154,7 +10154,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt106) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:503:35: ';'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:503:35: ';'
 							{
 							char_literal323=(Token)match(input,48,FOLLOW_48_in_annotationTypeElementRest3408); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -10201,7 +10201,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "annotationMethodOrConstantRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:506:1: annotationMethodOrConstantRest : ( annotationMethodRest | annotationConstantRest );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:506:1: annotationMethodOrConstantRest : ( annotationMethodRest | annotationConstantRest );
 	public final JavaJavaParser.annotationMethodOrConstantRest_return annotationMethodOrConstantRest() throws RecognitionException {
 		JavaJavaParser.annotationMethodOrConstantRest_return retval = new JavaJavaParser.annotationMethodOrConstantRest_return();
 		retval.start = input.LT(1);
@@ -10216,7 +10216,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 81) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:507:5: ( annotationMethodRest | annotationConstantRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:507:5: ( annotationMethodRest | annotationConstantRest )
 			int alt108=2;
 			int LA108_0 = input.LA(1);
 			if ( (LA108_0==Identifier) ) {
@@ -10252,7 +10252,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt108) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:507:9: annotationMethodRest
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:507:9: annotationMethodRest
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -10266,7 +10266,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:508:9: annotationConstantRest
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:508:9: annotationConstantRest
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -10311,7 +10311,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "annotationMethodRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:511:1: annotationMethodRest : Identifier '(' ')' ( defaultValue )? ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:511:1: annotationMethodRest : Identifier '(' ')' ( defaultValue )? ;
 	public final JavaJavaParser.annotationMethodRest_return annotationMethodRest() throws RecognitionException {
 		JavaJavaParser.annotationMethodRest_return retval = new JavaJavaParser.annotationMethodRest_return();
 		retval.start = input.LT(1);
@@ -10331,8 +10331,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 82) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:5: ( Identifier '(' ')' ( defaultValue )? )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:9: Identifier '(' ')' ( defaultValue )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:5: ( Identifier '(' ')' ( defaultValue )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:9: Identifier '(' ')' ( defaultValue )?
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -10358,7 +10358,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s(")");}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:75: ( defaultValue )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:75: ( defaultValue )?
 			int alt109=2;
 			int LA109_0 = input.LA(1);
 			if ( (LA109_0==68) ) {
@@ -10366,7 +10366,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt109) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:75: defaultValue
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:512:75: defaultValue
 					{
 					pushFollow(FOLLOW_defaultValue_in_annotationMethodRest3479);
 					defaultValue329=defaultValue();
@@ -10411,7 +10411,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "annotationConstantRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:515:1: annotationConstantRest : variableDeclarators ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:515:1: annotationConstantRest : variableDeclarators ;
 	public final JavaJavaParser.annotationConstantRest_return annotationConstantRest() throws RecognitionException {
 		JavaJavaParser.annotationConstantRest_return retval = new JavaJavaParser.annotationConstantRest_return();
 		retval.start = input.LT(1);
@@ -10425,8 +10425,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 83) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:516:5: ( variableDeclarators )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:516:9: variableDeclarators
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:516:5: ( variableDeclarators )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:516:9: variableDeclarators
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -10469,7 +10469,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "defaultValue"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:519:1: defaultValue : 'default' elementValue ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:519:1: defaultValue : 'default' elementValue ;
 	public final JavaJavaParser.defaultValue_return defaultValue() throws RecognitionException {
 		JavaJavaParser.defaultValue_return retval = new JavaJavaParser.defaultValue_return();
 		retval.start = input.LT(1);
@@ -10485,8 +10485,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 84) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:520:5: ( 'default' elementValue )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:520:9: 'default' elementValue
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:520:5: ( 'default' elementValue )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:520:9: 'default' elementValue
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -10536,7 +10536,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "block"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:525:1: block : '{' ( blockStatement )* '}' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:525:1: block : '{' ( blockStatement )* '}' ;
 	public final JavaJavaParser.block_return block() throws RecognitionException {
 		JavaJavaParser.block_return retval = new JavaJavaParser.block_return();
 		retval.start = input.LT(1);
@@ -10554,8 +10554,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 85) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:5: ( '{' ( blockStatement )* '}' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:9: '{' ( blockStatement )* '}'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:5: ( '{' ( blockStatement )* '}' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:9: '{' ( blockStatement )* '}'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -10567,7 +10567,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("{");}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:23: ( blockStatement )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:23: ( blockStatement )*
 			loop110:
 			while (true) {
 				int alt110=2;
@@ -10578,7 +10578,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt110) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:23: blockStatement
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:526:23: blockStatement
 					{
 					pushFollow(FOLLOW_blockStatement_in_block3555);
 					blockStatement334=blockStatement();
@@ -10633,7 +10633,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "blockStatement"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:529:1: blockStatement : ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:529:1: blockStatement : ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement );
 	public final JavaJavaParser.blockStatement_return blockStatement() throws RecognitionException {
 		JavaJavaParser.blockStatement_return retval = new JavaJavaParser.blockStatement_return();
 		retval.start = input.LT(1);
@@ -10649,7 +10649,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 86) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:530:5: ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:530:5: ( localVariableDeclarationStatement | classOrInterfaceDeclaration | statement )
 			int alt111=3;
 			switch ( input.LA(1) ) {
 			case 74:
@@ -10869,7 +10869,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt111) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:530:10: localVariableDeclarationStatement
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:530:10: localVariableDeclarationStatement
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -10883,7 +10883,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:531:9: classOrInterfaceDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:531:9: classOrInterfaceDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -10897,7 +10897,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:532:8: statement
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:532:8: statement
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -10942,7 +10942,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "localVariableDeclarationStatement"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:535:1: localVariableDeclarationStatement : localVariableDeclaration ';' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:535:1: localVariableDeclarationStatement : localVariableDeclaration ';' ;
 	public final JavaJavaParser.localVariableDeclarationStatement_return localVariableDeclarationStatement() throws RecognitionException {
 		JavaJavaParser.localVariableDeclarationStatement_return retval = new JavaJavaParser.localVariableDeclarationStatement_return();
 		retval.start = input.LT(1);
@@ -10958,8 +10958,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 87) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:536:5: ( localVariableDeclaration ';' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:536:10: localVariableDeclaration ';'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:536:5: ( localVariableDeclaration ';' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:536:10: localVariableDeclaration ';'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -11010,7 +11010,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "localVariableDeclaration"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:539:1: localVariableDeclaration : variableModifiers type variableDeclarators ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:539:1: localVariableDeclaration : variableModifiers type variableDeclarators ;
 	public final JavaJavaParser.localVariableDeclaration_return localVariableDeclaration() throws RecognitionException {
 		JavaJavaParser.localVariableDeclaration_return retval = new JavaJavaParser.localVariableDeclaration_return();
 		retval.start = input.LT(1);
@@ -11026,8 +11026,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 88) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:540:5: ( variableModifiers type variableDeclarators )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:540:9: variableModifiers type variableDeclarators
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:540:5: ( variableModifiers type variableDeclarators )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:540:9: variableModifiers type variableDeclarators
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -11083,7 +11083,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "variableModifiers"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:543:1: variableModifiers : ( variableModifier )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:543:1: variableModifiers : ( variableModifier )* ;
 	public final JavaJavaParser.variableModifiers_return variableModifiers() throws RecognitionException {
 		JavaJavaParser.variableModifiers_return retval = new JavaJavaParser.variableModifiers_return();
 		retval.start = input.LT(1);
@@ -11097,13 +11097,13 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 89) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:544:5: ( ( variableModifier )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:544:9: ( variableModifier )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:544:5: ( ( variableModifier )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:544:9: ( variableModifier )*
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:544:9: ( variableModifier )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:544:9: ( variableModifier )*
 			loop112:
 			while (true) {
 				int alt112=2;
@@ -11114,7 +11114,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt112) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:544:9: variableModifier
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:544:9: variableModifier
 					{
 					pushFollow(FOLLOW_variableModifier_in_variableModifiers3681);
 					variableModifier344=variableModifier();
@@ -11162,7 +11162,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "statement"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:547:1: statement : ( block | ASSERT expression ( ':' expression )? ';' | 'if' parExpression statement ( options {k=1; } : 'else' statement )? | 'for' '(' forControl ')' statement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | 'try' block ( catches 'finally' block | catches | 'finally' block ) | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( Identifier )? ';' | 'continue' ( Identifier )? ';' | ';' | statementExpression ';' | Identifier ':' statement );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:547:1: statement : ( block | ASSERT expression ( ':' expression )? ';' | 'if' parExpression statement ( options {k=1; } : 'else' statement )? | 'for' '(' forControl ')' statement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | 'try' block ( catches 'finally' block | catches | 'finally' block ) | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( Identifier )? ';' | 'continue' ( Identifier )? ';' | ';' | statementExpression ';' | Identifier ':' statement );
 	public final JavaJavaParser.statement_return statement() throws RecognitionException {
 		JavaJavaParser.statement_return retval = new JavaJavaParser.statement_return();
 		retval.start = input.LT(1);
@@ -11266,7 +11266,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 90) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:548:5: ( block | ASSERT expression ( ':' expression )? ';' | 'if' parExpression statement ( options {k=1; } : 'else' statement )? | 'for' '(' forControl ')' statement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | 'try' block ( catches 'finally' block | catches | 'finally' block ) | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( Identifier )? ';' | 'continue' ( Identifier )? ';' | ';' | statementExpression ';' | Identifier ':' statement )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:548:5: ( block | ASSERT expression ( ':' expression )? ';' | 'if' parExpression statement ( options {k=1; } : 'else' statement )? | 'for' '(' forControl ')' statement | 'while' parExpression statement | 'do' statement 'while' parExpression ';' | 'try' block ( catches 'finally' block | catches | 'finally' block ) | 'switch' parExpression '{' switchBlockStatementGroups '}' | 'synchronized' parExpression block | 'return' ( expression )? ';' | 'throw' expression ';' | 'break' ( Identifier )? ';' | 'continue' ( Identifier )? ';' | ';' | statementExpression ';' | Identifier ':' statement )
 			int alt119=16;
 			switch ( input.LA(1) ) {
 			case 108:
@@ -11404,7 +11404,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt119) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:548:7: block
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:548:7: block
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11418,7 +11418,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:549:9: ASSERT expression ( ':' expression )? ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:549:9: ASSERT expression ( ':' expression )? ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11435,7 +11435,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, expression347.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:549:27: ( ':' expression )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:549:27: ( ':' expression )?
 					int alt113=2;
 					int LA113_0 = input.LA(1);
 					if ( (LA113_0==47) ) {
@@ -11443,7 +11443,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt113) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:549:28: ':' expression
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:549:28: ':' expression
 							{
 							char_literal348=(Token)match(input,47,FOLLOW_47_in_statement3714); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -11471,7 +11471,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:9: 'if' parExpression statement ( options {k=1; } : 'else' statement )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:9: 'if' parExpression statement ( options {k=1; } : 'else' statement )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11495,7 +11495,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, statement353.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:154: ( options {k=1; } : 'else' statement )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:154: ( options {k=1; } : 'else' statement )?
 					int alt114=2;
 					int LA114_0 = input.LA(1);
 					if ( (LA114_0==71) ) {
@@ -11506,7 +11506,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt114) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:170: 'else' statement
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:170: 'else' statement
 							{
 							string_literal354=(Token)match(input,71,FOLLOW_71_in_statement3745); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -11529,7 +11529,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:551:9: 'for' '(' forControl ')' statement
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:551:9: 'for' '(' forControl ')' statement
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11570,7 +11570,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:552:9: 'while' parExpression statement
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:552:9: 'while' parExpression statement
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11597,7 +11597,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:553:9: 'do' statement 'while' parExpression ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:553:9: 'do' statement 'while' parExpression ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11638,7 +11638,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:554:9: 'try' block ( catches 'finally' block | catches | 'finally' block )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:554:9: 'try' block ( catches 'finally' block | catches | 'finally' block )
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11656,7 +11656,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, block370.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:555:9: ( catches 'finally' block | catches | 'finally' block )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:555:9: ( catches 'finally' block | catches | 'finally' block )
 					int alt115=3;
 					int LA115_0 = input.LA(1);
 					if ( (LA115_0==64) ) {
@@ -11695,7 +11695,7 @@ public class JavaJavaParser extends Parser {
 
 					switch (alt115) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:555:11: catches 'finally' block
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:555:11: catches 'finally' block
 							{
 							pushFollow(FOLLOW_catches_in_statement3839);
 							catches371=catches();
@@ -11719,7 +11719,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:556:11: catches
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:556:11: catches
 							{
 							pushFollow(FOLLOW_catches_in_statement3856);
 							catches374=catches();
@@ -11730,7 +11730,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 3 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:557:13: 'finally' block
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:557:13: 'finally' block
 							{
 							string_literal375=(Token)match(input,75,FOLLOW_75_in_statement3870); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -11753,7 +11753,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:559:9: 'switch' parExpression '{' switchBlockStatementGroups '}'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:559:9: 'switch' parExpression '{' switchBlockStatementGroups '}'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11792,7 +11792,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 9 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:560:9: 'synchronized' parExpression block
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:560:9: 'synchronized' parExpression block
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11819,7 +11819,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 10 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:561:9: 'return' ( expression )? ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:561:9: 'return' ( expression )? ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11831,7 +11831,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("return"); operatorCount++; JavaMetrics.uniqueOperator.add("return");}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:561:136: ( expression )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:561:136: ( expression )?
 					int alt116=2;
 					int LA116_0 = input.LA(1);
 					if ( ((LA116_0 >= CharacterLiteral && LA116_0 <= DecimalLiteral)||LA116_0==FloatingPointLiteral||(LA116_0 >= HexLiteral && LA116_0 <= Identifier)||(LA116_0 >= OctalLiteral && LA116_0 <= StringLiteral)||LA116_0==25||LA116_0==32||(LA116_0 >= 36 && LA116_0 <= 37)||(LA116_0 >= 40 && LA116_0 <= 41)||LA116_0==60||LA116_0==62||LA116_0==65||LA116_0==70||LA116_0==73||LA116_0==76||LA116_0==82||LA116_0==84||(LA116_0 >= 86 && LA116_0 <= 87)||LA116_0==93||LA116_0==96||LA116_0==99||LA116_0==103||LA116_0==105||LA116_0==113) ) {
@@ -11839,7 +11839,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt116) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:561:136: expression
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:561:136: expression
 							{
 							pushFollow(FOLLOW_expression_in_statement3932);
 							expression386=expression();
@@ -11862,7 +11862,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 11 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:562:9: 'throw' expression ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:562:9: 'throw' expression ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11890,7 +11890,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 12 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:563:9: 'break' ( Identifier )? ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:563:9: 'break' ( Identifier )? ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11902,7 +11902,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("break"); /*System.out.println("FOUND BREAK");*/operatorCount++; JavaMetrics.uniqueOperator.add("break");}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:563:170: ( Identifier )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:563:170: ( Identifier )?
 					int alt117=2;
 					int LA117_0 = input.LA(1);
 					if ( (LA117_0==Identifier) ) {
@@ -11910,7 +11910,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt117) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:563:170: Identifier
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:563:170: Identifier
 							{
 							Identifier392=(Token)match(input,Identifier,FOLLOW_Identifier_in_statement3967); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -11934,7 +11934,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 13 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:564:9: 'continue' ( Identifier )? ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:564:9: 'continue' ( Identifier )? ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11946,7 +11946,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("continue");operatorCount++; JavaMetrics.uniqueOperator.add("continue");}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:564:141: ( Identifier )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:564:141: ( Identifier )?
 					int alt118=2;
 					int LA118_0 = input.LA(1);
 					if ( (LA118_0==Identifier) ) {
@@ -11954,7 +11954,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt118) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:564:141: Identifier
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:564:141: Identifier
 							{
 							Identifier395=(Token)match(input,Identifier,FOLLOW_Identifier_in_statement3987); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -11978,7 +11978,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 14 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:565:9: ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:565:9: ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -11993,7 +11993,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 15 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:566:9: statementExpression ';'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:566:9: statementExpression ';'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -12014,7 +12014,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 16 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:567:9: Identifier ':' statement
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:567:9: Identifier ':' statement
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -12072,7 +12072,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "catches"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:570:1: catches : catchClause ( catchClause )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:570:1: catches : catchClause ( catchClause )* ;
 	public final JavaJavaParser.catches_return catches() throws RecognitionException {
 		JavaJavaParser.catches_return retval = new JavaJavaParser.catches_return();
 		retval.start = input.LT(1);
@@ -12087,8 +12087,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 91) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:571:5: ( catchClause ( catchClause )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:571:9: catchClause ( catchClause )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:571:5: ( catchClause ( catchClause )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:571:9: catchClause ( catchClause )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -12099,7 +12099,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, catchClause403.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:571:21: ( catchClause )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:571:21: ( catchClause )*
 			loop120:
 			while (true) {
 				int alt120=2;
@@ -12110,7 +12110,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt120) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:571:22: catchClause
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:571:22: catchClause
 					{
 					pushFollow(FOLLOW_catchClause_in_catches4063);
 					catchClause404=catchClause();
@@ -12158,7 +12158,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "catchClause"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:574:1: catchClause : 'catch' '(' formalParameter ')' block ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:574:1: catchClause : 'catch' '(' formalParameter ')' block ;
 	public final JavaJavaParser.catchClause_return catchClause() throws RecognitionException {
 		JavaJavaParser.catchClause_return retval = new JavaJavaParser.catchClause_return();
 		retval.start = input.LT(1);
@@ -12179,8 +12179,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 92) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:575:5: ( 'catch' '(' formalParameter ')' block )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:575:9: 'catch' '(' formalParameter ')' block
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:575:5: ( 'catch' '(' formalParameter ')' block )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:575:9: 'catch' '(' formalParameter ')' block
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -12250,7 +12250,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "formalParameter"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:578:1: formalParameter : variableModifiers type variableDeclaratorId ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:578:1: formalParameter : variableModifiers type variableDeclaratorId ;
 	public final JavaJavaParser.formalParameter_return formalParameter() throws RecognitionException {
 		JavaJavaParser.formalParameter_return retval = new JavaJavaParser.formalParameter_return();
 		retval.start = input.LT(1);
@@ -12266,8 +12266,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 93) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:579:5: ( variableModifiers type variableDeclaratorId )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:579:9: variableModifiers type variableDeclaratorId
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:579:5: ( variableModifiers type variableDeclaratorId )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:579:9: variableModifiers type variableDeclaratorId
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -12322,7 +12322,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "switchBlockStatementGroups"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:582:1: switchBlockStatementGroups : ( switchBlockStatementGroup )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:582:1: switchBlockStatementGroups : ( switchBlockStatementGroup )* ;
 	public final JavaJavaParser.switchBlockStatementGroups_return switchBlockStatementGroups() throws RecognitionException {
 		JavaJavaParser.switchBlockStatementGroups_return retval = new JavaJavaParser.switchBlockStatementGroups_return();
 		retval.start = input.LT(1);
@@ -12336,13 +12336,13 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 94) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:583:5: ( ( switchBlockStatementGroup )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:583:9: ( switchBlockStatementGroup )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:583:5: ( ( switchBlockStatementGroup )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:583:9: ( switchBlockStatementGroup )*
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:583:9: ( switchBlockStatementGroup )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:583:9: ( switchBlockStatementGroup )*
 			loop121:
 			while (true) {
 				int alt121=2;
@@ -12353,7 +12353,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt121) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:583:10: switchBlockStatementGroup
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:583:10: switchBlockStatementGroup
 					{
 					pushFollow(FOLLOW_switchBlockStatementGroup_in_switchBlockStatementGroups4152);
 					switchBlockStatementGroup413=switchBlockStatementGroup();
@@ -12401,7 +12401,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "switchBlockStatementGroup"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:590:1: switchBlockStatementGroup : ( switchLabel )+ ( blockStatement )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:590:1: switchBlockStatementGroup : ( switchLabel )+ ( blockStatement )* ;
 	public final JavaJavaParser.switchBlockStatementGroup_return switchBlockStatementGroup() throws RecognitionException {
 		JavaJavaParser.switchBlockStatementGroup_return retval = new JavaJavaParser.switchBlockStatementGroup_return();
 		retval.start = input.LT(1);
@@ -12416,13 +12416,13 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 95) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:5: ( ( switchLabel )+ ( blockStatement )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:9: ( switchLabel )+ ( blockStatement )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:5: ( ( switchLabel )+ ( blockStatement )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:9: ( switchLabel )+ ( blockStatement )*
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:9: ( switchLabel )+
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:9: ( switchLabel )+
 			int cnt122=0;
 			loop122:
 			while (true) {
@@ -12445,7 +12445,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt122) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:9: switchLabel
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:9: switchLabel
 					{
 					pushFollow(FOLLOW_switchLabel_in_switchBlockStatementGroup4179);
 					switchLabel414=switchLabel();
@@ -12465,7 +12465,7 @@ public class JavaJavaParser extends Parser {
 				cnt122++;
 			}
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:22: ( blockStatement )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:22: ( blockStatement )*
 			loop123:
 			while (true) {
 				int alt123=2;
@@ -12476,7 +12476,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt123) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:22: blockStatement
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:22: blockStatement
 					{
 					pushFollow(FOLLOW_blockStatement_in_switchBlockStatementGroup4182);
 					blockStatement415=blockStatement();
@@ -12524,7 +12524,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "switchLabel"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:594:1: switchLabel : ( 'case' constantExpression ':' | 'case' enumConstantName ':' | 'default' ':' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:594:1: switchLabel : ( 'case' constantExpression ':' | 'case' enumConstantName ':' | 'default' ':' );
 	public final JavaJavaParser.switchLabel_return switchLabel() throws RecognitionException {
 		JavaJavaParser.switchLabel_return retval = new JavaJavaParser.switchLabel_return();
 		retval.start = input.LT(1);
@@ -12551,7 +12551,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 96) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:595:5: ( 'case' constantExpression ':' | 'case' enumConstantName ':' | 'default' ':' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:595:5: ( 'case' constantExpression ':' | 'case' enumConstantName ':' | 'default' ':' )
 			int alt124=3;
 			int LA124_0 = input.LA(1);
 			if ( (LA124_0==63) ) {
@@ -12634,7 +12634,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt124) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:595:9: 'case' constantExpression ':'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:595:9: 'case' constantExpression ':'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -12661,7 +12661,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:596:9: 'case' enumConstantName ':'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:596:9: 'case' enumConstantName ':'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -12688,7 +12688,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:597:9: 'default' ':'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:597:9: 'default' ':'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -12740,7 +12740,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "forControl"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:600:1: forControl options {k=3; } : ( enhancedForControl | ( forInit )? ';' ( expression )? ';' ( forUpdate )? );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:600:1: forControl options {k=3; } : ( enhancedForControl | ( forInit )? ';' ( expression )? ';' ( forUpdate )? );
 	public final JavaJavaParser.forControl_return forControl() throws RecognitionException {
 		JavaJavaParser.forControl_return retval = new JavaJavaParser.forControl_return();
 		retval.start = input.LT(1);
@@ -12761,12 +12761,12 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 97) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:602:5: ( enhancedForControl | ( forInit )? ';' ( expression )? ';' ( forUpdate )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:602:5: ( enhancedForControl | ( forInit )? ';' ( expression )? ';' ( forUpdate )? )
 			int alt128=2;
 			alt128 = dfa128.predict(input);
 			switch (alt128) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:602:9: enhancedForControl
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:602:9: enhancedForControl
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -12780,12 +12780,12 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:9: ( forInit )? ';' ( expression )? ';' ( forUpdate )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:9: ( forInit )? ';' ( expression )? ';' ( forUpdate )?
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:9: ( forInit )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:9: ( forInit )?
 					int alt125=2;
 					int LA125_0 = input.LA(1);
 					if ( ((LA125_0 >= CharacterLiteral && LA125_0 <= DecimalLiteral)||LA125_0==FloatingPointLiteral||(LA125_0 >= HexLiteral && LA125_0 <= Identifier)||(LA125_0 >= OctalLiteral && LA125_0 <= StringLiteral)||LA125_0==25||LA125_0==32||(LA125_0 >= 36 && LA125_0 <= 37)||(LA125_0 >= 40 && LA125_0 <= 41)||LA125_0==54||LA125_0==60||LA125_0==62||LA125_0==65||LA125_0==70||(LA125_0 >= 73 && LA125_0 <= 74)||LA125_0==76||LA125_0==82||LA125_0==84||(LA125_0 >= 86 && LA125_0 <= 87)||LA125_0==93||LA125_0==96||LA125_0==99||LA125_0==103||LA125_0==105||LA125_0==113) ) {
@@ -12793,7 +12793,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt125) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:9: forInit
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:9: forInit
 							{
 							pushFollow(FOLLOW_forInit_in_forControl4282);
 							forInit425=forInit();
@@ -12812,7 +12812,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal426_tree);
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:22: ( expression )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:22: ( expression )?
 					int alt126=2;
 					int LA126_0 = input.LA(1);
 					if ( ((LA126_0 >= CharacterLiteral && LA126_0 <= DecimalLiteral)||LA126_0==FloatingPointLiteral||(LA126_0 >= HexLiteral && LA126_0 <= Identifier)||(LA126_0 >= OctalLiteral && LA126_0 <= StringLiteral)||LA126_0==25||LA126_0==32||(LA126_0 >= 36 && LA126_0 <= 37)||(LA126_0 >= 40 && LA126_0 <= 41)||LA126_0==60||LA126_0==62||LA126_0==65||LA126_0==70||LA126_0==73||LA126_0==76||LA126_0==82||LA126_0==84||(LA126_0 >= 86 && LA126_0 <= 87)||LA126_0==93||LA126_0==96||LA126_0==99||LA126_0==103||LA126_0==105||LA126_0==113) ) {
@@ -12820,7 +12820,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt126) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:22: expression
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:22: expression
 							{
 							pushFollow(FOLLOW_expression_in_forControl4287);
 							expression427=expression();
@@ -12839,7 +12839,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal428_tree);
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:38: ( forUpdate )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:38: ( forUpdate )?
 					int alt127=2;
 					int LA127_0 = input.LA(1);
 					if ( ((LA127_0 >= CharacterLiteral && LA127_0 <= DecimalLiteral)||LA127_0==FloatingPointLiteral||(LA127_0 >= HexLiteral && LA127_0 <= Identifier)||(LA127_0 >= OctalLiteral && LA127_0 <= StringLiteral)||LA127_0==25||LA127_0==32||(LA127_0 >= 36 && LA127_0 <= 37)||(LA127_0 >= 40 && LA127_0 <= 41)||LA127_0==60||LA127_0==62||LA127_0==65||LA127_0==70||LA127_0==73||LA127_0==76||LA127_0==82||LA127_0==84||(LA127_0 >= 86 && LA127_0 <= 87)||LA127_0==93||LA127_0==96||LA127_0==99||LA127_0==103||LA127_0==105||LA127_0==113) ) {
@@ -12847,7 +12847,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt127) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:38: forUpdate
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:603:38: forUpdate
 							{
 							pushFollow(FOLLOW_forUpdate_in_forControl4292);
 							forUpdate429=forUpdate();
@@ -12894,7 +12894,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "forInit"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:606:1: forInit : ( localVariableDeclaration | expressionList );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:606:1: forInit : ( localVariableDeclaration | expressionList );
 	public final JavaJavaParser.forInit_return forInit() throws RecognitionException {
 		JavaJavaParser.forInit_return retval = new JavaJavaParser.forInit_return();
 		retval.start = input.LT(1);
@@ -12909,7 +12909,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 98) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:607:5: ( localVariableDeclaration | expressionList )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:607:5: ( localVariableDeclaration | expressionList )
 			int alt129=2;
 			switch ( input.LA(1) ) {
 			case 54:
@@ -13058,7 +13058,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt129) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:607:9: localVariableDeclaration
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:607:9: localVariableDeclaration
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13072,7 +13072,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:608:9: expressionList
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:608:9: expressionList
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13117,7 +13117,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "enhancedForControl"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:611:1: enhancedForControl : variableModifiers type Identifier ':' expression ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:611:1: enhancedForControl : variableModifiers type Identifier ':' expression ;
 	public final JavaJavaParser.enhancedForControl_return enhancedForControl() throws RecognitionException {
 		JavaJavaParser.enhancedForControl_return retval = new JavaJavaParser.enhancedForControl_return();
 		retval.start = input.LT(1);
@@ -13137,8 +13137,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 99) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:612:5: ( variableModifiers type Identifier ':' expression )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:612:9: variableModifiers type Identifier ':' expression
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:612:5: ( variableModifiers type Identifier ':' expression )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:612:9: variableModifiers type Identifier ':' expression
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -13206,7 +13206,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "forUpdate"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:615:1: forUpdate : expressionList ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:615:1: forUpdate : expressionList ;
 	public final JavaJavaParser.forUpdate_return forUpdate() throws RecognitionException {
 		JavaJavaParser.forUpdate_return retval = new JavaJavaParser.forUpdate_return();
 		retval.start = input.LT(1);
@@ -13220,8 +13220,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 100) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:616:5: ( expressionList )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:616:9: expressionList
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:616:5: ( expressionList )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:616:9: expressionList
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -13264,7 +13264,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "parExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:621:1: parExpression : '(' expression ')' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:621:1: parExpression : '(' expression ')' ;
 	public final JavaJavaParser.parExpression_return parExpression() throws RecognitionException {
 		JavaJavaParser.parExpression_return retval = new JavaJavaParser.parExpression_return();
 		retval.start = input.LT(1);
@@ -13282,8 +13282,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 101) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:622:5: ( '(' expression ')' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:622:9: '(' expression ')'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:622:5: ( '(' expression ')' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:622:9: '(' expression ')'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -13340,7 +13340,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "expressionList"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:625:1: expressionList : expression ( ',' expression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:625:1: expressionList : expression ( ',' expression )* ;
 	public final JavaJavaParser.expressionList_return expressionList() throws RecognitionException {
 		JavaJavaParser.expressionList_return retval = new JavaJavaParser.expressionList_return();
 		retval.start = input.LT(1);
@@ -13357,8 +13357,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 102) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:626:5: ( expression ( ',' expression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:626:9: expression ( ',' expression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:626:5: ( expression ( ',' expression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:626:9: expression ( ',' expression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -13369,7 +13369,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, expression441.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:626:20: ( ',' expression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:626:20: ( ',' expression )*
 			loop130:
 			while (true) {
 				int alt130=2;
@@ -13380,7 +13380,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt130) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:626:21: ',' expression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:626:21: ',' expression
 					{
 					char_literal442=(Token)match(input,39,FOLLOW_39_in_expressionList4429); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -13435,7 +13435,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "statementExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:629:1: statementExpression : expression ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:629:1: statementExpression : expression ;
 	public final JavaJavaParser.statementExpression_return statementExpression() throws RecognitionException {
 		JavaJavaParser.statementExpression_return retval = new JavaJavaParser.statementExpression_return();
 		retval.start = input.LT(1);
@@ -13449,8 +13449,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 103) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:630:5: ( expression )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:630:9: expression
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:630:5: ( expression )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:630:9: expression
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -13493,7 +13493,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "constantExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:633:1: constantExpression : expression ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:633:1: constantExpression : expression ;
 	public final JavaJavaParser.constantExpression_return constantExpression() throws RecognitionException {
 		JavaJavaParser.constantExpression_return retval = new JavaJavaParser.constantExpression_return();
 		retval.start = input.LT(1);
@@ -13507,8 +13507,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 104) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:634:5: ( expression )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:634:9: expression
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:634:5: ( expression )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:634:9: expression
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -13551,7 +13551,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "expression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:637:1: expression : conditionalExpression ( assignmentOperator expression )? ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:637:1: expression : conditionalExpression ( assignmentOperator expression )? ;
 	public final JavaJavaParser.expression_return expression() throws RecognitionException {
 		JavaJavaParser.expression_return retval = new JavaJavaParser.expression_return();
 		retval.start = input.LT(1);
@@ -13567,8 +13567,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 105) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:5: ( conditionalExpression ( assignmentOperator expression )? )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:9: conditionalExpression ( assignmentOperator expression )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:5: ( conditionalExpression ( assignmentOperator expression )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:9: conditionalExpression ( assignmentOperator expression )?
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -13579,7 +13579,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, conditionalExpression446.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:31: ( assignmentOperator expression )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:31: ( assignmentOperator expression )?
 			int alt131=2;
 			switch ( input.LA(1) ) {
 				case 50:
@@ -13673,7 +13673,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt131) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:32: assignmentOperator expression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:32: assignmentOperator expression
 					{
 					pushFollow(FOLLOW_assignmentOperator_in_expression4503);
 					assignmentOperator447=assignmentOperator();
@@ -13724,7 +13724,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "assignmentOperator"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:641:1: assignmentOperator : ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?| ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?| ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?);
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:641:1: assignmentOperator : ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?| ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?| ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?);
 	public final JavaJavaParser.assignmentOperator_return assignmentOperator() throws RecognitionException {
 		JavaJavaParser.assignmentOperator_return retval = new JavaJavaParser.assignmentOperator_return();
 		retval.start = input.LT(1);
@@ -13763,7 +13763,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 106) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:642:5: ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?| ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?| ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?)
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:642:5: ( '=' | '+=' | '-=' | '*=' | '/=' | '&=' | '|=' | '^=' | '%=' | ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?| ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?| ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?)
 			int alt132=12;
 			int LA132_0 = input.LA(1);
 			if ( (LA132_0==50) ) {
@@ -13833,7 +13833,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt132) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:642:9: '='
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:642:9: '='
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13848,7 +13848,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:643:9: '+='
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:643:9: '+='
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13863,7 +13863,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:644:9: '-='
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:644:9: '-='
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13878,7 +13878,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:645:9: '*='
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:645:9: '*='
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13893,7 +13893,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:646:9: '/='
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:646:9: '/='
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13908,7 +13908,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:647:9: '&='
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:647:9: '&='
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13923,7 +13923,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:648:9: '|='
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:648:9: '|='
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13938,7 +13938,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:649:9: '^='
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:649:9: '^='
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13953,7 +13953,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 9 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:650:9: '%='
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:650:9: '%='
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -13968,7 +13968,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 10 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:651:9: ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:651:9: ( '<' '<' '=' )=>t1= '<' t2= '<' t3= '=' {...}?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -14001,7 +14001,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 11 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:656:9: ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:656:9: ( '>' '>' '>' '=' )=>t1= '>' t2= '>' t3= '>' t4= '=' {...}?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -14042,7 +14042,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 12 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:663:9: ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:663:9: ( '>' '>' '=' )=>t1= '>' t2= '>' t3= '=' {...}?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -14106,7 +14106,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "conditionalExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:670:1: conditionalExpression : conditionalOrExpression ( '?' expression ':' expression )? ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:670:1: conditionalExpression : conditionalOrExpression ( '?' expression ':' expression )? ;
 	public final JavaJavaParser.conditionalExpression_return conditionalExpression() throws RecognitionException {
 		JavaJavaParser.conditionalExpression_return retval = new JavaJavaParser.conditionalExpression_return();
 		retval.start = input.LT(1);
@@ -14126,8 +14126,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 107) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:671:5: ( conditionalOrExpression ( '?' expression ':' expression )? )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:671:9: conditionalOrExpression ( '?' expression ':' expression )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:671:5: ( conditionalOrExpression ( '?' expression ':' expression )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:671:9: conditionalOrExpression ( '?' expression ':' expression )?
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -14138,7 +14138,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, conditionalOrExpression458.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:671:33: ( '?' expression ':' expression )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:671:33: ( '?' expression ':' expression )?
 			int alt133=2;
 			int LA133_0 = input.LA(1);
 			if ( (LA133_0==53) ) {
@@ -14146,7 +14146,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt133) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:671:35: '?' expression ':' expression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:671:35: '?' expression ':' expression
 					{
 					char_literal459=(Token)match(input,53,FOLLOW_53_in_conditionalExpression4783); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -14209,7 +14209,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "conditionalOrExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:674:1: conditionalOrExpression : conditionalAndExpression ( '||' conditionalAndExpression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:674:1: conditionalOrExpression : conditionalAndExpression ( '||' conditionalAndExpression )* ;
 	public final JavaJavaParser.conditionalOrExpression_return conditionalOrExpression() throws RecognitionException {
 		JavaJavaParser.conditionalOrExpression_return retval = new JavaJavaParser.conditionalOrExpression_return();
 		retval.start = input.LT(1);
@@ -14226,8 +14226,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 108) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:675:5: ( conditionalAndExpression ( '||' conditionalAndExpression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:675:9: conditionalAndExpression ( '||' conditionalAndExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:675:5: ( conditionalAndExpression ( '||' conditionalAndExpression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:675:9: conditionalAndExpression ( '||' conditionalAndExpression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -14238,7 +14238,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, conditionalAndExpression463.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:675:34: ( '||' conditionalAndExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:675:34: ( '||' conditionalAndExpression )*
 			loop134:
 			while (true) {
 				int alt134=2;
@@ -14249,7 +14249,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt134) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:675:36: '||' conditionalAndExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:675:36: '||' conditionalAndExpression
 					{
 					string_literal464=(Token)match(input,111,FOLLOW_111_in_conditionalOrExpression4815); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -14304,7 +14304,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "conditionalAndExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:678:1: conditionalAndExpression : inclusiveOrExpression ( '&&' inclusiveOrExpression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:678:1: conditionalAndExpression : inclusiveOrExpression ( '&&' inclusiveOrExpression )* ;
 	public final JavaJavaParser.conditionalAndExpression_return conditionalAndExpression() throws RecognitionException {
 		JavaJavaParser.conditionalAndExpression_return retval = new JavaJavaParser.conditionalAndExpression_return();
 		retval.start = input.LT(1);
@@ -14321,8 +14321,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 109) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:679:5: ( inclusiveOrExpression ( '&&' inclusiveOrExpression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:679:9: inclusiveOrExpression ( '&&' inclusiveOrExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:679:5: ( inclusiveOrExpression ( '&&' inclusiveOrExpression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:679:9: inclusiveOrExpression ( '&&' inclusiveOrExpression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -14333,7 +14333,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, inclusiveOrExpression466.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:679:31: ( '&&' inclusiveOrExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:679:31: ( '&&' inclusiveOrExpression )*
 			loop135:
 			while (true) {
 				int alt135=2;
@@ -14344,7 +14344,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt135) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:679:33: '&&' inclusiveOrExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:679:33: '&&' inclusiveOrExpression
 					{
 					string_literal467=(Token)match(input,29,FOLLOW_29_in_conditionalAndExpression4845); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -14399,7 +14399,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "inclusiveOrExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:682:1: inclusiveOrExpression : exclusiveOrExpression ( '|' exclusiveOrExpression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:682:1: inclusiveOrExpression : exclusiveOrExpression ( '|' exclusiveOrExpression )* ;
 	public final JavaJavaParser.inclusiveOrExpression_return inclusiveOrExpression() throws RecognitionException {
 		JavaJavaParser.inclusiveOrExpression_return retval = new JavaJavaParser.inclusiveOrExpression_return();
 		retval.start = input.LT(1);
@@ -14416,8 +14416,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 110) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:683:5: ( exclusiveOrExpression ( '|' exclusiveOrExpression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:683:9: exclusiveOrExpression ( '|' exclusiveOrExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:683:5: ( exclusiveOrExpression ( '|' exclusiveOrExpression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:683:9: exclusiveOrExpression ( '|' exclusiveOrExpression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -14428,7 +14428,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, exclusiveOrExpression469.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:683:31: ( '|' exclusiveOrExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:683:31: ( '|' exclusiveOrExpression )*
 			loop136:
 			while (true) {
 				int alt136=2;
@@ -14439,7 +14439,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt136) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:683:33: '|' exclusiveOrExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:683:33: '|' exclusiveOrExpression
 					{
 					char_literal470=(Token)match(input,109,FOLLOW_109_in_inclusiveOrExpression4875); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -14494,7 +14494,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "exclusiveOrExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:686:1: exclusiveOrExpression : andExpression ( '^' andExpression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:686:1: exclusiveOrExpression : andExpression ( '^' andExpression )* ;
 	public final JavaJavaParser.exclusiveOrExpression_return exclusiveOrExpression() throws RecognitionException {
 		JavaJavaParser.exclusiveOrExpression_return retval = new JavaJavaParser.exclusiveOrExpression_return();
 		retval.start = input.LT(1);
@@ -14511,8 +14511,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 111) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:687:5: ( andExpression ( '^' andExpression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:687:9: andExpression ( '^' andExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:687:5: ( andExpression ( '^' andExpression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:687:9: andExpression ( '^' andExpression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -14523,7 +14523,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, andExpression472.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:687:23: ( '^' andExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:687:23: ( '^' andExpression )*
 			loop137:
 			while (true) {
 				int alt137=2;
@@ -14534,7 +14534,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt137) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:687:25: '^' andExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:687:25: '^' andExpression
 					{
 					char_literal473=(Token)match(input,57,FOLLOW_57_in_exclusiveOrExpression4905); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -14588,7 +14588,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "andExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:690:1: andExpression : equalityExpression ( '&' equalityExpression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:690:1: andExpression : equalityExpression ( '&' equalityExpression )* ;
 	public final JavaJavaParser.andExpression_return andExpression() throws RecognitionException {
 		JavaJavaParser.andExpression_return retval = new JavaJavaParser.andExpression_return();
 		retval.start = input.LT(1);
@@ -14605,8 +14605,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 112) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:691:5: ( equalityExpression ( '&' equalityExpression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:691:9: equalityExpression ( '&' equalityExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:691:5: ( equalityExpression ( '&' equalityExpression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:691:9: equalityExpression ( '&' equalityExpression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -14617,7 +14617,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, equalityExpression475.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:691:28: ( '&' equalityExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:691:28: ( '&' equalityExpression )*
 			loop138:
 			while (true) {
 				int alt138=2;
@@ -14628,7 +14628,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt138) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:691:30: '&' equalityExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:691:30: '&' equalityExpression
 					{
 					char_literal476=(Token)match(input,30,FOLLOW_30_in_andExpression4933); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -14683,7 +14683,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "equalityExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:694:1: equalityExpression : instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:694:1: equalityExpression : instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* ;
 	public final JavaJavaParser.equalityExpression_return equalityExpression() throws RecognitionException {
 		JavaJavaParser.equalityExpression_return retval = new JavaJavaParser.equalityExpression_return();
 		retval.start = input.LT(1);
@@ -14702,8 +14702,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 113) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:5: ( instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:9: instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:5: ( instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:9: instanceOfExpression ( ( '==' | '!=' ) instanceOfExpression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -14714,7 +14714,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, instanceOfExpression478.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:30: ( ( '==' | '!=' ) instanceOfExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:30: ( ( '==' | '!=' ) instanceOfExpression )*
 			loop140:
 			while (true) {
 				int alt140=2;
@@ -14725,9 +14725,9 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt140) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:32: ( '==' | '!=' ) instanceOfExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:32: ( '==' | '!=' ) instanceOfExpression
 					{
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:32: ( '==' | '!=' )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:32: ( '==' | '!=' )
 					int alt139=2;
 					int LA139_0 = input.LA(1);
 					if ( (LA139_0==51) ) {
@@ -14746,7 +14746,7 @@ public class JavaJavaParser extends Parser {
 
 					switch (alt139) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:33: '=='
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:33: '=='
 							{
 							string_literal479=(Token)match(input,51,FOLLOW_51_in_equalityExpression4964); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -14758,7 +14758,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:50: '!='
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:695:50: '!='
 							{
 							string_literal480=(Token)match(input,26,FOLLOW_26_in_equalityExpression4969); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -14818,7 +14818,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "instanceOfExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:698:1: instanceOfExpression : relationalExpression ( 'instanceof' type )? ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:698:1: instanceOfExpression : relationalExpression ( 'instanceof' type )? ;
 	public final JavaJavaParser.instanceOfExpression_return instanceOfExpression() throws RecognitionException {
 		JavaJavaParser.instanceOfExpression_return retval = new JavaJavaParser.instanceOfExpression_return();
 		retval.start = input.LT(1);
@@ -14835,8 +14835,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 114) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:699:5: ( relationalExpression ( 'instanceof' type )? )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:699:9: relationalExpression ( 'instanceof' type )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:699:5: ( relationalExpression ( 'instanceof' type )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:699:9: relationalExpression ( 'instanceof' type )?
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -14847,7 +14847,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, relationalExpression482.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:699:30: ( 'instanceof' type )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:699:30: ( 'instanceof' type )?
 			int alt141=2;
 			int LA141_0 = input.LA(1);
 			if ( (LA141_0==81) ) {
@@ -14855,7 +14855,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt141) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:699:31: 'instanceof' type
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:699:31: 'instanceof' type
 					{
 					string_literal483=(Token)match(input,81,FOLLOW_81_in_instanceOfExpression4999); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -14907,7 +14907,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "relationalExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:702:1: relationalExpression : shiftExpression ( relationalOp shiftExpression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:702:1: relationalExpression : shiftExpression ( relationalOp shiftExpression )* ;
 	public final JavaJavaParser.relationalExpression_return relationalExpression() throws RecognitionException {
 		JavaJavaParser.relationalExpression_return retval = new JavaJavaParser.relationalExpression_return();
 		retval.start = input.LT(1);
@@ -14923,8 +14923,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 115) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:703:5: ( shiftExpression ( relationalOp shiftExpression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:703:9: shiftExpression ( relationalOp shiftExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:703:5: ( shiftExpression ( relationalOp shiftExpression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:703:9: shiftExpression ( relationalOp shiftExpression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -14935,7 +14935,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, shiftExpression485.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:703:25: ( relationalOp shiftExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:703:25: ( relationalOp shiftExpression )*
 			loop142:
 			while (true) {
 				int alt142=2;
@@ -14957,7 +14957,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt142) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:703:27: relationalOp shiftExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:703:27: relationalOp shiftExpression
 					{
 					pushFollow(FOLLOW_relationalOp_in_relationalExpression5027);
 					relationalOp486=relationalOp();
@@ -15011,7 +15011,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "relationalOp"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:706:1: relationalOp : ( ( '<' '=' )=>t1= '<' t2= '=' {...}?| ( '>' '=' )=>t1= '>' t2= '=' {...}?| '<' | '>' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:706:1: relationalOp : ( ( '<' '=' )=>t1= '<' t2= '=' {...}?| ( '>' '=' )=>t1= '>' t2= '=' {...}?| '<' | '>' );
 	public final JavaJavaParser.relationalOp_return relationalOp() throws RecognitionException {
 		JavaJavaParser.relationalOp_return retval = new JavaJavaParser.relationalOp_return();
 		retval.start = input.LT(1);
@@ -15032,7 +15032,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 116) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:707:5: ( ( '<' '=' )=>t1= '<' t2= '=' {...}?| ( '>' '=' )=>t1= '>' t2= '=' {...}?| '<' | '>' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:707:5: ( ( '<' '=' )=>t1= '<' t2= '=' {...}?| ( '>' '=' )=>t1= '>' t2= '=' {...}?| '<' | '>' )
 			int alt143=4;
 			int LA143_0 = input.LA(1);
 			if ( (LA143_0==49) ) {
@@ -15091,7 +15091,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt143) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:707:9: ( '<' '=' )=>t1= '<' t2= '=' {...}?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:707:9: ( '<' '=' )=>t1= '<' t2= '=' {...}?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -15116,7 +15116,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:710:9: ( '>' '=' )=>t1= '>' t2= '=' {...}?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:710:9: ( '>' '=' )=>t1= '>' t2= '=' {...}?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -15141,7 +15141,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:713:9: '<'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:713:9: '<'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -15156,7 +15156,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:714:9: '>'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:714:9: '>'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -15202,7 +15202,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "shiftExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:717:1: shiftExpression : additiveExpression ( shiftOp additiveExpression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:717:1: shiftExpression : additiveExpression ( shiftOp additiveExpression )* ;
 	public final JavaJavaParser.shiftExpression_return shiftExpression() throws RecognitionException {
 		JavaJavaParser.shiftExpression_return retval = new JavaJavaParser.shiftExpression_return();
 		retval.start = input.LT(1);
@@ -15218,8 +15218,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 117) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:718:5: ( additiveExpression ( shiftOp additiveExpression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:718:9: additiveExpression ( shiftOp additiveExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:718:5: ( additiveExpression ( shiftOp additiveExpression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:718:9: additiveExpression ( shiftOp additiveExpression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -15230,7 +15230,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, additiveExpression490.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:718:28: ( shiftOp additiveExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:718:28: ( shiftOp additiveExpression )*
 			loop144:
 			while (true) {
 				int alt144=2;
@@ -15267,7 +15267,7 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt144) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:718:30: shiftOp additiveExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:718:30: shiftOp additiveExpression
 					{
 					pushFollow(FOLLOW_shiftOp_in_shiftExpression5160);
 					shiftOp491=shiftOp();
@@ -15321,7 +15321,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "shiftOp"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:721:1: shiftOp : ( ( '<' '<' )=>t1= '<' t2= '<' {...}?| ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?| ( '>' '>' )=>t1= '>' t2= '>' {...}?);
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:721:1: shiftOp : ( ( '<' '<' )=>t1= '<' t2= '<' {...}?| ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?| ( '>' '>' )=>t1= '>' t2= '>' {...}?);
 	public final JavaJavaParser.shiftOp_return shiftOp() throws RecognitionException {
 		JavaJavaParser.shiftOp_return retval = new JavaJavaParser.shiftOp_return();
 		retval.start = input.LT(1);
@@ -15340,7 +15340,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 118) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:722:5: ( ( '<' '<' )=>t1= '<' t2= '<' {...}?| ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?| ( '>' '>' )=>t1= '>' t2= '>' {...}?)
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:722:5: ( ( '<' '<' )=>t1= '<' t2= '<' {...}?| ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?| ( '>' '>' )=>t1= '>' t2= '>' {...}?)
 			int alt145=3;
 			int LA145_0 = input.LA(1);
 			if ( (LA145_0==49) && (synpred215_JavaJava())) {
@@ -15467,7 +15467,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt145) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:722:9: ( '<' '<' )=>t1= '<' t2= '<' {...}?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:722:9: ( '<' '<' )=>t1= '<' t2= '<' {...}?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -15492,7 +15492,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:725:9: ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:725:9: ( '>' '>' '>' )=>t1= '>' t2= '>' t3= '>' {...}?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -15525,7 +15525,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:730:9: ( '>' '>' )=>t1= '>' t2= '>' {...}?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:730:9: ( '>' '>' )=>t1= '>' t2= '>' {...}?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -15581,7 +15581,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "additiveExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:736:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:736:1: additiveExpression : multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* ;
 	public final JavaJavaParser.additiveExpression_return additiveExpression() throws RecognitionException {
 		JavaJavaParser.additiveExpression_return retval = new JavaJavaParser.additiveExpression_return();
 		retval.start = input.LT(1);
@@ -15600,8 +15600,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 119) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:5: ( multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:9: multiplicativeExpression ( ( '+' | '-' ) multiplicativeExpression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -15612,7 +15612,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, multiplicativeExpression493.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:34: ( ( '+' | '-' ) multiplicativeExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:34: ( ( '+' | '-' ) multiplicativeExpression )*
 			loop147:
 			while (true) {
 				int alt147=2;
@@ -15623,9 +15623,9 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt147) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:36: ( '+' | '-' ) multiplicativeExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:36: ( '+' | '-' ) multiplicativeExpression
 					{
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:36: ( '+' | '-' )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:36: ( '+' | '-' )
 					int alt146=2;
 					int LA146_0 = input.LA(1);
 					if ( (LA146_0==36) ) {
@@ -15644,7 +15644,7 @@ public class JavaJavaParser extends Parser {
 
 					switch (alt146) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:37: '+'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:37: '+'
 							{
 							char_literal494=(Token)match(input,36,FOLLOW_36_in_additiveExpression5306); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -15656,7 +15656,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:52: '-'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:737:52: '-'
 							{
 							char_literal495=(Token)match(input,40,FOLLOW_40_in_additiveExpression5311); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -15716,7 +15716,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "multiplicativeExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:740:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:740:1: multiplicativeExpression : unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* ;
 	public final JavaJavaParser.multiplicativeExpression_return multiplicativeExpression() throws RecognitionException {
 		JavaJavaParser.multiplicativeExpression_return retval = new JavaJavaParser.multiplicativeExpression_return();
 		retval.start = input.LT(1);
@@ -15737,8 +15737,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 120) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:5: ( unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:9: unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:5: ( unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:9: unaryExpression ( ( '*' | '/' | '%' ) unaryExpression )*
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -15749,7 +15749,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, unaryExpression497.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:25: ( ( '*' | '/' | '%' ) unaryExpression )*
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:25: ( ( '*' | '/' | '%' ) unaryExpression )*
 			loop149:
 			while (true) {
 				int alt149=2;
@@ -15760,9 +15760,9 @@ public class JavaJavaParser extends Parser {
 
 				switch (alt149) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:27: ( '*' | '/' | '%' ) unaryExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:27: ( '*' | '/' | '%' ) unaryExpression
 					{
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:27: ( '*' | '/' | '%' )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:27: ( '*' | '/' | '%' )
 					int alt148=3;
 					switch ( input.LA(1) ) {
 					case 34:
@@ -15788,7 +15788,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt148) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:29: '*'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:29: '*'
 							{
 							char_literal498=(Token)match(input,34,FOLLOW_34_in_multiplicativeExpression5344); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -15800,7 +15800,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:45: '/'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:45: '/'
 							{
 							char_literal499=(Token)match(input,45,FOLLOW_45_in_multiplicativeExpression5350); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -15812,7 +15812,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 3 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:61: '%'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:741:61: '%'
 							{
 							char_literal500=(Token)match(input,27,FOLLOW_27_in_multiplicativeExpression5356); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -15872,7 +15872,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "unaryExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:744:1: unaryExpression : ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:744:1: unaryExpression : ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus );
 	public final JavaJavaParser.unaryExpression_return unaryExpression() throws RecognitionException {
 		JavaJavaParser.unaryExpression_return retval = new JavaJavaParser.unaryExpression_return();
 		retval.start = input.LT(1);
@@ -15898,7 +15898,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 121) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:745:5: ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:745:5: ( '+' unaryExpression | '-' unaryExpression | '++' unaryExpression | '--' unaryExpression | unaryExpressionNotPlusMinus )
 			int alt150=5;
 			switch ( input.LA(1) ) {
 			case 36:
@@ -15958,7 +15958,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt150) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:745:9: '+' unaryExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:745:9: '+' unaryExpression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -15978,7 +15978,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:746:9: '-' unaryExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:746:9: '-' unaryExpression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -15998,7 +15998,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:747:9: '++' unaryExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:747:9: '++' unaryExpression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16018,7 +16018,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:748:9: '--' unaryExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:748:9: '--' unaryExpression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16038,7 +16038,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:749:9: unaryExpressionNotPlusMinus
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:749:9: unaryExpressionNotPlusMinus
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16083,7 +16083,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "unaryExpressionNotPlusMinus"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:752:1: unaryExpressionNotPlusMinus : ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:752:1: unaryExpressionNotPlusMinus : ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? );
 	public final JavaJavaParser.unaryExpressionNotPlusMinus_return unaryExpressionNotPlusMinus() throws RecognitionException {
 		JavaJavaParser.unaryExpressionNotPlusMinus_return retval = new JavaJavaParser.unaryExpressionNotPlusMinus_return();
 		retval.start = input.LT(1);
@@ -16109,7 +16109,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 122) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:753:5: ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:753:5: ( '~' unaryExpression | '!' unaryExpression | castExpression | primary ( selector )* ( '++' | '--' )? )
 			int alt153=4;
 			switch ( input.LA(1) ) {
 			case 113:
@@ -16168,7 +16168,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt153) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:753:9: '~' unaryExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:753:9: '~' unaryExpression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16188,7 +16188,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:754:9: '!' unaryExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:754:9: '!' unaryExpression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16208,7 +16208,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:755:9: castExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:755:9: castExpression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16222,7 +16222,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:9: primary ( selector )* ( '++' | '--' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:9: primary ( selector )* ( '++' | '--' )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16233,7 +16233,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, primary516.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:17: ( selector )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:17: ( selector )*
 					loop151:
 					while (true) {
 						int alt151=2;
@@ -16244,7 +16244,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt151) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:17: selector
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:17: selector
 							{
 							pushFollow(FOLLOW_selector_in_unaryExpressionNotPlusMinus5490);
 							selector517=selector();
@@ -16260,7 +16260,7 @@ public class JavaJavaParser extends Parser {
 						}
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:27: ( '++' | '--' )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:27: ( '++' | '--' )?
 					int alt152=3;
 					int LA152_0 = input.LA(1);
 					if ( (LA152_0==37) ) {
@@ -16271,7 +16271,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt152) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:28: '++'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:28: '++'
 							{
 							string_literal518=(Token)match(input,37,FOLLOW_37_in_unaryExpressionNotPlusMinus5494); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -16283,7 +16283,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:44: '--'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:756:44: '--'
 							{
 							string_literal519=(Token)match(input,41,FOLLOW_41_in_unaryExpressionNotPlusMinus5498); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -16331,7 +16331,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "castExpression"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:759:1: castExpression : ( '(' primitiveType ')' unaryExpression | '(' ( type | expression ) ')' unaryExpressionNotPlusMinus );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:759:1: castExpression : ( '(' primitiveType ')' unaryExpression | '(' ( type | expression ) ')' unaryExpressionNotPlusMinus );
 	public final JavaJavaParser.castExpression_return castExpression() throws RecognitionException {
 		JavaJavaParser.castExpression_return retval = new JavaJavaParser.castExpression_return();
 		retval.start = input.LT(1);
@@ -16357,7 +16357,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 123) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:760:5: ( '(' primitiveType ')' unaryExpression | '(' ( type | expression ) ')' unaryExpressionNotPlusMinus )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:760:5: ( '(' primitiveType ')' unaryExpression | '(' ( type | expression ) ')' unaryExpressionNotPlusMinus )
 			int alt155=2;
 			int LA155_0 = input.LA(1);
 			if ( (LA155_0==32) ) {
@@ -16380,7 +16380,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt155) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:760:8: '(' primitiveType ')' unaryExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:760:8: '(' primitiveType ')' unaryExpression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16413,7 +16413,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:8: '(' ( type | expression ) ')' unaryExpressionNotPlusMinus
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:8: '(' ( type | expression ) ')' unaryExpressionNotPlusMinus
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16425,12 +16425,12 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {s("(");}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:21: ( type | expression )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:21: ( type | expression )
 					int alt154=2;
 					alt154 = dfa154.predict(input);
 					switch (alt154) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:22: type
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:22: type
 							{
 							pushFollow(FOLLOW_type_in_castExpression5540);
 							type525=type();
@@ -16441,7 +16441,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:29: expression
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:29: expression
 							{
 							pushFollow(FOLLOW_expression_in_castExpression5544);
 							expression526=expression();
@@ -16500,7 +16500,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "primary"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:764:1: primary : ( parExpression | 'this' ( '.' Identifier )* ( identifierSuffix )? | 'super' superSuffix | literal | 'new' creator |I1= Identifier ( '.' I4= Identifier )* ( identifierSuffix )? | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:764:1: primary : ( parExpression | 'this' ( '.' Identifier )* ( identifierSuffix )? | 'super' superSuffix | literal | 'new' creator |I1= Identifier ( '.' I4= Identifier )* ( identifierSuffix )? | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' );
 	public final JavaJavaParser.primary_return primary() throws RecognitionException {
 		JavaJavaParser.primary_return retval = new JavaJavaParser.primary_return();
 		retval.start = input.LT(1);
@@ -16550,7 +16550,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 124) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:765:5: ( parExpression | 'this' ( '.' Identifier )* ( identifierSuffix )? | 'super' superSuffix | literal | 'new' creator |I1= Identifier ( '.' I4= Identifier )* ( identifierSuffix )? | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:765:5: ( parExpression | 'this' ( '.' Identifier )* ( identifierSuffix )? | 'super' superSuffix | literal | 'new' creator |I1= Identifier ( '.' I4= Identifier )* ( identifierSuffix )? | primitiveType ( '[' ']' )* '.' 'class' | 'void' '.' 'class' )
 			int alt161=8;
 			switch ( input.LA(1) ) {
 			case 32:
@@ -16616,7 +16616,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt161) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:765:9: parExpression
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:765:9: parExpression
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16630,7 +16630,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:9: 'this' ( '.' Identifier )* ( identifierSuffix )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:9: 'this' ( '.' Identifier )* ( identifierSuffix )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16642,7 +16642,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {keywordCount++;JavaMetrics.uniqueKeywords.add("this");}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:72: ( '.' Identifier )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:72: ( '.' Identifier )*
 					loop156:
 					while (true) {
 						int alt156=2;
@@ -16661,7 +16661,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt156) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:73: '.' Identifier
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:73: '.' Identifier
 							{
 							char_literal531=(Token)match(input,43,FOLLOW_43_in_primary5582); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -16684,7 +16684,7 @@ public class JavaJavaParser extends Parser {
 						}
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:100: ( identifierSuffix )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:100: ( identifierSuffix )?
 					int alt157=2;
 					switch ( input.LA(1) ) {
 						case 55:
@@ -16711,7 +16711,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt157) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:100: identifierSuffix
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:100: identifierSuffix
 							{
 							pushFollow(FOLLOW_identifierSuffix_in_primary5590);
 							identifierSuffix533=identifierSuffix();
@@ -16727,7 +16727,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:767:9: 'super' superSuffix
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:767:9: 'super' superSuffix
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16748,7 +16748,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:768:9: literal
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:768:9: literal
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16762,7 +16762,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:769:9: 'new' creator
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:769:9: 'new' creator
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16783,7 +16783,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:9: I1= Identifier ( '.' I4= Identifier )* ( identifierSuffix )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:9: I1= Identifier ( '.' I4= Identifier )* ( identifierSuffix )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16795,7 +16795,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					id((I1!=null?I1.getText():null));
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:41: ( '.' I4= Identifier )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:41: ( '.' I4= Identifier )*
 					loop158:
 					while (true) {
 						int alt158=2;
@@ -16814,7 +16814,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt158) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:42: '.' I4= Identifier
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:42: '.' I4= Identifier
 							{
 							char_literal539=(Token)match(input,43,FOLLOW_43_in_primary5645); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -16837,7 +16837,7 @@ public class JavaJavaParser extends Parser {
 						}
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:73: ( identifierSuffix )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:73: ( identifierSuffix )?
 					int alt159=2;
 					switch ( input.LA(1) ) {
 						case 55:
@@ -16864,7 +16864,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt159) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:73: identifierSuffix
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:73: identifierSuffix
 							{
 							pushFollow(FOLLOW_identifierSuffix_in_primary5656);
 							identifierSuffix540=identifierSuffix();
@@ -16880,7 +16880,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:771:9: primitiveType ( '[' ']' )* '.' 'class'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:771:9: primitiveType ( '[' ']' )* '.' 'class'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -16891,7 +16891,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, primitiveType541.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:771:23: ( '[' ']' )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:771:23: ( '[' ']' )*
 					loop160:
 					while (true) {
 						int alt160=2;
@@ -16902,7 +16902,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt160) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:771:24: '[' ']'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:771:24: '[' ']'
 							{
 							char_literal542=(Token)match(input,55,FOLLOW_55_in_primary5671); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -16942,7 +16942,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:772:9: 'void' '.' 'class'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:772:9: 'void' '.' 'class'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17002,7 +17002,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "identifierSuffix"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:775:1: identifierSuffix : ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' explicitGenericInvocation | '.' 'this' | '.' 'super' arguments | '.' 'new' innerCreator );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:775:1: identifierSuffix : ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' explicitGenericInvocation | '.' 'this' | '.' 'super' arguments | '.' 'new' innerCreator );
 	public final JavaJavaParser.identifierSuffix_return identifierSuffix() throws RecognitionException {
 		JavaJavaParser.identifierSuffix_return retval = new JavaJavaParser.identifierSuffix_return();
 		retval.start = input.LT(1);
@@ -17050,7 +17050,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 125) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:776:5: ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' explicitGenericInvocation | '.' 'this' | '.' 'super' arguments | '.' 'new' innerCreator )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:776:5: ( ( '[' ']' )+ '.' 'class' | ( '[' expression ']' )+ | arguments | '.' 'class' | '.' explicitGenericInvocation | '.' 'this' | '.' 'super' arguments | '.' 'new' innerCreator )
 			int alt164=8;
 			switch ( input.LA(1) ) {
 			case 55:
@@ -17133,12 +17133,12 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt164) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:776:9: ( '[' ']' )+ '.' 'class'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:776:9: ( '[' ']' )+ '.' 'class'
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:776:9: ( '[' ']' )+
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:776:9: ( '[' ']' )+
 					int cnt162=0;
 					loop162:
 					while (true) {
@@ -17150,7 +17150,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt162) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:776:10: '[' ']'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:776:10: '[' ']'
 							{
 							char_literal549=(Token)match(input,55,FOLLOW_55_in_identifierSuffix5721); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -17195,12 +17195,12 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:777:9: ( '[' expression ']' )+
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:777:9: ( '[' expression ']' )+
 					{
 					root_0 = (Object)adaptor.nil();
 
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:777:9: ( '[' expression ']' )+
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:777:9: ( '[' expression ']' )+
 					int cnt163=0;
 					loop163:
 					while (true) {
@@ -17216,7 +17216,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt163) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:777:10: '[' expression ']'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:777:10: '[' expression ']'
 							{
 							char_literal553=(Token)match(input,55,FOLLOW_55_in_identifierSuffix5747); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -17253,7 +17253,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:778:9: arguments
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:778:9: arguments
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17267,7 +17267,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:779:9: '.' 'class'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:779:9: '.' 'class'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17289,7 +17289,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:780:9: '.' explicitGenericInvocation
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:780:9: '.' explicitGenericInvocation
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17310,7 +17310,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:781:9: '.' 'this'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:781:9: '.' 'this'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17332,7 +17332,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:782:9: '.' 'super' arguments
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:782:9: '.' 'super' arguments
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17360,7 +17360,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:783:9: '.' 'new' innerCreator
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:783:9: '.' 'new' innerCreator
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17419,7 +17419,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "creator"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:786:1: creator : ( nonWildcardTypeArguments createdName classCreatorRest | createdName ( arrayCreatorRest | classCreatorRest ) );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:786:1: creator : ( nonWildcardTypeArguments createdName classCreatorRest | createdName ( arrayCreatorRest | classCreatorRest ) );
 	public final JavaJavaParser.creator_return creator() throws RecognitionException {
 		JavaJavaParser.creator_return retval = new JavaJavaParser.creator_return();
 		retval.start = input.LT(1);
@@ -17438,7 +17438,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 126) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:787:5: ( nonWildcardTypeArguments createdName classCreatorRest | createdName ( arrayCreatorRest | classCreatorRest ) )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:787:5: ( nonWildcardTypeArguments createdName classCreatorRest | createdName ( arrayCreatorRest | classCreatorRest ) )
 			int alt166=2;
 			int LA166_0 = input.LA(1);
 			if ( (LA166_0==49) ) {
@@ -17457,7 +17457,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt166) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:787:9: nonWildcardTypeArguments createdName classCreatorRest
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:787:9: nonWildcardTypeArguments createdName classCreatorRest
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17483,7 +17483,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:788:9: createdName ( arrayCreatorRest | classCreatorRest )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:788:9: createdName ( arrayCreatorRest | classCreatorRest )
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17494,7 +17494,7 @@ public class JavaJavaParser extends Parser {
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) adaptor.addChild(root_0, createdName572.getTree());
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:788:21: ( arrayCreatorRest | classCreatorRest )
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:788:21: ( arrayCreatorRest | classCreatorRest )
 					int alt165=2;
 					int LA165_0 = input.LA(1);
 					if ( (LA165_0==55) ) {
@@ -17513,7 +17513,7 @@ public class JavaJavaParser extends Parser {
 
 					switch (alt165) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:788:22: arrayCreatorRest
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:788:22: arrayCreatorRest
 							{
 							pushFollow(FOLLOW_arrayCreatorRest_in_creator5884);
 							arrayCreatorRest573=arrayCreatorRest();
@@ -17524,7 +17524,7 @@ public class JavaJavaParser extends Parser {
 							}
 							break;
 						case 2 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:788:41: classCreatorRest
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:788:41: classCreatorRest
 							{
 							pushFollow(FOLLOW_classCreatorRest_in_creator5888);
 							classCreatorRest574=classCreatorRest();
@@ -17571,7 +17571,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "createdName"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:791:1: createdName : ( classOrInterfaceType | primitiveType );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:791:1: createdName : ( classOrInterfaceType | primitiveType );
 	public final JavaJavaParser.createdName_return createdName() throws RecognitionException {
 		JavaJavaParser.createdName_return retval = new JavaJavaParser.createdName_return();
 		retval.start = input.LT(1);
@@ -17586,7 +17586,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 127) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:792:5: ( classOrInterfaceType | primitiveType )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:792:5: ( classOrInterfaceType | primitiveType )
 			int alt167=2;
 			int LA167_0 = input.LA(1);
 			if ( (LA167_0==Identifier) ) {
@@ -17605,7 +17605,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt167) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:792:8: classOrInterfaceType
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:792:8: classOrInterfaceType
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17620,7 +17620,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:793:9: primitiveType
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:793:9: primitiveType
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -17666,7 +17666,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "innerCreator"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:796:1: innerCreator : ( nonWildcardTypeArguments )? Identifier classCreatorRest ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:796:1: innerCreator : ( nonWildcardTypeArguments )? Identifier classCreatorRest ;
 	public final JavaJavaParser.innerCreator_return innerCreator() throws RecognitionException {
 		JavaJavaParser.innerCreator_return retval = new JavaJavaParser.innerCreator_return();
 		retval.start = input.LT(1);
@@ -17683,13 +17683,13 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 128) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:797:5: ( ( nonWildcardTypeArguments )? Identifier classCreatorRest )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:797:9: ( nonWildcardTypeArguments )? Identifier classCreatorRest
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:797:5: ( ( nonWildcardTypeArguments )? Identifier classCreatorRest )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:797:9: ( nonWildcardTypeArguments )? Identifier classCreatorRest
 			{
 			root_0 = (Object)adaptor.nil();
 
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:797:9: ( nonWildcardTypeArguments )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:797:9: ( nonWildcardTypeArguments )?
 			int alt168=2;
 			int LA168_0 = input.LA(1);
 			if ( (LA168_0==49) ) {
@@ -17697,7 +17697,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt168) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:797:9: nonWildcardTypeArguments
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:797:9: nonWildcardTypeArguments
 					{
 					pushFollow(FOLLOW_nonWildcardTypeArguments_in_innerCreator5945);
 					nonWildcardTypeArguments577=nonWildcardTypeArguments();
@@ -17754,7 +17754,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "arrayCreatorRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:800:1: arrayCreatorRest : '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* ) ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:800:1: arrayCreatorRest : '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* ) ;
 	public final JavaJavaParser.arrayCreatorRest_return arrayCreatorRest() throws RecognitionException {
 		JavaJavaParser.arrayCreatorRest_return retval = new JavaJavaParser.arrayCreatorRest_return();
 		retval.start = input.LT(1);
@@ -17788,8 +17788,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 129) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:801:5: ( '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* ) )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:801:9: '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:801:5: ( '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* ) )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:801:9: '[' ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* )
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -17801,7 +17801,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("[");}
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:802:9: ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:802:9: ( ']' ( '[' ']' )* arrayInitializer | expression ']' ( '[' expression ']' )* ( '[' ']' )* )
 			int alt172=2;
 			int LA172_0 = input.LA(1);
 			if ( (LA172_0==56) ) {
@@ -17820,7 +17820,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt172) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:802:13: ']' ( '[' ']' )* arrayInitializer
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:802:13: ']' ( '[' ']' )* arrayInitializer
 					{
 					char_literal581=(Token)match(input,56,FOLLOW_56_in_arrayCreatorRest5984); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
@@ -17828,7 +17828,7 @@ public class JavaJavaParser extends Parser {
 					adaptor.addChild(root_0, char_literal581_tree);
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:802:17: ( '[' ']' )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:802:17: ( '[' ']' )*
 					loop169:
 					while (true) {
 						int alt169=2;
@@ -17839,7 +17839,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt169) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:802:18: '[' ']'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:802:18: '[' ']'
 							{
 							char_literal582=(Token)match(input,55,FOLLOW_55_in_arrayCreatorRest5987); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -17872,7 +17872,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:13: expression ']' ( '[' expression ']' )* ( '[' ']' )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:13: expression ']' ( '[' expression ']' )* ( '[' ']' )*
 					{
 					pushFollow(FOLLOW_expression_in_arrayCreatorRest6010);
 					expression585=expression();
@@ -17887,7 +17887,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {s("]");}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:38: ( '[' expression ']' )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:38: ( '[' expression ']' )*
 					loop170:
 					while (true) {
 						int alt170=2;
@@ -17902,7 +17902,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt170) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:39: '[' expression ']'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:39: '[' expression ']'
 							{
 							char_literal587=(Token)match(input,55,FOLLOW_55_in_arrayCreatorRest6017); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -17932,7 +17932,7 @@ public class JavaJavaParser extends Parser {
 						}
 					}
 
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:79: ( '[' ']' )*
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:79: ( '[' ']' )*
 					loop171:
 					while (true) {
 						int alt171=2;
@@ -17947,7 +17947,7 @@ public class JavaJavaParser extends Parser {
 
 						switch (alt171) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:80: '[' ']'
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:80: '[' ']'
 							{
 							char_literal590=(Token)match(input,55,FOLLOW_55_in_arrayCreatorRest6029); if (state.failed) return retval;
 							if ( state.backtracking==0 ) {
@@ -18008,7 +18008,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "classCreatorRest"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:807:1: classCreatorRest : arguments ( classBody )? ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:807:1: classCreatorRest : arguments ( classBody )? ;
 	public final JavaJavaParser.classCreatorRest_return classCreatorRest() throws RecognitionException {
 		JavaJavaParser.classCreatorRest_return retval = new JavaJavaParser.classCreatorRest_return();
 		retval.start = input.LT(1);
@@ -18023,8 +18023,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 130) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:808:5: ( arguments ( classBody )? )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:808:8: arguments ( classBody )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:808:5: ( arguments ( classBody )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:808:8: arguments ( classBody )?
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -18036,7 +18036,7 @@ public class JavaJavaParser extends Parser {
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) adaptor.addChild(root_0, arguments592.getTree());
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:808:43: ( classBody )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:808:43: ( classBody )?
 			int alt173=2;
 			int LA173_0 = input.LA(1);
 			if ( (LA173_0==108) ) {
@@ -18044,7 +18044,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt173) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:808:43: classBody
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:808:43: classBody
 					{
 					pushFollow(FOLLOW_classBody_in_classCreatorRest6067);
 					classBody593=classBody();
@@ -18089,7 +18089,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "explicitGenericInvocation"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:811:1: explicitGenericInvocation : nonWildcardTypeArguments Identifier arguments ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:811:1: explicitGenericInvocation : nonWildcardTypeArguments Identifier arguments ;
 	public final JavaJavaParser.explicitGenericInvocation_return explicitGenericInvocation() throws RecognitionException {
 		JavaJavaParser.explicitGenericInvocation_return retval = new JavaJavaParser.explicitGenericInvocation_return();
 		retval.start = input.LT(1);
@@ -18106,8 +18106,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 131) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:812:5: ( nonWildcardTypeArguments Identifier arguments )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:812:9: nonWildcardTypeArguments Identifier arguments
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:812:5: ( nonWildcardTypeArguments Identifier arguments )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:812:9: nonWildcardTypeArguments Identifier arguments
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -18163,7 +18163,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "nonWildcardTypeArguments"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:815:1: nonWildcardTypeArguments : '<' typeList '>' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:815:1: nonWildcardTypeArguments : '<' typeList '>' ;
 	public final JavaJavaParser.nonWildcardTypeArguments_return nonWildcardTypeArguments() throws RecognitionException {
 		JavaJavaParser.nonWildcardTypeArguments_return retval = new JavaJavaParser.nonWildcardTypeArguments_return();
 		retval.start = input.LT(1);
@@ -18181,8 +18181,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 132) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:816:5: ( '<' typeList '>' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:816:9: '<' typeList '>'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:816:5: ( '<' typeList '>' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:816:9: '<' typeList '>'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -18239,7 +18239,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "selector"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:819:1: selector : ( '.' Identifier ( arguments )? | '.' 'this' | '.' 'super' superSuffix | '.' 'new' innerCreator | '[' expression ']' );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:819:1: selector : ( '.' Identifier ( arguments )? | '.' 'this' | '.' 'super' superSuffix | '.' 'new' innerCreator | '[' expression ']' );
 	public final JavaJavaParser.selector_return selector() throws RecognitionException {
 		JavaJavaParser.selector_return retval = new JavaJavaParser.selector_return();
 		retval.start = input.LT(1);
@@ -18276,7 +18276,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 133) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:5: ( '.' Identifier ( arguments )? | '.' 'this' | '.' 'super' superSuffix | '.' 'new' innerCreator | '[' expression ']' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:5: ( '.' Identifier ( arguments )? | '.' 'this' | '.' 'super' superSuffix | '.' 'new' innerCreator | '[' expression ']' )
 			int alt175=5;
 			int LA175_0 = input.LA(1);
 			if ( (LA175_0==43) ) {
@@ -18327,7 +18327,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt175) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:9: '.' Identifier ( arguments )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:9: '.' Identifier ( arguments )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -18346,7 +18346,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {if(primitive) id((Identifier601!=null?Identifier601.getText():null));}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:74: ( arguments )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:74: ( arguments )?
 					int alt174=2;
 					int LA174_0 = input.LA(1);
 					if ( (LA174_0==32) ) {
@@ -18354,7 +18354,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt174) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:74: arguments
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:820:74: arguments
 							{
 							pushFollow(FOLLOW_arguments_in_selector6159);
 							arguments602=arguments();
@@ -18370,7 +18370,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:821:9: '.' 'this'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:821:9: '.' 'this'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -18392,7 +18392,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:822:9: '.' 'super' superSuffix
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:822:9: '.' 'super' superSuffix
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -18420,7 +18420,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:823:9: '.' 'new' innerCreator
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:823:9: '.' 'new' innerCreator
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -18448,7 +18448,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:824:9: '[' expression ']'
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:824:9: '[' expression ']'
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -18507,7 +18507,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "superSuffix"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:827:1: superSuffix : ( arguments | '.' Identifier ( arguments )? );
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:827:1: superSuffix : ( arguments | '.' Identifier ( arguments )? );
 	public final JavaJavaParser.superSuffix_return superSuffix() throws RecognitionException {
 		JavaJavaParser.superSuffix_return retval = new JavaJavaParser.superSuffix_return();
 		retval.start = input.LT(1);
@@ -18526,7 +18526,7 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 134) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:828:5: ( arguments | '.' Identifier ( arguments )? )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:828:5: ( arguments | '.' Identifier ( arguments )? )
 			int alt177=2;
 			int LA177_0 = input.LA(1);
 			if ( (LA177_0==32) ) {
@@ -18545,7 +18545,7 @@ public class JavaJavaParser extends Parser {
 
 			switch (alt177) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:828:9: arguments
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:828:9: arguments
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -18559,7 +18559,7 @@ public class JavaJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:829:9: '.' Identifier ( arguments )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:829:9: '.' Identifier ( arguments )?
 					{
 					root_0 = (Object)adaptor.nil();
 
@@ -18578,7 +18578,7 @@ public class JavaJavaParser extends Parser {
 					}
 
 					if ( state.backtracking==0 ) {if(primitive) id((Identifier616!=null?Identifier616.getText():null));}
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:829:72: ( arguments )?
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:829:72: ( arguments )?
 					int alt176=2;
 					int LA176_0 = input.LA(1);
 					if ( (LA176_0==32) ) {
@@ -18586,7 +18586,7 @@ public class JavaJavaParser extends Parser {
 					}
 					switch (alt176) {
 						case 1 :
-							// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:829:72: arguments
+							// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:829:72: arguments
 							{
 							pushFollow(FOLLOW_arguments_in_superSuffix6272);
 							arguments617=arguments();
@@ -18633,7 +18633,7 @@ public class JavaJavaParser extends Parser {
 
 
 	// $ANTLR start "arguments"
-	// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:832:1: arguments : '(' ( expressionList )? ')' ;
+	// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:832:1: arguments : '(' ( expressionList )? ')' ;
 	public final JavaJavaParser.arguments_return arguments() throws RecognitionException {
 		JavaJavaParser.arguments_return retval = new JavaJavaParser.arguments_return();
 		retval.start = input.LT(1);
@@ -18651,8 +18651,8 @@ public class JavaJavaParser extends Parser {
 		try {
 			if ( state.backtracking>0 && alreadyParsedRule(input, 135) ) { return retval; }
 
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:5: ( '(' ( expressionList )? ')' )
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:9: '(' ( expressionList )? ')'
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:5: ( '(' ( expressionList )? ')' )
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:9: '(' ( expressionList )? ')'
 			{
 			root_0 = (Object)adaptor.nil();
 
@@ -18664,7 +18664,7 @@ public class JavaJavaParser extends Parser {
 			}
 
 			if ( state.backtracking==0 ) {s("("); }
-			// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:23: ( expressionList )?
+			// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:23: ( expressionList )?
 			int alt178=2;
 			int LA178_0 = input.LA(1);
 			if ( ((LA178_0 >= CharacterLiteral && LA178_0 <= DecimalLiteral)||LA178_0==FloatingPointLiteral||(LA178_0 >= HexLiteral && LA178_0 <= Identifier)||(LA178_0 >= OctalLiteral && LA178_0 <= StringLiteral)||LA178_0==25||LA178_0==32||(LA178_0 >= 36 && LA178_0 <= 37)||(LA178_0 >= 40 && LA178_0 <= 41)||LA178_0==60||LA178_0==62||LA178_0==65||LA178_0==70||LA178_0==73||LA178_0==76||LA178_0==82||LA178_0==84||(LA178_0 >= 86 && LA178_0 <= 87)||LA178_0==93||LA178_0==96||LA178_0==99||LA178_0==103||LA178_0==105||LA178_0==113) ) {
@@ -18672,7 +18672,7 @@ public class JavaJavaParser extends Parser {
 			}
 			switch (alt178) {
 				case 1 :
-					// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:23: expressionList
+					// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:833:23: expressionList
 					{
 					pushFollow(FOLLOW_expressionList_in_arguments6295);
 					expressionList619=expressionList();
@@ -18717,15 +18717,15 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred5_JavaJava
 	public final void synpred5_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:88:9: ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:88:9: annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:88:9: ( annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* ) )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:88:9: annotations ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
 		{
 		pushFollow(FOLLOW_annotations_in_synpred5_JavaJava73);
 		annotations();
 		state._fsp--;
 		if (state.failed) return;
 
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:9: ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:9: ( packageDeclaration ( importDeclaration )* ( typeDeclaration )* | classOrInterfaceDeclaration ( typeDeclaration )* )
 		int alt184=2;
 		int LA184_0 = input.LA(1);
 		if ( (LA184_0==88) ) {
@@ -18744,14 +18744,14 @@ public class JavaJavaParser extends Parser {
 
 		switch (alt184) {
 			case 1 :
-				// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:13: packageDeclaration ( importDeclaration )* ( typeDeclaration )*
+				// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:13: packageDeclaration ( importDeclaration )* ( typeDeclaration )*
 				{
 				pushFollow(FOLLOW_packageDeclaration_in_synpred5_JavaJava87);
 				packageDeclaration();
 				state._fsp--;
 				if (state.failed) return;
 
-				// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:32: ( importDeclaration )*
+				// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:32: ( importDeclaration )*
 				loop181:
 				while (true) {
 					int alt181=2;
@@ -18762,7 +18762,7 @@ public class JavaJavaParser extends Parser {
 
 					switch (alt181) {
 					case 1 :
-						// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:32: importDeclaration
+						// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:32: importDeclaration
 						{
 						pushFollow(FOLLOW_importDeclaration_in_synpred5_JavaJava89);
 						importDeclaration();
@@ -18777,7 +18777,7 @@ public class JavaJavaParser extends Parser {
 					}
 				}
 
-				// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:51: ( typeDeclaration )*
+				// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:51: ( typeDeclaration )*
 				loop182:
 				while (true) {
 					int alt182=2;
@@ -18788,7 +18788,7 @@ public class JavaJavaParser extends Parser {
 
 					switch (alt182) {
 					case 1 :
-						// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:51: typeDeclaration
+						// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:89:51: typeDeclaration
 						{
 						pushFollow(FOLLOW_typeDeclaration_in_synpred5_JavaJava92);
 						typeDeclaration();
@@ -18806,14 +18806,14 @@ public class JavaJavaParser extends Parser {
 				}
 				break;
 			case 2 :
-				// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:13: classOrInterfaceDeclaration ( typeDeclaration )*
+				// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:13: classOrInterfaceDeclaration ( typeDeclaration )*
 				{
 				pushFollow(FOLLOW_classOrInterfaceDeclaration_in_synpred5_JavaJava107);
 				classOrInterfaceDeclaration();
 				state._fsp--;
 				if (state.failed) return;
 
-				// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:41: ( typeDeclaration )*
+				// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:41: ( typeDeclaration )*
 				loop183:
 				while (true) {
 					int alt183=2;
@@ -18824,7 +18824,7 @@ public class JavaJavaParser extends Parser {
 
 					switch (alt183) {
 					case 1 :
-						// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:41: typeDeclaration
+						// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:90:41: typeDeclaration
 						{
 						pushFollow(FOLLOW_typeDeclaration_in_synpred5_JavaJava109);
 						typeDeclaration();
@@ -18851,8 +18851,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred113_JavaJava
 	public final void synpred113_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: ( explicitConstructorInvocation )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: explicitConstructorInvocation
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: ( explicitConstructorInvocation )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:421:22: explicitConstructorInvocation
 		{
 		pushFollow(FOLLOW_explicitConstructorInvocation_in_synpred113_JavaJava2728);
 		explicitConstructorInvocation();
@@ -18866,10 +18866,10 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred117_JavaJava
 	public final void synpred117_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';'
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: ( ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: ( nonWildcardTypeArguments )? ( 'this' | 'super' ) arguments ';'
 		{
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: ( nonWildcardTypeArguments )?
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: ( nonWildcardTypeArguments )?
 		int alt192=2;
 		int LA192_0 = input.LA(1);
 		if ( (LA192_0==49) ) {
@@ -18877,7 +18877,7 @@ public class JavaJavaParser extends Parser {
 		}
 		switch (alt192) {
 			case 1 :
-				// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: nonWildcardTypeArguments
+				// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:425:9: nonWildcardTypeArguments
 				{
 				pushFollow(FOLLOW_nonWildcardTypeArguments_in_synpred117_JavaJava2755);
 				nonWildcardTypeArguments();
@@ -18913,8 +18913,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred128_JavaJava
 	public final void synpred128_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:9: ( annotation )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:9: annotation
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:9: ( annotation )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:457:9: annotation
 		{
 		pushFollow(FOLLOW_annotation_in_synpred128_JavaJava3017);
 		annotation();
@@ -18928,8 +18928,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred151_JavaJava
 	public final void synpred151_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:530:10: ( localVariableDeclarationStatement )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:530:10: localVariableDeclarationStatement
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:530:10: ( localVariableDeclarationStatement )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:530:10: localVariableDeclarationStatement
 		{
 		pushFollow(FOLLOW_localVariableDeclarationStatement_in_synpred151_JavaJava3584);
 		localVariableDeclarationStatement();
@@ -18943,8 +18943,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred152_JavaJava
 	public final void synpred152_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:531:9: ( classOrInterfaceDeclaration )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:531:9: classOrInterfaceDeclaration
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:531:9: ( classOrInterfaceDeclaration )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:531:9: classOrInterfaceDeclaration
 		{
 		pushFollow(FOLLOW_classOrInterfaceDeclaration_in_synpred152_JavaJava3594);
 		classOrInterfaceDeclaration();
@@ -18958,8 +18958,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred157_JavaJava
 	public final void synpred157_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:170: ( 'else' statement )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:170: 'else' statement
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:170: ( 'else' statement )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:550:170: 'else' statement
 		{
 		match(input,71,FOLLOW_71_in_synpred157_JavaJava3745); if (state.failed) return;
 
@@ -18975,8 +18975,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred162_JavaJava
 	public final void synpred162_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:555:11: ( catches 'finally' block )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:555:11: catches 'finally' block
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:555:11: ( catches 'finally' block )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:555:11: catches 'finally' block
 		{
 		pushFollow(FOLLOW_catches_in_synpred162_JavaJava3839);
 		catches();
@@ -18997,8 +18997,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred163_JavaJava
 	public final void synpred163_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:556:11: ( catches )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:556:11: catches
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:556:11: ( catches )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:556:11: catches
 		{
 		pushFollow(FOLLOW_catches_in_synpred163_JavaJava3856);
 		catches();
@@ -19012,8 +19012,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred178_JavaJava
 	public final void synpred178_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:9: ( switchLabel )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:9: switchLabel
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:9: ( switchLabel )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:591:9: switchLabel
 		{
 		pushFollow(FOLLOW_switchLabel_in_synpred178_JavaJava4179);
 		switchLabel();
@@ -19027,8 +19027,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred180_JavaJava
 	public final void synpred180_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:595:9: ( 'case' constantExpression ':' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:595:9: 'case' constantExpression ':'
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:595:9: ( 'case' constantExpression ':' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:595:9: 'case' constantExpression ':'
 		{
 		match(input,63,FOLLOW_63_in_synpred180_JavaJava4206); if (state.failed) return;
 
@@ -19046,8 +19046,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred181_JavaJava
 	public final void synpred181_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:596:9: ( 'case' enumConstantName ':' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:596:9: 'case' enumConstantName ':'
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:596:9: ( 'case' enumConstantName ':' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:596:9: 'case' enumConstantName ':'
 		{
 		match(input,63,FOLLOW_63_in_synpred181_JavaJava4221); if (state.failed) return;
 
@@ -19065,8 +19065,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred182_JavaJava
 	public final void synpred182_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:602:9: ( enhancedForControl )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:602:9: enhancedForControl
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:602:9: ( enhancedForControl )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:602:9: enhancedForControl
 		{
 		pushFollow(FOLLOW_enhancedForControl_in_synpred182_JavaJava4272);
 		enhancedForControl();
@@ -19080,8 +19080,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred186_JavaJava
 	public final void synpred186_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:607:9: ( localVariableDeclaration )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:607:9: localVariableDeclaration
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:607:9: ( localVariableDeclaration )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:607:9: localVariableDeclaration
 		{
 		pushFollow(FOLLOW_localVariableDeclaration_in_synpred186_JavaJava4312);
 		localVariableDeclaration();
@@ -19095,8 +19095,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred188_JavaJava
 	public final void synpred188_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:32: ( assignmentOperator expression )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:32: assignmentOperator expression
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:32: ( assignmentOperator expression )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:638:32: assignmentOperator expression
 		{
 		pushFollow(FOLLOW_assignmentOperator_in_synpred188_JavaJava4503);
 		assignmentOperator();
@@ -19115,8 +19115,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred198_JavaJava
 	public final void synpred198_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:651:9: ( '<' '<' '=' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:651:10: '<' '<' '='
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:651:9: ( '<' '<' '=' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:651:10: '<' '<' '='
 		{
 		match(input,49,FOLLOW_49_in_synpred198_JavaJava4640); if (state.failed) return;
 
@@ -19134,8 +19134,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred199_JavaJava
 	public final void synpred199_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:656:9: ( '>' '>' '>' '=' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:656:10: '>' '>' '>' '='
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:656:9: ( '>' '>' '>' '=' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:656:10: '>' '>' '>' '='
 		{
 		match(input,52,FOLLOW_52_in_synpred199_JavaJava4687); if (state.failed) return;
 
@@ -19152,8 +19152,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred200_JavaJava
 	public final void synpred200_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:663:9: ( '>' '>' '=' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:663:10: '>' '>' '='
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:663:9: ( '>' '>' '=' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:663:10: '>' '>' '='
 		{
 		match(input,52,FOLLOW_52_in_synpred200_JavaJava4732); if (state.failed) return;
 
@@ -19168,8 +19168,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred211_JavaJava
 	public final void synpred211_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:707:9: ( '<' '=' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:707:10: '<' '='
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:707:9: ( '<' '=' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:707:10: '<' '='
 		{
 		match(input,49,FOLLOW_49_in_synpred211_JavaJava5056); if (state.failed) return;
 
@@ -19182,8 +19182,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred212_JavaJava
 	public final void synpred212_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:710:9: ( '>' '=' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:710:10: '>' '='
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:710:9: ( '>' '=' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:710:10: '>' '='
 		{
 		match(input,52,FOLLOW_52_in_synpred212_JavaJava5090); if (state.failed) return;
 
@@ -19196,8 +19196,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred215_JavaJava
 	public final void synpred215_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:722:9: ( '<' '<' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:722:10: '<' '<'
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:722:9: ( '<' '<' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:722:10: '<' '<'
 		{
 		match(input,49,FOLLOW_49_in_synpred215_JavaJava5185); if (state.failed) return;
 
@@ -19210,8 +19210,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred216_JavaJava
 	public final void synpred216_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:725:9: ( '>' '>' '>' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:725:10: '>' '>' '>'
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:725:9: ( '>' '>' '>' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:725:10: '>' '>' '>'
 		{
 		match(input,52,FOLLOW_52_in_synpred216_JavaJava5219); if (state.failed) return;
 
@@ -19226,8 +19226,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred217_JavaJava
 	public final void synpred217_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:730:9: ( '>' '>' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:730:10: '>' '>'
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:730:9: ( '>' '>' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:730:10: '>' '>'
 		{
 		match(input,52,FOLLOW_52_in_synpred217_JavaJava5259); if (state.failed) return;
 
@@ -19240,8 +19240,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred229_JavaJava
 	public final void synpred229_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:755:9: ( castExpression )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:755:9: castExpression
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:755:9: ( castExpression )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:755:9: castExpression
 		{
 		pushFollow(FOLLOW_castExpression_in_synpred229_JavaJava5478);
 		castExpression();
@@ -19255,8 +19255,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred233_JavaJava
 	public final void synpred233_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:760:8: ( '(' primitiveType ')' unaryExpression )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:760:8: '(' primitiveType ')' unaryExpression
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:760:8: ( '(' primitiveType ')' unaryExpression )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:760:8: '(' primitiveType ')' unaryExpression
 		{
 		match(input,32,FOLLOW_32_in_synpred233_JavaJava5520); if (state.failed) return;
 
@@ -19279,8 +19279,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred234_JavaJava
 	public final void synpred234_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:22: ( type )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:22: type
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:22: ( type )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:761:22: type
 		{
 		pushFollow(FOLLOW_type_in_synpred234_JavaJava5540);
 		type();
@@ -19294,8 +19294,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred236_JavaJava
 	public final void synpred236_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:73: ( '.' Identifier )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:73: '.' Identifier
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:73: ( '.' Identifier )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:73: '.' Identifier
 		{
 		match(input,43,FOLLOW_43_in_synpred236_JavaJava5582); if (state.failed) return;
 
@@ -19308,8 +19308,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred237_JavaJava
 	public final void synpred237_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:100: ( identifierSuffix )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:100: identifierSuffix
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:100: ( identifierSuffix )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:766:100: identifierSuffix
 		{
 		pushFollow(FOLLOW_identifierSuffix_in_synpred237_JavaJava5590);
 		identifierSuffix();
@@ -19326,8 +19326,8 @@ public class JavaJavaParser extends Parser {
 		Token I4=null;
 
 
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:42: ( '.' I4= Identifier )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:42: '.' I4= Identifier
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:42: ( '.' I4= Identifier )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:42: '.' I4= Identifier
 		{
 		match(input,43,FOLLOW_43_in_synpred242_JavaJava5645); if (state.failed) return;
 
@@ -19340,8 +19340,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred243_JavaJava
 	public final void synpred243_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:73: ( identifierSuffix )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:73: identifierSuffix
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:73: ( identifierSuffix )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:770:73: identifierSuffix
 		{
 		pushFollow(FOLLOW_identifierSuffix_in_synpred243_JavaJava5656);
 		identifierSuffix();
@@ -19355,8 +19355,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred249_JavaJava
 	public final void synpred249_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:777:10: ( '[' expression ']' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:777:10: '[' expression ']'
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:777:10: ( '[' expression ']' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:777:10: '[' expression ']'
 		{
 		match(input,55,FOLLOW_55_in_synpred249_JavaJava5747); if (state.failed) return;
 
@@ -19374,8 +19374,8 @@ public class JavaJavaParser extends Parser {
 
 	// $ANTLR start synpred262_JavaJava
 	public final void synpred262_JavaJava_fragment() throws RecognitionException {
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:39: ( '[' expression ']' )
-		// /Users/sophanna/IdeaProjects/denis_antlr/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:39: '[' expression ']'
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:39: ( '[' expression ']' )
+		// /Users/dennis/Documents/GitHub/Metrics-Suite/metricsSuite/src/com/metricssuite/antlr/JavaJava.g:803:39: '[' expression ']'
 		{
 		match(input,55,FOLLOW_55_in_synpred262_JavaJava6017); if (state.failed) return;
 

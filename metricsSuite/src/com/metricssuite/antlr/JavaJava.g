@@ -941,9 +941,9 @@ WS  :  (' '{ws++;}|'\r'{ws++;}|'\t'{ws++;}|'\u000C'{ws++;}|'\n'{ws++;}) {$channe
     ;
 
 COMMENT
-    :   '/*' ( options {greedy=false;} : .{commentcount++;System.out.println("block comment: "+commentcount);} )* '*/' {$channel=HIDDEN;}
+    :   '/*'{commentcount += 2;} ( options {greedy=false;} : .{commentcount++;System.out.println("block comment: "+commentcount);} )* '*/' {commentcount += 2;} {$channel=HIDDEN;}
     ;
 
 LINE_COMMENT
-    : '//' ~( ('\n' |'\r') )* (options {greedy=false;}: .{commentcount++;} )'\r' ? '\n'  {$channel=HIDDEN;}
+    : '//' {commentcount += 2;} ~( ('\n' |'\r') )* {commentcount++;} (options {greedy=false;}: .{commentcount++;} ) {commentcount++;}'\r' ? '\n' {commentcount++;} {$channel=HIDDEN;}
     ;
