@@ -65,7 +65,8 @@ public class MetricsParser
         String stringFromFile = sb.toString();
 
         //remove all comments using REGEX
-        String clean = stringFromFile.replaceAll("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","");
+        String clean = stringFromFile.replaceAll
+                ("(?: /\\* (?:[^*] | (?: \\*+[^*/]) ) *\\*+/) | (?: //.*)","");
 
         //print out length of the strings,
         System.out.println("length with comments: " + stringFromFile.length());
