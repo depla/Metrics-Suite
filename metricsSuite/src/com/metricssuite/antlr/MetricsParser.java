@@ -53,7 +53,7 @@ public class MetricsParser
 
         //******************************************************************************
         //Trying to compute comment bytes
-        Scanner scanner = new Scanner(selectedFile);
+        /*Scanner scanner = new Scanner(selectedFile);
 
         StringBuilder sb = new StringBuilder();
 
@@ -63,18 +63,18 @@ public class MetricsParser
             sb.append(scanner.nextLine()).append("\n");
         }
 
-        String stringFromFile = sb.toString();
+        String stringFromFile = sb.toString();*/
 
         //remove all comments using REGEX
-        String stringNoComments = stringFromFile.replaceAll
-                ("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","");
+        //String stringNoComments = stringFromFile.replaceAll
+               // ("(?:/\\*(?:[^*]|(?:\\*+[^*/]))*\\*+/)|(?://.*)","");
 
         //print out length of the strings,
-        System.out.println("length with comments: " + stringFromFile.length());
+        /*System.out.println("length with comments: " + stringFromFile.length());
         System.out.println("length without comments: " + stringNoComments.length());
         //System.out.println(clean);
 
-        int numCommentsBytes = stringFromFile.length() - stringNoComments.length();
+        int numCommentsBytes = stringFromFile.length() - stringNoComments.length();*/
 
 
         //******************************************************************************
@@ -104,8 +104,8 @@ public class MetricsParser
         stringBuilder.append("File name: ").append(fileName).append("\n");
         stringBuilder.append("File length in bytes: ").append(selectedFile.length()).append("\n");
         stringBuilder.append("File white space: ").append(lexer.ws).append("\n");
-        stringBuilder.append("File comment space in bytes:").append(numCommentsBytes).append("\n");
-        stringBuilder.append("Comment percentage of file: ").append(df.format(100* (double)numCommentsBytes/selectedFile.length())).append("%\n");
+        stringBuilder.append("File comment space in bytes:").append(lexer.commentcount).append("\n");
+        stringBuilder.append("Comment percentage of file: ").append(df.format(100* (double)lexer.commentcount/selectedFile.length())).append("%\n");
         stringBuilder.append("Halstead metrics: \n");
         stringBuilder.append("  Unique operators: "+ uniqueOperators).append("\n");
         stringBuilder.append("  Unique operands: "+ uniqueOperands).append("\n");
